@@ -8,6 +8,28 @@ std_msgs::Float32MultiArray desire_thrust;
 std_msgs::Float32MultiArray desire_moment_attitude;
 std_msgs::Float32MultiArray desire_moment_angle;
 
+Gripper gripper;
+float Lw = gripper.Lw;
+
+Eigen::Vector3f BP1;
+Eigen::Vector3f BP2;
+Eigen::Vector3f BP3;
+Eigen::Vector3f BP4;
+
+Eigen::Matrix3f BP1x;
+Eigen::Matrix3f BP2x;
+Eigen::Matrix3f BP3x;
+Eigen::Matrix3f BP4x;
+
+
+BP1 << Lw, 0, 0 ;
+BP2 << 0, Lw, 0 ;
+BP3 << -Lw, 0, 0 ;
+BP4 << 0, -Lw, 0 ;
+
+
+
+
 void desire_thrust_cb(const std_msgs::Float32MultiArray::ConstPtr& msg)
 {
     desire_thrust.data[0] = msg->data[0];
