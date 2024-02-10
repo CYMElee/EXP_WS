@@ -1,7 +1,7 @@
 #include "ros/ros.h"
 #include "constant.h" //define physical property
 #include "std_msgs/Float32MultiArray.h"
-
+#include "std_msgs/Float32.h"
 #include <Eigen/Dense>
 
 #define B 0
@@ -15,16 +15,11 @@ float r;
 
 std_msgs::Float32MultiArray phi;
 std_msgs::Float32MultiArray phid;
-std_msgs::Float32MultiArray M;
+std_msgs::Float32 M;
 phi.data.resize(3);
 phid.data.resize(3);
-M.data.resize(3);
-M.data[0] = 0;
-M.data[1] = 0;
+
 Gripper gripper;
-
-
-void moment_calculator()
 
 
 
@@ -57,7 +52,7 @@ int main(int argc,char **argv)
     ros::Subscriber phi_desire = nh.subscribe<std_msgs::Float32MultiArray>
         ("gripper/phi_desire",10,phid_cb);
 
-    ros::Publisher gripper_moment = nh.advertise<std_msgs::Float32MultiArray>
+    ros::Publisher gripper_moment = nh.advertise<std_msgs::Float32>
         ("gripper/desire_moment",10,);
 
     ros::Rate rate(100);
@@ -67,11 +62,11 @@ int main(int argc,char **argv)
         phi_error = phid.data[0] - phi.data[0];
         phi_error_d = phid.data[1] - phi.data[1];
         r = phi_error_d - a*phi_error;
-        M.data[2] = gripper.ixyz[2]*(B*phi.data[1]+K*phi.data[0])+gripper.ixyz[2]*phid.data[2] \
+        M = gripper.ixyz[2]*(B*phi.data[1]+K*phi.data[0])+gripper.ixyz[2]*phid.data[2] \
         gripper.ixyz[2]*K1*r-gripper.ixyz[2]*(a^2)*phi_error;
         gripper_moment.publish(M);
         ros::spinOnce();
-        rate.sleep;
+        rate.sleep();
     }
 
     return 0;
