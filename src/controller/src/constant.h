@@ -1,6 +1,21 @@
 #ifndef CONSTANTS_H
 #define CONSTANTS_H
 
+class World
+{
+    private:
+        float g;
+    public:
+        World();
+
+
+
+
+
+};
+
+
+
 class UAV
 {
     private:
@@ -18,6 +33,7 @@ class Gripper
         float mass;
         float ixyz[3];
         float damping;
+        float Lw;
 
     public:
          Gripper();

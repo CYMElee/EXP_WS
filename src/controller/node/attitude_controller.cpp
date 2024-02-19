@@ -38,13 +38,13 @@ int main(int argc,char **argv)
     ros::init(argc,argv,"attitude_controller");
     ros::NodeHandle nh;
     ros::Subscriber desire_agvr = nh.subscribe<std_msgs::Float32MultiArray>
-        ("gripper/desire_agvr",10,desire_agvr_cb);
+        ("platform/desire_attitude",10,desire_agvr_cb);
     ros::Subscriber desire_agvr = nh.subscribe<std_msgs::Float32MultiArray>
-        ("gripper/measure_attitude",10,measure_attitude_cb);
+        ("platform/measure_attitude",10,measure_attitude_cb);
     ros::Subscriber desire_agvr = nh.subscribe<std_msgs::Float32MultiArray>
-        ("gripper/measure_attitude",10,measure_attitude_cb);
+        ("platform/desire_angular_velocity",10,measure_attitude_cb);
     ros::Subscriber desire_agvr = nh.subscribe<std_msgs::Float32MultiArray>
-        ("gripper/measure_attitude",10,measure_attitude_cb);                                                
+        ("platform/measure_angular_velocity",10,measure_attitude_cb);                                                
 
     ros::Rate rate(100);
 

@@ -4,7 +4,7 @@
 #include "constant.h"
 #include <Eigen/Dense>
 
-using namespace Eigen
+using namespace Eigen;
 
 std_msgs::Float32MultiArray desire_thrust;
 std_msgs::Float32MultiArray desire_moment_attitude;
@@ -105,7 +105,7 @@ Ar << Ar_temp2,W1MultiArrayW2,W3;
 
 ArT = (Ar.transpoMultiArraye())*((Ar * Ar.transpose()).inverse());
 
-void desire_thrusMultiArray_cb(const std_msgs::Float32MultiArray::ConstPtr& msg)
+void desire_thrus_total_cb(const std_msgs::Float32MultiArray::ConstPtr& msg)
 {
     desire_thrust.data[0] = msg->data[0];
     desire_thrust.data[1] = msg->data[1];
@@ -145,8 +145,8 @@ int main(int argc,char **argv)
     ros::init(argc,argv,"wrench_mapper");
     ros::NodeHandle nh;
 
-    ros::Subscriber desire_thrust = nh.subscribe<std_msgs::Float32MultiArray>
-        ("gripper/desire_thrust",10,desire_thrust_cb); //corresponding u1 on matlab
+    ros::Subscriber desire_thrust_total = nh.subscribe<std_msgs::Float32MultiArray>
+        ("gripper/desire_thrust_total",10,desire_thrust_total_cb); //corresponding u1 on matlab
 
     ros::Subscriber desire_moment_attitude = nh.subscribe<std_msgs::Float32MultiArray>
         ("gripper/desire_moment_attitude",10,desire_moment_attitude_cb); // corresponding u2 on matlab
@@ -154,15 +154,15 @@ int main(int argc,char **argv)
     ros::Subscriber desire_moment_angle = nh.subscribe<std_msgs::Float32>
         ("gripper/desire_moment_angle",10,desire_moment_angle_cb); // corresponding M on matlab
 
-    ros::Publisher desire_thrust_total = nh.advertise<std_msgs::Float32MultiArray>
-        ("gripper/desire_thrust_total",10); 
+    ros::Publisher desire_thrust_each = nh.advertise<std_msgs::Float32MultiArray>
+        ("gripper/desire_thrust_each",10); 
 
     ros::Rate rate(100);
     while(ros::ok())
     {  
 
         fd_gen();
-        desire_thrust_total.publish(fd);
+        desire_thrust_each.publish(fd);
 
 
         ros::spinOnce();

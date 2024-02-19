@@ -30,13 +30,13 @@ std_msgs::Int16 system_mode = -1;
 enum {
     TAKEOFF,
     HOVERING_GRIPPER_SCISSORS,
-    HOVERING_GRIPPER_STATIC,
-    CIRCLE,
-    LAND,
-}SYS_Mode;
+  ER_STATIC,
+  
+  
+} 
 
-void trajectory_generate()
-{
+v nerate()
+{ 
     switch (system_mode)
 
     case 0:
