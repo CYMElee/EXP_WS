@@ -7,6 +7,9 @@
 
 
 using namespace Eigen ;
+
+std_msgs::Float32MultiArray m;
+
 //attitude control gains
 Matrix<float, 3, 3> KR;
 Matrix<float, 3, 3> Kw;
@@ -30,30 +33,54 @@ Ki << 5.5, 0 , 0 ,
       0  , 0,  3;
 
 
-// 
+void desire_attitude_cb(const std_msgs::Float32MultiArray::ConstPtr& msg)
+{
+
+}
+
+void measure_attitude_cb(const std_msgs::Float32MultiArray::ConstPtr& msg)
+{
 
 
+}
+
+void desire_angular_vel_cb(const std_msgs::Float32MultiArray::ConstPtr& msg)
+{
+
+}
+
+void measure_angular_vel_cb(const std_msgs::Float32MultiArray::ConstPtr& msg)
+{
+
+
+}
+
+void total_moment()
+{
+
+
+
+}
 int main(int argc,char **argv)
 {
     ros::init(argc,argv,"attitude_controller");
     ros::NodeHandle nh;
     ros::Subscriber desire_agvr = nh.subscribe<std_msgs::Float32MultiArray>
-        ("platform/desire_attitude",10,desire_agvr_cb);
+        ("platform/desire_attitude",10,desire_attitude_cb);
     ros::Subscriber desire_agvr = nh.subscribe<std_msgs::Float32MultiArray>
         ("platform/measure_attitude",10,measure_attitude_cb);
     ros::Subscriber desire_agvr = nh.subscribe<std_msgs::Float32MultiArray>
-        ("platform/desire_angular_velocity",10,measure_attitude_cb);
+        ("platform/desire_angular_velocity",10,desire_angular_vel_cb);
     ros::Subscriber desire_agvr = nh.subscribe<std_msgs::Float32MultiArray>
-        ("platform/measure_angular_velocity",10,measure_attitude_cb);                                                
+        ("platform/measure_angular_velocity",10,measure_angular_vel_cb);                                                
 
     ros::Rate rate(100);
 
     while(ros::ok)
     {
-
-
-
         ros::spinOnce();
+
+        total_moment();
 
         rate.sleep();
     }
