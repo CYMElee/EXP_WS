@@ -5,9 +5,11 @@
 #include "std_msgs/Float32MultiArray.h"
 
 #include "Eigen/Dense"
-
+#include "constant.h"
 
 using namespace Eigen ;
+
+Platform platform;
 
 std_msgs::Float32MultiArray u2;
 
@@ -17,6 +19,7 @@ RowVector3f agvr;
 RowVector3f omega;
 RowVector3f m;
 
+RowVector3f h;
 
 
 //attitude control gains
@@ -90,12 +93,13 @@ void attitude_er()
     eR(2) = E(1,0);
     eW = omega - R.transpose*(Rr*agvr);
 
-
+    //Physical dynamic to cancel
+    h = omega.cross(platform.IB*omega);
 }
 
 void moment()
 {
-    m = h - tau_g - IB*(KR*eR + Kw*ew + Ki*eRiout);
+    m = h - platform.IB*(KR*eR + Kw*eW );
 
     u2.data[0] = m(0);
     u2.data[1] = m(1);
@@ -124,6 +128,8 @@ int main(int argc,char **argv)
         ros::spinOnce();
         
         attitude_er();
+
+        h();
 
         moment();
 
