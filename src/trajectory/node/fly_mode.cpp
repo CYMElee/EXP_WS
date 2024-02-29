@@ -129,7 +129,7 @@ int main(int argc,char **argv)
             {
             case 0:
                 {
-                    if(c != c_prev){
+                    
                         trajectory.data = HOVERING_GRIPPER_STATIC;
                         arm_signel.data = ARM;
                         ROS_INFO("THE FLY TRAJECTORY IS: HOVERING_GRIPPER_STATIC!!!");
@@ -137,17 +137,17 @@ int main(int argc,char **argv)
                         MAV_arm.publish(arm_signel.data);
                         ROS_INFO("PREPARING STE TO GUIDE MODE!!!");
                         ROS_INFO("PREPARING STE TO ARMING!!!");
-                    }
-                    if(state() == 1 & arm() == 1){
+                    
+                        while(ros::ok() && state() == 1 && arm() == 1)
+                        {
+                            ROS_WARN("WAIT_ALL_MAV_ARE_READY");
+                            ros::spinOnce();
+                            rate.sleep();
+                        }
                         ROS_WARN("READY_TAKEOFF!!!");
                         takeofMAV_takeofff_signal.data= 1;
                         MAV_takeoff.publish(takeofMAV_takeofff_signal.data);
-                    }
-                    else
-                    {
-                    ROS_WARN("WAIT_ALL_MAV_ARE_READY");
                     
-                    }
                 
                 }
                 break;
@@ -160,43 +160,33 @@ int main(int argc,char **argv)
                         system_trajectory.publish(trajectory.data);
                         MAV_arm.publish(arm_signel.data);
                         ROS_INFO("PREPARING STE TO GUIDE MODE!!!!!!");
-                        ros::topic::waitForMessage<std_msgs::Bool>("system/mode_set");
-                        ROS_WARN("SUCCESS SET TO GUIDE MODE!!!");
                         ROS_INFO("PREPARING STE TO ARMING!!!");
-                    }
-                    if(state() == 1 & arm() == 1){
+                        }
+                       while(ros::ok() && state() == 1 && arm() == 1)
+                       {
+                           ROS_WARN("WAIT_ALL_MAV_ARE_READY");
+                           ros::spinOnce();
+                           rate.sleep();
+                       }
+          
                         ROS_WARN("READY_TAKEOFF!!!");
                         takeofMAV_takeofff_signal.data= 1;
                         MAV_takeoff.publish(takeofMAV_takeofff_signal.data);
-                    }
-                    else
-                    {
-                        ROS_WARN("WAIT_ALL_MAV_ARE_READY");
-                    
-                    }
 
-               
+
                 }
                 break;
             case 2:
                 {
-
                     trajectory.data = LAND;
                     arm_signel.data = Kill;
                     ROS_INFO("THE FLY TRAJECTORY IS: LAND!!!");
                     system_trajectory.publish(trajectory.data);
                     MAV_arm.publish(arm_signel.data);
                     ROS_INFO("PREPARING SET TO LAND MODE!!!");
-                    ros::topic::waitForMessage<std_msgs::Int16>("system/mode_set");
-                    ROS_INFO("PREPARING SET TO LAND MODE!!!");
                     ROS_INFO("PREPARING STE TO DISARM !!!");
-
                 }
                 break;
-            }
-            else(c == EOF)
-            {
-                c = c_prev;
             }
             }
     
