@@ -25,129 +25,14 @@ std_msgs::Float32 phid;   //angle
 std_msgs::Float32 phid_d; //angular vel
 std_msgs::Float32 phid_dd; //angular acc
       
-std_msgs::Int16 system_mode = -1;
+std_msgs::Int16 system_mode = -1;    //-1 = NON , 0 = GUIDE & ARMING , 2 = LAND  THIS IS A TRIGGER FOR NOD ,NOT ENTER!!!
 
 enum {
-    TAKEOFF,
+    HOVERING_GRIPPER_STATIC,
     HOVERING_GRIPPER_SCISSORS,
-  ER_STATIC,
-  
-  
-} 
-
-v nerate()
-{ 
-    switch (system_mode)
-
-    case 0:
-    {
-
-
-
-    }
-
-    case 1:
-    {
-
-
-    }
-    case 2:
-    {
-
-
-
-
-    }
-    case 4:
-    {
-
-
-
-
-
-    }
-
+    LAND,
 }
 
-
-
-
-
-void take_off()
-{
-    if(system_mode == TAKEOFF  )
-    {
-        ROS_INFO("READY TAKEOFF!!!\n");
-
-    }
-    else
-    {
-        system_mode = TAKEOFF;
-        ROS_INFO("START ARMING!!!\n");
-        sys_mode.request.custom_mode = "GUIDE";
-        arm_cmd.request.value = true;
-
-
-    }
-}
-/*function for gripper mode select*/
-void hovering_gripper_stop()
-{
-    if(system_mode == HOVERING_GRIPPER_STATIC && system_state == HOVERING_GRIPPER_STATIC)
-    {
-        ROS_INFO("READY HOVERING_GRIPPER_STATIC!!!\n");
-
-    }
-    else
-    {
-        system_mode = HOVERING_GRIPPER_STATIC;
-        ROS_INFO("START HOVERING_GRIPPER_STATIC!!!\n");
-        system_state_set.publish(system_mode);
-        
-        
-
-
-
-    }
-}
-
-void hovering_gripper_scissors()
-{
-    if(system_mode == HOVERING_GRIPPER_SCISSORS && system_state == HOVERING_GRIPPER_SCISSORS)
-    {
-        ROS_INFO("READY HOVERING_GRIPPER_SCISSORS!!!\n");
-
-    }
-    else
-    {
-        system_mode = HOVERING_GRIPPER_SCISSORS;
-        ROS_INFO("START HOVERING_GRIPPER_SCISSORS!!!\n");
-        system_state_set.publish(system_mode);
-
-    }
-
-
-}
-
-void land()
-{
-
-    if(system_mode == LAND && mav_state == LAND)
-    {
-        ROS_INFO("READY TAKEOFF!!!\n");
-
-    }
-    else
-    {
-        system_mode = LAND;
-        ROS_INFO("START ARMING!!!\n");
-        system_state_set.publish(system_mode);
-
-    }
-
-
-
-}
 
 /*function for ROS callback function*/
 
@@ -186,35 +71,25 @@ int main(int argc,char **argv)
         {
         case 0:
             {
-                ROS_INFO("PREPARING ARMING!!!");
-                take_off();
-                //send a few setpoints before starting
-                for(int i = 100; ros::ok() && i > 0; --i){
-                    local_pos_pub.publish(pose);
-                    ros::spinOnce();
-                    rate.sleep();
-                }
-                if( set_mode_client.call(sys_mode) &&
-                sys_mode.response.mode_sent){
-                ROS_INFO("Offboard enabled");
-                }
-                ros::Duration::sleep(5.0);
-                if( arming_client.call(arm_cmd) &&
-                    arm_cmd.response.success){
-                    ROS_INFO("Vehicle armed");
-                    }
+                ROS_INFO("THE FLY TRAJECTORY IS: HOVERING_GRIPPER_STATIC!!!");
+                ROS_INFO("PREPARING STE TO GUIDE MODE!!!");
+                ROS_INFO("PREPARING STE TO ARMING!!!");
+
 
             }
             break;
         case 1:
             {
+                ROS_INFO("THE FLY TRAJECTORY IS: HOVERING_GRIPPER_SCISSORS!!!");
                 ROS_INFO("PREPARING HOVERING(STOP)!!!");
                 hovering_gripper_stop();
             }
             break;
         case 2:
             {
+                ROS_INFO("THE FLY TRAJECTORY IS: LAND!!!");
                 ROS_INFO("PREPARING HOVERING(SCISSORS)!!!");
+                ROS_INFO("PREPARING STE TO GUIDE MODE!!!");
                 hovering_gripper_scissors();
             }
             break;
