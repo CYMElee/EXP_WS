@@ -48,7 +48,7 @@ z<< 0,0,1;
 
 void desire_position_cb(const std_msgs::Float32MultiArray::ConstPtr& msg)
 {
-    p(0) = msg->data[0];
+    pd(0) = msg->data[0];
     pd(1)= msg->data[1];
     pd(2) = msg->data[2];
 
@@ -123,7 +123,7 @@ int main(int argc,char **argv)
         ("platform/measure_attitude",10,measure_attitude_cb); 
 
     ros::Publisher desire_thrust_total = nh.advertise<std_msgs::Float32MultiArray>
-        ("platform/desire_thrust_total",10,);
+        ("platform/desire_thrust_total",10);
 
     ros::Rate rate(100);
     while(ros::ok())

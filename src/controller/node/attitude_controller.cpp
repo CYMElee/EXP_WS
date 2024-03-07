@@ -114,7 +114,7 @@ int main(int argc,char **argv)
         ("platform/desire_attitude",10,desire_attitude_cb);
     ros::Subscriber measure_attitude = nh.subscribe<std_msgs::Float32MultiArray>
         ("platform/measure_attitude",10,measure_attitude_cb);
-    ros::Subscriber desire_angular_velocity = nh.subscribe<std_msgs::Float32MultiArray>
+    ros::Subscriber desire_omega = nh.subscribe<std_msgs::Float32MultiArray>
         ("platform/desire_omega",10,desire_omega_cb);
     ros::Subscriber measure_omega = nh.subscribe<std_msgs::Float32MultiArray>
         ("platform/measure_omega_cb",10,measure_omega_cb);  
