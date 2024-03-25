@@ -1,25 +1,29 @@
 #include "ros/ros.h"
 
-#include "geometry_msgs/TwistStamped" //attitude velocity msgs
-#include "geometry_msgs/PoseStamped" //attitude msgs
 #include "std_msgs/Float32MultiArray.h"
 
 #include "Eigen/Dense"
-#include "constant.h"
+
+
+#define Lw_sq 0.185*0.185
+#define IBXY 2*0.036*Lw_sq
+#define IBZ 4*0.036*Lw_sq
 
 using namespace Eigen ;
 
-Platform platform;
+float IBxy = IBXY;
+float IBz = IBZ;
 
 std_msgs::Float32MultiArray u2;
-
+std_msgs::Float32MultiArray er;
+Matrix<float, 3, 3> IB; //rotation inertia
 Matrix<float, 3, 3> R; //measure attitude
 Matrix<float, 3, 3> Rr; // desire attitude
-RowVector3f agvr;
-RowVector3f omega;
-RowVector3f m;
+Vector3f agvr;
+Vector3f omega;
+Vector3f m;
 
-RowVector3f h;
+Vector3f h;
 
 
 //attitude control gains
@@ -31,25 +35,14 @@ Matrix<float, 3, 3> E;
 Vector3f eR;
 Vector3f eW;
 
-KR << 17.0, 0 , 0 ,
-      0  , 15.0,0
-      0  , 0,  8.0;
-
-Kw << 6.0, 0 , 0 ,
-      0  , 5.5,0
-      0  , 0,  3.0;
-
-Ki << 5.5, 0 , 0 ,
-      0  , 4.5,0
-      0  , 0,  3;
+Quaternionf quaternion;
 
 
 void desire_attitude_cb(const std_msgs::Float32MultiArray::ConstPtr& msg)
 {
-    Eigen::AngleAxisd roll_angle(msg->data[0], Eigen::Vector3d::UnitX());
-    Eigen::AngleAxisd pitch_angle(msg->data[1], Eigen::Vector3d::UnitY());
-    Eigen::AngleAxisd yaw_angle(msg->data[2], Eigen::Vector3d::UnitZ());
-    Rr = (yaw_angle * pitch_angle * roll_angle).toRotationMatrix();
+    quaternion = AngleAxisf(msg->data[0], \
+    Vector3f(msg->data[1], msg->data[2], msg->data[3]));
+    Rr = quaternion.toRotationMatrix();
     
 
 
@@ -57,10 +50,9 @@ void desire_attitude_cb(const std_msgs::Float32MultiArray::ConstPtr& msg)
 
 void measure_attitude_cb(const std_msgs::Float32MultiArray::ConstPtr& msg)
 {
-    Eigen::AngleAxisd roll_angle(msg->data[0] , Eigen::Vector3d::UnitX());
-    Eigen::AngleAxisd pitch_angle(msg->data[1], Eigen::Vector3d::UnitY());
-    Eigen::AngleAxisd yaw_angle(msg->data[2], Eigen::Vector3d::UnitZ());
-    R = (yaw_angle * pitch_angle * roll_angle).toRotationMatrix();
+    quaternion = AngleAxisf(msg->data[0], \
+    Vector3f(msg->data[1], msg->data[2], msg->data[3]));
+    R = quaternion.toRotationMatrix();
 
 
 }
@@ -87,19 +79,23 @@ void measure_omega_cb(const std_msgs::Float32MultiArray::ConstPtr& msg)
 
 void attitude_er()
 {
-    E = 0.5*(Rr.transpose*R-R.transpose*Rr);
+    E = 0.5*(Rr.transpose()*R-R.transpose()*Rr);
     eR(0) = E(2,1);
     eR(1) = E(0,2);
     eR(2) = E(1,0);
-    eW = omega - R.transpose*(Rr*agvr);
+    er.data[0] = eR(0);
+    er.data[1] = eR(1);
+    er.data[2] = eR(2);
+
+    eW = omega -( R.transpose()*(Rr*agvr));
 
     //Physical dynamic to cancel
-    h = omega.cross(platform.IB*omega);
+    h = omega.cross(IB*omega);
 }
 
 void moment()
 {
-    m = h - platform.IB*(KR*eR + Kw*eW );
+    m = h - IB*(KR*eR + Kw*eW);
 
     u2.data[0] = m(0);
     u2.data[1] = m(1);
@@ -110,37 +106,52 @@ int main(int argc,char **argv)
 {
     ros::init(argc,argv,"attitude_controller");
     ros::NodeHandle nh;
-    ros::Subscriber desire_attitude = nh.subscribe<std_msgs::Float32MultiArray>
-        ("platform/desire_attitude",10,desire_attitude_cb);
-    ros::Subscriber measure_attitude = nh.subscribe<std_msgs::Float32MultiArray>
-        ("platform/measure_attitude",10,measure_attitude_cb);
-    ros::Subscriber desire_omega = nh.subscribe<std_msgs::Float32MultiArray>
-        ("platform/desire_omega",10,desire_omega_cb);
-    ros::Subscriber measure_omega = nh.subscribe<std_msgs::Float32MultiArray>
-        ("platform/measure_omega_cb",10,measure_omega_cb);  
-    ros::Publisher total_moment = nh.advertise<std_msgs::Float32MultiArray>
-        ("platform/desire_thrust_total",10,);                                              
+    u2.data.resize(3);
+    er.data.resize(3);
+    KR << 17, 0 , 0 ,
+          0 , 15, 0 ,
+          0 , 0 , 10;
 
+    Kw << 4  , 0 , 0 ,
+          0  , 5.5,0 ,
+          0  , 0,  2.2;
+
+    //Ki << 5.5, 0 , 0 ,
+    //      0  , 4.5,0 ,
+    //      0  , 0,  3;
+
+    IB << IBxy,  0  , 0,
+            0 , IBxy, 0,
+            0 ,  0  , IBz;
+
+    ros::Subscriber desire_attitude = nh.subscribe<std_msgs::Float32MultiArray>
+        ("/platform/desire_attitude",10,desire_attitude_cb);
+    ros::Subscriber measure_attitude = nh.subscribe<std_msgs::Float32MultiArray>
+        ("/platform/measure_attitude",10,measure_attitude_cb);
+    ros::Subscriber desire_omega = nh.subscribe<std_msgs::Float32MultiArray>
+        ("/platform/desire_omega",10,desire_omega_cb);
+    ros::Subscriber measure_omega = nh.subscribe<std_msgs::Float32MultiArray>
+        ("/platform/measure_omega",10,measure_omega_cb);  
+    ros::Publisher total_moment = nh.advertise<std_msgs::Float32MultiArray>
+        ("/platform/desire_total_moment",10); 
+    ros::Publisher attitude_error = nh.advertise<std_msgs::Float32MultiArray>
+        ("/platform/attitude_error",10); 
+
+    // give some initial                                          
+
+ 
     ros::Rate rate(100);
 
     while(ros::ok)
     {
-        ros::spinOnce();
         
         attitude_er();
-
-        h();
-
         moment();
 
         total_moment.publish(u2);
-
-
+        attitude_error.publish(er);
+        ros::spinOnce();
         rate.sleep();
     }
-
-
-
-
     return 0;
 }

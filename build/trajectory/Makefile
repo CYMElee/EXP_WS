@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lee/workspace/ROS_WS/exp_ws/src
+CMAKE_SOURCE_DIR = /home/lee/workspace/ROS_WS/ex_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lee/workspace/ROS_WS/exp_ws/build
+CMAKE_BINARY_DIR = /home/lee/workspace/ROS_WS/ex_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/lee/workspace/ROS_WS/exp_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ROS_WS/exp_ws/build/CMakeFiles /home/lee/workspace/ROS_WS/exp_ws/build/trajectory/CMakeFiles/progress.marks
-	cd /home/lee/workspace/ROS_WS/exp_ws/build && $(MAKE) -f CMakeFiles/Makefile2 trajectory/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ROS_WS/exp_ws/build/CMakeFiles 0
+	cd /home/lee/workspace/ROS_WS/ex_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ROS_WS/ex_ws/build/CMakeFiles /home/lee/workspace/ROS_WS/ex_ws/build/trajectory/CMakeFiles/progress.marks
+	cd /home/lee/workspace/ROS_WS/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 trajectory/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ROS_WS/ex_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lee/workspace/ROS_WS/exp_ws/build && $(MAKE) -f CMakeFiles/Makefile2 trajectory/clean
+	cd /home/lee/workspace/ROS_WS/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 trajectory/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,60 +154,18 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lee/workspace/ROS_WS/exp_ws/build && $(MAKE) -f CMakeFiles/Makefile2 trajectory/preinstall
+	cd /home/lee/workspace/ROS_WS/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 trajectory/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lee/workspace/ROS_WS/exp_ws/build && $(MAKE) -f CMakeFiles/Makefile2 trajectory/preinstall
+	cd /home/lee/workspace/ROS_WS/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 trajectory/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/lee/workspace/ROS_WS/exp_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lee/workspace/ROS_WS/ex_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
-
-# Convenience name for target.
-trajectory/CMakeFiles/trajectory.dir/rule:
-	cd /home/lee/workspace/ROS_WS/exp_ws/build && $(MAKE) -f CMakeFiles/Makefile2 trajectory/CMakeFiles/trajectory.dir/rule
-.PHONY : trajectory/CMakeFiles/trajectory.dir/rule
-
-# Convenience name for target.
-trajectory: trajectory/CMakeFiles/trajectory.dir/rule
-
-.PHONY : trajectory
-
-# fast build rule for target.
-trajectory/fast:
-	cd /home/lee/workspace/ROS_WS/exp_ws/build && $(MAKE) -f trajectory/CMakeFiles/trajectory.dir/build.make trajectory/CMakeFiles/trajectory.dir/build
-.PHONY : trajectory/fast
-
-node/trajectory.o: node/trajectory.cpp.o
-
-.PHONY : node/trajectory.o
-
-# target to build an object file
-node/trajectory.cpp.o:
-	cd /home/lee/workspace/ROS_WS/exp_ws/build && $(MAKE) -f trajectory/CMakeFiles/trajectory.dir/build.make trajectory/CMakeFiles/trajectory.dir/node/trajectory.cpp.o
-.PHONY : node/trajectory.cpp.o
-
-node/trajectory.i: node/trajectory.cpp.i
-
-.PHONY : node/trajectory.i
-
-# target to preprocess a source file
-node/trajectory.cpp.i:
-	cd /home/lee/workspace/ROS_WS/exp_ws/build && $(MAKE) -f trajectory/CMakeFiles/trajectory.dir/build.make trajectory/CMakeFiles/trajectory.dir/node/trajectory.cpp.i
-.PHONY : node/trajectory.cpp.i
-
-node/trajectory.s: node/trajectory.cpp.s
-
-.PHONY : node/trajectory.s
-
-# target to generate assembly for a file
-node/trajectory.cpp.s:
-	cd /home/lee/workspace/ROS_WS/exp_ws/build && $(MAKE) -f trajectory/CMakeFiles/trajectory.dir/build.make trajectory/CMakeFiles/trajectory.dir/node/trajectory.cpp.s
-.PHONY : node/trajectory.cpp.s
 
 # Help Target
 help:
@@ -222,10 +180,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
-	@echo "... trajectory"
-	@echo "... node/trajectory.o"
-	@echo "... node/trajectory.i"
-	@echo "... node/trajectory.s"
 .PHONY : help
 
 
@@ -237,6 +191,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/lee/workspace/ROS_WS/exp_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lee/workspace/ROS_WS/ex_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

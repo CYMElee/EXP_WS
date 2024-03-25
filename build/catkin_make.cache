@@ -1,2 +1,2 @@
-controller:trajectory
--DCMAKE_BUILD_TYPE=RelWithDebInfo -DCATKIN_DEVEL_PREFIX=/home/lee/workspace/ROS_WS/exp_ws/devel -DCMAKE_INSTALL_PREFIX=/home/lee/workspace/ROS_WS/exp_ws/install -G Unix Makefiles
+controller:ground:sensor
+-DCMAKE_BUILD_TYPE=RelWithDebInfo -DCATKIN_DEVEL_PREFIX=/home/lee/workspace/ROS_WS/ex_ws/devel -DCMAKE_INSTALL_PREFIX=/home/lee/workspace/ROS_WS/ex_ws/install -G Unix Makefiles

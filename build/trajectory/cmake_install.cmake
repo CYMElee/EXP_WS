@@ -1,8 +1,8 @@
-# Install script for directory: /home/lee/workspace/ROS_WS/exp_ws/src/trajectory
+# Install script for directory: /home/lee/workspace/ROS_WS/ex_ws/src/trajectory
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/lee/workspace/ROS_WS/exp_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/lee/workspace/ROS_WS/ex_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/lee/workspace/ROS_WS/exp_ws/build/trajectory/catkin_generated/installspace/trajectory.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/lee/workspace/ROS_WS/ex_ws/build/trajectory/catkin_generated/installspace/trajectory.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/trajectory/cmake" TYPE FILE FILES
-    "/home/lee/workspace/ROS_WS/exp_ws/build/trajectory/catkin_generated/installspace/trajectoryConfig.cmake"
-    "/home/lee/workspace/ROS_WS/exp_ws/build/trajectory/catkin_generated/installspace/trajectoryConfig-version.cmake"
+    "/home/lee/workspace/ROS_WS/ex_ws/build/trajectory/catkin_generated/installspace/trajectoryConfig.cmake"
+    "/home/lee/workspace/ROS_WS/ex_ws/build/trajectory/catkin_generated/installspace/trajectoryConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/trajectory" TYPE FILE FILES "/home/lee/workspace/ROS_WS/exp_ws/src/trajectory/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/trajectory" TYPE FILE FILES "/home/lee/workspace/ROS_WS/ex_ws/src/trajectory/package.xml")
 endif()
 

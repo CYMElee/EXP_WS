@@ -1,0 +1,5 @@
+<launch> 
+    <node name="fly_mode" pkg="ex_ground" type="fly_mode" output="screen"></node>
+    <node name="trajectory_generator" pkg="ex_ground" type="trajectory_generator" output="screen">
+    </node>
+</launch>
