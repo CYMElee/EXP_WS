@@ -1,9 +1,8 @@
 #include "ros/ros.h"
 #include "std_msgs/Float32MultiArray.h"
-
-#include <tf2/LinearMath/Matrix3x3.h>
+#include "tf2/LinearMath/Matrix3x3.h"
 #include "Eigen/Dense"
-#include <eigen_conversions/eigen_msg.h>
+#include "eigen_conversions/eigen_msg.h"
 
 #define G 9.81 //greavity
 #define  M_main 0.012 //kg
@@ -63,20 +62,11 @@ void measure_velocity_cb(const std_msgs::Float32MultiArray::ConstPtr& msg)
     p_dot(2) = msg->data[2];
 }
 
-//void measure_attitude_cb(const std_msgs::Float32MultiArray::ConstPtr& msg)
-//{
-  //  AngleAxisf roll_angle(msg ->data[0], Vector3f::UnitX());
-  //  AngleAxisf pitch_angle(msg ->data[1], Vector3f::UnitY());
- //   AngleAxisf yaw_angle(msg ->data[2], Vector3f::UnitZ());
- //   R = (yaw_angle * pitch_angle * roll_angle).toRotationMatrix();
-    
-//}
 
 
 void measure_attitude_cb(const std_msgs::Float32MultiArray::ConstPtr& msg)
 {
    
-   //quaternion((msg->data[0]),(msg->data[1]),(msg->data[2]),(msg->data[3]));
   quaternion = AngleAxisf(msg->data[0],Vector3f(msg->data[1], msg->data[2], msg->data[3]));
 
    R = quaternion.toRotationMatrix();
@@ -169,10 +159,7 @@ pd_dot(2) = 1;
         total_thrust();
 
         desire_thrust_total.publish(t);
-   //ROS_INFO("THE ROTATION MATRIX:\n%f,%f,%f\n%f,%f,%f\n%f,%f,%f",
-  //  R(0,0), R(0,1), R(0,2),
-  //  R(1,0), R(1,1), R(1,2),
-  //  R(2,0), R(2,1), R(2,2));
+
         ros::spinOnce();
         rate.sleep();
 

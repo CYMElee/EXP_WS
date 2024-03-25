@@ -1100,7 +1100,7 @@ platform: cmake_check_build_system
 
 # fast build rule for target.
 platform/fast:
-	$(MAKE) -f sensor/CMakeFiles/platform.dir/build.make sensor/CMakeFiles/platform.dir/build
+	$(MAKE) -f optitrack/CMakeFiles/platform.dir/build.make optitrack/CMakeFiles/platform.dir/build
 .PHONY : platform/fast
 
 #=============================================================================
@@ -1113,7 +1113,7 @@ optitrack: cmake_check_build_system
 
 # fast build rule for target.
 optitrack/fast:
-	$(MAKE) -f sensor/CMakeFiles/optitrack.dir/build.make sensor/CMakeFiles/optitrack.dir/build
+	$(MAKE) -f optitrack/CMakeFiles/optitrack.dir/build.make optitrack/CMakeFiles/optitrack.dir/build
 .PHONY : optitrack/fast
 
 # Help Target

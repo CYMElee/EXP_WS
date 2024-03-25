@@ -503,6 +503,12 @@ message_generation_DIR:PATH=/opt/ros/noetic/share/message_generation/cmake
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/noetic/share/message_runtime/cmake
 
+//Value Computed by CMake
+optitrack_BINARY_DIR:STATIC=/home/lee/workspace/ROS_WS/ex_ws/build/optitrack
+
+//Value Computed by CMake
+optitrack_SOURCE_DIR:STATIC=/home/lee/workspace/ROS_WS/ex_ws/src/optitrack
+
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/noetic/share/rosconsole/cmake
 

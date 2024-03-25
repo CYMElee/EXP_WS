@@ -56,7 +56,7 @@ CMAKE_BINARY_DIR = /home/lee/workspace/ROS_WS/ex_ws/build
 all: gtest/all
 all: controller/all
 all: ground/all
-all: sensor/all
+all: optitrack/all
 
 .PHONY : all
 
@@ -64,7 +64,7 @@ all: sensor/all
 preinstall: gtest/preinstall
 preinstall: controller/preinstall
 preinstall: ground/preinstall
-preinstall: sensor/preinstall
+preinstall: optitrack/preinstall
 
 .PHONY : preinstall
 
@@ -77,7 +77,7 @@ clean: CMakeFiles/download_extra_data.dir/clean
 clean: gtest/clean
 clean: controller/clean
 clean: ground/clean
-clean: sensor/clean
+clean: optitrack/clean
 
 .PHONY : clean
 
@@ -240,24 +240,24 @@ gtest/googletest/clean: gtest/googletest/CMakeFiles/gtest.dir/clean
 .PHONY : gtest/googletest/clean
 
 #=============================================================================
-# Directory level rules for directory sensor
+# Directory level rules for directory optitrack
 
 # Recursive "all" directory target.
-sensor/all: sensor/CMakeFiles/platform.dir/all
-sensor/all: sensor/CMakeFiles/optitrack.dir/all
+optitrack/all: optitrack/CMakeFiles/platform.dir/all
+optitrack/all: optitrack/CMakeFiles/optitrack.dir/all
 
-.PHONY : sensor/all
+.PHONY : optitrack/all
 
 # Recursive "preinstall" directory target.
-sensor/preinstall:
+optitrack/preinstall:
 
-.PHONY : sensor/preinstall
+.PHONY : optitrack/preinstall
 
 # Recursive "clean" directory target.
-sensor/clean: sensor/CMakeFiles/platform.dir/clean
-sensor/clean: sensor/CMakeFiles/optitrack.dir/clean
+optitrack/clean: optitrack/CMakeFiles/platform.dir/clean
+optitrack/clean: optitrack/CMakeFiles/optitrack.dir/clean
 
-.PHONY : sensor/clean
+.PHONY : optitrack/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/doxygen.dir
@@ -398,8 +398,8 @@ CMakeFiles/download_extra_data.dir/clean:
 # Target rules for target gtest/googlemock/CMakeFiles/gmock_main.dir
 
 # All Build rule for target.
-gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googlemock/CMakeFiles/gmock.dir/all
+gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ROS_WS/ex_ws/build/CMakeFiles --progress-num=8,9 "Built target gmock_main"
@@ -2178,58 +2178,58 @@ ground/CMakeFiles/fly_mode.dir/clean:
 .PHONY : ground/CMakeFiles/fly_mode.dir/clean
 
 #=============================================================================
-# Target rules for target sensor/CMakeFiles/platform.dir
+# Target rules for target optitrack/CMakeFiles/platform.dir
 
 # All Build rule for target.
-sensor/CMakeFiles/platform.dir/all:
-	$(MAKE) -f sensor/CMakeFiles/platform.dir/build.make sensor/CMakeFiles/platform.dir/depend
-	$(MAKE) -f sensor/CMakeFiles/platform.dir/build.make sensor/CMakeFiles/platform.dir/build
+optitrack/CMakeFiles/platform.dir/all:
+	$(MAKE) -f optitrack/CMakeFiles/platform.dir/build.make optitrack/CMakeFiles/platform.dir/depend
+	$(MAKE) -f optitrack/CMakeFiles/platform.dir/build.make optitrack/CMakeFiles/platform.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ROS_WS/ex_ws/build/CMakeFiles --progress-num=20,21 "Built target platform"
-.PHONY : sensor/CMakeFiles/platform.dir/all
+.PHONY : optitrack/CMakeFiles/platform.dir/all
 
 # Build rule for subdir invocation for target.
-sensor/CMakeFiles/platform.dir/rule: cmake_check_build_system
+optitrack/CMakeFiles/platform.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ROS_WS/ex_ws/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 sensor/CMakeFiles/platform.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 optitrack/CMakeFiles/platform.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ROS_WS/ex_ws/build/CMakeFiles 0
-.PHONY : sensor/CMakeFiles/platform.dir/rule
+.PHONY : optitrack/CMakeFiles/platform.dir/rule
 
 # Convenience name for target.
-platform: sensor/CMakeFiles/platform.dir/rule
+platform: optitrack/CMakeFiles/platform.dir/rule
 
 .PHONY : platform
 
 # clean rule for target.
-sensor/CMakeFiles/platform.dir/clean:
-	$(MAKE) -f sensor/CMakeFiles/platform.dir/build.make sensor/CMakeFiles/platform.dir/clean
-.PHONY : sensor/CMakeFiles/platform.dir/clean
+optitrack/CMakeFiles/platform.dir/clean:
+	$(MAKE) -f optitrack/CMakeFiles/platform.dir/build.make optitrack/CMakeFiles/platform.dir/clean
+.PHONY : optitrack/CMakeFiles/platform.dir/clean
 
 #=============================================================================
-# Target rules for target sensor/CMakeFiles/optitrack.dir
+# Target rules for target optitrack/CMakeFiles/optitrack.dir
 
 # All Build rule for target.
-sensor/CMakeFiles/optitrack.dir/all:
-	$(MAKE) -f sensor/CMakeFiles/optitrack.dir/build.make sensor/CMakeFiles/optitrack.dir/depend
-	$(MAKE) -f sensor/CMakeFiles/optitrack.dir/build.make sensor/CMakeFiles/optitrack.dir/build
+optitrack/CMakeFiles/optitrack.dir/all:
+	$(MAKE) -f optitrack/CMakeFiles/optitrack.dir/build.make optitrack/CMakeFiles/optitrack.dir/depend
+	$(MAKE) -f optitrack/CMakeFiles/optitrack.dir/build.make optitrack/CMakeFiles/optitrack.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ROS_WS/ex_ws/build/CMakeFiles --progress-num=18,19 "Built target optitrack"
-.PHONY : sensor/CMakeFiles/optitrack.dir/all
+.PHONY : optitrack/CMakeFiles/optitrack.dir/all
 
 # Build rule for subdir invocation for target.
-sensor/CMakeFiles/optitrack.dir/rule: cmake_check_build_system
+optitrack/CMakeFiles/optitrack.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ROS_WS/ex_ws/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 sensor/CMakeFiles/optitrack.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 optitrack/CMakeFiles/optitrack.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ROS_WS/ex_ws/build/CMakeFiles 0
-.PHONY : sensor/CMakeFiles/optitrack.dir/rule
+.PHONY : optitrack/CMakeFiles/optitrack.dir/rule
 
 # Convenience name for target.
-optitrack: sensor/CMakeFiles/optitrack.dir/rule
+optitrack: optitrack/CMakeFiles/optitrack.dir/rule
 
 .PHONY : optitrack
 
 # clean rule for target.
-sensor/CMakeFiles/optitrack.dir/clean:
-	$(MAKE) -f sensor/CMakeFiles/optitrack.dir/build.make sensor/CMakeFiles/optitrack.dir/clean
-.PHONY : sensor/CMakeFiles/optitrack.dir/clean
+optitrack/CMakeFiles/optitrack.dir/clean:
+	$(MAKE) -f optitrack/CMakeFiles/optitrack.dir/build.make optitrack/CMakeFiles/optitrack.dir/clean
+.PHONY : optitrack/CMakeFiles/optitrack.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

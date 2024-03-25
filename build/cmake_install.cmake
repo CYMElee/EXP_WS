@@ -133,7 +133,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/lee/workspace/ROS_WS/ex_ws/build/gtest/cmake_install.cmake")
   include("/home/lee/workspace/ROS_WS/ex_ws/build/controller/cmake_install.cmake")
   include("/home/lee/workspace/ROS_WS/ex_ws/build/ground/cmake_install.cmake")
-  include("/home/lee/workspace/ROS_WS/ex_ws/build/sensor/cmake_install.cmake")
+  include("/home/lee/workspace/ROS_WS/ex_ws/build/optitrack/cmake_install.cmake")
 
 endif()
 

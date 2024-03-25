@@ -42,17 +42,17 @@ int main(int argc,char **argv)
     phi.data.resize(3);
 
     ros::Subscriber trajectory_mode = nh.subscribe<std_msgs::Int16>
-        ("system/trajectory",100,trajectory_mode_cb); 
+        ("/system/trajectory",100,trajectory_mode_cb); 
     ros::Publisher desire_position = nh.advertise<std_msgs::Float32MultiArray>
-        ("platform/desire_position",10);
+        ("/platform/desire_position",10);
     ros::Publisher desire_velocity = nh.advertise<std_msgs::Float32MultiArray>
-        ("platform/desire_velocity",10);
+        ("/platform/desire_velocity",10);
     ros::Publisher desire_attitude = nh.advertise<std_msgs::Float32MultiArray>
-        ("platform/desire_attitude",10);
+        ("/platform/desire_attitude",10);
     ros::Publisher desire_omega = nh.advertise<std_msgs::Float32MultiArray>
-        ("platform/desire_omega",10);
+        ("/platform/desire_omega",10);
     ros::Publisher desire_phi = nh.advertise<std_msgs::Float32MultiArray>
-        ("gripper/phi_desire",10);
+        ("/gripper/phi_desire",10);
 
     ros::Rate rate(100);
 

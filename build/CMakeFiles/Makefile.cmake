@@ -17,15 +17,15 @@ set(CMAKE_MAKEFILE_DEPENDS
   "controller/catkin_generated/package.cmake"
   "ground/catkin_generated/ordered_paths.cmake"
   "ground/catkin_generated/package.cmake"
-  "sensor/catkin_generated/ordered_paths.cmake"
-  "sensor/catkin_generated/package.cmake"
+  "optitrack/catkin_generated/ordered_paths.cmake"
+  "optitrack/catkin_generated/package.cmake"
   "/home/lee/workspace/ROS_WS/ex_ws/src/CMakeLists.txt"
   "/home/lee/workspace/ROS_WS/ex_ws/src/controller/CMakeLists.txt"
   "/home/lee/workspace/ROS_WS/ex_ws/src/controller/package.xml"
   "/home/lee/workspace/ROS_WS/ex_ws/src/ground/CMakeLists.txt"
   "/home/lee/workspace/ROS_WS/ex_ws/src/ground/package.xml"
-  "/home/lee/workspace/ROS_WS/ex_ws/src/sensor/CMakeLists.txt"
-  "/home/lee/workspace/ROS_WS/ex_ws/src/sensor/package.xml"
+  "/home/lee/workspace/ROS_WS/ex_ws/src/optitrack/CMakeLists.txt"
+  "/home/lee/workspace/ROS_WS/ex_ws/src/optitrack/package.xml"
   "/opt/ros/noetic/share/actionlib/cmake/actionlib-msg-extras.cmake"
   "/opt/ros/noetic/share/actionlib/cmake/actionlibConfig-version.cmake"
   "/opt/ros/noetic/share/actionlib/cmake/actionlibConfig.cmake"
@@ -246,7 +246,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "gtest/googletest/CMakeFiles/CMakeDirectoryInformation.cmake"
   "controller/CMakeFiles/CMakeDirectoryInformation.cmake"
   "ground/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "sensor/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "optitrack/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -322,6 +322,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "controller/CMakeFiles/mapper.dir/DependInfo.cmake"
   "ground/CMakeFiles/trajectory_generator.dir/DependInfo.cmake"
   "ground/CMakeFiles/fly_mode.dir/DependInfo.cmake"
-  "sensor/CMakeFiles/platform.dir/DependInfo.cmake"
-  "sensor/CMakeFiles/optitrack.dir/DependInfo.cmake"
+  "optitrack/CMakeFiles/platform.dir/DependInfo.cmake"
+  "optitrack/CMakeFiles/optitrack.dir/DependInfo.cmake"
   )
