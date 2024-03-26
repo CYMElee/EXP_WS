@@ -136,7 +136,6 @@ int main(int argc,char **argv)
                         takeoff_signal.data = 1;
                         MAV_takeoff.publish(takeoff_signal);
                     
-                
                 }
                 break;
             case 'B':
@@ -158,7 +157,6 @@ int main(int argc,char **argv)
                         ROS_WARN("READY_TAKEOFF!!!");
                         takeoff_signal.data = 1;
                         MAV_takeoff.publish(takeoff_signal);
-
 
                 }
                 break;

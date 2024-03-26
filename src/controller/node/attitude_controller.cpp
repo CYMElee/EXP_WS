@@ -1,7 +1,5 @@
 #include "ros/ros.h"
-
 #include "std_msgs/Float32MultiArray.h"
-
 #include "Eigen/Dense"
 
 
@@ -22,7 +20,6 @@ Matrix<float, 3, 3> Rr; // desire attitude
 Vector3f agvr;
 Vector3f omega;
 Vector3f m;
-
 Vector3f h;
 
 
@@ -116,9 +113,6 @@ int main(int argc,char **argv)
           0  , 5.5,0 ,
           0  , 0,  2.2;
 
-    //Ki << 5.5, 0 , 0 ,
-    //      0  , 4.5,0 ,
-    //      0  , 0,  3;
 
     IB << IBxy,  0  , 0,
             0 , IBxy, 0,
@@ -136,9 +130,6 @@ int main(int argc,char **argv)
         ("/platform/desire_total_moment",10); 
     ros::Publisher attitude_error = nh.advertise<std_msgs::Float32MultiArray>
         ("/platform/attitude_error",10); 
-
-    // give some initial                                          
-
  
     ros::Rate rate(100);
 

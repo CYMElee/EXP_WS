@@ -114,18 +114,7 @@ Ki << 2.7, 0 , 0 ,
       0  , 0,  2;
 z<< 0,0,1;
 
-t.data[0] = 1;
-t.data[1] = 1;
-t.data[2] = 1;
-p(0) = 1;
-p(1) = 1;
-p(2) = 1;
-p_dot(0) = 1;
-p_dot(1) = 1;
-p_dot(2) = 1;
-pd_dot(0) = 1;
-pd_dot(1) = 1;
-pd_dot(2) = 1;
+
 
 
     ros::Subscriber desire_position = nh.subscribe<std_msgs::Float32MultiArray>
@@ -145,7 +134,6 @@ pd_dot(2) = 1;
 
     ros::Publisher desire_thrust_total = nh.advertise<std_msgs::Float32MultiArray>
         ("/platform/desire_thrust_total",10);
-   // ros::topic::waitForMessage<std_msgs::Float32MultiArray>("/platform/measure_position");
    t.data[0] = 0;
    t.data[1] = 0;
    t.data[2] = 1;
