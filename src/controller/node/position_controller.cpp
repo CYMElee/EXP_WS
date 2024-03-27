@@ -114,9 +114,6 @@ Ki << 2.7, 0 , 0 ,
       0  , 0,  2;
 z<< 0,0,1;
 
-
-
-
     ros::Subscriber desire_position = nh.subscribe<std_msgs::Float32MultiArray>
         ("/platform/desire_position",10,desire_position_cb); 
 
@@ -134,18 +131,15 @@ z<< 0,0,1;
 
     ros::Publisher desire_thrust_total = nh.advertise<std_msgs::Float32MultiArray>
         ("/platform/desire_thrust_total",10);
-   t.data[0] = 0;
-   t.data[1] = 0;
-   t.data[2] = 1;
+
+    ros::topic::waitForMessage<std_msgs::Float32MultiArray>("/platform/desire_position");
+    
     ROS_INFO("RECEIVE POSITION");
     ros::Rate rate(100);
     while(ros::ok())
     {
         
-        
-        
         total_thrust();
-
         desire_thrust_total.publish(t);
 
         ros::spinOnce();

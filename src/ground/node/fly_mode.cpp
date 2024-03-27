@@ -17,16 +17,11 @@
 
 
 mavros_msgs::State mav1_state, mav2_state ,mav3_state, mav4_state;
-
-      
+  
 std_msgs::Int16 trajectory;   //-1 = NON , 0 = GUIDE & ARMING , 2 = LAND  THIS IS A TRIGGER FOR NOD ,NOT ENTER!!!
-
 std_msgs::Bool arm_signel; // 0 means disarm & land,1= arm & guide
 std_msgs::Bool kill;
-
 std_msgs::Bool takeoff_signal;
-
-int c_prev = -1;
 
 enum {
     HOVERING_GRIPPER_STATIC,
@@ -68,8 +63,6 @@ void state_cb4(const mavros_msgs::State::ConstPtr& msg)
 }
 
 
-
-
 int arm() {
     if (mav1_state.armed && mav2_state.armed  && 
         mav3_state.armed && mav4_state.armed) {
@@ -91,18 +84,17 @@ int main(int argc,char **argv)
     kill.data = 1;
 
     ros::Subscriber MAV1 = nh.subscribe<mavros_msgs::State>
-        ("/uav0/mavros/state",10,state_cb1);
+        ("/MAV1/mavros/state",10,state_cb1);
     ros::Subscriber MAV2 = nh.subscribe<mavros_msgs::State>
-        ("/uav1/mavros/state",10,state_cb2);
+        ("/MAV2/mavros/state",10,state_cb2);
     ros::Subscriber MAV3 = nh.subscribe<mavros_msgs::State>
-        ("/uav2/mavros/state",10,state_cb3);
+        ("/MAV3/mavros/state",10,state_cb3);
     ros::Subscriber MAV4 = nh.subscribe<mavros_msgs::State>
-        ("/uav3/mavros/state",10,state_cb4);
+        ("/MAV4/mavros/state",10,state_cb4);
     ros::Publisher system_trajectory = nh.advertise<std_msgs::Int16>("/system/trajectory",10);
     ros::Publisher system_kill = nh.advertise<std_msgs::Bool>("/system/kill",10);
 
     ros::Publisher MAV_takeoff = nh.advertise<std_msgs::Bool>("/MAV/takeoff",10);
-
 
     ROS_INFO("\n(0):hovering_gripper_stop\n (1):hovering_gripper_scissors\n (2):land");
     

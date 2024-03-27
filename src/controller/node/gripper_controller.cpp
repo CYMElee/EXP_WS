@@ -62,7 +62,7 @@ int main(int argc,char **argv)
 
     ros::Publisher gripper_moment = nh.advertise<std_msgs::Float32>
         ("/gripper/desire_moment",10);
-    //ros::topic::waitForMessage<std_msgs::Float32MultiArray>("/gripper/phi_desire");
+    ros::topic::waitForMessage<std_msgs::Float32MultiArray>("/gripper/phi_desire");
     ros::Rate rate(100);
     while(ros::ok())
     {

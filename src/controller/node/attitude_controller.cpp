@@ -132,7 +132,7 @@ int main(int argc,char **argv)
         ("/platform/attitude_error",10); 
  
     ros::Rate rate(100);
-
+    ros::topic::waitForMessage<std_msgs::Float32MultiArray>("/platform/desire_attitude");
     while(ros::ok)
     {
         

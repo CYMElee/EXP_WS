@@ -16,6 +16,9 @@
 
 using namespace Eigen;
 using namespace std;
+
+Quaterniond q;
+
       
 std_msgs::Float64MultiArray fd; // desire forc for each UAV
 
@@ -46,10 +49,17 @@ void MAV::Thrust(std_msgs::Float64MultiArray fd,int i)
     fd_e(2,1) = fd.data[i+2];
     
     T.data[0] = fd_e.norm(); // net thrust(PWM 0~1) you should imply thrust curve here
-    T.data[1] = atan2(-fd_e(1,1),fd_e(2,1)); //alpha
-    T.data[2] = asin(fd_e(0,1)/T.data[0]);  //beta
+    q = AngleAxisd(0, Eigen::Vector3d::UnitZ()) *
+        AngleAxisd(asin(fd_e(0,1)/T.data[0]), Eigen::Vector3d::UnitY()) *
+        AngleAxisd(atan2(-fd_e(1,1),fd_e(2,1)), Eigen::Vector3d::UnitX());
+    T.data[1] = q.w();
+    T.data[2] = q.x();
+    T.data[3] = q.y();
+    T.data[4] = q.z();
+
     MAV_cmd.publish(T);
 }
+
 void thrust_cb(const std_msgs::Float64MultiArray::ConstPtr &msg)
 {
     fd = *msg;
@@ -68,7 +78,9 @@ int main(int argc,char **argv)
                   MAV(nh, "/MAV2/cmd"),
                   MAV(nh, "/MAV3/cmd"),
                   MAV(nh, "/MAV4/cmd")};
+                  
     ros::Rate rate(100);
+    ros::topic::waitForMessage<std_msgs::Float64MultiArray>("/gripper/desire_thrust_each");
 
     while(ros::ok())
     {

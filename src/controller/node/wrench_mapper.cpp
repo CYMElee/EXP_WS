@@ -44,12 +44,6 @@ RowVector3f W4;
 
 float Lw = lw;
 
-
-
-
-
-
-
 void desire_thrust_total_cb(const std_msgs::Float32MultiArray::ConstPtr& msg)
 {
     u1 = *msg;
@@ -164,7 +158,7 @@ int main(int argc,char **argv)
 
 
 
-
+    ros::topic::waitForMessage<std_msgs::Float32MultiArray>("/gripper/desire_thrust_total");
 
     ros::Rate rate(100);
     while(ros::ok())
