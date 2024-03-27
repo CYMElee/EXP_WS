@@ -42,10 +42,6 @@ mavros_msgs/State.h
 Eigen/Dense
 /home/lee/workspace/ROS_WS/ex_ws/src/ground/node/Eigen/Dense
 
-/home/lee/workspace/ROS_WS/ex_ws/src/ground/src/getch.cpp
-ex_ground/getch.h
-/home/lee/workspace/ROS_WS/ex_ws/src/ground/src/ex_ground/getch.h
-
 /opt/ros/noetic/include/geometry_msgs/Point.h
 string
 -

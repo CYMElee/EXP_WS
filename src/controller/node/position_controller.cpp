@@ -101,18 +101,18 @@ int main(int argc,char **argv)
     t.data.resize(3);
 
     //control gain
-Kp << 4.5, 0 , 0 ,
-      0  , 4.5,0 ,
-      0  , 0,  5;
+    Kp << 4.5,0 , 0 ,
+          0  ,4.5,0 ,
+          0  ,0  ,5;
 
-Kv << 2  , 0  ,0 ,
-      0  , 2  ,0,
-      0  , 0  ,2.5;
+    Kv << 2  , 0  ,0 ,
+          0  , 2  ,0,
+          0  , 0  ,2.5;
 
-Ki << 2.7, 0 , 0 ,
-      0  , 2.5,0,
-      0  , 0,  2;
-z<< 0,0,1;
+    Ki << 2.7, 0 , 0 ,
+          0  , 2.5,0,
+          0  , 0,  2;
+    z<< 0,0,1;
 
     ros::Subscriber desire_position = nh.subscribe<std_msgs::Float32MultiArray>
         ("/platform/desire_position",10,desire_position_cb); 

@@ -26,7 +26,7 @@ class MAV{
     private:
         std_msgs::Float64MultiArray T; //T[0] is net thrust T[1] is apha T[2] is beta
         Vector3f fd_e;
-        ros::Publisher MAV_cmd ;#include "std_msgs/Bool.h"
+        ros::Publisher MAV_cmd ;
 
     public:
         MAV(ros::NodeHandle nh, string Topic);
