@@ -14,7 +14,7 @@ std_msgs::Float32MultiArray Rr;
 std_msgs::Float32MultiArray agvr;
 std_msgs::Float32MultiArray phi;
 std_msgs::Int16 traj;
-int c;
+
 float t = 0;
 enum {
     HOVERING_GRIPPER_STATIC,
@@ -26,7 +26,7 @@ enum {
 void trajectory_mode_cb(const std_msgs::Int16::ConstPtr& msg)
 {
     traj = *msg;
-    c = traj.data;
+    
 }
 
 
@@ -42,7 +42,7 @@ int main(int argc,char **argv)
     phi.data.resize(3);
 
     ros::Subscriber trajectory_mode = nh.subscribe<std_msgs::Int16>
-        ("/system/trajectory",100,trajectory_mode_cb); 
+        ("/system/trajectory",10,trajectory_mode_cb); 
     ros::Publisher desire_position = nh.advertise<std_msgs::Float32MultiArray>
         ("/platform/desire_position",10);
     ros::Publisher desire_velocity = nh.advertise<std_msgs::Float32MultiArray>

@@ -81,7 +81,15 @@ int main(int argc,char **argv)
                   
     ros::Rate rate(100);
     ros::topic::waitForMessage<std_msgs::Float64MultiArray>("/gripper/desire_thrust_each");
+    ros::Time data_burning = ros::Time::now();
 
+    //burning useless data
+    while(ros::ok() && ros::Time::now() - data_burning < ros::Duration(1))
+    {
+
+        ros::spinOnce();
+        rate.sleep();
+    }
     while(ros::ok())
     {
         mav[0].Thrust(fd,0);
@@ -92,9 +100,5 @@ int main(int argc,char **argv)
         ros::spinOnce();
         rate.sleep();
     }
-
-
-
-
     return 0;
 }
