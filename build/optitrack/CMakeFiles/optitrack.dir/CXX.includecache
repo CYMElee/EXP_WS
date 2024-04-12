@@ -6,21 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/home/lee/workspace/ROS_WS/ex_ws/src/optitrack/node/optitrack.cpp
+/home/lee/workspace/ROS_ws/ex_ws/src/optitrack/node/optitrack.cpp
 ros/ros.h
-/home/lee/workspace/ROS_WS/ex_ws/src/optitrack/node/ros/ros.h
+/home/lee/workspace/ROS_ws/ex_ws/src/optitrack/node/ros/ros.h
 std_msgs/Float32MultiArray.h
-/home/lee/workspace/ROS_WS/ex_ws/src/optitrack/node/std_msgs/Float32MultiArray.h
+/home/lee/workspace/ROS_ws/ex_ws/src/optitrack/node/std_msgs/Float32MultiArray.h
 geometry_msgs/PoseStamped.h
-/home/lee/workspace/ROS_WS/ex_ws/src/optitrack/node/geometry_msgs/PoseStamped.h
+/home/lee/workspace/ROS_ws/ex_ws/src/optitrack/node/geometry_msgs/PoseStamped.h
 tf2/LinearMath/Quaternion.h
-/home/lee/workspace/ROS_WS/ex_ws/src/optitrack/node/tf2/LinearMath/Quaternion.h
+/home/lee/workspace/ROS_ws/ex_ws/src/optitrack/node/tf2/LinearMath/Quaternion.h
 tf2_geometry_msgs/tf2_geometry_msgs.h
-/home/lee/workspace/ROS_WS/ex_ws/src/optitrack/node/tf2_geometry_msgs/tf2_geometry_msgs.h
+/home/lee/workspace/ROS_ws/ex_ws/src/optitrack/node/tf2_geometry_msgs/tf2_geometry_msgs.h
 Eigen/Dense
-/home/lee/workspace/ROS_WS/ex_ws/src/optitrack/node/Eigen/Dense
+/home/lee/workspace/ROS_ws/ex_ws/src/optitrack/node/Eigen/Dense
 string
-/home/lee/workspace/ROS_WS/ex_ws/src/optitrack/node/string
+/home/lee/workspace/ROS_ws/ex_ws/src/optitrack/node/string
 
 /opt/ros/noetic/include/geometry_msgs/Point.h
 string

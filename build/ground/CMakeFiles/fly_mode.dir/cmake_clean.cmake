@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/lee/workspace/ROS_WS/ex_ws/devel/lib/ground/fly_mode"
-  "/home/lee/workspace/ROS_WS/ex_ws/devel/lib/ground/fly_mode.pdb"
+  "/home/lee/workspace/ROS_ws/ex_ws/devel/lib/ground/fly_mode"
+  "/home/lee/workspace/ROS_ws/ex_ws/devel/lib/ground/fly_mode.pdb"
   "CMakeFiles/fly_mode.dir/node/fly_mode.cpp.o"
   "CMakeFiles/fly_mode.dir/src/getch.cpp.o"
 )

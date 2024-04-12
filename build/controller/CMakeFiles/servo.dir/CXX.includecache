@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/lee/workspace/ROS_WS/ex_ws/src/controller/node/qc_servo.cpp
+/home/lee/workspace/ROS_ws/ex_ws/src/controller/node/qc_servo.cpp
 ros/ros.h
-/home/lee/workspace/ROS_WS/ex_ws/src/controller/node/ros/ros.h
+/home/lee/workspace/ROS_ws/ex_ws/src/controller/node/ros/ros.h
 std_msgs/Float64MultiArray.h
-/home/lee/workspace/ROS_WS/ex_ws/src/controller/node/std_msgs/Float64MultiArray.h
+/home/lee/workspace/ROS_ws/ex_ws/src/controller/node/std_msgs/Float64MultiArray.h
 std_msgs/Float64.h
-/home/lee/workspace/ROS_WS/ex_ws/src/controller/node/std_msgs/Float64.h
+/home/lee/workspace/ROS_ws/ex_ws/src/controller/node/std_msgs/Float64.h
 Eigen/Dense
-/home/lee/workspace/ROS_WS/ex_ws/src/controller/node/Eigen/Dense
+/home/lee/workspace/ROS_ws/ex_ws/src/controller/node/Eigen/Dense
 cmath
-/home/lee/workspace/ROS_WS/ex_ws/src/controller/node/cmath
+/home/lee/workspace/ROS_ws/ex_ws/src/controller/node/cmath
 string
-/home/lee/workspace/ROS_WS/ex_ws/src/controller/node/string
+/home/lee/workspace/ROS_ws/ex_ws/src/controller/node/string
 
 /opt/ros/noetic/include/ros/advertise_options.h
 ros/forwards.h

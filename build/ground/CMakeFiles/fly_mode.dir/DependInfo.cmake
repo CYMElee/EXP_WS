@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/lee/workspace/ROS_WS/ex_ws/src/ground/node/fly_mode.cpp" "/home/lee/workspace/ROS_WS/ex_ws/build/ground/CMakeFiles/fly_mode.dir/node/fly_mode.cpp.o"
-  "/home/lee/workspace/ROS_WS/ex_ws/src/ground/src/getch.cpp" "/home/lee/workspace/ROS_WS/ex_ws/build/ground/CMakeFiles/fly_mode.dir/src/getch.cpp.o"
+  "/home/lee/workspace/ROS_ws/ex_ws/src/ground/node/fly_mode.cpp" "/home/lee/workspace/ROS_ws/ex_ws/build/ground/CMakeFiles/fly_mode.dir/node/fly_mode.cpp.o"
+  "/home/lee/workspace/ROS_ws/ex_ws/src/ground/src/getch.cpp" "/home/lee/workspace/ROS_ws/ex_ws/build/ground/CMakeFiles/fly_mode.dir/src/getch.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -18,12 +18,12 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/lee/workspace/ROS_WS/ex_ws/src/ground/include"
+  "/home/lee/workspace/ROS_ws/ex_ws/src/ground/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/eigen3"
-  "/home/lee/workspace/ROS_WS/ex_ws/src/ground/./include"
-  "/home/lee/workspace/ROS_WS/ex_ws/src/ground/include/ground"
+  "/home/lee/workspace/ROS_ws/ex_ws/src/ground/./include"
+  "/home/lee/workspace/ROS_ws/ex_ws/src/ground/include/ground"
   )
 
 # Targets to which this target links.

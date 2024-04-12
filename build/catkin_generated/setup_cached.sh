@@ -7,4 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/lee/workspace/ROS_WS/ex_ws/build'
+export CMAKE_PREFIX_PATH="/home/lee/workspace/ROS_ws/ex_ws/devel:$CMAKE_PREFIX_PATH"
+export PWD='/home/lee/workspace/ROS_ws/ex_ws/build'
+export ROSLISP_PACKAGE_DIRECTORIES='/home/lee/workspace/ROS_ws/ex_ws/devel/share/common-lisp'
+export ROS_PACKAGE_PATH='/home/lee/workspace/ROS_ws/ex_ws/src:/opt/ros/noetic/share'
