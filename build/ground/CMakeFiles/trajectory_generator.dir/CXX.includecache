@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/lee/workspace/ROS_WS/ex_ws/src/ground/node/trajectory_generator.cpp
+/home/lee/workspace/ROS_ws/ex_ws/src/ground/node/trajectory_generator.cpp
 ros/ros.h
-/home/lee/workspace/ROS_WS/ex_ws/src/ground/node/ros/ros.h
+/home/lee/workspace/ROS_ws/ex_ws/src/ground/node/ros/ros.h
 std_msgs/Float32MultiArray.h
-/home/lee/workspace/ROS_WS/ex_ws/src/ground/node/std_msgs/Float32MultiArray.h
+/home/lee/workspace/ROS_ws/ex_ws/src/ground/node/std_msgs/Float32MultiArray.h
 std_msgs/Int16.h
-/home/lee/workspace/ROS_WS/ex_ws/src/ground/node/std_msgs/Int16.h
+/home/lee/workspace/ROS_ws/ex_ws/src/ground/node/std_msgs/Int16.h
 std_msgs/Bool.h
-/home/lee/workspace/ROS_WS/ex_ws/src/ground/node/std_msgs/Bool.h
+/home/lee/workspace/ROS_ws/ex_ws/src/ground/node/std_msgs/Bool.h
 math.h
-/home/lee/workspace/ROS_WS/ex_ws/src/ground/node/math.h
+/home/lee/workspace/ROS_ws/ex_ws/src/ground/node/math.h
 
 /opt/ros/noetic/include/ros/advertise_options.h
 ros/forwards.h

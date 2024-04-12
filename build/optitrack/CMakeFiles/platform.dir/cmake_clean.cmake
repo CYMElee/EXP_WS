@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/lee/workspace/ROS_WS/ex_ws/devel/lib/optitrack/platform"
-  "/home/lee/workspace/ROS_WS/ex_ws/devel/lib/optitrack/platform.pdb"
+  "/home/lee/workspace/ROS_ws/ex_ws/devel/lib/optitrack/platform"
+  "/home/lee/workspace/ROS_ws/ex_ws/devel/lib/optitrack/platform.pdb"
   "CMakeFiles/platform.dir/node/platform.cpp.o"
 )
 

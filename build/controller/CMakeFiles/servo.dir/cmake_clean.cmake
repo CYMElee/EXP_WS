@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/lee/workspace/ROS_WS/ex_ws/devel/lib/controller/servo"
-  "/home/lee/workspace/ROS_WS/ex_ws/devel/lib/controller/servo.pdb"
+  "/home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/servo"
+  "/home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/servo.pdb"
   "CMakeFiles/servo.dir/node/qc_servo.cpp.o"
 )
 

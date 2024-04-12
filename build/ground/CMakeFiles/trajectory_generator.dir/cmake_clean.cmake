@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/lee/workspace/ROS_WS/ex_ws/devel/lib/ground/trajectory_generator"
-  "/home/lee/workspace/ROS_WS/ex_ws/devel/lib/ground/trajectory_generator.pdb"
+  "/home/lee/workspace/ROS_ws/ex_ws/devel/lib/ground/trajectory_generator"
+  "/home/lee/workspace/ROS_ws/ex_ws/devel/lib/ground/trajectory_generator.pdb"
   "CMakeFiles/trajectory_generator.dir/node/trajectory_generator.cpp.o"
 )
 
