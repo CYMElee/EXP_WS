@@ -1091,6 +1091,19 @@ fly_mode/fast:
 .PHONY : fly_mode/fast
 
 #=============================================================================
+# Target rules for targets named encoder
+
+# Build rule for target.
+encoder: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 encoder
+.PHONY : encoder
+
+# fast build rule for target.
+encoder/fast:
+	$(MAKE) -f sensor/CMakeFiles/encoder.dir/build.make sensor/CMakeFiles/encoder.dir/build
+.PHONY : encoder/fast
+
+#=============================================================================
 # Target rules for targets named platform
 
 # Build rule for target.
@@ -1200,6 +1213,7 @@ help:
 	@echo "... mapper"
 	@echo "... trajectory_generator"
 	@echo "... fly_mode"
+	@echo "... encoder"
 	@echo "... platform"
 	@echo "... optitrack"
 .PHONY : help

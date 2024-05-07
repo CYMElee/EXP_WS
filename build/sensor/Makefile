@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+sensor/CMakeFiles/encoder.dir/rule:
+	cd /home/lee/workspace/ROS_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sensor/CMakeFiles/encoder.dir/rule
+.PHONY : sensor/CMakeFiles/encoder.dir/rule
+
+# Convenience name for target.
+encoder: sensor/CMakeFiles/encoder.dir/rule
+
+.PHONY : encoder
+
+# fast build rule for target.
+encoder/fast:
+	cd /home/lee/workspace/ROS_ws/ex_ws/build && $(MAKE) -f sensor/CMakeFiles/encoder.dir/build.make sensor/CMakeFiles/encoder.dir/build
+.PHONY : encoder/fast
+
+# Convenience name for target.
 sensor/CMakeFiles/platform.dir/rule:
 	cd /home/lee/workspace/ROS_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sensor/CMakeFiles/platform.dir/rule
 .PHONY : sensor/CMakeFiles/platform.dir/rule
@@ -196,6 +211,33 @@ optitrack: sensor/CMakeFiles/optitrack.dir/rule
 optitrack/fast:
 	cd /home/lee/workspace/ROS_ws/ex_ws/build && $(MAKE) -f sensor/CMakeFiles/optitrack.dir/build.make sensor/CMakeFiles/optitrack.dir/build
 .PHONY : optitrack/fast
+
+node/encoder.o: node/encoder.cpp.o
+
+.PHONY : node/encoder.o
+
+# target to build an object file
+node/encoder.cpp.o:
+	cd /home/lee/workspace/ROS_ws/ex_ws/build && $(MAKE) -f sensor/CMakeFiles/encoder.dir/build.make sensor/CMakeFiles/encoder.dir/node/encoder.cpp.o
+.PHONY : node/encoder.cpp.o
+
+node/encoder.i: node/encoder.cpp.i
+
+.PHONY : node/encoder.i
+
+# target to preprocess a source file
+node/encoder.cpp.i:
+	cd /home/lee/workspace/ROS_ws/ex_ws/build && $(MAKE) -f sensor/CMakeFiles/encoder.dir/build.make sensor/CMakeFiles/encoder.dir/node/encoder.cpp.i
+.PHONY : node/encoder.cpp.i
+
+node/encoder.s: node/encoder.cpp.s
+
+.PHONY : node/encoder.s
+
+# target to generate assembly for a file
+node/encoder.cpp.s:
+	cd /home/lee/workspace/ROS_ws/ex_ws/build && $(MAKE) -f sensor/CMakeFiles/encoder.dir/build.make sensor/CMakeFiles/encoder.dir/node/encoder.cpp.s
+.PHONY : node/encoder.cpp.s
 
 node/optitrack.o: node/optitrack.cpp.o
 
@@ -263,9 +305,13 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... encoder"
 	@echo "... platform"
 	@echo "... install/local"
 	@echo "... optitrack"
+	@echo "... node/encoder.o"
+	@echo "... node/encoder.i"
+	@echo "... node/encoder.s"
 	@echo "... node/optitrack.o"
 	@echo "... node/optitrack.i"
 	@echo "... node/optitrack.s"

@@ -322,6 +322,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "controller/CMakeFiles/mapper.dir/DependInfo.cmake"
   "ground/CMakeFiles/trajectory_generator.dir/DependInfo.cmake"
   "ground/CMakeFiles/fly_mode.dir/DependInfo.cmake"
+  "sensor/CMakeFiles/encoder.dir/DependInfo.cmake"
   "sensor/CMakeFiles/platform.dir/DependInfo.cmake"
   "sensor/CMakeFiles/optitrack.dir/DependInfo.cmake"
   )

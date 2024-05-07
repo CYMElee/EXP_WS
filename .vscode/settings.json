@@ -19,7 +19,12 @@
         "vector": "cpp",
         "hash_map": "cpp",
         "hash_set": "cpp",
-        "functional": "cpp"
+        "functional": "cpp",
+        "sstream": "cpp",
+        "iosfwd": "cpp",
+        "*.ipp": "cpp",
+        "initializer_list": "cpp",
+        "iostream": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }

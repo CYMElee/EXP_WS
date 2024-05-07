@@ -243,6 +243,7 @@ gtest/googletest/clean: gtest/googletest/CMakeFiles/gtest.dir/clean
 # Directory level rules for directory sensor
 
 # Recursive "all" directory target.
+sensor/all: sensor/CMakeFiles/encoder.dir/all
 sensor/all: sensor/CMakeFiles/platform.dir/all
 sensor/all: sensor/CMakeFiles/optitrack.dir/all
 
@@ -254,6 +255,7 @@ sensor/preinstall:
 .PHONY : sensor/preinstall
 
 # Recursive "clean" directory target.
+sensor/clean: sensor/CMakeFiles/encoder.dir/clean
 sensor/clean: sensor/CMakeFiles/platform.dir/clean
 sensor/clean: sensor/CMakeFiles/optitrack.dir/clean
 
@@ -402,7 +404,7 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googlemock/CMakeFiles/gmoc
 gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ROS_ws/ex_ws/build/CMakeFiles --progress-num=8,9 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ROS_ws/ex_ws/build/CMakeFiles --progress-num=10,11 "Built target gmock_main"
 .PHONY : gtest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -429,7 +431,7 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/clean:
 gtest/googlemock/CMakeFiles/gmock.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ROS_ws/ex_ws/build/CMakeFiles --progress-num=6,7 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ROS_ws/ex_ws/build/CMakeFiles --progress-num=8,9 "Built target gmock"
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -456,7 +458,7 @@ gtest/googlemock/CMakeFiles/gmock.dir/clean:
 gtest/googletest/CMakeFiles/gtest_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ROS_ws/ex_ws/build/CMakeFiles --progress-num=14,15 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ROS_ws/ex_ws/build/CMakeFiles --progress-num=16,17 "Built target gtest_main"
 .PHONY : gtest/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -483,7 +485,7 @@ gtest/googletest/CMakeFiles/gtest_main.dir/clean:
 gtest/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ROS_ws/ex_ws/build/CMakeFiles --progress-num=12,13 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ROS_ws/ex_ws/build/CMakeFiles --progress-num=14,15 "Built target gtest"
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -510,7 +512,7 @@ gtest/googletest/CMakeFiles/gtest.dir/clean:
 controller/CMakeFiles/servo.dir/all:
 	$(MAKE) -f controller/CMakeFiles/servo.dir/build.make controller/CMakeFiles/servo.dir/depend
 	$(MAKE) -f controller/CMakeFiles/servo.dir/build.make controller/CMakeFiles/servo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ROS_ws/ex_ws/build/CMakeFiles --progress-num=24,25 "Built target servo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ROS_ws/ex_ws/build/CMakeFiles --progress-num=26,27 "Built target servo"
 .PHONY : controller/CMakeFiles/servo.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1428,7 +1430,7 @@ controller/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/clean:
 controller/CMakeFiles/position.dir/all:
 	$(MAKE) -f controller/CMakeFiles/position.dir/build.make controller/CMakeFiles/position.dir/depend
 	$(MAKE) -f controller/CMakeFiles/position.dir/build.make controller/CMakeFiles/position.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ROS_ws/ex_ws/build/CMakeFiles --progress-num=22,23 "Built target position"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ROS_ws/ex_ws/build/CMakeFiles --progress-num=24,25 "Built target position"
 .PHONY : controller/CMakeFiles/position.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2076,7 +2078,7 @@ controller/CMakeFiles/actionlib_generate_messages_py.dir/clean:
 controller/CMakeFiles/gripper.dir/all:
 	$(MAKE) -f controller/CMakeFiles/gripper.dir/build.make controller/CMakeFiles/gripper.dir/depend
 	$(MAKE) -f controller/CMakeFiles/gripper.dir/build.make controller/CMakeFiles/gripper.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ROS_ws/ex_ws/build/CMakeFiles --progress-num=10,11 "Built target gripper"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ROS_ws/ex_ws/build/CMakeFiles --progress-num=12,13 "Built target gripper"
 .PHONY : controller/CMakeFiles/gripper.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2103,7 +2105,7 @@ controller/CMakeFiles/gripper.dir/clean:
 controller/CMakeFiles/mapper.dir/all:
 	$(MAKE) -f controller/CMakeFiles/mapper.dir/build.make controller/CMakeFiles/mapper.dir/depend
 	$(MAKE) -f controller/CMakeFiles/mapper.dir/build.make controller/CMakeFiles/mapper.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ROS_ws/ex_ws/build/CMakeFiles --progress-num=16,17 "Built target mapper"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ROS_ws/ex_ws/build/CMakeFiles --progress-num=18,19 "Built target mapper"
 .PHONY : controller/CMakeFiles/mapper.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2130,7 +2132,7 @@ controller/CMakeFiles/mapper.dir/clean:
 ground/CMakeFiles/trajectory_generator.dir/all:
 	$(MAKE) -f ground/CMakeFiles/trajectory_generator.dir/build.make ground/CMakeFiles/trajectory_generator.dir/depend
 	$(MAKE) -f ground/CMakeFiles/trajectory_generator.dir/build.make ground/CMakeFiles/trajectory_generator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ROS_ws/ex_ws/build/CMakeFiles --progress-num=26,27 "Built target trajectory_generator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ROS_ws/ex_ws/build/CMakeFiles --progress-num=28,29 "Built target trajectory_generator"
 .PHONY : ground/CMakeFiles/trajectory_generator.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2157,7 +2159,7 @@ ground/CMakeFiles/trajectory_generator.dir/clean:
 ground/CMakeFiles/fly_mode.dir/all:
 	$(MAKE) -f ground/CMakeFiles/fly_mode.dir/build.make ground/CMakeFiles/fly_mode.dir/depend
 	$(MAKE) -f ground/CMakeFiles/fly_mode.dir/build.make ground/CMakeFiles/fly_mode.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ROS_ws/ex_ws/build/CMakeFiles --progress-num=3,4,5 "Built target fly_mode"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ROS_ws/ex_ws/build/CMakeFiles --progress-num=5,6,7 "Built target fly_mode"
 .PHONY : ground/CMakeFiles/fly_mode.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2178,13 +2180,40 @@ ground/CMakeFiles/fly_mode.dir/clean:
 .PHONY : ground/CMakeFiles/fly_mode.dir/clean
 
 #=============================================================================
+# Target rules for target sensor/CMakeFiles/encoder.dir
+
+# All Build rule for target.
+sensor/CMakeFiles/encoder.dir/all:
+	$(MAKE) -f sensor/CMakeFiles/encoder.dir/build.make sensor/CMakeFiles/encoder.dir/depend
+	$(MAKE) -f sensor/CMakeFiles/encoder.dir/build.make sensor/CMakeFiles/encoder.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ROS_ws/ex_ws/build/CMakeFiles --progress-num=3,4 "Built target encoder"
+.PHONY : sensor/CMakeFiles/encoder.dir/all
+
+# Build rule for subdir invocation for target.
+sensor/CMakeFiles/encoder.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ROS_ws/ex_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 sensor/CMakeFiles/encoder.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ROS_ws/ex_ws/build/CMakeFiles 0
+.PHONY : sensor/CMakeFiles/encoder.dir/rule
+
+# Convenience name for target.
+encoder: sensor/CMakeFiles/encoder.dir/rule
+
+.PHONY : encoder
+
+# clean rule for target.
+sensor/CMakeFiles/encoder.dir/clean:
+	$(MAKE) -f sensor/CMakeFiles/encoder.dir/build.make sensor/CMakeFiles/encoder.dir/clean
+.PHONY : sensor/CMakeFiles/encoder.dir/clean
+
+#=============================================================================
 # Target rules for target sensor/CMakeFiles/platform.dir
 
 # All Build rule for target.
 sensor/CMakeFiles/platform.dir/all:
 	$(MAKE) -f sensor/CMakeFiles/platform.dir/build.make sensor/CMakeFiles/platform.dir/depend
 	$(MAKE) -f sensor/CMakeFiles/platform.dir/build.make sensor/CMakeFiles/platform.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ROS_ws/ex_ws/build/CMakeFiles --progress-num=20,21 "Built target platform"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ROS_ws/ex_ws/build/CMakeFiles --progress-num=22,23 "Built target platform"
 .PHONY : sensor/CMakeFiles/platform.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2211,7 +2240,7 @@ sensor/CMakeFiles/platform.dir/clean:
 sensor/CMakeFiles/optitrack.dir/all:
 	$(MAKE) -f sensor/CMakeFiles/optitrack.dir/build.make sensor/CMakeFiles/optitrack.dir/depend
 	$(MAKE) -f sensor/CMakeFiles/optitrack.dir/build.make sensor/CMakeFiles/optitrack.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ROS_ws/ex_ws/build/CMakeFiles --progress-num=18,19 "Built target optitrack"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ROS_ws/ex_ws/build/CMakeFiles --progress-num=20,21 "Built target optitrack"
 .PHONY : sensor/CMakeFiles/optitrack.dir/all
 
 # Build rule for subdir invocation for target.

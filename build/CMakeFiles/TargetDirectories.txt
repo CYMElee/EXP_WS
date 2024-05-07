@@ -117,6 +117,7 @@
 /home/lee/workspace/ROS_ws/ex_ws/build/sensor/CMakeFiles/rebuild_cache.dir
 /home/lee/workspace/ROS_ws/ex_ws/build/sensor/CMakeFiles/edit_cache.dir
 /home/lee/workspace/ROS_ws/ex_ws/build/sensor/CMakeFiles/test.dir
+/home/lee/workspace/ROS_ws/ex_ws/build/sensor/CMakeFiles/encoder.dir
 /home/lee/workspace/ROS_ws/ex_ws/build/sensor/CMakeFiles/platform.dir
 /home/lee/workspace/ROS_ws/ex_ws/build/sensor/CMakeFiles/install/local.dir
 /home/lee/workspace/ROS_ws/ex_ws/build/sensor/CMakeFiles/optitrack.dir

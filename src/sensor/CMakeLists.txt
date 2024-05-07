@@ -140,6 +140,7 @@ include_directories(
 ## The recommended prefix ensures that target names across packages don't collide
 add_executable(optitrack node/optitrack.cpp)
 add_executable(platform node/platform.cpp)
+add_executable(encoder node/encoder.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -156,6 +157,9 @@ target_link_libraries(optitrack
   ${catkin_LIBRARIES}
 )
 target_link_libraries(platform
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(encoder
   ${catkin_LIBRARIES}
 )
 
