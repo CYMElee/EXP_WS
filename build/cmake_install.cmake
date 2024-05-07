@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "")
+    set(CMAKE_INSTALL_CONFIG_NAME "RelWithDebInfo")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -133,7 +133,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/lee/workspace/ROS_ws/ex_ws/build/gtest/cmake_install.cmake")
   include("/home/lee/workspace/ROS_ws/ex_ws/build/controller/cmake_install.cmake")
   include("/home/lee/workspace/ROS_ws/ex_ws/build/ground/cmake_install.cmake")
-  include("/home/lee/workspace/ROS_ws/ex_ws/build/optitrack/cmake_install.cmake")
+  include("/home/lee/workspace/ROS_ws/ex_ws/build/sensor/cmake_install.cmake")
 
 endif()
 

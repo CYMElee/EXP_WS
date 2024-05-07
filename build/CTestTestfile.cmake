@@ -7,4 +7,4 @@
 subdirs("gtest")
 subdirs("controller")
 subdirs("ground")
-subdirs("optitrack")
+subdirs("sensor")
