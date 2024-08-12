@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/position"
-  "/home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/position.pdb"
+  "/home/lee/workspace/ros_ws/ex_ws/devel/lib/controller/position"
+  "/home/lee/workspace/ros_ws/ex_ws/devel/lib/controller/position.pdb"
   "CMakeFiles/position.dir/node/position_controller.cpp.o"
 )
 

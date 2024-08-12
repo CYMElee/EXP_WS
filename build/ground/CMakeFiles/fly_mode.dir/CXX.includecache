@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/lee/workspace/ROS_ws/ex_ws/src/ground/include/ex_ground/getch.h
+/home/lee/workspace/ros_ws/ex_ws/src/ground/include/ex_ground/getch.h
 cstdio
 -
 unistd.h
@@ -16,35 +16,35 @@ termios.h
 fcntl.h
 -
 
-/home/lee/workspace/ROS_ws/ex_ws/src/ground/node/fly_mode.cpp
+/home/lee/workspace/ros_ws/ex_ws/src/ground/node/fly_mode.cpp
 ros/ros.h
-/home/lee/workspace/ROS_ws/ex_ws/src/ground/node/ros/ros.h
+/home/lee/workspace/ros_ws/ex_ws/src/ground/node/ros/ros.h
 ex_ground/getch.h
-/home/lee/workspace/ROS_ws/ex_ws/src/ground/node/ex_ground/getch.h
+/home/lee/workspace/ros_ws/ex_ws/src/ground/node/ex_ground/getch.h
 geometry_msgs/PoseStamped.h
-/home/lee/workspace/ROS_ws/ex_ws/src/ground/node/geometry_msgs/PoseStamped.h
+/home/lee/workspace/ros_ws/ex_ws/src/ground/node/geometry_msgs/PoseStamped.h
 geometry_msgs/TwistStamped.h
-/home/lee/workspace/ROS_ws/ex_ws/src/ground/node/geometry_msgs/TwistStamped.h
+/home/lee/workspace/ros_ws/ex_ws/src/ground/node/geometry_msgs/TwistStamped.h
 std_msgs/Int16.h
-/home/lee/workspace/ROS_ws/ex_ws/src/ground/node/std_msgs/Int16.h
+/home/lee/workspace/ros_ws/ex_ws/src/ground/node/std_msgs/Int16.h
 std_msgs/Float32.h
-/home/lee/workspace/ROS_ws/ex_ws/src/ground/node/std_msgs/Float32.h
+/home/lee/workspace/ros_ws/ex_ws/src/ground/node/std_msgs/Float32.h
 std_msgs/Bool.h
-/home/lee/workspace/ROS_ws/ex_ws/src/ground/node/std_msgs/Bool.h
+/home/lee/workspace/ros_ws/ex_ws/src/ground/node/std_msgs/Bool.h
 std_msgs/Float32MultiArray.h
-/home/lee/workspace/ROS_ws/ex_ws/src/ground/node/std_msgs/Float32MultiArray.h
+/home/lee/workspace/ros_ws/ex_ws/src/ground/node/std_msgs/Float32MultiArray.h
 mavros_msgs/CommandBool.h
 -
 mavros_msgs/SetMode.h
 -
 mavros_msgs/State.h
-/home/lee/workspace/ROS_ws/ex_ws/src/ground/node/mavros_msgs/State.h
+/home/lee/workspace/ros_ws/ex_ws/src/ground/node/mavros_msgs/State.h
 Eigen/Dense
-/home/lee/workspace/ROS_ws/ex_ws/src/ground/node/Eigen/Dense
+/home/lee/workspace/ros_ws/ex_ws/src/ground/node/Eigen/Dense
 
-/home/lee/workspace/ROS_ws/ex_ws/src/ground/src/getch.cpp
+/home/lee/workspace/ros_ws/ex_ws/src/ground/src/getch.cpp
 ex_ground/getch.h
-/home/lee/workspace/ROS_ws/ex_ws/src/ground/src/ex_ground/getch.h
+/home/lee/workspace/ros_ws/ex_ws/src/ground/src/ex_ground/getch.h
 
 /opt/ros/noetic/include/geometry_msgs/Point.h
 string

@@ -1,8 +1,8 @@
-# Install script for directory: /home/lee/workspace/ROS_ws/ex_ws/src/optitrack
+# Install script for directory: /home/lee/workspace/ros_ws/ex_ws/src/optitrack
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/lee/workspace/ROS_ws/ex_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/lee/workspace/ros_ws/ex_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/lee/workspace/ROS_ws/ex_ws/build/optitrack/catkin_generated/installspace/optitrack.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/lee/workspace/ros_ws/ex_ws/build/optitrack/catkin_generated/installspace/optitrack.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/optitrack/cmake" TYPE FILE FILES
-    "/home/lee/workspace/ROS_ws/ex_ws/build/optitrack/catkin_generated/installspace/optitrackConfig.cmake"
-    "/home/lee/workspace/ROS_ws/ex_ws/build/optitrack/catkin_generated/installspace/optitrackConfig-version.cmake"
+    "/home/lee/workspace/ros_ws/ex_ws/build/optitrack/catkin_generated/installspace/optitrackConfig.cmake"
+    "/home/lee/workspace/ros_ws/ex_ws/build/optitrack/catkin_generated/installspace/optitrackConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/optitrack" TYPE FILE FILES "/home/lee/workspace/ROS_ws/ex_ws/src/optitrack/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/optitrack" TYPE FILE FILES "/home/lee/workspace/ros_ws/ex_ws/src/optitrack/package.xml")
 endif()
 

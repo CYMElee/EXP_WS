@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lee/workspace/ROS_ws/ex_ws/src
+CMAKE_SOURCE_DIR = /home/lee/workspace/ros_ws/ex_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lee/workspace/ROS_ws/ex_ws/build
+CMAKE_BINARY_DIR = /home/lee/workspace/ros_ws/ex_ws/build
 
 # Include any dependencies generated for this target.
 include controller/CMakeFiles/gripper.dir/depend.make
@@ -58,17 +58,17 @@ include controller/CMakeFiles/gripper.dir/progress.make
 include controller/CMakeFiles/gripper.dir/flags.make
 
 controller/CMakeFiles/gripper.dir/node/gripper_controller.cpp.o: controller/CMakeFiles/gripper.dir/flags.make
-controller/CMakeFiles/gripper.dir/node/gripper_controller.cpp.o: /home/lee/workspace/ROS_ws/ex_ws/src/controller/node/gripper_controller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lee/workspace/ROS_ws/ex_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object controller/CMakeFiles/gripper.dir/node/gripper_controller.cpp.o"
-	cd /home/lee/workspace/ROS_ws/ex_ws/build/controller && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gripper.dir/node/gripper_controller.cpp.o -c /home/lee/workspace/ROS_ws/ex_ws/src/controller/node/gripper_controller.cpp
+controller/CMakeFiles/gripper.dir/node/gripper_controller.cpp.o: /home/lee/workspace/ros_ws/ex_ws/src/controller/node/gripper_controller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object controller/CMakeFiles/gripper.dir/node/gripper_controller.cpp.o"
+	cd /home/lee/workspace/ros_ws/ex_ws/build/controller && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gripper.dir/node/gripper_controller.cpp.o -c /home/lee/workspace/ros_ws/ex_ws/src/controller/node/gripper_controller.cpp
 
 controller/CMakeFiles/gripper.dir/node/gripper_controller.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gripper.dir/node/gripper_controller.cpp.i"
-	cd /home/lee/workspace/ROS_ws/ex_ws/build/controller && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lee/workspace/ROS_ws/ex_ws/src/controller/node/gripper_controller.cpp > CMakeFiles/gripper.dir/node/gripper_controller.cpp.i
+	cd /home/lee/workspace/ros_ws/ex_ws/build/controller && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lee/workspace/ros_ws/ex_ws/src/controller/node/gripper_controller.cpp > CMakeFiles/gripper.dir/node/gripper_controller.cpp.i
 
 controller/CMakeFiles/gripper.dir/node/gripper_controller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gripper.dir/node/gripper_controller.cpp.s"
-	cd /home/lee/workspace/ROS_ws/ex_ws/build/controller && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lee/workspace/ROS_ws/ex_ws/src/controller/node/gripper_controller.cpp -o CMakeFiles/gripper.dir/node/gripper_controller.cpp.s
+	cd /home/lee/workspace/ros_ws/ex_ws/build/controller && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lee/workspace/ros_ws/ex_ws/src/controller/node/gripper_controller.cpp -o CMakeFiles/gripper.dir/node/gripper_controller.cpp.s
 
 # Object files for target gripper
 gripper_OBJECTS = \
@@ -77,45 +77,45 @@ gripper_OBJECTS = \
 # External object files for target gripper
 gripper_EXTERNAL_OBJECTS =
 
-/home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/gripper: controller/CMakeFiles/gripper.dir/node/gripper_controller.cpp.o
-/home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/gripper: controller/CMakeFiles/gripper.dir/build.make
-/home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/gripper: /usr/lib/liborocos-kdl.so
-/home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/gripper: /usr/lib/liborocos-kdl.so
-/home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/gripper: /opt/ros/noetic/lib/libtf2_ros.so
-/home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/gripper: /opt/ros/noetic/lib/libactionlib.so
-/home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/gripper: /opt/ros/noetic/lib/libmessage_filters.so
-/home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/gripper: /opt/ros/noetic/lib/libroscpp.so
-/home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/gripper: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/gripper: /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0
-/home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/gripper: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
-/home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/gripper: /opt/ros/noetic/lib/librosconsole.so
-/home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/gripper: /opt/ros/noetic/lib/librosconsole_log4cxx.so
-/home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/gripper: /opt/ros/noetic/lib/librosconsole_backend_interface.so
-/home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/gripper: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-/home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/gripper: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0
-/home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/gripper: /opt/ros/noetic/lib/libxmlrpcpp.so
-/home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/gripper: /opt/ros/noetic/lib/libtf2.so
-/home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/gripper: /opt/ros/noetic/lib/libroscpp_serialization.so
-/home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/gripper: /opt/ros/noetic/lib/librostime.so
-/home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/gripper: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
-/home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/gripper: /opt/ros/noetic/lib/libcpp_common.so
-/home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/gripper: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
-/home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/gripper: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
-/home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/gripper: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-/home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/gripper: controller/CMakeFiles/gripper.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lee/workspace/ROS_ws/ex_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/gripper"
-	cd /home/lee/workspace/ROS_ws/ex_ws/build/controller && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gripper.dir/link.txt --verbose=$(VERBOSE)
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/controller/gripper: controller/CMakeFiles/gripper.dir/node/gripper_controller.cpp.o
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/controller/gripper: controller/CMakeFiles/gripper.dir/build.make
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/controller/gripper: /usr/lib/liborocos-kdl.so
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/controller/gripper: /usr/lib/liborocos-kdl.so
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/controller/gripper: /opt/ros/noetic/lib/libtf2_ros.so
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/controller/gripper: /opt/ros/noetic/lib/libactionlib.so
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/controller/gripper: /opt/ros/noetic/lib/libmessage_filters.so
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/controller/gripper: /opt/ros/noetic/lib/libroscpp.so
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/controller/gripper: /usr/lib/x86_64-linux-gnu/libpthread.a
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/controller/gripper: /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/controller/gripper: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/controller/gripper: /opt/ros/noetic/lib/librosconsole.so
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/controller/gripper: /opt/ros/noetic/lib/librosconsole_log4cxx.so
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/controller/gripper: /opt/ros/noetic/lib/librosconsole_backend_interface.so
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/controller/gripper: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/controller/gripper: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/controller/gripper: /opt/ros/noetic/lib/libxmlrpcpp.so
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/controller/gripper: /opt/ros/noetic/lib/libtf2.so
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/controller/gripper: /opt/ros/noetic/lib/libroscpp_serialization.so
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/controller/gripper: /opt/ros/noetic/lib/librostime.so
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/controller/gripper: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/controller/gripper: /opt/ros/noetic/lib/libcpp_common.so
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/controller/gripper: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/controller/gripper: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/controller/gripper: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/controller/gripper: controller/CMakeFiles/gripper.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/lee/workspace/ros_ws/ex_ws/devel/lib/controller/gripper"
+	cd /home/lee/workspace/ros_ws/ex_ws/build/controller && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gripper.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-controller/CMakeFiles/gripper.dir/build: /home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/gripper
+controller/CMakeFiles/gripper.dir/build: /home/lee/workspace/ros_ws/ex_ws/devel/lib/controller/gripper
 
 .PHONY : controller/CMakeFiles/gripper.dir/build
 
 controller/CMakeFiles/gripper.dir/clean:
-	cd /home/lee/workspace/ROS_ws/ex_ws/build/controller && $(CMAKE_COMMAND) -P CMakeFiles/gripper.dir/cmake_clean.cmake
+	cd /home/lee/workspace/ros_ws/ex_ws/build/controller && $(CMAKE_COMMAND) -P CMakeFiles/gripper.dir/cmake_clean.cmake
 .PHONY : controller/CMakeFiles/gripper.dir/clean
 
 controller/CMakeFiles/gripper.dir/depend:
-	cd /home/lee/workspace/ROS_ws/ex_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lee/workspace/ROS_ws/ex_ws/src /home/lee/workspace/ROS_ws/ex_ws/src/controller /home/lee/workspace/ROS_ws/ex_ws/build /home/lee/workspace/ROS_ws/ex_ws/build/controller /home/lee/workspace/ROS_ws/ex_ws/build/controller/CMakeFiles/gripper.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lee/workspace/ros_ws/ex_ws/src /home/lee/workspace/ros_ws/ex_ws/src/controller /home/lee/workspace/ros_ws/ex_ws/build /home/lee/workspace/ros_ws/ex_ws/build/controller /home/lee/workspace/ros_ws/ex_ws/build/controller/CMakeFiles/gripper.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : controller/CMakeFiles/gripper.dir/depend
 

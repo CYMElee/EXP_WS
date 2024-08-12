@@ -1,0 +1,17 @@
+<launch>
+    <arg name="fcu_url" default="/dev/ttyUSB0:230400"/>
+    <arg name="gcs_url" default="udp://@192.168.50.81"/>
+    <arg name="SYS_ID" default="1"/>
+
+    <group ns="MAV$(arg SYS_ID)">
+        <param name="UAV_ID" value="$(arg SYS_ID)"/>
+        <include file="$(find mavros)/launch/apm.launch">
+            <arg name="fcu_url" value="$(arg fcu_url)"/>
+            <arg name="gcs_url" value="$(arg gcs_url)"/>
+            <arg name="tgt_system" value="$(arg SYS_ID)"/>
+        </include>
+       <node name="topic_tool" pkg="mav$(arg SYS_ID)" type="topic_tool"></node>
+       <node name="origin_py" pkg="mav$(arg SYS_ID)" type="origin.py"></node>
+       <node name="main" pkg="mav$(arg SYS_ID)" type="main" output="screen"></node>
+    </group>
+</launch>

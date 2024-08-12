@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/attitude"
-  "/home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/attitude.pdb"
+  "/home/lee/workspace/ros_ws/ex_ws/devel/lib/controller/attitude"
+  "/home/lee/workspace/ros_ws/ex_ws/devel/lib/controller/attitude.pdb"
   "CMakeFiles/attitude.dir/node/attitude_controller.cpp.o"
 )
 

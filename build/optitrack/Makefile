@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lee/workspace/ROS_ws/ex_ws/src
+CMAKE_SOURCE_DIR = /home/lee/workspace/ros_ws/ex_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lee/workspace/ROS_ws/ex_ws/build
+CMAKE_BINARY_DIR = /home/lee/workspace/ros_ws/ex_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ install/local/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/lee/workspace/ROS_ws/ex_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ROS_ws/ex_ws/build/CMakeFiles /home/lee/workspace/ROS_ws/ex_ws/build/optitrack/CMakeFiles/progress.marks
-	cd /home/lee/workspace/ROS_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 optitrack/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ROS_ws/ex_ws/build/CMakeFiles 0
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles /home/lee/workspace/ros_ws/ex_ws/build/optitrack/CMakeFiles/progress.marks
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 optitrack/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lee/workspace/ROS_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 optitrack/clean
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 optitrack/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lee/workspace/ROS_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 optitrack/preinstall
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 optitrack/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lee/workspace/ROS_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 optitrack/preinstall
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 optitrack/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/lee/workspace/ROS_ws/ex_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 optitrack/CMakeFiles/platform.dir/rule:
-	cd /home/lee/workspace/ROS_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 optitrack/CMakeFiles/platform.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 optitrack/CMakeFiles/platform.dir/rule
 .PHONY : optitrack/CMakeFiles/platform.dir/rule
 
 # Convenience name for target.
@@ -179,12 +179,12 @@ platform: optitrack/CMakeFiles/platform.dir/rule
 
 # fast build rule for target.
 platform/fast:
-	cd /home/lee/workspace/ROS_ws/ex_ws/build && $(MAKE) -f optitrack/CMakeFiles/platform.dir/build.make optitrack/CMakeFiles/platform.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f optitrack/CMakeFiles/platform.dir/build.make optitrack/CMakeFiles/platform.dir/build
 .PHONY : platform/fast
 
 # Convenience name for target.
 optitrack/CMakeFiles/optitrack.dir/rule:
-	cd /home/lee/workspace/ROS_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 optitrack/CMakeFiles/optitrack.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 optitrack/CMakeFiles/optitrack.dir/rule
 .PHONY : optitrack/CMakeFiles/optitrack.dir/rule
 
 # Convenience name for target.
@@ -194,7 +194,7 @@ optitrack: optitrack/CMakeFiles/optitrack.dir/rule
 
 # fast build rule for target.
 optitrack/fast:
-	cd /home/lee/workspace/ROS_ws/ex_ws/build && $(MAKE) -f optitrack/CMakeFiles/optitrack.dir/build.make optitrack/CMakeFiles/optitrack.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f optitrack/CMakeFiles/optitrack.dir/build.make optitrack/CMakeFiles/optitrack.dir/build
 .PHONY : optitrack/fast
 
 node/optitrack.o: node/optitrack.cpp.o
@@ -203,7 +203,7 @@ node/optitrack.o: node/optitrack.cpp.o
 
 # target to build an object file
 node/optitrack.cpp.o:
-	cd /home/lee/workspace/ROS_ws/ex_ws/build && $(MAKE) -f optitrack/CMakeFiles/optitrack.dir/build.make optitrack/CMakeFiles/optitrack.dir/node/optitrack.cpp.o
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f optitrack/CMakeFiles/optitrack.dir/build.make optitrack/CMakeFiles/optitrack.dir/node/optitrack.cpp.o
 .PHONY : node/optitrack.cpp.o
 
 node/optitrack.i: node/optitrack.cpp.i
@@ -212,7 +212,7 @@ node/optitrack.i: node/optitrack.cpp.i
 
 # target to preprocess a source file
 node/optitrack.cpp.i:
-	cd /home/lee/workspace/ROS_ws/ex_ws/build && $(MAKE) -f optitrack/CMakeFiles/optitrack.dir/build.make optitrack/CMakeFiles/optitrack.dir/node/optitrack.cpp.i
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f optitrack/CMakeFiles/optitrack.dir/build.make optitrack/CMakeFiles/optitrack.dir/node/optitrack.cpp.i
 .PHONY : node/optitrack.cpp.i
 
 node/optitrack.s: node/optitrack.cpp.s
@@ -221,7 +221,7 @@ node/optitrack.s: node/optitrack.cpp.s
 
 # target to generate assembly for a file
 node/optitrack.cpp.s:
-	cd /home/lee/workspace/ROS_ws/ex_ws/build && $(MAKE) -f optitrack/CMakeFiles/optitrack.dir/build.make optitrack/CMakeFiles/optitrack.dir/node/optitrack.cpp.s
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f optitrack/CMakeFiles/optitrack.dir/build.make optitrack/CMakeFiles/optitrack.dir/node/optitrack.cpp.s
 .PHONY : node/optitrack.cpp.s
 
 node/platform.o: node/platform.cpp.o
@@ -230,7 +230,7 @@ node/platform.o: node/platform.cpp.o
 
 # target to build an object file
 node/platform.cpp.o:
-	cd /home/lee/workspace/ROS_ws/ex_ws/build && $(MAKE) -f optitrack/CMakeFiles/platform.dir/build.make optitrack/CMakeFiles/platform.dir/node/platform.cpp.o
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f optitrack/CMakeFiles/platform.dir/build.make optitrack/CMakeFiles/platform.dir/node/platform.cpp.o
 .PHONY : node/platform.cpp.o
 
 node/platform.i: node/platform.cpp.i
@@ -239,7 +239,7 @@ node/platform.i: node/platform.cpp.i
 
 # target to preprocess a source file
 node/platform.cpp.i:
-	cd /home/lee/workspace/ROS_ws/ex_ws/build && $(MAKE) -f optitrack/CMakeFiles/platform.dir/build.make optitrack/CMakeFiles/platform.dir/node/platform.cpp.i
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f optitrack/CMakeFiles/platform.dir/build.make optitrack/CMakeFiles/platform.dir/node/platform.cpp.i
 .PHONY : node/platform.cpp.i
 
 node/platform.s: node/platform.cpp.s
@@ -248,7 +248,7 @@ node/platform.s: node/platform.cpp.s
 
 # target to generate assembly for a file
 node/platform.cpp.s:
-	cd /home/lee/workspace/ROS_ws/ex_ws/build && $(MAKE) -f optitrack/CMakeFiles/platform.dir/build.make optitrack/CMakeFiles/platform.dir/node/platform.cpp.s
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f optitrack/CMakeFiles/platform.dir/build.make optitrack/CMakeFiles/platform.dir/node/platform.cpp.s
 .PHONY : node/platform.cpp.s
 
 # Help Target
@@ -283,6 +283,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/lee/workspace/ROS_ws/ex_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

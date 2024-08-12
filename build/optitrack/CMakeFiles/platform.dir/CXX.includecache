@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/lee/workspace/ROS_ws/ex_ws/src/optitrack/node/platform.cpp
+/home/lee/workspace/ros_ws/ex_ws/src/optitrack/node/platform.cpp
 ros/ros.h
-/home/lee/workspace/ROS_ws/ex_ws/src/optitrack/node/ros/ros.h
+/home/lee/workspace/ros_ws/ex_ws/src/optitrack/node/ros/ros.h
 std_msgs/Float32MultiArray.h
-/home/lee/workspace/ROS_ws/ex_ws/src/optitrack/node/std_msgs/Float32MultiArray.h
+/home/lee/workspace/ros_ws/ex_ws/src/optitrack/node/std_msgs/Float32MultiArray.h
 geometry_msgs/PoseStamped.h
-/home/lee/workspace/ROS_ws/ex_ws/src/optitrack/node/geometry_msgs/PoseStamped.h
+/home/lee/workspace/ros_ws/ex_ws/src/optitrack/node/geometry_msgs/PoseStamped.h
 Eigen/Dense
-/home/lee/workspace/ROS_ws/ex_ws/src/optitrack/node/Eigen/Dense
+/home/lee/workspace/ros_ws/ex_ws/src/optitrack/node/Eigen/Dense
 
 /opt/ros/noetic/include/geometry_msgs/Point.h
 string

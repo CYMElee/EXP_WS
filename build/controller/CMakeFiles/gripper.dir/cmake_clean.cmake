@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/gripper"
-  "/home/lee/workspace/ROS_ws/ex_ws/devel/lib/controller/gripper.pdb"
+  "/home/lee/workspace/ros_ws/ex_ws/devel/lib/controller/gripper"
+  "/home/lee/workspace/ros_ws/ex_ws/devel/lib/controller/gripper.pdb"
   "CMakeFiles/gripper.dir/node/gripper_controller.cpp.o"
 )
 

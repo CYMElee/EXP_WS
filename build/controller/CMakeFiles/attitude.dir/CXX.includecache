@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/lee/workspace/ROS_ws/ex_ws/src/controller/node/attitude_controller.cpp
+/home/lee/workspace/ros_ws/ex_ws/src/controller/node/attitude_controller.cpp
 ros/ros.h
-/home/lee/workspace/ROS_ws/ex_ws/src/controller/node/ros/ros.h
+/home/lee/workspace/ros_ws/ex_ws/src/controller/node/ros/ros.h
 std_msgs/Float32MultiArray.h
-/home/lee/workspace/ROS_ws/ex_ws/src/controller/node/std_msgs/Float32MultiArray.h
+/home/lee/workspace/ros_ws/ex_ws/src/controller/node/std_msgs/Float32MultiArray.h
 Eigen/Dense
-/home/lee/workspace/ROS_ws/ex_ws/src/controller/node/Eigen/Dense
+/home/lee/workspace/ros_ws/ex_ws/src/controller/node/Eigen/Dense
 
 /opt/ros/noetic/include/ros/advertise_options.h
 ros/forwards.h
