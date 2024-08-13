@@ -1,4 +1,4 @@
-#include "ex_ground/getch.h"
+#include "getch.h"
 char getch()
 {
     int flags = fcntl(0, F_GETFL, 0);

@@ -21,7 +21,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/eigen3"
-  "/home/lee/workspace/ros_ws/ex_ws/src/ground/./include"
   )
 
 # Targets to which this target links.

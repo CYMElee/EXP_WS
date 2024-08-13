@@ -131,13 +131,11 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/lee/workspace/ros_ws/ex_ws/build/gtest/cmake_install.cmake")
-  include("/home/lee/workspace/ros_ws/ex_ws/build/controller/cmake_install.cmake")
   include("/home/lee/workspace/ros_ws/ex_ws/build/ground/cmake_install.cmake")
   include("/home/lee/workspace/ros_ws/ex_ws/build/MAV/MAV1/cmake_install.cmake")
   include("/home/lee/workspace/ros_ws/ex_ws/build/MAV/MAV2/cmake_install.cmake")
   include("/home/lee/workspace/ros_ws/ex_ws/build/MAV/MAV3/cmake_install.cmake")
   include("/home/lee/workspace/ros_ws/ex_ws/build/MAV/MAV4/cmake_install.cmake")
-  include("/home/lee/workspace/ros_ws/ex_ws/build/optitrack/cmake_install.cmake")
 
 endif()
 

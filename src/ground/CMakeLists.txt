@@ -120,10 +120,10 @@ catkin_package(
 
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
+
 include_directories(
-include
+  include
   ${catkin_INCLUDE_DIRS}
-  ./include
 )
 
 ## Declare a C++ library
@@ -143,31 +143,68 @@ set(HEADERS_ include/ex_ground/getch.h)
 
 #add_dependencies(fly_mode, ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 #add_dependencies(getch, ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-add_executable(fly_mode node/fly_mode.cpp
+
+# Keyboard_control
+
+add_executable(keyboard node/keyboard.cpp
                         src/getch.cpp)
-add_executable(trajectory_generator node/trajectory_generator.cpp)                        
+add_executable(trajectory_generator node/trajectory_generator.cpp)  
+
+
+
+# Controller
+
+
+add_executable(position_controller node/position_controller.cpp)
+add_executable(qc_servo node/qc_servo.cpp)
+add_executable(gripper_controller node/gripper_controller.cpp)
+add_executable(attitude_controller node/attitude_controller.cpp)        
+
+add_executable(topic_tool_platform src/topic_tool_platform.cpp) 
 
 #target_link_libraries(getch
  # ${catkin_LIBRARIES}
 #)
 
 
-target_link_libraries(fly_mode
+target_link_libraries(keyboard
  
   ${catkin_LIBRARIES}
 )
 
-target_include_directories(fly_mode PRIVATE
-	include/${PROJECT_NAME}/ )
 
 target_link_libraries(trajectory_generator
- 
+  ${catkin_LIBRARIES}
+)
+
+target_link_libraries(position_controller
+  ${catkin_LIBRARIES}
+)
+
+target_link_libraries(gripper_controller
+  ${catkin_LIBRARIES}
+)
+
+target_link_libraries(position_controller
+  ${catkin_LIBRARIES}
+)
+
+target_link_libraries(qc_servo
+  ${catkin_LIBRARIES}
+)
+
+target_link_libraries(attitude_controller
+  ${catkin_LIBRARIES}
+)
+
+target_link_libraries(topic_tool_platform
   ${catkin_LIBRARIES}
 )
 
 
 
   
+
 
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context

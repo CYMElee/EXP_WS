@@ -1,5 +1,15 @@
 <launch> 
+<!--controller -->
+    <node name="gripper_controller" pkg="ex_controller" type="gripper" output="screen"></node>
+    <node name="position_controller" pkg="ex_controller" type="position" output="screen"></node>
+    <node name="wrench_mapper" pkg="ex_controller" type="mapper" output="screen"></node>
+    <node name="attitude_controller" pkg="ex_controller" type="attitude" output="screen"></node>
+<!-- keyboard control -->
     <node name="fly_mode" pkg="ex_ground" type="fly_mode" output="screen"></node>
+<!--trajectory generate-->
     <node name="trajectory_generator" pkg="ex_ground" type="trajectory_generator" output="screen">
+<!-- optitrack using for platform-->
+ 
+ 
     </node>
 </launch>

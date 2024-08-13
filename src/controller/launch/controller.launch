@@ -1,6 +1,0 @@
-<launch> 
-    <node name="gripper_controller" pkg="ex_controller" type="gripper" output="screen"></node>
-    <node name="position_controller" pkg="ex_controller" type="position" output="screen"></node>
-    <node name="wrench_mapper" pkg="ex_controller" type="mapper" output="screen"></node>
-    <node name="attitude_controller" pkg="ex_controller" type="attitude" output="screen"></node>
-</launch>

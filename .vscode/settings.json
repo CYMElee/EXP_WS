@@ -19,7 +19,10 @@
         "vector": "cpp",
         "hash_map": "cpp",
         "hash_set": "cpp",
-        "functional": "cpp"
+        "functional": "cpp",
+        "random": "cpp",
+        "cmath": "cpp",
+        "complex": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
