@@ -9,7 +9,6 @@
 <!--trajectory generate-->
     <node name="trajectory_generator" pkg="ex_ground" type="trajectory_generator" output="screen">
 <!-- optitrack using for platform-->
- 
- 
+    <node name="topic_tool_platform" pkg="ex_ground" type="topic_tool_platform" output="screen">
     </node>
 </launch>

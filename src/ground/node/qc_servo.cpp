@@ -6,6 +6,8 @@
 #include "string"
 
 
+
+// define the motor curve index
 #define six -3.0607845945e-8
 #define fith 2.8310812334e6
 #define fourth -1.0243476854e-4

@@ -3,31 +3,41 @@
 #include "std_msgs/Int16.h"
 #include "std_msgs/Bool.h"
 #include "math.h"
+#include "geometry_msgs/PoseStamped.h"
 
 #define D2R 0.0174
-#define dt 0.001
+#define dt 0.01
 
-/*[0] is 0 derivate [1] is first derivate [2] is second derivate*/
+
 std_msgs::Float32MultiArray pd;
 std_msgs::Float32MultiArray pd_d;
 std_msgs::Float32MultiArray Rr;
 std_msgs::Float32MultiArray agvr;
-std_msgs::Float32MultiArray phi;
-std_msgs::Int16 traj;
-int c;
-float t = 0;
-enum {
-    HOVERING_GRIPPER_STATIC,
-    HOVERING_GRIPPER_SCISSORS,
+std_msgs::Float32MultiArray phid;
+std_msgs::Int16 Mode;
+geometry_msgs::PoseStamped pose;
+
+enum MAV_mod{
+    IDLE,
+    TAKEOFF,
     LAND,
-}TRAJECTORY;
+};
 
 
-void trajectory_mode_cb(const std_msgs::Int16::ConstPtr& msg)
-{
-    traj = *msg;
-    c = traj.data;
+void initialize(void);
+
+void hovering(void);
+
+void land(void);
+
+void mode_cb(const std_msgs::Int16::ConstPtr& msg){
+    Mode = *msg;
+
 }
+
+//void pose_cb(const std_msgs::Float32MultiArray::ConstPtr& msg){
+//    pose = *msg;
+//}
 
 
 int main(int argc,char **argv)
@@ -35,14 +45,16 @@ int main(int argc,char **argv)
     ros::init(argc,argv,"trajectory_generator");
     ros::NodeHandle nh;
     /*initial some variable*/
-    pd.data.resize(3);
-    pd_d.data.resize(3);
-    Rr.data.resize(3);
-    agvr.data.resize(3);
-    phi.data.resize(3);
+    initialize();
 
-    ros::Subscriber trajectory_mode = nh.subscribe<std_msgs::Int16>
-        ("/system/trajectory",100,trajectory_mode_cb); 
+    /*get the system's pose*/
+   // ros::Subscriber GET_POSE = nh.subscribe<std_msgs::Float32MultiArray>
+      //  ("/platform/measure_position",10,pose_cb);
+
+    /*get the system's fly mode*/
+    ros::Subscriber GET_MODE = nh.subscribe<std_msgs::Int16>
+        ("/ground_station/set_mode",10,mode_cb);
+    /*publish the trajectory*/
     ros::Publisher desire_position = nh.advertise<std_msgs::Float32MultiArray>
         ("/platform/desire_position",10);
     ros::Publisher desire_velocity = nh.advertise<std_msgs::Float32MultiArray>
@@ -56,89 +68,110 @@ int main(int argc,char **argv)
 
     ros::Rate rate(100);
 
-    ros::topic::waitForMessage<std_msgs::Int16>("system/trajectory");
- 
-    ros::Time last_request = ros::Time::now();
 
-    while(ros::ok() && ros::Time::now()-last_request<ros::Duration(0.3))
+    while(ros::ok())
     {
-        ros::spinOnce();
-        rate.sleep();
+        if(Mode.data = MAV_mod::IDLE){
+           
+        }
+
+        if(Mode.data = MAV_mod::TAKEOFF){
+          hovering();  
+
+        }
+
+
+        if(Mode.data = MAV_mod::LAND){
+            land();
+        }
+
+
     }
 
-    ros::topic::waitForMessage<std_msgs::Bool>("/MAV/takeoff");
-    ROS_WARN("START_GENERATE_TRAJECTORY");
+    desire_position.publish(pd);
+    desire_velocity.publish(pd_d);
+    desire_attitude.publish(Rr);
+    desire_omega.publish(agvr);
+    desire_phi.publish(agvr);
 
-    switch (traj.data)
-    {
-        case HOVERING_GRIPPER_STATIC:
-            ROS_WARN("TRAJECTORY:HARVING(STATIC)");
-            
-            while(ros::ok())
-            {   /*platform*/
-                pd.data[0] = 0;
-                pd.data[1] = 0;
-                pd.data[2] = 0;
+    ros::spinOnce();
+    rate.sleep();
 
-                pd_d.data[0] = 0;
-                pd_d.data[1] = 0;
-                pd_d.data[2] = 0;
-
-                Rr.data[0] = 0;
-                Rr.data[1] = 0;
-                Rr.data[2] = 0;
-
-                agvr.data[0] = 0;
-                agvr.data[1] = 0;
-                agvr.data[2] = 0;
-
-                /*gripper*/
-                phi.data[1] = 0;
-                phi.data[2] = 0;
-                desire_position.publish(pd);
-                desire_velocity.publish(pd_d);
-                desire_attitude.publish(Rr);
-                desire_omega.publish(agvr);
-
-                ros::spinOnce();
-                rate.sleep();
-            }
-            break;
-        case HOVERING_GRIPPER_SCISSORS:
-            ROS_WARN("TRAJECTORY:HARVING(SCR)");
-            while(ros::ok() )
-            {
-                pd.data[0] = 0;
-                pd.data[1] = 0;
-                pd.data[2] = 0;
-
-                pd_d.data[0] = 0;
-                pd_d.data[1] = 0;
-                pd_d.data[2] = 0;
-
-                Rr.data[0] = 0;
-                Rr.data[1] = 0;
-                Rr.data[2] = 0;
-
-                agvr.data[0] = 0;
-                agvr.data[1] = 0;
-                agvr.data[2] = 0;
-
-                /*gripper*/
-                phi.data[0] = 0.1*sin(t)+ 90*D2R;
-                phi.data[1] = 0.1*cos(t);
-                phi.data[2] = -0.1*sin(t);
-
-                desire_position.publish(pd);
-                desire_velocity.publish(pd_d);
-                desire_attitude.publish(Rr);
-                desire_omega.publish(agvr);
-                t += dt;
-                ros::spinOnce();
-                rate.sleep();
-            }
-            break;
-    }
-   
     return 0;
+}
+
+
+void initialize(void){
+    Mode.data = MAV_mod::IDLE;
+    pd.data.resize(3);
+    pd_d.data.resize(3);
+    Rr.data.resize(3);
+    agvr.data.resize(3);
+    phid.data.resize(3);
+
+}
+
+
+void hovering(void){
+
+/*in hovering mode, we hope the system(platform) can hovering on z=0.5m */
+
+    /*platform position*/
+    pd.data[0] = 1;
+    pd.data[1] = 1;
+    pd.data[2] = 0.5;
+
+    /*platform velocity*/
+    pd_d.data[0] = 0;
+    pd_d.data[1] = 0;
+    pd_d.data[2] = 0;
+
+    /*platform attitude*/
+    Rr.data[0] = 1;
+    Rr.data[1] = 0;
+    Rr.data[2] = 0;
+    Rr.data[3] = 0;
+
+    /*platform rate change*/
+
+    agvr.data[0] = 0;
+    agvr.data[1] = 0;
+    agvr.data[2] = 0;
+
+    /*platform gripper angle*/
+    phid.data[0] = 1.57;
+    phid.data[1] = 0;
+    phid.data[2] = 0;
+
+
+
+}
+
+void land(void){
+    pd.data[0] = 1;
+    pd.data[1] = 1;
+    pd.data[2] = 0.2;
+
+    /*platform velocity*/
+    pd_d.data[0] = 0;
+    pd_d.data[1] = 0;
+    pd_d.data[2] = 0;
+
+    /*platform attitude*/
+    Rr.data[0] = 1;
+    Rr.data[1] = 0;
+    Rr.data[2] = 0;
+    Rr.data[3] = 0;
+
+    /*platform rate change*/
+
+    agvr.data[0] = 0;
+    agvr.data[1] = 0;
+    agvr.data[2] = 0;
+
+    /*platform gripper angle*/
+    phid.data[0] = 1.57;
+    phid.data[1] = 0;
+    phid.data[2] = 0;
+
 }

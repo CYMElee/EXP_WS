@@ -3,7 +3,6 @@
 /*1:Receive the Position and Attitude*/
 /*2:Calculate the velocity and angular rate*/
 
-
 #include <ros/ros.h>
 #include <geometry_msgs/PoseStamped.h>
 #include <nav_msgs/Odometry.h>
@@ -72,7 +71,7 @@ void host_pos(const geometry_msgs::PoseStamped::ConstPtr& msg)
 
 int main(int argc, char **argv)
 {
-    ros::init(argc, argv, "topic");
+    ros::init(argc, argv, "topic_tool_platform");
     ros::NodeHandle nh;
 
   
