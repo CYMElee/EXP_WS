@@ -47,12 +47,12 @@ int main(int argc,char **argv)
     phi.data.resize(3);
     phid.data.resize(3);
     phi.data[0] = 1.57;
-    phi.data[1] = 0.1;
-    phi.data[2] = 0.1;
+    phi.data[1] = 0;
+    phi.data[2] = 0;
     phid.data[0] = 1.57;
-    phid.data[1] = 0.1;
-    phid.data[2] = 0.1;
-    M.data = 0.5;
+    phid.data[1] = 0;
+    phid.data[2] = 0;
+    M.data = 0;
 
     ros::Subscriber phi_measure = nh.subscribe<std_msgs::Float32MultiArray>
         ("/gripper/phi_measure",10,phi_cb);

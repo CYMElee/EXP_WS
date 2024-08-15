@@ -8,13 +8,13 @@
 
 
 // define the motor curve index
-#define six -3.0607845945e-8
-#define fith 2.8310812334e6
-#define fourth -1.0243476854e-4
-#define third 1.8488037507e-3
-#define second -1.8071097239e-2
-#define first 1.2644148433e-1
-#define zero 3.2072458244e-2
+double p6 = 0.03169;
+double p5 = 0.2807;
+double p4 = -0.07407;
+double p3 = 0.01128;
+double p2 = -0.0007524;
+double p1 = 1.375e-05;
+double p0 = 3.274e-07;
 
 using namespace Eigen;
 using namespace std;
@@ -39,6 +39,7 @@ class MAV{
 
 MAV::MAV(ros::NodeHandle nh, string Topic)
 {
+    T.data.resize(3);
     MAV_cmd = nh.advertise<std_msgs::Float64MultiArray>(Topic,10);
 
 }
@@ -46,18 +47,23 @@ MAV::MAV(ros::NodeHandle nh, string Topic)
 void MAV::Thrust(std_msgs::Float64MultiArray fd,int i)
 {
 
-    fd_e(0,1) = fd.data[i];
-    fd_e(1,1) = fd.data[i+1];
-    fd_e(2,1) = fd.data[i+2];
+    fd_e(0,1) = fd.data[i]; //x
+    fd_e(1,1) = fd.data[i+1]; //y
+    fd_e(2,1) = fd.data[i+2]; //z
+    double f = (fd_e.norm()/4); //because we have 4 motor for each sd420
+
+    T.data[0] = p6*pow(f,6)+p5*pow(f,5)+p4*pow(f,4)+p3*pow(f,3)+p2*pow(f,2)+p1*pow(f,1)+p0;   // net thrust(PWM 0~1) you should imply thrust curve here
+
+    /*using the desire thrust(vector) on platform body frame to get the alpha and beta*/
+
+    double alpha = atan2(-fd_e(1,1),fd_e(2,1));
+    double beta = asin(fd_e(0,1)/f);
     
-    T.data[0] = fd_e.norm(); // net thrust(PWM 0~1) you should imply thrust curve here
-    q = AngleAxisd(0, Eigen::Vector3d::UnitZ()) *
-        AngleAxisd(asin(fd_e(0,1)/T.data[0]), Eigen::Vector3d::UnitY()) *
-        AngleAxisd(atan2(-fd_e(1,1),fd_e(2,1)), Eigen::Vector3d::UnitX());
-    T.data[1] = q.w();
-    T.data[2] = q.x();
-    T.data[3] = q.y();
-    T.data[4] = q.z();
+  
+
+    T.data[1] = alpha;
+    T.data[2] = beta;
+
 
     MAV_cmd.publish(T);
 }
@@ -72,6 +78,8 @@ int main(int argc,char **argv)
 {
     ros::init(argc,argv,"qc_servo");
     ros::NodeHandle nh;
+
+    fd.data.resize(12);
 
     ros::Subscriber thrust = nh.subscribe<std_msgs::Float64MultiArray>
         ("/gripper/desire_thrust_each",10,thrust_cb);

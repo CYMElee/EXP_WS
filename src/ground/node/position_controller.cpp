@@ -5,8 +5,8 @@
 #include "eigen_conversions/eigen_msg.h"
 
 #define G 9.81 //greavity
-#define  M_main 0.012 //kg
-#define  M_qc  0.03 //kg
+#define  M_main 2 //kg
+#define  M_qc  1.5 //kg
 
 
 using namespace Eigen;
@@ -36,9 +36,9 @@ Quaternionf quaternion;
 
 void desire_position_cb(const std_msgs::Float32MultiArray::ConstPtr& msg)
 {
-    pd(0) = msg->data[0];
-    pd(1)= msg->data[1];
-    pd(2) = msg->data[2];
+    pd(0) = msg->data[0]; //x
+    pd(1)= msg->data[1];  //y
+    pd(2) = msg->data[2]; //z
 
 }
 void desire_velocity_cb(const std_msgs::Float32MultiArray::ConstPtr& msg)
@@ -86,7 +86,7 @@ void total_thrust()
     ev(2) = p_dot(2) - pd_dot(2);
 
     fr = ((M_qc+0.006)*4+M_main)*(G*z-Kp*ep-Kv*ev);
-    u1 = R.transpose()*fr;
+    u1 = R.transpose()*fr; // transform the desire thrust from inertial frame to body fixed frame
     
     t.data[0] = u1(0);
     t.data[1] = u1(1);

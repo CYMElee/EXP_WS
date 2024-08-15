@@ -15,7 +15,7 @@ float IBz = IBZ;
 std_msgs::Float32MultiArray u2;
 std_msgs::Float32MultiArray er;
 Matrix<float, 3, 3> IB; //rotation inertia
-Matrix<float, 3, 3> R; //measure attitude
+Matrix<float, 3, 3> R; //measure attitude,which is rotation matrix that from body frame to inertial frame
 Matrix<float, 3, 3> Rr; // desire attitude
 Vector3f agvr;
 Vector3f omega;
@@ -46,7 +46,7 @@ void desire_attitude_cb(const std_msgs::Float32MultiArray::ConstPtr& msg)
 }
 
 void measure_attitude_cb(const std_msgs::Float32MultiArray::ConstPtr& msg)
-{
+{   
     quaternion = AngleAxisf(msg->data[0], \
     Vector3f(msg->data[1], msg->data[2], msg->data[3]));
     R = quaternion.toRotationMatrix();

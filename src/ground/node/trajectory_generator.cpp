@@ -103,11 +103,11 @@ int main(int argc,char **argv)
 
 void initialize(void){
     Mode.data = MAV_mod::IDLE;
-    pd.data.resize(3);
-    pd_d.data.resize(3);
-    Rr.data.resize(3);
-    agvr.data.resize(3);
-    phid.data.resize(3);
+    pd.data.resize(3); // desire position:x,y,z
+    pd_d.data.resize(3); // desire velocity:x,y,z
+    Rr.data.resize(3); // desire Attitude:
+    agvr.data.resize(3);  // desire angular rate
+    phid.data.resize(3); // desire gripper angle
 
 }
 
