@@ -15,6 +15,7 @@ enum MAV_mod{
     IDLE,
     TAKEOFF,
     LAND,
+    SET_HOME,
 };
 
 class MAV_State
@@ -104,6 +105,9 @@ int main(int argv,char** argc)
                     SET_MODE.publish(Mode);
                 }
                 break;
+            case 'S':
+                Mode.data = MAV_mod::SET_HOME;
+                SET_MODE.publish(Mode);
 
             }
             }

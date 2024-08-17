@@ -8,14 +8,16 @@
 #define D2R 0.0174
 #define dt 0.01
 
-
+std_msgs::Float32MultiArray p_home;
+std_msgs::Float32MultiArray pose;
 std_msgs::Float32MultiArray pd;
 std_msgs::Float32MultiArray pd_d;
 std_msgs::Float32MultiArray Rr;
 std_msgs::Float32MultiArray agvr;
 std_msgs::Float32MultiArray phid;
 std_msgs::Int16 Mode;
-geometry_msgs::PoseStamped pose;
+
+
 
 enum MAV_mod{
     IDLE,
@@ -35,9 +37,9 @@ void mode_cb(const std_msgs::Int16::ConstPtr& msg){
 
 }
 
-//void pose_cb(const std_msgs::Float32MultiArray::ConstPtr& msg){
-//    pose = *msg;
-//}
+void pose_cb(const std_msgs::Float32MultiArray::ConstPtr& msg){
+     pose = *msg;
+}
 
 
 int main(int argc,char **argv)
@@ -47,13 +49,15 @@ int main(int argc,char **argv)
     /*initial some variable*/
     initialize();
 
-    /*get the system's pose*/
-   // ros::Subscriber GET_POSE = nh.subscribe<std_msgs::Float32MultiArray>
-      //  ("/platform/measure_position",10,pose_cb);
+
 
     /*get the system's fly mode*/
     ros::Subscriber GET_MODE = nh.subscribe<std_msgs::Int16>
         ("/ground_station/set_mode",10,mode_cb);
+
+    ros::Subscriber sub_pub =  nh.advertise<std_msgs::Float32MultiArray>
+        ("/platform/measure_position",10,pose_cb);
+
     /*publish the trajectory*/
     ros::Publisher desire_position = nh.advertise<std_msgs::Float32MultiArray>
         ("/platform/desire_position",10);
@@ -85,6 +89,9 @@ int main(int argc,char **argv)
             land();
         }
 
+        if(Mode.data = MAV_mod::SET_HOME)
+            set_home();
+            
 
     }
 
@@ -108,6 +115,7 @@ void initialize(void){
     Rr.data.resize(3); // desire Attitude:
     agvr.data.resize(3);  // desire angular rate
     phid.data.resize(3); // desire gripper angle
+    p_home.data.resize(3);
 
 }
 
@@ -117,8 +125,8 @@ void hovering(void){
 /*in hovering mode, we hope the system(platform) can hovering on z=0.5m */
 
     /*platform position*/
-    pd.data[0] = 1;
-    pd.data[1] = 1;
+    pd.data[0] = p_home.data[0];
+    pd.data[1] = p_home.data[1];
     pd.data[2] = 0.5;
 
     /*platform velocity*/
@@ -148,8 +156,8 @@ void hovering(void){
 }
 
 void land(void){
-    pd.data[0] = 1;
-    pd.data[1] = 1;
+    pd.data[0] = p_home.data[0];
+    pd.data[1] = p_home.data[1];
     pd.data[2] = 0.2;
 
     /*platform velocity*/
@@ -173,5 +181,15 @@ void land(void){
     phid.data[0] = 1.57;
     phid.data[1] = 0;
     phid.data[2] = 0;
+
+}
+
+
+void set_home(void){
+    p_home.data[0] = pose.data[0]; //x
+    p_home.data[1] = pose.data[1]; //y
+    p_home.data[2] = 0; //z
+
+
 
 }

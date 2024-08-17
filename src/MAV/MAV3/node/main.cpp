@@ -9,6 +9,7 @@
 #include <mavros_msgs/Mavlink.h>
 #include "mavros_msgs/AttitudeTarget.h"
 #include "std_msgs/Float64MultiArray.h"
+#include "std_msgs/Float32MultiArray.h"
 #include "cmath"
 #include "Eigen/Dense"
 
@@ -20,23 +21,34 @@ enum MAV_mod{
 };
 
 int UAV_ID;
+/*use to publish*/
 geometry_msgs::PoseStamped pose;
+
+/*platform pose*/
+geometry_msgs::PoseStamped platform_pose;
+/*MAV pose*/
+geometry_msgs::PoseStamped mav_pose;
+
 mavros_msgs::State current_state;
+
+std_msgs::Float64MultiArray T_cmd;
+
 std_msgs::Int16 Change_Mode_Trigger ;
 
 mavros_msgs::AttitudeTarget T;
 
-std_msgs::Float64MultiArray Attitude_Thrust_receive;
-
-
-
-
-
-void state_cb(const mavros_msgs::State::ConstPtr& msg);
-void Takeoff_Signal_cb(const std_msgs::Int16::ConstPtr& msg);
-void T_sub_cb(const std_msgs::Float64MultiArray::ConstPtr& msg);
 
 void initialize(void);
+
+void state_cb(const mavros_msgs::State::ConstPtr& msg);
+void mode_cb(const std_msgs::Int16::ConstPtr& msg);
+void platform_pose_cb(const geometry_msgs::PoseStamped::ConstPtr& msg);
+void mav_pose_cb(const geometry_msgs::PoseStamped::ConstPtr& msg);
+void T_sub_cb(const std_msgs::Float64MultiArray::ConstPtr& msg);
+
+void T_cmd_calculate(void);
+
+
 
 
 int main(int argv,char** argc)
@@ -50,9 +62,6 @@ int main(int argv,char** argc)
     //*******************************//
     //        use for takeoff       //
     //******************************//
-
-
-
     ros::Subscriber state_sub = nh.subscribe<mavros_msgs::State>
         ("mavros/state", 10, state_cb);
 
@@ -65,14 +74,22 @@ int main(int argv,char** argc)
     ros::ServiceClient set_mode_client = nh.serviceClient<mavros_msgs::SetMode>
         ("mavros/set_mode");
 
+    //*******************************//
+    //        use after takeoff       //
+    //******************************//
 
-    /*****Subscribe the Attitude and Thrust command!!!******/
+    /*subscribe the Platform attitude*/
+    ros::Subscriber PLA_Atti_sub = nh.subscribe<geometry_msgs::PoseStamped>("/vrpn_client_node/platform/pose",12,platform_pose_cb);
+    /*subscribe the MAV attitude, get from optitrack*/
+    std::string sub_topic = std::string("/vrpn_client_node/MAV") + std::to_string(UAV_ID) + std::string("/pose");
+    ros::Subscriber MAV_pose = nh.subscribe<geometry_msgs::PoseStamped>(sub_topic, 10, mav_pose_cb);
+    /*****Subscribe the Gimbal_angle and Thrust command!!!******/
     ros::Subscriber T_sub = nh.subscribe<std_msgs::Float64MultiArray>("cmd",12,T_sub_cb);
 
     /****Publish the Attitude and Thrust command  !!!****/
     ros::Publisher T_pub = nh.advertise<mavros_msgs::AttitudeTarget>
         ("mavros/setpoint_raw/attitude", 10);
-    ros::Subscriber Takeoff_Signal = nh.subscribe<std_msgs::Int16>("/ground_station/set_mode", 10, Takeoff_Signal_cb);
+    ros::Subscriber Takeoff_Signal = nh.subscribe<std_msgs::Int16>("/ground_station/set_mode", 10, mode_cb);
     ros::Rate rate(100.0);
 
     while(ros::ok() && !current_state.connected){
@@ -112,33 +129,22 @@ int main(int argv,char** argc)
     if( arming_client.call(arm_cmd) && arm_cmd.response.success) {
         ROS_INFO("Vehicle armed");
     }
-    ros::ServiceClient takeoff_cl = nh.serviceClient<mavros_msgs::CommandTOL>("mavros/cmd/takeoff");
-    mavros_msgs::CommandTOL srv_takeoff;
 
     rate = ros::Rate(100);
     while(ros::ok() && Change_Mode_Trigger.data !=MAV_mod::TAKEOFF){
 
         ROS_INFO("READY_TAKEOFF!!");
-
-        T_pub.publish(T); //idle
-
-	    ros::spinOnce();
-	    rate.sleep();
-
-
-    }
-    rate = ros::Rate(100);
-    
-    while(ros::ok()){
-        /*********************************/
-        /**  if receive the LAND topic  */
-        /*******************************/
-        if(Change_Mode_Trigger.data ==MAV_mod::LAND){
-            offb_set_mode.request.custom_mode = "AUTO.LAND";
+        if( current_state.mode != "OFFBOARD" ){
             set_mode_client.call(offb_set_mode);
-            arm_cmd.request.value = false;
+        }
+        if(!current_state.armed){
             arming_client.call(arm_cmd);
         }
+	ros::spinOnce();
+	rate.sleep();
+    }
+    rate = ros::Rate(100);
+    while(ros::ok()){
 
         T_pub.publish(T);
 
@@ -151,36 +157,69 @@ int main(int argv,char** argc)
 }
 
 
-
+void T_sub_cb(const std_msgs::Float64MultiArray::ConstPtr& msg){
+    T_cmd = *msg;
+}
 
 void state_cb(const mavros_msgs::State::ConstPtr& msg){
-
 	current_state = *msg;
 }
 
-void Takeoff_Signal_cb(const std_msgs::Int16::ConstPtr& msg){
-
+void mode_cb(const std_msgs::Int16::ConstPtr& msg){
 	Change_Mode_Trigger = *msg;
 }
-void T_sub_cb(const std_msgs::Float64MultiArray::ConstPtr& msg){
-    T.orientation.w = msg->data[0];
-    T.orientation.x = msg->data[1];
-    T.orientation.y = msg->data[2];
-    T.orientation.z = msg->data[3];
-    T.thrust = msg->data[4];
 
+void platform_pose_cb(const geometry_msgs::PoseStamped::ConstPtr& msg){
+    platform_pose = *msg;
+}
+void mav_pose_cb(const geometry_msgs::PoseStamped::ConstPtr& msg){
+    mav_pose = *msg;
 }
 
 void initialize(void){
-
     //init the attitude and thrust value
-    T.orientation.w = 1;
-    T.orientation.x = 0;
-    T.orientation.y = 0;
-    T.orientation.z = 0;
-    T.thrust = 0.1;
-    T.type_mask = T.IGNORE_PITCH_RATE | \
-    T.IGNORE_ROLL_RATE |T.IGNORE_YAW_RATE ;
-    
+    T.type_mask = 7 ;
+    T_cmd.data.resize(3);
 }
+
+
+void T_cmd_calculate(void){
+
+    /*in here we will change the mav pose from quater to euler angle*/
+    Eigen::Quaternionf quaternion_mav(mav_pose.pose.orientation.w,mav_pose.pose.orientation.x,mav_pose.pose.orientation.y,mav_pose.pose.orientation.z );
+    Eigen::Matrix3f rotationMatrix_mav = quaternion_mav.toRotationMatrix();
+    Eigen::Vector3f eulerAngles_mav = rotationMatrix_mav.eulerAngles(2, 1, 0);
+    float alpha = T_cmd.data[1];
+    float beta = T_cmd.data[2];
+    float thrust = T_cmd.data[0]; 
+    float z = eulerAngles_mav(1,1);
+
+     /*get the MAV desire Attitude(from mav fram to platform fram)*/
+    Eigen::Quaternionf MAV_pose_cmd;
+    MAV_pose_cmd = Eigen::AngleAxisf(z,Eigen::Vector3f::UnitZ()) * \
+    Eigen::AngleAxisf(beta,Eigen::Vector3f::UnitY()) * \
+    Eigen::AngleAxisf(alpha, Eigen::Vector3f::UnitX());
+    Eigen::Matrix3f rotationMatrix_mav_des = MAV_pose_cmd.toRotationMatrix();
+
+
+
+
+    /**Build the Rotation matrix(platform body to inertial)**/
+    Eigen::Quaternionf quaternion_platform(platform_pose.pose.orientation.w,platform_pose.pose.orientation.x,platform_pose.pose.orientation.y,platform_pose.pose.orientation.z);
+    Eigen::Matrix3f rotationMatrix_platform = quaternion_platform.toRotationMatrix();
+
+    /**get the desire mav attitude (body frame to inertial frame)**/
+    Eigen::Matrix3f rotationMatrix_mav_des_b2i = rotationMatrix_platform*rotationMatrix_mav_des;
+    Eigen::Quaternionf mav_pose_desire(rotationMatrix_mav_des_b2i);
+
+
+    
+    T.orientation.w =mav_pose_desire.w();
+    T.orientation.x =mav_pose_desire.x();
+    T.orientation.y =mav_pose_desire.y();
+    T.orientation.z =mav_pose_desire.z();
+    T.thrust = thrust;
+
+}
+
 
