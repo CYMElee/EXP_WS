@@ -23,6 +23,7 @@ enum MAV_mod{
     IDLE,
     TAKEOFF,
     LAND,
+    SET_HOME,
 };
 
 
@@ -31,6 +32,7 @@ void initialize(void);
 void hovering(void);
 
 void land(void);
+void set_home(void);
 
 void mode_cb(const std_msgs::Int16::ConstPtr& msg){
     Mode = *msg;
@@ -49,13 +51,11 @@ int main(int argc,char **argv)
     /*initial some variable*/
     initialize();
 
-
-
     /*get the system's fly mode*/
     ros::Subscriber GET_MODE = nh.subscribe<std_msgs::Int16>
         ("/ground_station/set_mode",10,mode_cb);
 
-    ros::Subscriber sub_pub =  nh.advertise<std_msgs::Float32MultiArray>
+    ros::Subscriber sub_pub =  nh.subscribe<std_msgs::Float32MultiArray>
         ("/platform/measure_position",10,pose_cb);
 
     /*publish the trajectory*/
@@ -91,8 +91,7 @@ int main(int argc,char **argv)
 
         if(Mode.data = MAV_mod::SET_HOME)
             set_home();
-            
-
+        
     }
 
     desire_position.publish(pd);
@@ -116,6 +115,7 @@ void initialize(void){
     agvr.data.resize(3);  // desire angular rate
     phid.data.resize(3); // desire gripper angle
     p_home.data.resize(3);
+    pose.data.resize(3);
 
 }
 
@@ -127,7 +127,7 @@ void hovering(void){
     /*platform position*/
     pd.data[0] = p_home.data[0];
     pd.data[1] = p_home.data[1];
-    pd.data[2] = 0.5;
+    pd.data[2] = 1.6;
 
     /*platform velocity*/
     pd_d.data[0] = 0;
@@ -189,7 +189,4 @@ void set_home(void){
     p_home.data[0] = pose.data[0]; //x
     p_home.data[1] = pose.data[1]; //y
     p_home.data[2] = 0; //z
-
-
-
 }

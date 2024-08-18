@@ -12,8 +12,8 @@
 #define a 1
 #define K1 800
 
-float phi_error = 0.0001;
-float phi_error_d = 0.0001;
+float phi_error = 0;
+float phi_error_d = 0;
 float r = 0.0001;
 
 

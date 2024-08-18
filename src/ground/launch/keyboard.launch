@@ -11,4 +11,5 @@
 <!-- optitrack using for platform-->
     <node name="topic_tool_platform" pkg="ex_ground" type="topic_tool_platform" output="screen">
     </node>
+    <node pkg="rosbag" type="record" name="bag_record" args="-a   -o ../rosbag_record/ex.bag"/>
 </launch>

@@ -5,7 +5,7 @@
 #include "eigen_conversions/eigen_msg.h"
 
 #define G 9.81 //greavity
-#define  M_main 2 //kg
+#define  M_main 1.6 //kg
 #define  M_qc  1.5 //kg
 
 
@@ -85,7 +85,7 @@ void total_thrust()
     ev(1) = p_dot(1) - pd_dot(1);
     ev(2) = p_dot(2) - pd_dot(2);
 
-    fr = ((M_qc+0.006)*4+M_main)*(G*z-Kp*ep-Kv*ev);
+    fr = ((M_qc+M_main/2)*4+M_main)*(G*z-Kp*ep-Kv*ev);
     u1 = R.transpose()*fr; // transform the desire thrust from inertial frame to body fixed frame
     
     t.data[0] = u1(0);

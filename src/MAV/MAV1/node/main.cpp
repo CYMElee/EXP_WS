@@ -18,6 +18,7 @@ enum MAV_mod{
     IDLE,
     TAKEOFF,
     LAND,
+    SET_HOME,
 };
 
 int UAV_ID;
@@ -30,7 +31,7 @@ geometry_msgs::PoseStamped platform_pose;
 geometry_msgs::PoseStamped mav_pose;
 
 mavros_msgs::State current_state;
-
+ 
 std_msgs::Float64MultiArray T_cmd;
 
 std_msgs::Int16 Change_Mode_Trigger ;
@@ -96,7 +97,6 @@ int main(int argv,char** argc)
         ros::spinOnce();
         rate.sleep();
     }
-    ros::param::get("UAV_ID", UAV_ID);
 
     ROS_INFO("Wait for setting origin and home position...");
     std::string mavlink_topic = std::string("/MAV") + std::to_string(UAV_ID) + std::string("/mavlink/to");
@@ -144,6 +144,7 @@ int main(int argv,char** argc)
 	rate.sleep();
     }
     rate = ros::Rate(100);
+    ros::topic::waitForMessage<std_msgs::Float32MultiArray>("cmd");
     while(ros::ok()){
 
 
@@ -214,8 +215,6 @@ void T_cmd_calculate(void){
     Eigen::Matrix3f rotationMatrix_mav_des_b2i = rotationMatrix_platform*rotationMatrix_mav_des;
     Eigen::Quaternionf mav_pose_desire(rotationMatrix_mav_des_b2i);
 
-
-    
     T.orientation.w =mav_pose_desire.w();
     T.orientation.x =mav_pose_desire.x();
     T.orientation.y =mav_pose_desire.y();

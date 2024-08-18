@@ -18,6 +18,7 @@ enum MAV_mod{
     IDLE,
     TAKEOFF,
     LAND,
+    SET_HOME,
 };
 
 int UAV_ID;
@@ -146,6 +147,8 @@ int main(int argv,char** argc)
     rate = ros::Rate(100);
     while(ros::ok()){
 
+
+        T_cmd_calculate();
         T_pub.publish(T);
 
         ros::spinOnce();

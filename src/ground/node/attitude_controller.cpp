@@ -3,9 +3,9 @@
 #include "Eigen/Dense"
 
 
-#define Lw_sq 0.185*0.185
-#define IBXY 2*0.036*Lw_sq
-#define IBZ 4*0.036*Lw_sq
+#define Lw_sq 1
+float IBXY = 2*2.3*Lw_sq+0.18;
+float IBZ  = 4*2.3*Lw_sq+0.09;
 
 using namespace Eigen ;
 

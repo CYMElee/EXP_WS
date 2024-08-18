@@ -90,7 +90,7 @@ int main(int argc,char **argv)
                   MAV(nh, "/MAV4/cmd")};
                   
     ros::Rate rate(100);
-    ros::topic::waitForMessage<std_msgs::Float64MultiArray>("/gripper/desire_thrust_each");
+   // ros::topic::waitForMessage<std_msgs::Float64MultiArray>("/gripper/desire_thrust_each");
 
     while(ros::ok())
     {
