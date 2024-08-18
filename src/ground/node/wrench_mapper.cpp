@@ -153,7 +153,7 @@ int main(int argc,char **argv)
     ros::Subscriber desire_moment_angle = nh.subscribe<std_msgs::Float32>
         ("/gripper/desire_moment_angle",10,desire_moment_angle_cb); // corresponding M on matlab
 
-    ros::Publisher desire_thrust_each = nh.advertise<std_msgs::Float32MultiArray>
+    ros::Publisher desire_thrust_each = nh.advertise<std_msgs::Float64MultiArray>
         ("/gripper/desire_thrust_each",10); 
 
 

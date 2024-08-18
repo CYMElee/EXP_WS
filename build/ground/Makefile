@@ -858,21 +858,6 @@ rosgraph_msgs_generate_messages_nodejs/fast:
 .PHONY : rosgraph_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
-ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/rule:
-	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/rule
-.PHONY : ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-mavros_msgs_generate_messages_lisp: ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : mavros_msgs_generate_messages_lisp
-
-# fast build rule for target.
-mavros_msgs_generate_messages_lisp/fast:
-	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/build
-.PHONY : mavros_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
 ground/CMakeFiles/qc_servo.dir/rule:
 	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/qc_servo.dir/rule
 .PHONY : ground/CMakeFiles/qc_servo.dir/rule
@@ -886,6 +871,21 @@ qc_servo: ground/CMakeFiles/qc_servo.dir/rule
 qc_servo/fast:
 	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/qc_servo.dir/build.make ground/CMakeFiles/qc_servo.dir/build
 .PHONY : qc_servo/fast
+
+# Convenience name for target.
+ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/rule:
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/rule
+.PHONY : ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+mavros_msgs_generate_messages_lisp: ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : mavros_msgs_generate_messages_lisp
+
+# fast build rule for target.
+mavros_msgs_generate_messages_lisp/fast:
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/build
+.PHONY : mavros_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 ground/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule:
@@ -1083,6 +1083,21 @@ trajectory_generator/fast:
 .PHONY : trajectory_generator/fast
 
 # Convenience name for target.
+ground/CMakeFiles/wrench_mapper.dir/rule:
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/wrench_mapper.dir/rule
+.PHONY : ground/CMakeFiles/wrench_mapper.dir/rule
+
+# Convenience name for target.
+wrench_mapper: ground/CMakeFiles/wrench_mapper.dir/rule
+
+.PHONY : wrench_mapper
+
+# fast build rule for target.
+wrench_mapper/fast:
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/wrench_mapper.dir/build.make ground/CMakeFiles/wrench_mapper.dir/build
+.PHONY : wrench_mapper/fast
+
+# Convenience name for target.
 ground/CMakeFiles/position_controller.dir/rule:
 	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/position_controller.dir/rule
 .PHONY : ground/CMakeFiles/position_controller.dir/rule
@@ -1259,6 +1274,33 @@ node/trajectory_generator.cpp.s:
 	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/trajectory_generator.dir/build.make ground/CMakeFiles/trajectory_generator.dir/node/trajectory_generator.cpp.s
 .PHONY : node/trajectory_generator.cpp.s
 
+node/wrench_mapper.o: node/wrench_mapper.cpp.o
+
+.PHONY : node/wrench_mapper.o
+
+# target to build an object file
+node/wrench_mapper.cpp.o:
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/wrench_mapper.dir/build.make ground/CMakeFiles/wrench_mapper.dir/node/wrench_mapper.cpp.o
+.PHONY : node/wrench_mapper.cpp.o
+
+node/wrench_mapper.i: node/wrench_mapper.cpp.i
+
+.PHONY : node/wrench_mapper.i
+
+# target to preprocess a source file
+node/wrench_mapper.cpp.i:
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/wrench_mapper.dir/build.make ground/CMakeFiles/wrench_mapper.dir/node/wrench_mapper.cpp.i
+.PHONY : node/wrench_mapper.cpp.i
+
+node/wrench_mapper.s: node/wrench_mapper.cpp.s
+
+.PHONY : node/wrench_mapper.s
+
+# target to generate assembly for a file
+node/wrench_mapper.cpp.s:
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/wrench_mapper.dir/build.make ground/CMakeFiles/wrench_mapper.dir/node/wrench_mapper.cpp.s
+.PHONY : node/wrench_mapper.cpp.s
+
 src/getch.o: src/getch.cpp.o
 
 .PHONY : src/getch.o
@@ -1372,8 +1414,8 @@ help:
 	@echo "... actionlib_msgs_generate_messages_eus"
 	@echo "... geographic_msgs_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
-	@echo "... mavros_msgs_generate_messages_lisp"
 	@echo "... qc_servo"
+	@echo "... mavros_msgs_generate_messages_lisp"
 	@echo "... actionlib_msgs_generate_messages_py"
 	@echo "... actionlib_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_py"
@@ -1387,6 +1429,7 @@ help:
 	@echo "... actionlib_msgs_generate_messages_nodejs"
 	@echo "... actionlib_generate_messages_py"
 	@echo "... trajectory_generator"
+	@echo "... wrench_mapper"
 	@echo "... position_controller"
 	@echo "... node/attitude_controller.o"
 	@echo "... node/attitude_controller.i"
@@ -1406,6 +1449,9 @@ help:
 	@echo "... node/trajectory_generator.o"
 	@echo "... node/trajectory_generator.i"
 	@echo "... node/trajectory_generator.s"
+	@echo "... node/wrench_mapper.o"
+	@echo "... node/wrench_mapper.i"
+	@echo "... node/wrench_mapper.s"
 	@echo "... src/getch.o"
 	@echo "... src/getch.i"
 	@echo "... src/getch.s"

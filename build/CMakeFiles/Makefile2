@@ -177,6 +177,7 @@ ground/all: ground/CMakeFiles/gripper_controller.dir/all
 ground/all: ground/CMakeFiles/keyboard.dir/all
 ground/all: ground/CMakeFiles/qc_servo.dir/all
 ground/all: ground/CMakeFiles/trajectory_generator.dir/all
+ground/all: ground/CMakeFiles/wrench_mapper.dir/all
 ground/all: ground/CMakeFiles/position_controller.dir/all
 
 .PHONY : ground/all
@@ -233,8 +234,8 @@ ground/clean: ground/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
 ground/clean: ground/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/clean
 ground/clean: ground/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/clean
 ground/clean: ground/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
-ground/clean: ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/clean
 ground/clean: ground/CMakeFiles/qc_servo.dir/clean
+ground/clean: ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/clean
 ground/clean: ground/CMakeFiles/actionlib_msgs_generate_messages_py.dir/clean
 ground/clean: ground/CMakeFiles/actionlib_generate_messages_cpp.dir/clean
 ground/clean: ground/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
@@ -248,6 +249,7 @@ ground/clean: ground/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/clean
 ground/clean: ground/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/clean
 ground/clean: ground/CMakeFiles/actionlib_generate_messages_py.dir/clean
 ground/clean: ground/CMakeFiles/trajectory_generator.dir/clean
+ground/clean: ground/CMakeFiles/wrench_mapper.dir/clean
 ground/clean: ground/CMakeFiles/position_controller.dir/clean
 
 .PHONY : ground/clean
@@ -1796,33 +1798,6 @@ ground/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean:
 .PHONY : ground/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
 
 #=============================================================================
-# Target rules for target ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir
-
-# All Build rule for target.
-ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/all:
-	$(MAKE) -f ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/depend
-	$(MAKE) -f ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target mavros_msgs_generate_messages_lisp"
-.PHONY : ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
-.PHONY : ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-mavros_msgs_generate_messages_lisp: ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : mavros_msgs_generate_messages_lisp
-
-# clean rule for target.
-ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/clean:
-	$(MAKE) -f ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/clean
-.PHONY : ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/clean
-
-#=============================================================================
 # Target rules for target ground/CMakeFiles/qc_servo.dir
 
 # All Build rule for target.
@@ -1848,6 +1823,33 @@ qc_servo: ground/CMakeFiles/qc_servo.dir/rule
 ground/CMakeFiles/qc_servo.dir/clean:
 	$(MAKE) -f ground/CMakeFiles/qc_servo.dir/build.make ground/CMakeFiles/qc_servo.dir/clean
 .PHONY : ground/CMakeFiles/qc_servo.dir/clean
+
+#=============================================================================
+# Target rules for target ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target mavros_msgs_generate_messages_lisp"
+.PHONY : ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
+.PHONY : ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+mavros_msgs_generate_messages_lisp: ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : mavros_msgs_generate_messages_lisp
+
+# clean rule for target.
+ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/clean
+.PHONY : ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/clean
 
 #=============================================================================
 # Target rules for target ground/CMakeFiles/actionlib_msgs_generate_messages_py.dir
@@ -2199,6 +2201,33 @@ trajectory_generator: ground/CMakeFiles/trajectory_generator.dir/rule
 ground/CMakeFiles/trajectory_generator.dir/clean:
 	$(MAKE) -f ground/CMakeFiles/trajectory_generator.dir/build.make ground/CMakeFiles/trajectory_generator.dir/clean
 .PHONY : ground/CMakeFiles/trajectory_generator.dir/clean
+
+#=============================================================================
+# Target rules for target ground/CMakeFiles/wrench_mapper.dir
+
+# All Build rule for target.
+ground/CMakeFiles/wrench_mapper.dir/all:
+	$(MAKE) -f ground/CMakeFiles/wrench_mapper.dir/build.make ground/CMakeFiles/wrench_mapper.dir/depend
+	$(MAKE) -f ground/CMakeFiles/wrench_mapper.dir/build.make ground/CMakeFiles/wrench_mapper.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num=40,41 "Built target wrench_mapper"
+.PHONY : ground/CMakeFiles/wrench_mapper.dir/all
+
+# Build rule for subdir invocation for target.
+ground/CMakeFiles/wrench_mapper.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/wrench_mapper.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
+.PHONY : ground/CMakeFiles/wrench_mapper.dir/rule
+
+# Convenience name for target.
+wrench_mapper: ground/CMakeFiles/wrench_mapper.dir/rule
+
+.PHONY : wrench_mapper
+
+# clean rule for target.
+ground/CMakeFiles/wrench_mapper.dir/clean:
+	$(MAKE) -f ground/CMakeFiles/wrench_mapper.dir/build.make ground/CMakeFiles/wrench_mapper.dir/clean
+.PHONY : ground/CMakeFiles/wrench_mapper.dir/clean
 
 #=============================================================================
 # Target rules for target ground/CMakeFiles/position_controller.dir

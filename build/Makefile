@@ -883,19 +883,6 @@ rosgraph_msgs_generate_messages_nodejs/fast:
 .PHONY : rosgraph_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
-# Target rules for targets named mavros_msgs_generate_messages_lisp
-
-# Build rule for target.
-mavros_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 mavros_msgs_generate_messages_lisp
-.PHONY : mavros_msgs_generate_messages_lisp
-
-# fast build rule for target.
-mavros_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/build
-.PHONY : mavros_msgs_generate_messages_lisp/fast
-
-#=============================================================================
 # Target rules for targets named qc_servo
 
 # Build rule for target.
@@ -907,6 +894,19 @@ qc_servo: cmake_check_build_system
 qc_servo/fast:
 	$(MAKE) -f ground/CMakeFiles/qc_servo.dir/build.make ground/CMakeFiles/qc_servo.dir/build
 .PHONY : qc_servo/fast
+
+#=============================================================================
+# Target rules for targets named mavros_msgs_generate_messages_lisp
+
+# Build rule for target.
+mavros_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mavros_msgs_generate_messages_lisp
+.PHONY : mavros_msgs_generate_messages_lisp
+
+# fast build rule for target.
+mavros_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/build
+.PHONY : mavros_msgs_generate_messages_lisp/fast
 
 #=============================================================================
 # Target rules for targets named actionlib_msgs_generate_messages_py
@@ -1076,6 +1076,19 @@ trajectory_generator: cmake_check_build_system
 trajectory_generator/fast:
 	$(MAKE) -f ground/CMakeFiles/trajectory_generator.dir/build.make ground/CMakeFiles/trajectory_generator.dir/build
 .PHONY : trajectory_generator/fast
+
+#=============================================================================
+# Target rules for targets named wrench_mapper
+
+# Build rule for target.
+wrench_mapper: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 wrench_mapper
+.PHONY : wrench_mapper
+
+# fast build rule for target.
+wrench_mapper/fast:
+	$(MAKE) -f ground/CMakeFiles/wrench_mapper.dir/build.make ground/CMakeFiles/wrench_mapper.dir/build
+.PHONY : wrench_mapper/fast
 
 #=============================================================================
 # Target rules for targets named position_controller
@@ -1262,8 +1275,8 @@ help:
 	@echo "... actionlib_msgs_generate_messages_eus"
 	@echo "... geographic_msgs_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
-	@echo "... mavros_msgs_generate_messages_lisp"
 	@echo "... qc_servo"
+	@echo "... mavros_msgs_generate_messages_lisp"
 	@echo "... actionlib_msgs_generate_messages_py"
 	@echo "... actionlib_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_py"
@@ -1277,6 +1290,7 @@ help:
 	@echo "... actionlib_msgs_generate_messages_nodejs"
 	@echo "... actionlib_generate_messages_py"
 	@echo "... trajectory_generator"
+	@echo "... wrench_mapper"
 	@echo "... position_controller"
 	@echo "... topic_tool_mav1"
 	@echo "... mav1"

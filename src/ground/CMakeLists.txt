@@ -149,6 +149,7 @@ set(HEADERS_ include/ex_ground/getch.h)
 add_executable(keyboard node/keyboard.cpp
                         src/getch.cpp)
 add_executable(trajectory_generator node/trajectory_generator.cpp)  
+add_executable(wrench_mapper node/wrench_mapper.cpp) 
 
 
 
@@ -162,9 +163,7 @@ add_executable(attitude_controller node/attitude_controller.cpp)
 
 add_executable(topic_tool_platform src/topic_tool_platform.cpp) 
 
-#target_link_libraries(getch
- # ${catkin_LIBRARIES}
-#)
+
 
 
 target_link_libraries(keyboard
@@ -198,6 +197,10 @@ target_link_libraries(attitude_controller
 )
 
 target_link_libraries(topic_tool_platform
+  ${catkin_LIBRARIES}
+)
+
+target_link_libraries(wrench_mapper
   ${catkin_LIBRARIES}
 )
 

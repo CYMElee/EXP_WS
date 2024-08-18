@@ -66,7 +66,7 @@ int main(int argc, char **argv)
 {
     ros::init(argc, argv, "topic_tool_platform");
     ros::NodeHandle nh;
-
+    initialize();
     std::string sub_topic = std::string("/vrpn_client_node/platform") + std::string("/pose");
 
     ros::Subscriber host_sub = nh.subscribe<geometry_msgs::PoseStamped>(sub_topic, 10, host_pos);

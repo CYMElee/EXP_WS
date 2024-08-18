@@ -1,15 +1,15 @@
 <launch> 
 <!--controller -->
-    <node name="gripper_controller" pkg="ex_ground" type="gripper" output="screen"></node>
-    <node name="position_controller" pkg="ex_ground" type="position" output="screen"></node>
-    <node name="wrench_mapper" pkg="ex_ground" type="mapper" output="screen"></node>
-    <node name="attitude_controller" pkg="ex_ground" type="attitude" output="screen"></node>
+    <node name="gripper_controller" pkg="ground" type="gripper_controller" output="screen"></node>
+    <node name="position_controller" pkg="ground" type="position_controller" output="screen"></node>
+    <node name="wrench_mapper" pkg="ground" type="wrench_mapper" output="screen"></node>
+    <node name="attitude_controller" pkg="ground" type="attitude_controller" output="screen"></node>
+    <node name="qc_servo" pkg="ground" type="qc_servo" output="screen"></node>
 <!-- keyboard control -->
-    <node name="keyboard" pkg="ex_ground" type="keyboard" output="screen"></node>
+    <node name="keyboard" pkg="ground" type="keyboard" output="screen"></node>
 <!--trajectory generate-->
-    <node name="trajectory_generator" pkg="ex_ground" type="trajectory_generator" output="screen">
+    <node name="trajectory_generator" pkg="ground" type="trajectory_generator" output="screen"></node>
 <!-- optitrack using for platform-->
-    <node name="topic_tool_platform" pkg="ex_ground" type="topic_tool_platform" output="screen">
-    </node>
-    <node pkg="rosbag" type="record" name="bag_record" args="-a   -o ../rosbag_record/ex.bag"/>
+    <node name="topic_tool_platform" pkg="ground" type="topic_tool_platform" output="screen"></node>
+   <!-- <node pkg="rosbag" type="record" name="bag_record" args="-a -o ../rosbag_record/ex.bag"></node>-->
 </launch>
