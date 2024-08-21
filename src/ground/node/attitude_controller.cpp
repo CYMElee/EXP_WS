@@ -129,7 +129,9 @@ int main(int argc,char **argv)
     ros::Publisher total_moment = nh.advertise<std_msgs::Float32MultiArray>
         ("/platform/desire_total_moment",10); 
     ros::Publisher attitude_error = nh.advertise<std_msgs::Float32MultiArray>
-        ("/platform/attitude_error",10); 
+        ("/platform/attitude_error",10);
+
+    ROS_INFO("SUCCESS LAUNCH ATTITUDE CONTROLLER"); 
  
     ros::Rate rate(100);
     ros::topic::waitForMessage<std_msgs::Float32MultiArray>("/platform/desire_attitude");

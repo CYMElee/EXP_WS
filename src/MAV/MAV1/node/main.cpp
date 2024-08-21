@@ -46,7 +46,6 @@ void mode_cb(const std_msgs::Int16::ConstPtr& msg);
 void platform_pose_cb(const geometry_msgs::PoseStamped::ConstPtr& msg);
 void mav_pose_cb(const geometry_msgs::PoseStamped::ConstPtr& msg);
 void T_sub_cb(const std_msgs::Float64MultiArray::ConstPtr& msg);
-
 void T_cmd_calculate(void);
 
 
@@ -80,7 +79,7 @@ int main(int argv,char** argc)
     //******************************//
 
     /*subscribe the Platform attitude*/
-    ros::Subscriber PLA_Atti_sub = nh.subscribe<geometry_msgs::PoseStamped>("/vrpn_client_node/platform/pose",12,platform_pose_cb);
+    ros::Subscriber platform_pose_sub = nh.subscribe<geometry_msgs::PoseStamped>("/vrpn_client_node/platform/pose",12,platform_pose_cb);
     /*subscribe the MAV attitude, get from optitrack*/
     std::string sub_topic = std::string("/vrpn_client_node/MAV") + std::to_string(UAV_ID) + std::string("/pose");
     ros::Subscriber MAV_pose = nh.subscribe<geometry_msgs::PoseStamped>(sub_topic, 10, mav_pose_cb);
@@ -144,7 +143,7 @@ int main(int argv,char** argc)
 	rate.sleep();
     }
     rate = ros::Rate(100);
-    ros::topic::waitForMessage<std_msgs::Float32MultiArray>("cmd");
+    ros::topic::waitForMessage<std_msgs::Float64MultiArray>("cmd");
     while(ros::ok()){
 
 

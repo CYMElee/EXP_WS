@@ -50,7 +50,6 @@ int main(int argc,char **argv)
     ros::NodeHandle nh;
     /*initial some variable*/
     initialize();
-
     /*get the system's fly mode*/
     ros::Subscriber GET_MODE = nh.subscribe<std_msgs::Int16>
         ("/ground_station/set_mode",10,mode_cb);
@@ -75,24 +74,23 @@ int main(int argc,char **argv)
 
     while(ros::ok())
     {
-        if(Mode.data = MAV_mod::IDLE){
+        if(Mode.data == MAV_mod::IDLE){
            
         }
 
-        if(Mode.data = MAV_mod::TAKEOFF){
+        if(Mode.data == MAV_mod::TAKEOFF){
           hovering();  
-
+          ROS_ERROR("SET_THE_HOVERING_TRAJECTORY!!!");
         }
 
 
-        if(Mode.data = MAV_mod::LAND){
+        if(Mode.data == MAV_mod::LAND){
             land();
         }
 
-        if(Mode.data = MAV_mod::SET_HOME)
+        if(Mode.data == MAV_mod::SET_HOME){
             set_home();
-        
-    }
+            }
 
     desire_position.publish(pd);
     desire_velocity.publish(pd_d);
@@ -103,12 +101,15 @@ int main(int argc,char **argv)
     ros::spinOnce();
     rate.sleep();
 
+    
+    }
     return 0;
 }
 
 
 void initialize(void){
     Mode.data = MAV_mod::IDLE;
+    ROS_ERROR("INIT(TRAJECTORY)!!!");
     pd.data.resize(3); // desire position:x,y,z
     pd_d.data.resize(3); // desire velocity:x,y,z
     Rr.data.resize(3); // desire Attitude:
@@ -120,7 +121,8 @@ void initialize(void){
 }
 
 
-void hovering(void){
+void hovering(void)
+{
 
 /*in hovering mode, we hope the system(platform) can hovering on z=0.5m */
 
@@ -189,4 +191,5 @@ void set_home(void){
     p_home.data[0] = pose.data[0]; //x
     p_home.data[1] = pose.data[1]; //y
     p_home.data[2] = 0; //z
+    ROS_ERROR("SET_THE_PLATFORM_HOME_POSITION(TRAJECTORY)!!!");
 }

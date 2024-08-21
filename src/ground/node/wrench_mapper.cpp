@@ -156,7 +156,7 @@ int main(int argc,char **argv)
     ros::Publisher desire_thrust_each = nh.advertise<std_msgs::Float64MultiArray>
         ("/gripper/desire_thrust_each",10); 
 
-
+    ROS_INFO("SUCCESS LAUNCH WRENCH_MAPPER!!!"); 
 
     ros::topic::waitForMessage<std_msgs::Float32MultiArray>("/gripper/desire_thrust_total");
 

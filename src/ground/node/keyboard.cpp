@@ -57,7 +57,7 @@ void MAV_State::MAV4_CB(const mavros_msgs::State::ConstPtr& msg){
 }
 
 void MAV_State::Check_All_State(void){
-    if(MAV1_State.armed && MAV2_State.armed  && MAV4_State.armed && Mode.data == MAV_mod::IDLE){
+    if(MAV1_State.armed && Mode.data == MAV_mod::IDLE){
         ROS_INFO("All_Mav_Get_Ready!!!");
     }
     if(Mode.data == MAV_mod::TAKEOFF){
@@ -65,6 +65,9 @@ void MAV_State::Check_All_State(void){
     }
     if(Mode.data == MAV_mod::LAND){
         ROS_INFO("All_Mav_Land!!!");
+    }
+    if(Mode.data == MAV_mod::SET_HOME){
+        ROS_INFO("SET_THE_PLATFORM_HOME_POSITION(keyboard)!!!");
     }
 }
 

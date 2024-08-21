@@ -47,17 +47,17 @@ MAV::MAV(ros::NodeHandle nh, string Topic)
 void MAV::Thrust(std_msgs::Float64MultiArray fd,int i)
 {
 
-    fd_e(0,1) = fd.data[i]; //x
-    fd_e(1,1) = fd.data[i+1]; //y
-    fd_e(2,1) = fd.data[i+2]; //z
+    fd_e(0) = fd.data[i]; //x
+    fd_e(1) = fd.data[i+1]; //y
+    fd_e(2) = fd.data[i+2]; //z
     double f = (fd_e.norm()/4); //because we have 4 motor for each sd420
 
     T.data[0] = p6*pow(f,6)+p5*pow(f,5)+p4*pow(f,4)+p3*pow(f,3)+p2*pow(f,2)+p1*pow(f,1)+p0;   // net thrust(PWM 0~1) you should imply thrust curve here
 
     /*using the desire thrust(vector) on platform body frame to get the alpha and beta*/
 
-    double alpha = atan2(-fd_e(1,1),fd_e(2,1));
-    double beta = asin(fd_e(0,1)/f);
+    double alpha = atan2(-fd_e(1),fd_e(2));
+    double beta = asin(fd_e(0)/f);
     
   
 
@@ -80,7 +80,7 @@ int main(int argc,char **argv)
     ros::NodeHandle nh;
 
     fd.data.resize(12);
-
+    ROS_INFO("SUCCESS LAUNCH QC_SERVO!!"); 
     ros::Subscriber thrust = nh.subscribe<std_msgs::Float64MultiArray>
         ("/gripper/desire_thrust_each",10,thrust_cb);
 

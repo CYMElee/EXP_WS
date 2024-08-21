@@ -99,6 +99,7 @@ int main(int argc,char **argv)
     ros::init(argc,argv,"position_controller");
     ros::NodeHandle nh;
     t.data.resize(3);
+    ROS_INFO("SUCCESS LAUNCH POSITION CONTROLLER"); 
 
     //control gain
 Kp << 4.5, 0 , 0 ,
