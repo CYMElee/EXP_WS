@@ -1,0 +1,8 @@
+prefix=/home/lee/workspace/ros_ws/ex_ws/devel
+
+Name: mav3
+Description: Description of mav3
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

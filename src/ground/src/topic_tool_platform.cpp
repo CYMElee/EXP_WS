@@ -90,6 +90,20 @@ int main(int argc, char **argv)
     
     ros::Rate rate(100);
 
+    for(int i = 0;i<100; i++){
+        /*set the position_prev*/
+        p_prev(0) = pose.pose.position.x;
+        p_prev(1) = pose.pose.position.y;
+        p_prev(2) = pose.pose.position.z;
+        /*set the */
+        eu_prev(2) = 0;
+        eu_prev(1) = 0;
+        eu_prev(0) = 0;
+        ros::spinOnce();
+        rate.sleep();
+    }
+
+
     while (ros::ok()) {
 
         Position_and_Velocity();
@@ -121,9 +135,7 @@ void initialize(void)
 
 
     /*set the init position using to get init velocity*/
-    p_prev[0] = pose.pose.position.x;
-    p_prev[1] = pose.pose.position.y;
-    p_prev[2] = pose.pose.position.z;
+
 
 }
 
@@ -133,13 +145,13 @@ void Position_and_Velocity(void)
     PLA_p.data[0] = pose.pose.position.x;
     PLA_p.data[1] = pose.pose.position.y;
     PLA_p.data[2] = pose.pose.position.z;
-    p[0] = pose.pose.position.x;
-    p[1] = pose.pose.position.y;
-    p[2] = pose.pose.position.z;
+    p(0) = pose.pose.position.x;
+    p(1) = pose.pose.position.y;
+    p(2) = pose.pose.position.z;
 
-    PLA_p_d.data[0] = (p[0]-p_prev[0])/dt;
-    PLA_p_d.data[1] = (p[1]-p_prev[1])/dt;
-    PLA_p_d.data[2] = (p[2]-p_prev[2])/dt;
+    PLA_p_d.data[0] = (p(0)-p_prev(0))/dt;
+    PLA_p_d.data[1] = (p(1)-p_prev(1))/dt;
+    PLA_p_d.data[2] = (p(2)-p_prev(2))/dt;
 
 }
 
@@ -167,9 +179,9 @@ void Attitude_and_Angular_rate(void)
                           0,-sin(Psi),cos(Psi)*cos(Theta);
 
 
-    Euler_Rate_Change(0) = ((eu[2] - eu_prev[2])/dt);
-    Euler_Rate_Change(1) = ((eu[1] - eu_prev[1])/dt);
-    Euler_Rate_Change(2) = ((eu[0] - eu_prev[0])/dt);
+    Euler_Rate_Change(0) = ((eu(2) - eu_prev(2))/dt);
+    Euler_Rate_Change(1) = ((eu(1) - eu_prev(1))/dt);
+    Euler_Rate_Change(2) = ((eu(0) - eu_prev(0))/dt);
     
     Angular_Rate_Change = Rate_Change_Matrix*Euler_Rate_Change;
 

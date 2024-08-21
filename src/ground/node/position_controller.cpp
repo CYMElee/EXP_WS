@@ -140,6 +140,7 @@ z<< 0,0,1;
     while(ros::ok())
     {
         
+        
         total_thrust();
         desire_thrust_total.publish(t);
 
