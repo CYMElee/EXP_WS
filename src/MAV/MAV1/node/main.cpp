@@ -37,7 +37,7 @@ std_msgs::Float64MultiArray T_cmd;
 std_msgs::Int16 Change_Mode_Trigger ;
 
 mavros_msgs::AttitudeTarget T;
-
+mavros_msgs::AttitudeTarget T_PREARM;
 
 void initialize(void);
 
@@ -133,12 +133,14 @@ int main(int argv,char** argc)
     while(ros::ok() && Change_Mode_Trigger.data !=MAV_mod::TAKEOFF){
 
         ROS_INFO("READY_TAKEOFF!!");
-        if( current_state.mode != "OFFBOARD" ){
-            set_mode_client.call(offb_set_mode);
-        }
-        if(!current_state.armed){
-            arming_client.call(arm_cmd);
-        }
+        //if( current_state.mode != "OFFBOARD" ){
+          //  set_mode_client.call(offb_set_mode);
+       // }
+       // if(!current_state.armed){
+       //     arming_client.call(arm_cmd);
+       // }
+    T_pub.publish(T_PREARM);
+    
 	ros::spinOnce();
 	rate.sleep();
     }
@@ -182,6 +184,15 @@ void initialize(void){
     //init the attitude and thrust value
     T.type_mask = 7 ;
     T_cmd.data.resize(3);
+    T_PREARM.type_mask = 7 ;
+    T_PREARM.orientation.w = 1;
+    T_PREARM.orientation.x = 0;
+    T_PREARM.orientation.y = 0;
+    T_PREARM.orientation.z = 0;
+    T_PREARM.thrust = 0.3;
+    
+    
+
 }
 
 

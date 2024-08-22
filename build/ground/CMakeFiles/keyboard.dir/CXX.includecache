@@ -34,10 +34,6 @@ mavros_msgs/State.h
 mavros_msgs/Mavlink.h
 /home/lee/workspace/ros_ws/ex_ws/src/ground/node/mavros_msgs/Mavlink.h
 
-/home/lee/workspace/ros_ws/ex_ws/src/ground/src/getch.cpp
-getch.h
-/home/lee/workspace/ros_ws/ex_ws/src/ground/src/getch.h
-
 /opt/ros/noetic/include/mavros_msgs/CommandBool.h
 ros/service_traits.h
 -

@@ -47,7 +47,7 @@ CMAKE_AR:FILEPATH=/usr/bin/ar
 
 //Choose the type of build, options are: None Debug Release RelWithDebInfo
 // MinSizeRel ...
-CMAKE_BUILD_TYPE:STRING=RelWithDebInfo
+CMAKE_BUILD_TYPE:STRING=
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -304,7 +304,7 @@ DOXYGEN_EXECUTABLE:FILEPATH=DOXYGEN_EXECUTABLE-NOTFOUND
 EMPY_EXECUTABLE:FILEPATH=EMPY_EXECUTABLE-NOTFOUND
 
 //Empy script
-EMPY_SCRIPT:STRING=/usr/lib/python3/dist-packages/em.py
+EMPY_SCRIPT:STRING=/home/lee/.local/lib/python3.8/site-packages/em.py
 
 //Path to a library.
 GMOCK_LIBRARY:FILEPATH=GMOCK_LIBRARY-NOTFOUND
@@ -359,7 +359,7 @@ PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python3
 PYTHON_VERSION:STRING=3
 
 //Location of Python module em
-PY_EM:STRING=/usr/lib/python3/dist-packages/em.py
+PY_EM:STRING=/home/lee/.local/lib/python3.8/site-packages/em.py
 
 //Value Computed by CMake
 Project_BINARY_DIR:STATIC=/home/lee/workspace/ros_ws/ex_ws/build
@@ -368,7 +368,7 @@ Project_BINARY_DIR:STATIC=/home/lee/workspace/ros_ws/ex_ws/build
 Project_SOURCE_DIR:STATIC=/home/lee/workspace/ros_ws/ex_ws/src
 
 //Path to a library.
-RT_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.a
+RT_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.so
 
 //Enable debian style python package layout
 SETUPTOOLS_DEB_LAYOUT:BOOL=ON
@@ -659,7 +659,11 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Test CMAKE_HAVE_LIBC_PTHREAD
-CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=1
+CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=
+//Have library pthreads
+CMAKE_HAVE_PTHREADS_CREATE:INTERNAL=
+//Have library pthread
+CMAKE_HAVE_PTHREAD_CREATE:INTERNAL=1
 //Have include pthread.h
 CMAKE_HAVE_PTHREAD_H:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
@@ -760,7 +764,7 @@ CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding PY_em
-FIND_PACKAGE_MESSAGE_DETAILS_PY_em:INTERNAL=[/usr/lib/python3/dist-packages/em.py][v()]
+FIND_PACKAGE_MESSAGE_DETAILS_PY_em:INTERNAL=[/home/lee/.local/lib/python3.8/site-packages/em.py][v()]
 //Details about finding PythonInterp
 FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python3][v3.8.10()]
 //Details about finding Threads
