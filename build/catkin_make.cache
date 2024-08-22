@@ -1,2 +1,0 @@
-controller:ground:optitrack
--DCATKIN_DEVEL_PREFIX=/home/lee/workspace/ROS_ws/ex_ws/devel -DCMAKE_INSTALL_PREFIX=/home/lee/workspace/ROS_ws/ex_ws/install -G Unix Makefiles
