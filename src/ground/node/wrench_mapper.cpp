@@ -158,7 +158,7 @@ int main(int argc,char **argv)
 
     ROS_INFO("SUCCESS LAUNCH WRENCH_MAPPER!!!"); 
 
-    ros::topic::waitForMessage<std_msgs::Float32MultiArray>("/gripper/desire_thrust_total");
+    ros::topic::waitForMessage<std_msgs::Float32MultiArray>("/platform/desire_thrust_total");
 
     ros::Rate rate(100);
     while(ros::ok())

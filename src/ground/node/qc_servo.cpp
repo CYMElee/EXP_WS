@@ -82,7 +82,7 @@ int main(int argc,char **argv)
     fd.data.resize(12);
     ROS_INFO("SUCCESS LAUNCH QC_SERVO!!"); 
     ros::Subscriber thrust = nh.subscribe<std_msgs::Float64MultiArray>
-        ("/gripper/desire_thrust_each",10,thrust_cb);
+        ("/plarform/desire_thrust_each",10,thrust_cb);
 
     MAV mav[4] = {MAV(nh, "/MAV1/cmd"),
                   MAV(nh, "/MAV2/cmd"),
@@ -90,7 +90,7 @@ int main(int argc,char **argv)
                   MAV(nh, "/MAV4/cmd")};
                   
     ros::Rate rate(100);
-   // ros::topic::waitForMessage<std_msgs::Float64MultiArray>("/gripper/desire_thrust_each");
+    ros::topic::waitForMessage<std_msgs::Float64MultiArray>("/plarform/desire_thrust_each");
 
     while(ros::ok())
     {
