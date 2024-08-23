@@ -140,14 +140,12 @@ int main(int argv,char** argc)
        //     arming_client.call(arm_cmd);
        // }
     T_pub.publish(T_PREARM);
-    
 	ros::spinOnce();
 	rate.sleep();
     }
     rate = ros::Rate(100);
     ros::topic::waitForMessage<std_msgs::Float64MultiArray>("cmd");
     while(ros::ok()){
-
 
         T_cmd_calculate();
         T_pub.publish(T);
