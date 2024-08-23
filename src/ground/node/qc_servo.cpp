@@ -8,13 +8,16 @@
 
 
 // define the motor curve index
-double p6 = 0.03169;
-double p5 = 0.2807;
-double p4 = -0.07407;
-double p3 = 0.01128;
-double p2 = -0.0007524;
-double p1 = 1.375e-05;
-double p0 = 3.274e-07;
+double p7 = 0.03169;
+double p6 = 0.2807;
+double p5 = -0.07407;
+double p4 = 0.01128;
+double p3 = -0.0007524;
+double p2 = 1.375e-05;
+double p1 = 3.274e-07;
+
+
+
 
 using namespace Eigen;
 using namespace std;
@@ -52,7 +55,7 @@ void MAV::Thrust(std_msgs::Float64MultiArray fd,int i)
     fd_e(2) = fd.data[i+2]; //z
     double f = (fd_e.norm()/4); //because we have 4 motor for each sd420
 
-    T.data[0] = p6*pow(f,6)+p5*pow(f,5)+p4*pow(f,4)+p3*pow(f,3)+p2*pow(f,2)+p1*pow(f,1)+p0;   // net thrust(PWM 0~1) you should imply thrust curve here
+    T.data[0] = p1*pow(f,6)+p2*pow(f,5)+p3*pow(f,4)+p4*pow(f,3)+p5*pow(f,2)+p6*pow(f,1)+p7;   // net thrust(PWM 0~1) you should imply thrust curve here
 
     /*using the desire thrust(vector) on platform body frame to get the alpha and beta*/
 
