@@ -26,10 +26,12 @@ std_msgs::Float32 M;
 
 
 
-void phi_cb(const std_msgs::Float32MultiArray::ConstPtr& msg)
-{
-    phi = *msg;
-}
+//void phi_cb(const std_msgs::Float32MultiArray::ConstPtr& msg)
+//{
+ //   phi = *msg;
+//}
+
+void initialize(void);
 
 void phid_cb(const std_msgs::Float32MultiArray::ConstPtr& msg)
 {
@@ -43,19 +45,13 @@ int main(int argc,char **argv)
     ros::init(argc,argv,"gripper_controller");
     ros::NodeHandle nh;
     //initalize...
+    initialize();
     ROS_INFO("SUCCESS LAUNCH GRIPPER CONTROLLER");
-    phi.data.resize(3);
-    phid.data.resize(3);
-    phi.data[0] = 1.57;
-    phi.data[1] = 0;
-    phi.data[2] = 0;
-    phid.data[0] = 1.57;
-    phid.data[1] = 0;
-    phid.data[2] = 0;
-    M.data = 0;
 
-    ros::Subscriber phi_measure = nh.subscribe<std_msgs::Float32MultiArray>
-        ("/gripper/phi_measure",10,phi_cb);
+    
+
+  //  ros::Subscriber phi_measure = nh.subscribe<std_msgs::Float32MultiArray>
+ //       ("/gripper/phi_measure",10,phi_cb);
 
     ros::Subscriber phi_desire = nh.subscribe<std_msgs::Float32MultiArray>
         ("/gripper/phi_desire",10,phid_cb);
@@ -79,6 +75,20 @@ int main(int argc,char **argv)
     }
 
     return 0;
+}
+
+
+
+void initialize(void){
+    phi.data.resize(3);
+    phid.data.resize(3);
+    phi.data[0] = 1.57;
+    phi.data[1] = 0;
+    phi.data[2] = 0;
+    phid.data[0] = 1.57;
+    phid.data[1] = 0;
+    phid.data[2] = 0;
+    M.data = 0;
 }
 
 

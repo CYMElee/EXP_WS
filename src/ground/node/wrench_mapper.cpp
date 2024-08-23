@@ -145,16 +145,16 @@ int main(int argc,char **argv)
   
     Fd.data.resize(12);
     ros::Subscriber desire_thrust_total = nh.subscribe<std_msgs::Float32MultiArray>
-        ("/gripper/desire_thrust_total",10,desire_thrust_total_cb); //corresponding u1 on matlab
+        ("/platform/desire_thrust_total",10,desire_thrust_total_cb); //corresponding u1 on matlab
 
     ros::Subscriber desire_moment_attitude = nh.subscribe<std_msgs::Float32MultiArray>
-        ("/gripper/desire_moment_attitude",10,desire_moment_attitude_cb); // corresponding u2 on matlab
+        ("/platform/desire_total_moment",10,desire_moment_attitude_cb); // corresponding u2 on matlab
 
     ros::Subscriber desire_moment_angle = nh.subscribe<std_msgs::Float32>
-        ("/gripper/desire_moment_angle",10,desire_moment_angle_cb); // corresponding M on matlab
+        ("/gripper/desire_moment",10,desire_moment_angle_cb); // corresponding M on matlab
 
     ros::Publisher desire_thrust_each = nh.advertise<std_msgs::Float64MultiArray>
-        ("/gripper/desire_thrust_each",10); 
+        ("/plarform/desire_thrust_each",10); 
 
     ROS_INFO("SUCCESS LAUNCH WRENCH_MAPPER!!!"); 
 
@@ -166,7 +166,6 @@ int main(int argc,char **argv)
 
         fd_gen();
         desire_thrust_each.publish(Fd);
-
 
         ros::spinOnce();
         rate.sleep();
