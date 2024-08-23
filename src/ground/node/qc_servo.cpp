@@ -60,7 +60,7 @@ void MAV::Thrust(std_msgs::Float64MultiArray fd,int i)
     /*using the desire thrust(vector) on platform body frame to get the alpha and beta*/
 
     double alpha = atan2(-fd_e(1),fd_e(2));
-    double beta = asin(fd_e(0)/f);
+    double beta = asin(fd_e(0)/fd_e.norm());
     
   
 
