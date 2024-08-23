@@ -14,10 +14,10 @@ std_msgs::Float32 M;
 std_msgs::Float64MultiArray Fd;
 
 
-Matrix<float, 3, 1> BP1;
-Matrix<float, 3, 1> BP2;
-Matrix<float, 3, 1> BP3;
-Matrix<float, 3, 1> BP4;
+Vector3f BP1;
+Vector3f BP2;
+Vector3f BP3;
+Vector3f BP4;
 
 Matrix<float, 3, 3> BP1x;
 Matrix<float, 3, 3> BP2x;
@@ -64,17 +64,17 @@ void fd_gen()
 {
     for(int r = 0; r< 3;r++)
     {
-    fd_temp1(r,1) = u1.data[r];  
+    fd_temp1(r,0) = u1.data[r];  
     }
     for(int r = 0; r< 3;r++)
     {
-    fd_temp1(r+3,1) = u2.data[r];
+    fd_temp1(r+3,0) = u2.data[r];
     }
-    fd_temp1(6,1) = M.data;
+    fd_temp1(6,0) = M.data;
     fd = ArT* fd_temp1;
     for(int r = 0;r<12;r++)
     {
-        Fd.data[r] = fd(r,1);
+        Fd.data[r] = fd(r,0);
 
     }
 
@@ -89,21 +89,21 @@ int main(int argc,char **argv)
     BP3 << -Lw , 0, 0 ;
     BP4 << 0, -Lw , 0 ;
 
-    BP1x << 0, -BP1[2],BP1[1],
-            BP1[2],0,-BP1[0],
-            -BP1[1],BP1[0],0;
+    BP1x << 0, -BP1(2),BP1(1),
+            BP1(2),0,-BP1(0),
+            -BP1(1),BP1(0),0;
 
-    BP2x << 0,-BP2[2],BP2[1], 
-            BP2[2],0,-BP2[0], 
-            -BP2[1],BP2[0],0;
+    BP2x << 0,-BP2(2),BP2(1), 
+            BP2(2),0,-BP2(0), 
+            -BP2(1),BP2(0),0;
 
-    BP3x << 0,-BP3[2],BP3[1],
-            BP3[2],0,-BP3[0],
-            -BP3[1],BP3[0],0;
+    BP3x << 0,-BP3(2),BP3(1),
+            BP3(2),0,-BP3(0),
+            -BP3(1),BP3(0),0;
 
-    BP4x << 0,-BP4[2],BP4[1], 
-            BP4[2],0,-BP4[0],
-            -BP4[1],BP4[0],0;
+    BP4x << 0,-BP4(2),BP4(1), 
+            BP4(2),0,-BP4(0),
+            -BP4(1),BP4(0),0;
     B1R = Matrix3f::Identity();
     B2R <<  0 ,-1  , 0,
             1 , 0  , 0,
