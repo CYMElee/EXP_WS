@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/lee/workspace/ros_ws/ex_ws/devel/lib/ground/wrench_mapper"
-  "/home/lee/workspace/ros_ws/ex_ws/devel/lib/ground/wrench_mapper.pdb"
+  "/home/lee/workspace/ROS_ws/ex_ws/devel/lib/ground/wrench_mapper"
+  "/home/lee/workspace/ROS_ws/ex_ws/devel/lib/ground/wrench_mapper.pdb"
   "CMakeFiles/wrench_mapper.dir/node/wrench_mapper.cpp.o"
 )
 

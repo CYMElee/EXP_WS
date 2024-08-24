@@ -203,7 +203,7 @@ void T_cmd_calculate(void){
     float alpha = T_cmd.data[1];
     float beta = T_cmd.data[2];
     float thrust = T_cmd.data[0]; 
-    float z = eulerAngles_mav(1,1);
+    float z = eulerAngles_mav(2);
 
      /*get the MAV desire Attitude(from mav fram to platform fram)*/
     Eigen::Quaternionf MAV_pose_cmd;

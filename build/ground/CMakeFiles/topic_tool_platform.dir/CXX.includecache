@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/lee/workspace/ros_ws/ex_ws/src/ground/src/topic_tool_platform.cpp
+/home/lee/workspace/ROS_ws/ex_ws/src/ground/src/topic_tool_platform.cpp
 ros/ros.h
 -
 geometry_msgs/PoseStamped.h
@@ -34,9 +34,9 @@ tf/tf.h
 string
 -
 std_msgs/Float32MultiArray.h
-/home/lee/workspace/ros_ws/ex_ws/src/ground/src/std_msgs/Float32MultiArray.h
+/home/lee/workspace/ROS_ws/ex_ws/src/ground/src/std_msgs/Float32MultiArray.h
 Eigen/Dense
-/home/lee/workspace/ros_ws/ex_ws/src/ground/src/Eigen/Dense
+/home/lee/workspace/ROS_ws/ex_ws/src/ground/src/Eigen/Dense
 
 /opt/ros/noetic/include/geometry_msgs/Point.h
 string

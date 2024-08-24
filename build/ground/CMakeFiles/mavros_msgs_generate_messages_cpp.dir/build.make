@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lee/workspace/ros_ws/ex_ws/src
+CMAKE_SOURCE_DIR = /home/lee/workspace/ROS_ws/ex_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lee/workspace/ros_ws/ex_ws/build
+CMAKE_BINARY_DIR = /home/lee/workspace/ROS_ws/ex_ws/build
 
 # Utility rule file for mavros_msgs_generate_messages_cpp.
 
@@ -63,10 +63,10 @@ ground/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/build: mavros_msgs_gener
 .PHONY : ground/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/build
 
 ground/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/clean:
-	cd /home/lee/workspace/ros_ws/ex_ws/build/ground && $(CMAKE_COMMAND) -P CMakeFiles/mavros_msgs_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/lee/workspace/ROS_ws/ex_ws/build/ground && $(CMAKE_COMMAND) -P CMakeFiles/mavros_msgs_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : ground/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/clean
 
 ground/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/depend:
-	cd /home/lee/workspace/ros_ws/ex_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lee/workspace/ros_ws/ex_ws/src /home/lee/workspace/ros_ws/ex_ws/src/ground /home/lee/workspace/ros_ws/ex_ws/build /home/lee/workspace/ros_ws/ex_ws/build/ground /home/lee/workspace/ros_ws/ex_ws/build/ground/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lee/workspace/ROS_ws/ex_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lee/workspace/ROS_ws/ex_ws/src /home/lee/workspace/ROS_ws/ex_ws/src/ground /home/lee/workspace/ROS_ws/ex_ws/build /home/lee/workspace/ROS_ws/ex_ws/build/ground /home/lee/workspace/ROS_ws/ex_ws/build/ground/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ground/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/depend
 
