@@ -1,8 +1,0 @@
-prefix=/home/lee/workspace/ROS_ws/ex_ws/devel
-
-Name: mav4
-Description: Description of mav4
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
