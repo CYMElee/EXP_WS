@@ -5,8 +5,8 @@
 #include "eigen_conversions/eigen_msg.h"
 
 #define G 9.81 //greavity
-#define  M_main 1.6 //kg
-#define  M_qc  1.5 //kg
+#define  M_main 0.4 //kg
+#define  M_qc  0.4 //kg
 
 
 using namespace Eigen;
@@ -102,17 +102,17 @@ int main(int argc,char **argv)
     ROS_INFO("SUCCESS LAUNCH POSITION CONTROLLER"); 
 
     //control gain
-Kp << 4.5, 0 , 0 ,
-      0  , 4.5,0 ,
-      0  , 0,  5;
+Kp << 1, 0 , 0 ,
+      0  , 1,0 ,
+      0  , 0,  1;
 
-Kv << 2  , 0  ,0 ,
-      0  , 2  ,0,
-      0  , 0  ,2.5;
+Kv << 1  , 0  ,0 ,
+      0  , 1  ,0,
+      0  , 0  ,1;
 
-Ki << 2.7, 0 , 0 ,
-      0  , 2.5,0,
-      0  , 0,  2;
+Ki << 1, 0 , 0 ,
+      0  , 1,0,
+      0  , 0,  1;
 z<< 0,0,1;
 
     ros::Subscriber desire_position = nh.subscribe<std_msgs::Float32MultiArray>

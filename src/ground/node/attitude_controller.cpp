@@ -105,13 +105,13 @@ int main(int argc,char **argv)
     ros::NodeHandle nh;
     u2.data.resize(3);
     er.data.resize(3);
-    KR << 17, 0 , 0 ,
-          0 , 15, 0 ,
-          0 , 0 , 10;
+    KR << 1, 0 , 0 ,
+          0 , 1, 0 ,
+          0 , 0 , 1;
 
-    Kw << 4  , 0 , 0 ,
-          0  , 5.5,0 ,
-          0  , 0,  2.2;
+    Kw << 1  , 0 , 0 ,
+          0  , 1,0 ,
+          0  , 0,  1;
 
 
     IB << IBxy,  0  , 0,
