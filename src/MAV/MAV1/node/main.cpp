@@ -91,6 +91,11 @@ int main(int argv,char** argc)
     ros::Publisher T_pub = nh.advertise<mavros_msgs::AttitudeTarget>
         ("mavros/setpoint_raw/attitude", 10);
     ros::Subscriber Takeoff_Signal = nh.subscribe<std_msgs::Int16>("/ground_station/set_mode", 10, mode_cb);
+
+    /*** using debug ***/
+    ros::Publisher T_pub_debug = nh.advertise<std_msgs::Float32MultiArray>
+        ("mavros/setpoint_raw/attitude_euler", 10);
+
     ros::Rate rate(100.0);
 
     while(ros::ok() && !current_state.connected){
@@ -150,6 +155,7 @@ int main(int argv,char** argc)
 
         T_cmd_calculate();
         T_pub.publish(T);
+        T_pub_debug.publish(Eul_cmd);
 
         ros::spinOnce();
         rate.sleep();
@@ -188,7 +194,8 @@ void initialize(void){
     T_PREARM.orientation.x = 0;
     T_PREARM.orientation.y = 0;
     T_PREARM.orientation.z = 0;
-    T_PREARM.thrust = 0.3;
+    T_PREARM.thrust = 0.3;  
+    Eul_cmd.data.resize(3);
     
     
 
@@ -230,6 +237,10 @@ void T_cmd_calculate(void){
     Eigen::AngleAxisf(eulerAngles_mav_des(1),Eigen::Vector3f::UnitY()) * \
     Eigen::AngleAxisf(eulerAngles_mav_des(2),Eigen::Vector3f::UnitX());
 
+    Eul_cmd.data[0] = eulerAngles_mav_des(0);
+    Eul_cmd.data[1] = eulerAngles_mav_des(1);
+    Eul_cmd.data[2] = eulerAngles_mav_des(2);
+    
 
     T.orientation.w =mav_pose_desire.w();
     T.orientation.x =mav_pose_desire.x();
