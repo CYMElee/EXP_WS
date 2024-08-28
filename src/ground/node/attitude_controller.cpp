@@ -92,7 +92,7 @@ void attitude_er()
 
 void moment()
 {
-    m = h - IB*(KR*eR + Kw*eW);
+    m = - IB*(KR*eR + Kw*eW);
 
     u2.data[0] = m(0);
     u2.data[1] = m(1);
@@ -110,7 +110,7 @@ int main(int argc,char **argv)
           0 , 0 , 1;
 
     Kw << 0  , 0 , 0 ,
-          0  , 0,0 ,
+          0  , 0, 0 ,
           0  , 0,  0;
 
 

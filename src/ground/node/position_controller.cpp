@@ -5,8 +5,8 @@
 #include "eigen_conversions/eigen_msg.h"
 
 #define G 9.81 //greavity
-#define  M_main 0.4 //kg
-#define  M_qc  0.4 //kg
+#define  M_main 0.3 //kg
+#define  M_qc  0.3 //kg
 
 
 using namespace Eigen;
@@ -102,9 +102,9 @@ int main(int argc,char **argv)
     ROS_INFO("SUCCESS LAUNCH POSITION CONTROLLER"); 
 
     //control gain
-Kp << 10, 0 , 0 ,
-      0  , 10 ,0 ,
-      0  , 0,  5;
+Kp << 8, 0 , 0 ,
+      0  , 8 ,0 ,
+      0  , 0,  8;
 
 Kv << 0 , 0  ,0 ,
       0  , 0  ,0,
