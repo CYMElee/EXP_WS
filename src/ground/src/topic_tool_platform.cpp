@@ -73,8 +73,8 @@ int main(int argc, char **argv)
     ros::init(argc, argv, "topic_tool_platform");
     ros::NodeHandle nh;
     initialize();
-    a << -2.748,2.528,-0.777;
-    b << 2.196e-04,6.588e-04,6.588e-04,2.196e-04;
+    a << -1.760041880343169,1.182893262037831,0.278059917634546;
+    b << 0.018098933007514,0.054296799022543,0.054296799022543,0.018098933007514;
     filter position_filter(a,b);
 
 
