@@ -13,7 +13,7 @@ filter::filter(Eigen::Vector3d a,Eigen::Vector4d b){
 }
 
 Eigen::Vector3d filter::Butterworth_filter(geometry_msgs::PoseStamped pose,int t){
-    if(t == 0){
+    if(t <= 500){
        position_raw_t_1 << pose.pose.position.x,pose.pose.position.y,pose.pose.position.z;
        position_raw_t_2 << pose.pose.position.x,pose.pose.position.y,pose.pose.position.z;
        position_raw_t_3 << pose.pose.position.x,pose.pose.position.y,pose.pose.position.z;
@@ -35,9 +35,9 @@ Eigen::Vector3d filter::Butterworth_filter(geometry_msgs::PoseStamped pose,int t
     position_t_1 = filt;
 
     /*renew the be failt data*/
-    //position_raw_t_3 = position_raw_t_2;
-    //position_raw_t_2 = position_raw_t_1;
-   // position_raw_t_1 << pose.pose.position.x,pose.pose.position.y,pose.pose.position.z;
+    position_raw_t_3 = position_raw_t_2;
+    position_raw_t_2 = position_raw_t_1;
+    position_raw_t_1 << pose.pose.position.x,pose.pose.position.y,pose.pose.position.z;
     
     
 
