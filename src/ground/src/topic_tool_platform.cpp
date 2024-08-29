@@ -18,6 +18,7 @@
 #include <string>
 #include "std_msgs/Float32MultiArray.h"
 #include "Eigen/Dense"
+#include "filter.h"
 
 #define dt 0.01
 
@@ -27,20 +28,23 @@ float Psi = 0; // x
 float Theta = 0; // y
 float Phi = 0; // z
 
+int t = 0;
+
 geometry_msgs::PoseStamped host_mocap;
 
+Vector3d a; //a & b using for filter
+Vector4d b;
 
+Vector3d p;
+Vector3d p_prev;
 
-RowVector3f p;
-RowVector3f p_prev;
+Vector3d eu;
+Vector3d eu_prev;
 
-RowVector3f eu;
-RowVector3f eu_prev;
-
-Matrix<float, 3, 3> R;
-Matrix<float, 3, 3> Rate_Change_Matrix;
-Matrix<float, 3, 1> Euler_Rate_Change;
-Matrix<float, 3, 1> Angular_Rate_Change;
+Matrix<double, 3, 3> R;
+Matrix<double, 3, 3> Rate_Change_Matrix;
+Matrix<double, 3, 1> Euler_Rate_Change;
+Matrix<double, 3, 1> Angular_Rate_Change;
 
 std_msgs::Float32MultiArray PLA_p;   //platform position
 std_msgs::Float32MultiArray PLA_p_d; //platform velocity
@@ -48,6 +52,8 @@ std_msgs::Float32MultiArray PLA_r;   //platform attitude
 std_msgs::Float32MultiArray PLA_agvr;//platform omga
 
 geometry_msgs::PoseStamped pose;
+
+
 
 
 
@@ -67,6 +73,12 @@ int main(int argc, char **argv)
     ros::init(argc, argv, "topic_tool_platform");
     ros::NodeHandle nh;
     initialize();
+    a << -2.748,2.528,-0.777;
+    b << 2.196e-04,6.588e-04,6.588e-04,2.196e-04;
+    filter position_filter(a,b);
+
+
+
     std::string sub_topic = std::string("/vrpn_client_node/platform") + std::string("/pose");
 
     ros::Subscriber host_sub = nh.subscribe<geometry_msgs::PoseStamped>(sub_topic, 10, host_pos);
@@ -106,6 +118,7 @@ int main(int argc, char **argv)
 
     while (ros::ok()) {
 
+        p = position_filter.Butterworth_filter(pose,t);
         Position_and_Velocity();
         Attitude_and_Angular_rate();
 
@@ -120,6 +133,7 @@ int main(int argc, char **argv)
 
         ros::spinOnce();
         rate.sleep();
+        t++;
     }
 
     return 0;
@@ -133,6 +147,7 @@ void initialize(void)
     PLA_r.data.resize(4); /*quaternion*/
     PLA_agvr.data.resize(3); /*Angular rate(not Euler angle rate change*/
 
+    
 
     /*set the init position using to get init velocity*/
 
@@ -142,16 +157,14 @@ void initialize(void)
 
 void Position_and_Velocity(void)
 {
-    PLA_p.data[0] = pose.pose.position.x;
-    PLA_p.data[1] = pose.pose.position.y;
-    PLA_p.data[2] = pose.pose.position.z;
-    p(0) = pose.pose.position.x;
-    p(1) = pose.pose.position.y;
-    p(2) = pose.pose.position.z;
+    
+    PLA_p.data[0] = p(0);
+    PLA_p.data[1] = p(1);
+    PLA_p.data[2] = p(2);
 
-    PLA_p_d.data[0] = (p(0)-p_prev(0))/dt;
-    PLA_p_d.data[1] = (p(1)-p_prev(1))/dt;
-    PLA_p_d.data[2] = (p(2)-p_prev(2))/dt;
+    PLA_p_d.data[0] = ((p(0)-p_prev(0))/dt);
+    PLA_p_d.data[1] = ((p(1)-p_prev(1))/dt);
+    PLA_p_d.data[2] = ((p(2)-p_prev(2))/dt);
 
 }
 
@@ -159,7 +172,7 @@ void Position_and_Velocity(void)
 
 void Attitude_and_Angular_rate(void)
 {
-    Quaternionf quaternion(pose.pose.orientation.w,pose.pose.orientation.x,pose.pose.orientation.y,pose.pose.orientation.z);
+    Quaterniond quaternion(pose.pose.orientation.w,pose.pose.orientation.x,pose.pose.orientation.y,pose.pose.orientation.z);
     PLA_r.data[0] = pose.pose.orientation.w;
     PLA_r.data[1] = pose.pose.orientation.x;
     PLA_r.data[2] = pose.pose.orientation.y;

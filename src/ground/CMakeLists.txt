@@ -131,7 +131,6 @@ include_directories(
  # include/ex_ground/getch.h
  # src/getch.cpp
 #)
-set(HEADERS_ include/ex_ground/getch.h)
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
 ## either from message generation or dynamic reconfigure
@@ -161,7 +160,8 @@ add_executable(qc_servo node/qc_servo.cpp)
 add_executable(gripper_controller node/gripper_controller.cpp)
 add_executable(attitude_controller node/attitude_controller.cpp)        
 
-add_executable(topic_tool_platform src/topic_tool_platform.cpp) 
+add_executable(topic_tool_platform src/topic_tool_platform.cpp
+                        src/filter.cpp) 
 
 
 
