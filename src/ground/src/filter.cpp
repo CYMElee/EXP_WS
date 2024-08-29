@@ -13,7 +13,7 @@ filter::filter(Eigen::Vector3d a,Eigen::Vector4d b){
 }
 
 Eigen::Vector3d filter::Butterworth_filter(geometry_msgs::PoseStamped pose,int t){
-    if(t <= 500){
+    if(t <= 50){
        position_raw_t_1 << pose.pose.position.x,pose.pose.position.y,pose.pose.position.z;
        position_raw_t_2 << pose.pose.position.x,pose.pose.position.y,pose.pose.position.z;
        position_raw_t_3 << pose.pose.position.x,pose.pose.position.y,pose.pose.position.z;
