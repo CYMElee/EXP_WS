@@ -102,7 +102,7 @@ int main(int argc, char **argv)
     
     ros::Rate rate(100);
 
-    for(int i = 0;i<100; i++){
+    for(int i = 0;i<50; i++){
         /*set the position_prev*/
         p_prev(0) = pose.pose.position.x;
         p_prev(1) = pose.pose.position.y;
