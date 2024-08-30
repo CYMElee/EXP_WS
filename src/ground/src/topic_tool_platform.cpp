@@ -38,6 +38,8 @@ Vector4d b;
 Vector3d p;
 Vector3d p_prev;
 
+
+Vector4d q;
 Vector3d eu;
 Vector3d eu_prev;
 
@@ -76,6 +78,7 @@ int main(int argc, char **argv)
     a << -2.374094743709352,1.929355669091215,-0.532075368312092;
     b <<0.002898194633721,0.008694583901164,0.008694583901164,0.002898194633721;
     filter position_filter(a,b);
+    filter attitude_filter(a,b);
 
     std::string sub_topic = std::string("/vrpn_client_node/platform") + std::string("/pose");
 
@@ -116,7 +119,8 @@ int main(int argc, char **argv)
 
     while (ros::ok()) {
 
-        p = position_filter.Butterworth_filter(pose,t);
+        p = position_filter.Butterworth_filter_position(pose,t);
+        q = attitude_filter.Butterworth_filter_attitude(pose,t);
         Position_and_Velocity();
         Attitude_and_Angular_rate();
 
@@ -170,11 +174,11 @@ void Position_and_Velocity(void)
 
 void Attitude_and_Angular_rate(void)
 {
-    Quaterniond quaternion(pose.pose.orientation.w,pose.pose.orientation.x,pose.pose.orientation.y,pose.pose.orientation.z);
-    PLA_r.data[0] = pose.pose.orientation.w;
-    PLA_r.data[1] = pose.pose.orientation.x;
-    PLA_r.data[2] = pose.pose.orientation.y;
-    PLA_r.data[3] = pose.pose.orientation.z;
+    Quaterniond quaternion(q(0),q(1),q(2),q(3));
+    PLA_r.data[0] = q(0);
+    PLA_r.data[1] = q(1);
+    PLA_r.data[2] = q(2);
+    PLA_r.data[3] = q(3);
 
     //transfer the attitude from Orientation to Euler
     

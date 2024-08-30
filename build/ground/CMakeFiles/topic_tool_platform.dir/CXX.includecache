@@ -14,10 +14,6 @@ ros/ros.h
 geometry_msgs/PoseStamped.h
 /home/lee/workspace/ros_ws/ex_ws/src/ground/include/geometry_msgs/PoseStamped.h
 
-/home/lee/workspace/ros_ws/ex_ws/src/ground/src/filter.cpp
-filter.h
-/home/lee/workspace/ros_ws/ex_ws/src/ground/src/filter.h
-
 /home/lee/workspace/ros_ws/ex_ws/src/ground/src/topic_tool_platform.cpp
 ros/ros.h
 -
