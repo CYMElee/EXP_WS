@@ -73,11 +73,9 @@ int main(int argc, char **argv)
     ros::init(argc, argv, "topic_tool_platform");
     ros::NodeHandle nh;
     initialize();
-    a << -1.760041880343169,1.182893262037831,0.278059917634546;
-    b << 0.018098933007514,0.054296799022543,0.054296799022543,0.018098933007514;
+    a << -2.374094743709352,1.929355669091215,-0.532075368312092;
+    b <<0.002898194633721,0.008694583901164,0.008694583901164,0.002898194633721;
     filter position_filter(a,b);
-
-
 
     std::string sub_topic = std::string("/vrpn_client_node/platform") + std::string("/pose");
 
