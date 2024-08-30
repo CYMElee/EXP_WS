@@ -231,7 +231,7 @@ void T_cmd_calculate(void){
     Eigen::Matrix3f rotationMatrix_mav_des_b2i = rotationMatrix_platform*rotationMatrix_mav_des;
     
     Eigen::Vector3f eulerAngles_mav_des = rotationMatrix_mav_des_b2i.eulerAngles(2, 1, 0);
-    eulerAngles_mav_des(0) = eulerAngles_mav(0);
+   // eulerAngles_mav_des(0) = eulerAngles_mav(0);
     Eigen::Quaternionf mav_pose_desire;
     mav_pose_desire = Eigen::AngleAxisf(eulerAngles_mav_des(0),Eigen::Vector3f::UnitZ()) * \
     Eigen::AngleAxisf(eulerAngles_mav_des(1),Eigen::Vector3f::UnitY()) * \
