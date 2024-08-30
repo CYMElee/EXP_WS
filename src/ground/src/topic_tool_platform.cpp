@@ -35,6 +35,10 @@ geometry_msgs::PoseStamped host_mocap;
 Vector3d a; //a & b using for filter
 Vector4d b;
 
+Vector3d c;
+Vector4d d;
+
+
 Vector3d p;
 Vector3d p_prev;
 
@@ -77,8 +81,12 @@ int main(int argc, char **argv)
     initialize();
     a << -2.374094743709352,1.929355669091215,-0.532075368312092;
     b <<0.002898194633721,0.008694583901164,0.008694583901164,0.002898194633721;
+
+    c << -2.874356892677485,2.756483195225695,-0.881893130592486;
+    d << 2.914649446567053e-05,8.743948339701157e-05,8.743948339701157e-05,2.914649446567053e-05;
+    
     filter position_filter(a,b);
-    filter attitude_filter(a,b);
+    filter attitude_filter(c,d);
 
     std::string sub_topic = std::string("/vrpn_client_node/platform") + std::string("/pose");
 
@@ -150,6 +158,8 @@ void initialize(void)
     PLA_agvr.data.resize(3); /*Angular rate(not Euler angle rate change*/
 
     
+
+
 
     /*set the init position using to get init velocity*/
 
