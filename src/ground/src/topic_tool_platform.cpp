@@ -57,6 +57,9 @@ std_msgs::Float32MultiArray PLA_p_d; //platform velocity
 std_msgs::Float32MultiArray PLA_r;   //platform attitude
 std_msgs::Float32MultiArray PLA_agvr;//platform omga
 
+
+std_msgs::Float32MultiArray Euler;   //platform attitude using for debug
+
 geometry_msgs::PoseStamped pose;
 
 
@@ -100,6 +103,9 @@ int main(int argc, char **argv)
     ros::Publisher attitude_pub =  nh.advertise<std_msgs::Float32MultiArray>
         ("/platform/measure_attitude",10);
 
+    ros::Publisher attitude_euler_pub =  nh.advertise<std_msgs::Float32MultiArray>
+        ("/platform/measure_attitude_euler",10);
+
     /*the platform velocity*/
     ros::Publisher vel_pub =  nh.advertise<std_msgs::Float32MultiArray>
         ("/platform/measure_velocity",10);
@@ -136,6 +142,7 @@ int main(int argc, char **argv)
         vel_pub.publish(PLA_p_d);
         attitude_pub.publish(PLA_r);
         omega_pub.publish(PLA_agvr);
+        attitude_euler_pub.publish(Euler);
 
         p_prev = p;
         eu_prev = eu;
@@ -156,7 +163,7 @@ void initialize(void)
     PLA_p_d.data.resize(3); /*x,y,z*/
     PLA_r.data.resize(4); /*quaternion*/
     PLA_agvr.data.resize(3); /*Angular rate(not Euler angle rate change*/
-
+    Euler.data.resize(3);
     
 
 
@@ -194,6 +201,11 @@ void Attitude_and_Angular_rate(void)
     
     R = quaternion.toRotationMatrix();
     eu = R.eulerAngles(2,1,0);
+
+    Euler.data[0] = eu(0);
+    Euler.data[1] = eu(1);
+    Euler.data[2] = eu(2);
+
     Psi = eu(2); //x
     Theta = eu(1); //y
     Phi = eu(0); //z
