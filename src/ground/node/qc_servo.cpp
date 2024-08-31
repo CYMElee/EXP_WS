@@ -30,7 +30,7 @@ std_msgs::Float64MultiArray fd; // desire forc for each UAV
 class MAV{
     private:
         std_msgs::Float64MultiArray T; //T[0] is net thrust T[1] is apha T[2] is beta
-        Vector3f fd_e;
+        Vector3d fd_e;
         ros::Publisher MAV_cmd;
 
     public:

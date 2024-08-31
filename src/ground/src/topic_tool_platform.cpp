@@ -17,6 +17,7 @@
 #include <tf/tf.h>
 #include <string>
 #include "std_msgs/Float32MultiArray.h"
+#include "std_msgs/Float64MultiArray.h"
 #include "Eigen/Dense"
 #include "filter.h"
 
@@ -52,13 +53,13 @@ Matrix<double, 3, 3> Rate_Change_Matrix;
 Matrix<double, 3, 1> Euler_Rate_Change;
 Matrix<double, 3, 1> Angular_Rate_Change;
 
-std_msgs::Float32MultiArray PLA_p;   //platform position
-std_msgs::Float32MultiArray PLA_p_d; //platform velocity
-std_msgs::Float32MultiArray PLA_r;   //platform attitude
-std_msgs::Float32MultiArray PLA_agvr;//platform omga
+std_msgs::Float64MultiArray PLA_p;   //platform position
+std_msgs::Float64MultiArray PLA_p_d; //platform velocity
+std_msgs::Float64MultiArray PLA_r;   //platform attitude
+std_msgs::Float64MultiArray PLA_agvr;//platform omga
 
 
-std_msgs::Float32MultiArray Euler;   //platform attitude using for debug
+std_msgs::Float64MultiArray Euler;   //platform attitude using for debug
 
 geometry_msgs::PoseStamped pose;
 
@@ -96,22 +97,22 @@ int main(int argc, char **argv)
     ros::Subscriber host_sub = nh.subscribe<geometry_msgs::PoseStamped>(sub_topic, 10, host_pos);
 
     /*the platform position*/
-    ros::Publisher pos_pub =  nh.advertise<std_msgs::Float32MultiArray>
+    ros::Publisher pos_pub =  nh.advertise<std_msgs::Float64MultiArray>
         ("/platform/measure_position",10);
 
     /*the platform attitude*/
-    ros::Publisher attitude_pub =  nh.advertise<std_msgs::Float32MultiArray>
+    ros::Publisher attitude_pub =  nh.advertise<std_msgs::Float64MultiArray>
         ("/platform/measure_attitude",10);
 
-    ros::Publisher attitude_euler_pub =  nh.advertise<std_msgs::Float32MultiArray>
+    ros::Publisher attitude_euler_pub =  nh.advertise<std_msgs::Float64MultiArray>
         ("/platform/measure_attitude_euler",10);
 
     /*the platform velocity*/
-    ros::Publisher vel_pub =  nh.advertise<std_msgs::Float32MultiArray>
+    ros::Publisher vel_pub =  nh.advertise<std_msgs::Float64MultiArray>
         ("/platform/measure_velocity",10);
 
     /*the platform angular rate*/
-    ros::Publisher omega_pub =  nh.advertise<std_msgs::Float32MultiArray>
+    ros::Publisher omega_pub =  nh.advertise<std_msgs::Float64MultiArray>
         ("/platform/measure_omega",10);
 
     
@@ -192,6 +193,7 @@ void Position_and_Velocity(void)
 void Attitude_and_Angular_rate(void)
 {
     Quaterniond quaternion(q(0),q(1),q(2),q(3));
+   // quaternion.normalize();
     PLA_r.data[0] = q(0);
     PLA_r.data[1] = q(1);
     PLA_r.data[2] = q(2);
@@ -199,8 +201,8 @@ void Attitude_and_Angular_rate(void)
 
     //transfer the attitude from Orientation to Euler
     
-    R = quaternion.toRotationMatrix();
-    eu = R.eulerAngles(2,1,0);
+   // R = quaternion.toRotationMatrix();
+    eu = quaternion.toRotationMatrix().eulerAngles(2,1,0);
 
     Euler.data[0] = eu(0);
     Euler.data[1] = eu(1);

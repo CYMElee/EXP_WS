@@ -1,5 +1,6 @@
 #include "ros/ros.h"
 #include "std_msgs/Float32MultiArray.h"
+#include "std_msgs/Float64MultiArray.h"
 #include "std_msgs/Int16.h"
 #include "std_msgs/Bool.h"
 #include "math.h"
@@ -8,13 +9,13 @@
 #define D2R 0.0174
 #define dt 0.01
 
-std_msgs::Float32MultiArray p_home;
-std_msgs::Float32MultiArray pose;
-std_msgs::Float32MultiArray pd;
-std_msgs::Float32MultiArray pd_d;
-std_msgs::Float32MultiArray Rr;
-std_msgs::Float32MultiArray agvr;
-std_msgs::Float32MultiArray phid;
+std_msgs::Float64MultiArray p_home;
+std_msgs::Float64MultiArray pose;
+std_msgs::Float64MultiArray pd;
+std_msgs::Float64MultiArray pd_d;
+std_msgs::Float64MultiArray Rr;
+std_msgs::Float64MultiArray agvr;
+std_msgs::Float64MultiArray phid;
 std_msgs::Int16 Mode;
 
 
@@ -39,7 +40,7 @@ void mode_cb(const std_msgs::Int16::ConstPtr& msg){
 
 }
 
-void pose_cb(const std_msgs::Float32MultiArray::ConstPtr& msg){
+void pose_cb(const std_msgs::Float64MultiArray::ConstPtr& msg){
      pose = *msg;
 }
 
@@ -54,19 +55,19 @@ int main(int argc,char **argv)
     ros::Subscriber GET_MODE = nh.subscribe<std_msgs::Int16>
         ("/ground_station/set_mode",10,mode_cb);
 
-    ros::Subscriber sub_pub =  nh.subscribe<std_msgs::Float32MultiArray>
+    ros::Subscriber sub_pub =  nh.subscribe<std_msgs::Float64MultiArray>
         ("/platform/measure_position",10,pose_cb);
 
     /*publish the trajectory*/
-    ros::Publisher desire_position = nh.advertise<std_msgs::Float32MultiArray>
+    ros::Publisher desire_position = nh.advertise<std_msgs::Float64MultiArray>
         ("/platform/desire_position",10);
-    ros::Publisher desire_velocity = nh.advertise<std_msgs::Float32MultiArray>
+    ros::Publisher desire_velocity = nh.advertise<std_msgs::Float64MultiArray>
         ("/platform/desire_velocity",10);
-    ros::Publisher desire_attitude = nh.advertise<std_msgs::Float32MultiArray>
+    ros::Publisher desire_attitude = nh.advertise<std_msgs::Float64MultiArray>
         ("/platform/desire_attitude",10);
-    ros::Publisher desire_omega = nh.advertise<std_msgs::Float32MultiArray>
+    ros::Publisher desire_omega = nh.advertise<std_msgs::Float64MultiArray>
         ("/platform/desire_omega",10);
-    ros::Publisher desire_phi = nh.advertise<std_msgs::Float32MultiArray>
+    ros::Publisher desire_phi = nh.advertise<std_msgs::Float64MultiArray>
         ("/gripper/phi_desire",10);
 
     ros::Rate rate(100);

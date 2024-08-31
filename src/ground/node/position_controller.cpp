@@ -1,5 +1,6 @@
 #include "ros/ros.h"
 #include "std_msgs/Float32MultiArray.h"
+#include "std_msgs/Float64MultiArray.h"
 #include "tf2/LinearMath/Matrix3x3.h"
 #include "Eigen/Dense"
 #include "eigen_conversions/eigen_msg.h"
@@ -11,51 +12,51 @@
 
 using namespace Eigen;
 
-std_msgs::Float32MultiArray t; //desire_thrust
+std_msgs::Float64MultiArray t; //desire_thrust
 
-Matrix<float, 3, 1> p;
-Matrix<float, 3, 1> pd;
-Matrix<float, 3, 1> p_dot;
-Matrix<float, 3, 1> pd_dot;
-Matrix<float, 3, 1> u1;
-Matrix<float, 3, 1> fr;
+Matrix<double, 3, 1> p;
+Matrix<double, 3, 1> pd;
+Matrix<double, 3, 1> p_dot;
+Matrix<double, 3, 1> pd_dot;
+Matrix<double, 3, 1> u1;
+Matrix<double, 3, 1> fr;
 
-Matrix<float, 3, 3> Kp;
-Matrix<float, 3, 3> Kv;
-Matrix<float, 3, 3> Ki;
-Matrix<float, 3, 3> R;
+Matrix<double, 3, 3> Kp;
+Matrix<double, 3, 3> Kv;
+Matrix<double, 3, 3> Ki;
+Matrix<double, 3, 3> R;
 
-Matrix<float, 3, 1> ep;
-Matrix<float, 3, 1> ev;
+Matrix<double, 3, 1> ep;
+Matrix<double, 3, 1> ev;
 
-Matrix<float, 3, 1> z; //0,0,1
+Matrix<double, 3, 1> z; //0,0,1
 
-Quaternionf quaternion;
+Quaterniond quaternion;
 
 
 
-void desire_position_cb(const std_msgs::Float32MultiArray::ConstPtr& msg)
+void desire_position_cb(const std_msgs::Float64MultiArray::ConstPtr& msg)
 {
     pd(0) = msg->data[0]; //x
     pd(1)= msg->data[1];  //y
     pd(2) = msg->data[2]; //z
 
 }
-void desire_velocity_cb(const std_msgs::Float32MultiArray::ConstPtr& msg)
+void desire_velocity_cb(const std_msgs::Float64MultiArray::ConstPtr& msg)
 {
     pd_dot(0) = msg->data[0];
     pd_dot(1) = msg->data[1];
     pd_dot(2) = msg->data[2];
 
 }
-void measure_position_cb(const std_msgs::Float32MultiArray::ConstPtr& msg)
+void measure_position_cb(const std_msgs::Float64MultiArray::ConstPtr& msg)
 {
     p(0) = msg->data[0];
     p(1) = msg->data[1];
     p(2) = msg->data[2];
 
 }
-void measure_velocity_cb(const std_msgs::Float32MultiArray::ConstPtr& msg)
+void measure_velocity_cb(const std_msgs::Float64MultiArray::ConstPtr& msg)
 {
     p_dot(0) = msg->data[0];
     p_dot(1) = msg->data[1];
@@ -64,10 +65,10 @@ void measure_velocity_cb(const std_msgs::Float32MultiArray::ConstPtr& msg)
 
 
 
-void measure_attitude_cb(const std_msgs::Float32MultiArray::ConstPtr& msg)
+void measure_attitude_cb(const std_msgs::Float64MultiArray::ConstPtr& msg)
 {
    
-  quaternion = AngleAxisf(msg->data[0],Vector3f(msg->data[1], msg->data[2], msg->data[3]));
+  quaternion = AngleAxisd(msg->data[0],Vector3d(msg->data[1], msg->data[2], msg->data[3]));
 
    R = quaternion.toRotationMatrix();
 
@@ -115,25 +116,25 @@ Ki << 1, 0 , 0 ,
       0  , 0,  1;
 z<< 0,0,1;
 
-    ros::Subscriber desire_position = nh.subscribe<std_msgs::Float32MultiArray>
+    ros::Subscriber desire_position = nh.subscribe<std_msgs::Float64MultiArray>
         ("/platform/desire_position",10,desire_position_cb); 
 
-    ros::Subscriber desire_velocity = nh.subscribe<std_msgs::Float32MultiArray>
+    ros::Subscriber desire_velocity = nh.subscribe<std_msgs::Float64MultiArray>
         ("/platform/desire_velocity",10,desire_velocity_cb);
 
-    ros::Subscriber measure_position = nh.subscribe<std_msgs::Float32MultiArray>
+    ros::Subscriber measure_position = nh.subscribe<std_msgs::Float64MultiArray>
         ("/platform/measure_position",10,measure_position_cb); 
 
-    ros::Subscriber measure_velocity = nh.subscribe<std_msgs::Float32MultiArray>
+    ros::Subscriber measure_velocity = nh.subscribe<std_msgs::Float64MultiArray>
         ("/platform/measure_velocity",10,measure_velocity_cb); 
 
-    ros::Subscriber measure_attitude = nh.subscribe<std_msgs::Float32MultiArray>
+    ros::Subscriber measure_attitude = nh.subscribe<std_msgs::Float64MultiArray>
         ("/platform/measure_attitude",10,measure_attitude_cb); 
 
-    ros::Publisher desire_thrust_total = nh.advertise<std_msgs::Float32MultiArray>
+    ros::Publisher desire_thrust_total = nh.advertise<std_msgs::Float64MultiArray>
         ("/platform/desire_thrust_total",10);
 
-    ros::topic::waitForMessage<std_msgs::Float32MultiArray>("/platform/desire_position");
+    ros::topic::waitForMessage<std_msgs::Float64MultiArray>("/platform/desire_position");
     
     ROS_INFO("RECEIVE POSITION");
     ros::Rate rate(100);

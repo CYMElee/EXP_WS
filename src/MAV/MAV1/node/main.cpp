@@ -33,7 +33,7 @@ geometry_msgs::PoseStamped mav_pose;
 mavros_msgs::State current_state;
  
 std_msgs::Float64MultiArray T_cmd;
-std_msgs::Float32MultiArray Eul_cmd;
+std_msgs::Float64MultiArray Eul_cmd;
 
 std_msgs::Int16 Change_Mode_Trigger ;
 
@@ -205,37 +205,37 @@ void initialize(void){
 void T_cmd_calculate(void){
 
     /*in here we will change the mav pose from quater to euler angle*/
-    Eigen::Quaternionf quaternion_mav(mav_pose.pose.orientation.w,mav_pose.pose.orientation.x,mav_pose.pose.orientation.y,mav_pose.pose.orientation.z );
-    Eigen::Matrix3f rotationMatrix_mav = quaternion_mav.toRotationMatrix();
-    Eigen::Vector3f eulerAngles_mav = rotationMatrix_mav.eulerAngles(2, 1, 0);
-    float alpha = T_cmd.data[1];
-    float beta = T_cmd.data[2];
-    float thrust = T_cmd.data[0]; 
-    float z = 0;
+    Eigen::Quaterniond quaternion_mav(mav_pose.pose.orientation.w,mav_pose.pose.orientation.x,mav_pose.pose.orientation.y,mav_pose.pose.orientation.z );
+    Eigen::Matrix3d rotationMatrix_mav = quaternion_mav.toRotationMatrix();
+    Eigen::Vector3d eulerAngles_mav = rotationMatrix_mav.eulerAngles(2, 1, 0);
+    double alpha = T_cmd.data[1];
+    double  beta = T_cmd.data[2];
+    double  thrust = T_cmd.data[0]; 
+    double  z = 0;
 
      /*get the MAV desire Attitude(from mav fram to platform fram)*/
-    Eigen::Quaternionf MAV_pose_cmd;
-    MAV_pose_cmd = Eigen::AngleAxisf(z,Eigen::Vector3f::UnitZ()) * \
-    Eigen::AngleAxisf(beta,Eigen::Vector3f::UnitY()) * \
-    Eigen::AngleAxisf(alpha, Eigen::Vector3f::UnitX());
-    Eigen::Matrix3f rotationMatrix_mav_des = MAV_pose_cmd.toRotationMatrix();
+    Eigen::Quaterniond MAV_pose_cmd;
+    MAV_pose_cmd = Eigen::AngleAxisd(z,Eigen::Vector3d::UnitZ()) * \
+    Eigen::AngleAxisd(beta,Eigen::Vector3d::UnitY()) * \
+    Eigen::AngleAxisd(alpha, Eigen::Vector3d::UnitX());
+    Eigen::Matrix3d rotationMatrix_mav_des = MAV_pose_cmd.toRotationMatrix();
 
 
 
 
     /**Build the Rotation matrix(platform body to inertial)**/
-    Eigen::Quaternionf quaternion_platform(platform_pose.pose.orientation.w,platform_pose.pose.orientation.x,platform_pose.pose.orientation.y,platform_pose.pose.orientation.z);
-    Eigen::Matrix3f rotationMatrix_platform = quaternion_platform.toRotationMatrix();
+    Eigen::Quaterniond quaternion_platform(platform_pose.pose.orientation.w,platform_pose.pose.orientation.x,platform_pose.pose.orientation.y,platform_pose.pose.orientation.z);
+    Eigen::Matrix3d rotationMatrix_platform = quaternion_platform.toRotationMatrix();
 
     /**get the desire mav attitude (body frame to inertial frame)**/
-    Eigen::Matrix3f rotationMatrix_mav_des_b2i = rotationMatrix_platform*rotationMatrix_mav_des;
+    Eigen::Matrix3d rotationMatrix_mav_des_b2i = rotationMatrix_platform*rotationMatrix_mav_des;
     
-    Eigen::Vector3f eulerAngles_mav_des = rotationMatrix_mav_des_b2i.eulerAngles(2, 1, 0);
+    Eigen::Vector3d eulerAngles_mav_des = rotationMatrix_mav_des_b2i.eulerAngles(2, 1, 0);
    // eulerAngles_mav_des(0) = eulerAngles_mav(0);
-    Eigen::Quaternionf mav_pose_desire;
-    mav_pose_desire = Eigen::AngleAxisf(eulerAngles_mav_des(0),Eigen::Vector3f::UnitZ()) * \
-    Eigen::AngleAxisf(eulerAngles_mav_des(1),Eigen::Vector3f::UnitY()) * \
-    Eigen::AngleAxisf(eulerAngles_mav_des(2),Eigen::Vector3f::UnitX());
+    Eigen::Quaterniond mav_pose_desire;
+    mav_pose_desire = Eigen::AngleAxisd(eulerAngles_mav_des(0),Eigen::Vector3d::UnitZ()) * \
+    Eigen::AngleAxisd(eulerAngles_mav_des(1),Eigen::Vector3d::UnitY()) * \
+    Eigen::AngleAxisd(eulerAngles_mav_des(2),Eigen::Vector3d::UnitX());
 
     Eul_cmd.data[0] = eulerAngles_mav_des(0);
     Eul_cmd.data[1] = eulerAngles_mav_des(1);

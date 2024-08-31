@@ -1,60 +1,61 @@
 #include "ros/ros.h"
 #include "std_msgs/Float32MultiArray.h"
+#include "std_msgs/Float64MultiArray.h"
 #include "Eigen/Dense"
 
 
 #define Lw_sq 1
-float IBXY = 2*2.3*Lw_sq+0.18;
-float IBZ  = 4*2.3*Lw_sq+0.09;
+double IBXY = 2*2.3*Lw_sq+0.18;
+double IBZ  = 4*2.3*Lw_sq+0.09;
 
 using namespace Eigen ;
 
-float IBxy = IBXY;
-float IBz = IBZ;
+double IBxy = IBXY;
+double IBz = IBZ;
 
-std_msgs::Float32MultiArray u2;
-std_msgs::Float32MultiArray er;
-Matrix<float, 3, 3> IB; //rotation inertia
-Matrix<float, 3, 3> R; //measure attitude,which is rotation matrix that from body frame to inertial frame
-Matrix<float, 3, 3> Rr; // desire attitude
-Vector3f agvr;
-Vector3f omega;
-Vector3f m;
-Vector3f h;
+std_msgs::Float64MultiArray u2;
+std_msgs::Float64MultiArray er;
+Matrix<double, 3, 3> IB; //rotation inertia
+Matrix<double, 3, 3> R; //measure attitude,which is rotation matrix that from body frame to inertial frame
+Matrix<double, 3, 3> Rr; // desire attitude
+Vector3d agvr;
+Vector3d omega;
+Vector3d m;
+Vector3d h;
 
 
 //attitude control gains
-Matrix<float, 3, 3> KR;
-Matrix<float, 3, 3> Kw;
-Matrix<float, 3, 3> Ki;
+Matrix<double, 3, 3> KR;
+Matrix<double, 3, 3> Kw;
+Matrix<double, 3, 3> Ki;
 
-Matrix<float, 3, 3> E;
-Vector3f eR;
-Vector3f eW;
+Matrix<double, 3, 3> E;
+Vector3d eR;
+Vector3d eW;
 
-Quaternionf quaternion;
+Quaterniond quaternion;
 
 
-void desire_attitude_cb(const std_msgs::Float32MultiArray::ConstPtr& msg)
+void desire_attitude_cb(const std_msgs::Float64MultiArray::ConstPtr& msg)
 {
-    quaternion = AngleAxisf(msg->data[0], \
-    Vector3f(msg->data[1], msg->data[2], msg->data[3]));
+    quaternion = AngleAxisd(msg->data[0], \
+    Vector3d(msg->data[1], msg->data[2], msg->data[3]));
     Rr = quaternion.toRotationMatrix();
     
 
 
 }
 
-void measure_attitude_cb(const std_msgs::Float32MultiArray::ConstPtr& msg)
+void measure_attitude_cb(const std_msgs::Float64MultiArray::ConstPtr& msg)
 {   
-    quaternion = AngleAxisf(msg->data[0], \
-    Vector3f(msg->data[1], msg->data[2], msg->data[3]));
+    quaternion = AngleAxisd(msg->data[0], \
+    Vector3d(msg->data[1], msg->data[2], msg->data[3]));
     R = quaternion.toRotationMatrix();
 
 
 }
 
-void desire_omega_cb(const std_msgs::Float32MultiArray::ConstPtr& msg)
+void desire_omega_cb(const std_msgs::Float64MultiArray::ConstPtr& msg)
 {
     agvr(0) = msg->data[0];
     agvr(1) = msg->data[1];
@@ -63,7 +64,7 @@ void desire_omega_cb(const std_msgs::Float32MultiArray::ConstPtr& msg)
 
 }
 
-void measure_omega_cb(const std_msgs::Float32MultiArray::ConstPtr& msg)
+void measure_omega_cb(const std_msgs::Float64MultiArray::ConstPtr& msg)
 {
     omega(0) = msg ->data[0];
     omega(1) = msg ->data[1];
@@ -118,23 +119,23 @@ int main(int argc,char **argv)
             0 , IBxy, 0,
             0 ,  0  , IBz;
 
-    ros::Subscriber desire_attitude = nh.subscribe<std_msgs::Float32MultiArray>
+    ros::Subscriber desire_attitude = nh.subscribe<std_msgs::Float64MultiArray>
         ("/platform/desire_attitude",10,desire_attitude_cb);
-    ros::Subscriber measure_attitude = nh.subscribe<std_msgs::Float32MultiArray>
+    ros::Subscriber measure_attitude = nh.subscribe<std_msgs::Float64MultiArray>
         ("/platform/measure_attitude",10,measure_attitude_cb);
-    ros::Subscriber desire_omega = nh.subscribe<std_msgs::Float32MultiArray>
+    ros::Subscriber desire_omega = nh.subscribe<std_msgs::Float64MultiArray>
         ("/platform/desire_omega",10,desire_omega_cb);
-    ros::Subscriber measure_omega = nh.subscribe<std_msgs::Float32MultiArray>
+    ros::Subscriber measure_omega = nh.subscribe<std_msgs::Float64MultiArray>
         ("/platform/measure_omega",10,measure_omega_cb);  
-    ros::Publisher total_moment = nh.advertise<std_msgs::Float32MultiArray>
+    ros::Publisher total_moment = nh.advertise<std_msgs::Float64MultiArray>
         ("/platform/desire_total_moment",10); 
-    ros::Publisher attitude_error = nh.advertise<std_msgs::Float32MultiArray>
+    ros::Publisher attitude_error = nh.advertise<std_msgs::Float64MultiArray>
         ("/platform/attitude_error",10);
 
     ROS_INFO("SUCCESS LAUNCH ATTITUDE CONTROLLER"); 
  
     ros::Rate rate(100);
-    ros::topic::waitForMessage<std_msgs::Float32MultiArray>("/platform/desire_attitude");
+    ros::topic::waitForMessage<std_msgs::Float64MultiArray>("/platform/desire_attitude");
     while(ros::ok)
     {
         
