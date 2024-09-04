@@ -1,0 +1,4 @@
+<launch> 
+    <include file="$(find xsens_mti_driver)/launch/xsens_mti_node.launch">
+    </include>
+</launch>

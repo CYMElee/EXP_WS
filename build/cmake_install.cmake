@@ -136,6 +136,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/lee/workspace/ros_ws/ex_ws/build/MAV/MAV2/cmake_install.cmake")
   include("/home/lee/workspace/ros_ws/ex_ws/build/MAV/MAV3/cmake_install.cmake")
   include("/home/lee/workspace/ros_ws/ex_ws/build/MAV/MAV4/cmake_install.cmake")
+  include("/home/lee/workspace/ros_ws/ex_ws/build/sensor/cmake_install.cmake")
+  include("/home/lee/workspace/ros_ws/ex_ws/build/xsens_ros_mti_driver/cmake_install.cmake")
 
 endif()
 

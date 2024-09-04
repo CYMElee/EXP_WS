@@ -23,6 +23,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "catkin_generated/order_packages.cmake"
   "ground/catkin_generated/ordered_paths.cmake"
   "ground/catkin_generated/package.cmake"
+  "sensor/catkin_generated/ordered_paths.cmake"
+  "sensor/catkin_generated/package.cmake"
+  "xsens_ros_mti_driver/catkin_generated/ordered_paths.cmake"
+  "xsens_ros_mti_driver/catkin_generated/package.cmake"
   "/home/lee/workspace/ros_ws/ex_ws/src/CMakeLists.txt"
   "/home/lee/workspace/ros_ws/ex_ws/src/MAV/MAV1/CMakeLists.txt"
   "/home/lee/workspace/ros_ws/ex_ws/src/MAV/MAV1/package.xml"
@@ -34,6 +38,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/lee/workspace/ros_ws/ex_ws/src/MAV/MAV4/package.xml"
   "/home/lee/workspace/ros_ws/ex_ws/src/ground/CMakeLists.txt"
   "/home/lee/workspace/ros_ws/ex_ws/src/ground/package.xml"
+  "/home/lee/workspace/ros_ws/ex_ws/src/sensor/CMakeLists.txt"
+  "/home/lee/workspace/ros_ws/ex_ws/src/sensor/package.xml"
+  "/home/lee/workspace/ros_ws/ex_ws/src/xsens_ros_mti_driver/CMakeLists.txt"
+  "/home/lee/workspace/ros_ws/ex_ws/src/xsens_ros_mti_driver/package.xml"
   "/opt/ros/noetic/share/actionlib/cmake/actionlib-msg-extras.cmake"
   "/opt/ros/noetic/share/actionlib/cmake/actionlibConfig-version.cmake"
   "/opt/ros/noetic/share/actionlib/cmake/actionlibConfig.cmake"
@@ -330,6 +338,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "MAV/MAV2/CMakeFiles/CMakeDirectoryInformation.cmake"
   "MAV/MAV3/CMakeFiles/CMakeDirectoryInformation.cmake"
   "MAV/MAV4/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "sensor/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "xsens_ros_mti_driver/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -414,4 +424,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "MAV/MAV3/CMakeFiles/mav3.dir/DependInfo.cmake"
   "MAV/MAV4/CMakeFiles/topic_tool_mav4.dir/DependInfo.cmake"
   "MAV/MAV4/CMakeFiles/mav4.dir/DependInfo.cmake"
+  "xsens_ros_mti_driver/CMakeFiles/xsens_mti_node.dir/DependInfo.cmake"
   )

@@ -2,7 +2,8 @@
 /*The platform pose */
 /*1:Receive the Position and Attitude*/
 /*2:Calculate the velocity and angular rate*/
-
+#include <iostream>
+#include <cmath> 
 #include <ros/ros.h>
 #include <geometry_msgs/PoseStamped.h>
 #include <nav_msgs/Odometry.h>
@@ -18,6 +19,7 @@
 #include <string>
 #include "std_msgs/Float32MultiArray.h"
 #include "std_msgs/Float64MultiArray.h"
+#include "geometry_msgs/Vector3Stamped.h"
 #include "Eigen/Dense"
 #include "filter.h"
 
@@ -32,6 +34,7 @@ float Phi = 0; // z
 int t = 0;
 
 geometry_msgs::PoseStamped host_mocap;
+geometry_msgs::Vector3Stamped imu_rate;
 
 Vector3d a; //a & b using for filter
 Vector4d b;
@@ -46,7 +49,6 @@ Vector3d p_prev;
 
 Vector4d q;
 Vector3d eu;
-Vector3d eu_prev;
 
 Matrix<double, 3, 3> R;
 Matrix<double, 3, 3> Rate_Change_Matrix;
@@ -72,11 +74,28 @@ void initialize(void);
 void Position_and_Velocity(void);
 void Attitude_and_Angular_rate(void);
 
-
+/*now we just get cm */
 void host_pos(const geometry_msgs::PoseStamped::ConstPtr& msg)
-{  
-    pose = *msg;
+{   pose = *msg;
+    pose.pose.position.x = std::floor(pose.pose.position.x)/100;
+    pose.pose.position.y = std::floor(pose.pose.position.y)/100;
+    pose.pose.position.z = std::floor(pose.pose.position.z)/100;
+    pose.pose.orientation.w = std::floor(pose.pose.orientation.w)/100;
+    pose.pose.orientation.x = std::floor(pose.pose.orientation.x)/100;
+    pose.pose.orientation.y = std::floor(pose.pose.orientation.y)/100;
+    pose.pose.orientation.z = std::floor(pose.pose.orientation.z)/100;
 }
+
+void imu_cb(const geometry_msgs::Vector3Stamped::ConstPtr& msg)
+{
+    imu_rate = *msg;
+    imu_rate.vector.x = std::floor(imu_rate.vector.x)/100;
+    imu_rate.vector.y = std::floor(imu_rate.vector.y)/100;
+    imu_rate.vector.z = std::floor(imu_rate.vector.z)/100;
+    
+
+}
+
 
 int main(int argc, char **argv)
 {
@@ -95,6 +114,9 @@ int main(int argc, char **argv)
     std::string sub_topic = std::string("/vrpn_client_node/platform") + std::string("/pose");
 
     ros::Subscriber host_sub = nh.subscribe<geometry_msgs::PoseStamped>(sub_topic, 10, host_pos);
+
+    /*get the angular velocity from MTI-300 IMU*/
+    ros::Subscriber imu_sub = nh.subscribe<geometry_msgs::Vector3Stamped>("/imu/angular_velocity",10,imu_cb);
 
     /*the platform position*/
     ros::Publisher pos_pub =  nh.advertise<std_msgs::Float64MultiArray>
@@ -124,9 +146,7 @@ int main(int argc, char **argv)
         p_prev(1) = pose.pose.position.y;
         p_prev(2) = pose.pose.position.z;
         /*set the */
-        eu_prev(2) = 0;
-        eu_prev(1) = 0;
-        eu_prev(0) = 0;
+  
         ros::spinOnce();
         rate.sleep();
     }
@@ -146,9 +166,7 @@ int main(int argc, char **argv)
         attitude_euler_pub.publish(Euler);
 
         p_prev = p;
-        eu_prev = eu;
         
-
         ros::spinOnce();
         rate.sleep();
         t++;
@@ -200,32 +218,8 @@ void Attitude_and_Angular_rate(void)
     PLA_r.data[3] = q(3);
 
     //transfer the attitude from Orientation to Euler
-    
-   // R = quaternion.toRotationMatrix();
-    eu = quaternion.toRotationMatrix().eulerAngles(2,1,0);
-
-    Euler.data[0] = eu(0);
-    Euler.data[1] = eu(1);
-    Euler.data[2] = eu(2);
-
-    Psi = eu(2); //x
-    Theta = eu(1); //y
-    Phi = eu(0); //z
-
-
-    Rate_Change_Matrix <<1 ,0 ,-sin(Theta),
-                          0,cos(Psi),sin(Psi)*cos(Theta),
-                          0,-sin(Psi),cos(Psi)*cos(Theta);
-
-
-    Euler_Rate_Change(0) = ((eu(2) - eu_prev(2))/dt);
-    Euler_Rate_Change(1) = ((eu(1) - eu_prev(1))/dt);
-    Euler_Rate_Change(2) = ((eu(0) - eu_prev(0))/dt);
-    
-    Angular_Rate_Change = Rate_Change_Matrix*Euler_Rate_Change;
-
-    PLA_agvr.data[0] = Angular_Rate_Change(0);
-    PLA_agvr.data[1] = Angular_Rate_Change(1);
-    PLA_agvr.data[2] = Angular_Rate_Change(2);
+    PLA_agvr.data[0] =  imu_rate.vector.x;
+    PLA_agvr.data[1] =  imu_rate.vector.y;
+    PLA_agvr.data[2] =  imu_rate.vector.z;
 
 }

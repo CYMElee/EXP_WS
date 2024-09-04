@@ -1207,6 +1207,19 @@ mav4/fast:
 	$(MAKE) -f MAV/MAV4/CMakeFiles/mav4.dir/build.make MAV/MAV4/CMakeFiles/mav4.dir/build
 .PHONY : mav4/fast
 
+#=============================================================================
+# Target rules for targets named xsens_mti_node
+
+# Build rule for target.
+xsens_mti_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 xsens_mti_node
+.PHONY : xsens_mti_node
+
+# fast build rule for target.
+xsens_mti_node/fast:
+	$(MAKE) -f xsens_ros_mti_driver/CMakeFiles/xsens_mti_node.dir/build.make xsens_ros_mti_driver/CMakeFiles/xsens_mti_node.dir/build
+.PHONY : xsens_mti_node/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1300,6 +1313,7 @@ help:
 	@echo "... mav3"
 	@echo "... topic_tool_mav4"
 	@echo "... mav4"
+	@echo "... xsens_mti_node"
 .PHONY : help
 
 
