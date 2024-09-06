@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/lee/workspace/ros_ws/ex_ws/devel/setup.sh
+    local-name: /home/lee/workspace/ex_ws/devel/setup.sh

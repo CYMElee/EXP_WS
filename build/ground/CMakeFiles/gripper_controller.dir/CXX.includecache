@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/lee/workspace/ros_ws/ex_ws/src/ground/node/gripper_controller.cpp
+/home/lee/workspace/ex_ws/src/ground/node/gripper_controller.cpp
 ros/ros.h
-/home/lee/workspace/ros_ws/ex_ws/src/ground/node/ros/ros.h
+/home/lee/workspace/ex_ws/src/ground/node/ros/ros.h
 std_msgs/Float32MultiArray.h
-/home/lee/workspace/ros_ws/ex_ws/src/ground/node/std_msgs/Float32MultiArray.h
+/home/lee/workspace/ex_ws/src/ground/node/std_msgs/Float32MultiArray.h
 std_msgs/Float64MultiArray.h
-/home/lee/workspace/ros_ws/ex_ws/src/ground/node/std_msgs/Float64MultiArray.h
+/home/lee/workspace/ex_ws/src/ground/node/std_msgs/Float64MultiArray.h
 std_msgs/Float32.h
-/home/lee/workspace/ros_ws/ex_ws/src/ground/node/std_msgs/Float32.h
+/home/lee/workspace/ex_ws/src/ground/node/std_msgs/Float32.h
 std_msgs/Float64.h
-/home/lee/workspace/ros_ws/ex_ws/src/ground/node/std_msgs/Float64.h
+/home/lee/workspace/ex_ws/src/ground/node/std_msgs/Float64.h
 
 /opt/ros/noetic/include/ros/advertise_options.h
 ros/forwards.h

@@ -1,4 +1,4 @@
-prefix=/home/lee/workspace/ros_ws/ex_ws/install
+prefix=/home/lee/workspace/ex_ws/install
 
 Name: xsens_mti_driver
 Description: Description of xsens_mti_driver

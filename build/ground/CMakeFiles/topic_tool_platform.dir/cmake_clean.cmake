@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/lee/workspace/ros_ws/ex_ws/devel/lib/ground/topic_tool_platform"
-  "/home/lee/workspace/ros_ws/ex_ws/devel/lib/ground/topic_tool_platform.pdb"
+  "/home/lee/workspace/ex_ws/devel/lib/ground/topic_tool_platform"
+  "/home/lee/workspace/ex_ws/devel/lib/ground/topic_tool_platform.pdb"
   "CMakeFiles/topic_tool_platform.dir/src/filter.cpp.o"
   "CMakeFiles/topic_tool_platform.dir/src/topic_tool_platform.cpp.o"
 )

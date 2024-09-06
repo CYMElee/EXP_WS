@@ -1,8 +1,8 @@
-# Install script for directory: /home/lee/workspace/ros_ws/ex_ws/src/MAV/MAV4
+# Install script for directory: /home/lee/workspace/ex_ws/src/MAV/MAV4
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/lee/workspace/ros_ws/ex_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/lee/workspace/ex_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/lee/workspace/ros_ws/ex_ws/build/MAV/MAV4/catkin_generated/installspace/mav4.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/lee/workspace/ex_ws/build/MAV/MAV4/catkin_generated/installspace/mav4.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mav4/cmake" TYPE FILE FILES
-    "/home/lee/workspace/ros_ws/ex_ws/build/MAV/MAV4/catkin_generated/installspace/mav4Config.cmake"
-    "/home/lee/workspace/ros_ws/ex_ws/build/MAV/MAV4/catkin_generated/installspace/mav4Config-version.cmake"
+    "/home/lee/workspace/ex_ws/build/MAV/MAV4/catkin_generated/installspace/mav4Config.cmake"
+    "/home/lee/workspace/ex_ws/build/MAV/MAV4/catkin_generated/installspace/mav4Config-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mav4" TYPE FILE FILES "/home/lee/workspace/ros_ws/ex_ws/src/MAV/MAV4/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mav4" TYPE FILE FILES "/home/lee/workspace/ex_ws/src/MAV/MAV4/package.xml")
 endif()
 

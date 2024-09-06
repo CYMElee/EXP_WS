@@ -1,8 +1,8 @@
-# Install script for directory: /home/lee/workspace/ros_ws/ex_ws/src/sensor
+# Install script for directory: /home/lee/workspace/ex_ws/src/sensor
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/lee/workspace/ros_ws/ex_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/lee/workspace/ex_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/lee/workspace/ros_ws/ex_ws/build/sensor/catkin_generated/installspace/sensor.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/lee/workspace/ex_ws/build/sensor/catkin_generated/installspace/sensor.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/sensor/cmake" TYPE FILE FILES
-    "/home/lee/workspace/ros_ws/ex_ws/build/sensor/catkin_generated/installspace/sensorConfig.cmake"
-    "/home/lee/workspace/ros_ws/ex_ws/build/sensor/catkin_generated/installspace/sensorConfig-version.cmake"
+    "/home/lee/workspace/ex_ws/build/sensor/catkin_generated/installspace/sensorConfig.cmake"
+    "/home/lee/workspace/ex_ws/build/sensor/catkin_generated/installspace/sensorConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/sensor" TYPE FILE FILES "/home/lee/workspace/ros_ws/ex_ws/src/sensor/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/sensor" TYPE FILE FILES "/home/lee/workspace/ex_ws/src/sensor/package.xml")
 endif()
 

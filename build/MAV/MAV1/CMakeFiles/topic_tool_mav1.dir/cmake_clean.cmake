@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/lee/workspace/ros_ws/ex_ws/devel/lib/mav1/topic_tool_mav1"
-  "/home/lee/workspace/ros_ws/ex_ws/devel/lib/mav1/topic_tool_mav1.pdb"
+  "/home/lee/workspace/ex_ws/devel/lib/mav1/topic_tool_mav1"
+  "/home/lee/workspace/ex_ws/devel/lib/mav1/topic_tool_mav1.pdb"
   "CMakeFiles/topic_tool_mav1.dir/src/topic_tool.cpp.o"
 )
 

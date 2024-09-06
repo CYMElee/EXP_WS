@@ -1,4 +1,4 @@
-prefix=/home/lee/workspace/ros_ws/ex_ws/devel
+prefix=/home/lee/workspace/ex_ws/devel
 
 Name: sensor
 Description: Description of sensor

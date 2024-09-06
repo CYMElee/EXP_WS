@@ -77,21 +77,21 @@ void Attitude_and_Angular_rate(void);
 /*now we just get cm */
 void host_pos(const geometry_msgs::PoseStamped::ConstPtr& msg)
 {   pose = *msg;
-    pose.pose.position.x = std::floor(pose.pose.position.x)/100;
-    pose.pose.position.y = std::floor(pose.pose.position.y)/100;
-    pose.pose.position.z = std::floor(pose.pose.position.z)/100;
-    pose.pose.orientation.w = std::floor(pose.pose.orientation.w)/100;
-    pose.pose.orientation.x = std::floor(pose.pose.orientation.x)/100;
-    pose.pose.orientation.y = std::floor(pose.pose.orientation.y)/100;
-    pose.pose.orientation.z = std::floor(pose.pose.orientation.z)/100;
+    pose.pose.position.x = std::floor(pose.pose.position.x*100)/100;
+    pose.pose.position.y = std::floor(pose.pose.position.y*100)/100;
+    pose.pose.position.z = std::floor(pose.pose.position.z*100)/100;
+    pose.pose.orientation.w = std::floor(pose.pose.orientation.w*100)/100;
+    pose.pose.orientation.x = std::floor(pose.pose.orientation.x*100)/100;
+    pose.pose.orientation.y = std::floor(pose.pose.orientation.y*100)/100;
+    pose.pose.orientation.z = std::floor(pose.pose.orientation.z*100)/100;
 }
 
 void imu_cb(const geometry_msgs::Vector3Stamped::ConstPtr& msg)
 {
     imu_rate = *msg;
-    imu_rate.vector.x = std::floor(imu_rate.vector.x)/100;
-    imu_rate.vector.y = std::floor(imu_rate.vector.y)/100;
-    imu_rate.vector.z = std::floor(imu_rate.vector.z)/100;
+    imu_rate.vector.x = std::floor(imu_rate.vector.x*100)/100;
+    imu_rate.vector.y = std::floor(imu_rate.vector.y*100)/100;
+    imu_rate.vector.z = std::floor(imu_rate.vector.z*100)/100;
     
 
 }

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/lee/workspace/ros_ws/ex_ws/devel/lib/ground/keyboard"
-  "/home/lee/workspace/ros_ws/ex_ws/devel/lib/ground/keyboard.pdb"
+  "/home/lee/workspace/ex_ws/devel/lib/ground/keyboard"
+  "/home/lee/workspace/ex_ws/devel/lib/ground/keyboard.pdb"
   "CMakeFiles/keyboard.dir/node/keyboard.cpp.o"
   "CMakeFiles/keyboard.dir/src/getch.cpp.o"
 )

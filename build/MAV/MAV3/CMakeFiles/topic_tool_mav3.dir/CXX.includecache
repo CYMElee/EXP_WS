@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/lee/workspace/ros_ws/ex_ws/src/MAV/MAV3/src/topic_tool.cpp
+/home/lee/workspace/ex_ws/src/MAV/MAV3/src/topic_tool.cpp
 ros/ros.h
 -
 geometry_msgs/PoseStamped.h

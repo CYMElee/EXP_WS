@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/lee/workspace/ros_ws/ex_ws/devel/lib/mav4/mav4"
-  "/home/lee/workspace/ros_ws/ex_ws/devel/lib/mav4/mav4.pdb"
+  "/home/lee/workspace/ex_ws/devel/lib/mav4/mav4"
+  "/home/lee/workspace/ex_ws/devel/lib/mav4/mav4.pdb"
   "CMakeFiles/mav4.dir/node/main.cpp.o"
 )
 
