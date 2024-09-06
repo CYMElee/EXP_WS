@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/lee/workspace/ex_ws/src/MAV/MAV2/node/main.cpp
+/home/lee/workspace/ros_ws/ex_ws/src/MAV/MAV2/node/main.cpp
 ros/ros.h
-/home/lee/workspace/ex_ws/src/MAV/MAV2/node/ros/ros.h
+/home/lee/workspace/ros_ws/ex_ws/src/MAV/MAV2/node/ros/ros.h
 string
 -
 std_msgs/Int16.h
-/home/lee/workspace/ex_ws/src/MAV/MAV2/node/std_msgs/Int16.h
+/home/lee/workspace/ros_ws/ex_ws/src/MAV/MAV2/node/std_msgs/Int16.h
 geometry_msgs/PoseStamped.h
 -
 mavros_msgs/CommandBool.h
@@ -26,15 +26,15 @@ mavros_msgs/State.h
 mavros_msgs/Mavlink.h
 -
 mavros_msgs/AttitudeTarget.h
-/home/lee/workspace/ex_ws/src/MAV/MAV2/node/mavros_msgs/AttitudeTarget.h
+/home/lee/workspace/ros_ws/ex_ws/src/MAV/MAV2/node/mavros_msgs/AttitudeTarget.h
 std_msgs/Float64MultiArray.h
-/home/lee/workspace/ex_ws/src/MAV/MAV2/node/std_msgs/Float64MultiArray.h
+/home/lee/workspace/ros_ws/ex_ws/src/MAV/MAV2/node/std_msgs/Float64MultiArray.h
 std_msgs/Float32MultiArray.h
-/home/lee/workspace/ex_ws/src/MAV/MAV2/node/std_msgs/Float32MultiArray.h
+/home/lee/workspace/ros_ws/ex_ws/src/MAV/MAV2/node/std_msgs/Float32MultiArray.h
 cmath
-/home/lee/workspace/ex_ws/src/MAV/MAV2/node/cmath
+/home/lee/workspace/ros_ws/ex_ws/src/MAV/MAV2/node/cmath
 Eigen/Dense
-/home/lee/workspace/ex_ws/src/MAV/MAV2/node/Eigen/Dense
+/home/lee/workspace/ros_ws/ex_ws/src/MAV/MAV2/node/Eigen/Dense
 
 /opt/ros/noetic/include/geometry_msgs/Point.h
 string

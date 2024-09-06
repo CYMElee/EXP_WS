@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/lee/workspace/ex_ws/src/ground/include/getch.h
+/home/lee/workspace/ros_ws/ex_ws/src/ground/include/getch.h
 cstdio
 -
 unistd.h
@@ -16,27 +16,27 @@ termios.h
 fcntl.h
 -
 
-/home/lee/workspace/ex_ws/src/ground/node/keyboard.cpp
+/home/lee/workspace/ros_ws/ex_ws/src/ground/node/keyboard.cpp
 ros/ros.h
-/home/lee/workspace/ex_ws/src/ground/node/ros/ros.h
+/home/lee/workspace/ros_ws/ex_ws/src/ground/node/ros/ros.h
 std_msgs/Int16.h
-/home/lee/workspace/ex_ws/src/ground/node/std_msgs/Int16.h
+/home/lee/workspace/ros_ws/ex_ws/src/ground/node/std_msgs/Int16.h
 getch.h
-/home/lee/workspace/ex_ws/src/ground/node/getch.h
+/home/lee/workspace/ros_ws/ex_ws/src/ground/node/getch.h
 mavros_msgs/CommandBool.h
-/home/lee/workspace/ex_ws/src/ground/node/mavros_msgs/CommandBool.h
+/home/lee/workspace/ros_ws/ex_ws/src/ground/node/mavros_msgs/CommandBool.h
 mavros_msgs/CommandTOL.h
-/home/lee/workspace/ex_ws/src/ground/node/mavros_msgs/CommandTOL.h
+/home/lee/workspace/ros_ws/ex_ws/src/ground/node/mavros_msgs/CommandTOL.h
 mavros_msgs/SetMode.h
-/home/lee/workspace/ex_ws/src/ground/node/mavros_msgs/SetMode.h
+/home/lee/workspace/ros_ws/ex_ws/src/ground/node/mavros_msgs/SetMode.h
 mavros_msgs/State.h
-/home/lee/workspace/ex_ws/src/ground/node/mavros_msgs/State.h
+/home/lee/workspace/ros_ws/ex_ws/src/ground/node/mavros_msgs/State.h
 mavros_msgs/Mavlink.h
-/home/lee/workspace/ex_ws/src/ground/node/mavros_msgs/Mavlink.h
+/home/lee/workspace/ros_ws/ex_ws/src/ground/node/mavros_msgs/Mavlink.h
 
-/home/lee/workspace/ex_ws/src/ground/src/getch.cpp
+/home/lee/workspace/ros_ws/ex_ws/src/ground/src/getch.cpp
 getch.h
-/home/lee/workspace/ex_ws/src/ground/src/getch.h
+/home/lee/workspace/ros_ws/ex_ws/src/ground/src/getch.h
 
 /opt/ros/noetic/include/mavros_msgs/CommandBool.h
 ros/service_traits.h

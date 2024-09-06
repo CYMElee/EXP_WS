@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lee/workspace/ex_ws/src
+CMAKE_SOURCE_DIR = /home/lee/workspace/ros_ws/ex_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lee/workspace/ex_ws/build
+CMAKE_BINARY_DIR = /home/lee/workspace/ros_ws/ex_ws/build
 
 # Include any dependencies generated for this target.
 include ground/CMakeFiles/attitude_controller.dir/depend.make
@@ -58,17 +58,17 @@ include ground/CMakeFiles/attitude_controller.dir/progress.make
 include ground/CMakeFiles/attitude_controller.dir/flags.make
 
 ground/CMakeFiles/attitude_controller.dir/node/attitude_controller.cpp.o: ground/CMakeFiles/attitude_controller.dir/flags.make
-ground/CMakeFiles/attitude_controller.dir/node/attitude_controller.cpp.o: /home/lee/workspace/ex_ws/src/ground/node/attitude_controller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object ground/CMakeFiles/attitude_controller.dir/node/attitude_controller.cpp.o"
-	cd /home/lee/workspace/ex_ws/build/ground && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/attitude_controller.dir/node/attitude_controller.cpp.o -c /home/lee/workspace/ex_ws/src/ground/node/attitude_controller.cpp
+ground/CMakeFiles/attitude_controller.dir/node/attitude_controller.cpp.o: /home/lee/workspace/ros_ws/ex_ws/src/ground/node/attitude_controller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object ground/CMakeFiles/attitude_controller.dir/node/attitude_controller.cpp.o"
+	cd /home/lee/workspace/ros_ws/ex_ws/build/ground && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/attitude_controller.dir/node/attitude_controller.cpp.o -c /home/lee/workspace/ros_ws/ex_ws/src/ground/node/attitude_controller.cpp
 
 ground/CMakeFiles/attitude_controller.dir/node/attitude_controller.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/attitude_controller.dir/node/attitude_controller.cpp.i"
-	cd /home/lee/workspace/ex_ws/build/ground && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lee/workspace/ex_ws/src/ground/node/attitude_controller.cpp > CMakeFiles/attitude_controller.dir/node/attitude_controller.cpp.i
+	cd /home/lee/workspace/ros_ws/ex_ws/build/ground && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lee/workspace/ros_ws/ex_ws/src/ground/node/attitude_controller.cpp > CMakeFiles/attitude_controller.dir/node/attitude_controller.cpp.i
 
 ground/CMakeFiles/attitude_controller.dir/node/attitude_controller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/attitude_controller.dir/node/attitude_controller.cpp.s"
-	cd /home/lee/workspace/ex_ws/build/ground && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lee/workspace/ex_ws/src/ground/node/attitude_controller.cpp -o CMakeFiles/attitude_controller.dir/node/attitude_controller.cpp.s
+	cd /home/lee/workspace/ros_ws/ex_ws/build/ground && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lee/workspace/ros_ws/ex_ws/src/ground/node/attitude_controller.cpp -o CMakeFiles/attitude_controller.dir/node/attitude_controller.cpp.s
 
 # Object files for target attitude_controller
 attitude_controller_OBJECTS = \
@@ -77,45 +77,45 @@ attitude_controller_OBJECTS = \
 # External object files for target attitude_controller
 attitude_controller_EXTERNAL_OBJECTS =
 
-/home/lee/workspace/ex_ws/devel/lib/ground/attitude_controller: ground/CMakeFiles/attitude_controller.dir/node/attitude_controller.cpp.o
-/home/lee/workspace/ex_ws/devel/lib/ground/attitude_controller: ground/CMakeFiles/attitude_controller.dir/build.make
-/home/lee/workspace/ex_ws/devel/lib/ground/attitude_controller: /usr/lib/liborocos-kdl.so
-/home/lee/workspace/ex_ws/devel/lib/ground/attitude_controller: /usr/lib/liborocos-kdl.so
-/home/lee/workspace/ex_ws/devel/lib/ground/attitude_controller: /opt/ros/noetic/lib/libtf2_ros.so
-/home/lee/workspace/ex_ws/devel/lib/ground/attitude_controller: /opt/ros/noetic/lib/libactionlib.so
-/home/lee/workspace/ex_ws/devel/lib/ground/attitude_controller: /opt/ros/noetic/lib/libmessage_filters.so
-/home/lee/workspace/ex_ws/devel/lib/ground/attitude_controller: /opt/ros/noetic/lib/libroscpp.so
-/home/lee/workspace/ex_ws/devel/lib/ground/attitude_controller: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/lee/workspace/ex_ws/devel/lib/ground/attitude_controller: /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0
-/home/lee/workspace/ex_ws/devel/lib/ground/attitude_controller: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
-/home/lee/workspace/ex_ws/devel/lib/ground/attitude_controller: /opt/ros/noetic/lib/librosconsole.so
-/home/lee/workspace/ex_ws/devel/lib/ground/attitude_controller: /opt/ros/noetic/lib/librosconsole_log4cxx.so
-/home/lee/workspace/ex_ws/devel/lib/ground/attitude_controller: /opt/ros/noetic/lib/librosconsole_backend_interface.so
-/home/lee/workspace/ex_ws/devel/lib/ground/attitude_controller: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-/home/lee/workspace/ex_ws/devel/lib/ground/attitude_controller: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0
-/home/lee/workspace/ex_ws/devel/lib/ground/attitude_controller: /opt/ros/noetic/lib/libxmlrpcpp.so
-/home/lee/workspace/ex_ws/devel/lib/ground/attitude_controller: /opt/ros/noetic/lib/libtf2.so
-/home/lee/workspace/ex_ws/devel/lib/ground/attitude_controller: /opt/ros/noetic/lib/libroscpp_serialization.so
-/home/lee/workspace/ex_ws/devel/lib/ground/attitude_controller: /opt/ros/noetic/lib/librostime.so
-/home/lee/workspace/ex_ws/devel/lib/ground/attitude_controller: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
-/home/lee/workspace/ex_ws/devel/lib/ground/attitude_controller: /opt/ros/noetic/lib/libcpp_common.so
-/home/lee/workspace/ex_ws/devel/lib/ground/attitude_controller: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
-/home/lee/workspace/ex_ws/devel/lib/ground/attitude_controller: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
-/home/lee/workspace/ex_ws/devel/lib/ground/attitude_controller: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-/home/lee/workspace/ex_ws/devel/lib/ground/attitude_controller: ground/CMakeFiles/attitude_controller.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/lee/workspace/ex_ws/devel/lib/ground/attitude_controller"
-	cd /home/lee/workspace/ex_ws/build/ground && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/attitude_controller.dir/link.txt --verbose=$(VERBOSE)
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/ground/attitude_controller: ground/CMakeFiles/attitude_controller.dir/node/attitude_controller.cpp.o
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/ground/attitude_controller: ground/CMakeFiles/attitude_controller.dir/build.make
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/ground/attitude_controller: /usr/lib/liborocos-kdl.so
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/ground/attitude_controller: /usr/lib/liborocos-kdl.so
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/ground/attitude_controller: /opt/ros/noetic/lib/libtf2_ros.so
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/ground/attitude_controller: /opt/ros/noetic/lib/libactionlib.so
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/ground/attitude_controller: /opt/ros/noetic/lib/libmessage_filters.so
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/ground/attitude_controller: /opt/ros/noetic/lib/libroscpp.so
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/ground/attitude_controller: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/ground/attitude_controller: /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/ground/attitude_controller: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/ground/attitude_controller: /opt/ros/noetic/lib/librosconsole.so
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/ground/attitude_controller: /opt/ros/noetic/lib/librosconsole_log4cxx.so
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/ground/attitude_controller: /opt/ros/noetic/lib/librosconsole_backend_interface.so
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/ground/attitude_controller: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/ground/attitude_controller: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/ground/attitude_controller: /opt/ros/noetic/lib/libxmlrpcpp.so
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/ground/attitude_controller: /opt/ros/noetic/lib/libtf2.so
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/ground/attitude_controller: /opt/ros/noetic/lib/libroscpp_serialization.so
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/ground/attitude_controller: /opt/ros/noetic/lib/librostime.so
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/ground/attitude_controller: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/ground/attitude_controller: /opt/ros/noetic/lib/libcpp_common.so
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/ground/attitude_controller: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/ground/attitude_controller: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/ground/attitude_controller: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/ground/attitude_controller: ground/CMakeFiles/attitude_controller.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/lee/workspace/ros_ws/ex_ws/devel/lib/ground/attitude_controller"
+	cd /home/lee/workspace/ros_ws/ex_ws/build/ground && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/attitude_controller.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-ground/CMakeFiles/attitude_controller.dir/build: /home/lee/workspace/ex_ws/devel/lib/ground/attitude_controller
+ground/CMakeFiles/attitude_controller.dir/build: /home/lee/workspace/ros_ws/ex_ws/devel/lib/ground/attitude_controller
 
 .PHONY : ground/CMakeFiles/attitude_controller.dir/build
 
 ground/CMakeFiles/attitude_controller.dir/clean:
-	cd /home/lee/workspace/ex_ws/build/ground && $(CMAKE_COMMAND) -P CMakeFiles/attitude_controller.dir/cmake_clean.cmake
+	cd /home/lee/workspace/ros_ws/ex_ws/build/ground && $(CMAKE_COMMAND) -P CMakeFiles/attitude_controller.dir/cmake_clean.cmake
 .PHONY : ground/CMakeFiles/attitude_controller.dir/clean
 
 ground/CMakeFiles/attitude_controller.dir/depend:
-	cd /home/lee/workspace/ex_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lee/workspace/ex_ws/src /home/lee/workspace/ex_ws/src/ground /home/lee/workspace/ex_ws/build /home/lee/workspace/ex_ws/build/ground /home/lee/workspace/ex_ws/build/ground/CMakeFiles/attitude_controller.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lee/workspace/ros_ws/ex_ws/src /home/lee/workspace/ros_ws/ex_ws/src/ground /home/lee/workspace/ros_ws/ex_ws/build /home/lee/workspace/ros_ws/ex_ws/build/ground /home/lee/workspace/ros_ws/ex_ws/build/ground/CMakeFiles/attitude_controller.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ground/CMakeFiles/attitude_controller.dir/depend
 

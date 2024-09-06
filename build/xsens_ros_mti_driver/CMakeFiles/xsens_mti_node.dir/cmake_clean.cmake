@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/lee/workspace/ex_ws/devel/lib/xsens_mti_driver/xsens_mti_node"
-  "/home/lee/workspace/ex_ws/devel/lib/xsens_mti_driver/xsens_mti_node.pdb"
+  "/home/lee/workspace/ros_ws/ex_ws/devel/lib/xsens_mti_driver/xsens_mti_node"
+  "/home/lee/workspace/ros_ws/ex_ws/devel/lib/xsens_mti_driver/xsens_mti_node.pdb"
   "CMakeFiles/xsens_mti_node.dir/src/main.cpp.o"
   "CMakeFiles/xsens_mti_node.dir/src/xdacallback.cpp.o"
   "CMakeFiles/xsens_mti_node.dir/src/xdainterface.cpp.o"

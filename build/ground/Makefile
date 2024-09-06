@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lee/workspace/ex_ws/src
+CMAKE_SOURCE_DIR = /home/lee/workspace/ros_ws/ex_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lee/workspace/ex_ws/build
+CMAKE_BINARY_DIR = /home/lee/workspace/ros_ws/ex_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/lee/workspace/ex_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles /home/lee/workspace/ex_ws/build/ground/CMakeFiles/progress.marks
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles /home/lee/workspace/ros_ws/ex_ws/build/ground/CMakeFiles/progress.marks
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/clean
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/preinstall
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/preinstall
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/lee/workspace/ex_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 ground/CMakeFiles/topic_tool_platform.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/topic_tool_platform.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/topic_tool_platform.dir/rule
 .PHONY : ground/CMakeFiles/topic_tool_platform.dir/rule
 
 # Convenience name for target.
@@ -179,12 +179,12 @@ topic_tool_platform: ground/CMakeFiles/topic_tool_platform.dir/rule
 
 # fast build rule for target.
 topic_tool_platform/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/topic_tool_platform.dir/build.make ground/CMakeFiles/topic_tool_platform.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/topic_tool_platform.dir/build.make ground/CMakeFiles/topic_tool_platform.dir/build
 .PHONY : topic_tool_platform/fast
 
 # Convenience name for target.
 ground/CMakeFiles/attitude_controller.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/attitude_controller.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/attitude_controller.dir/rule
 .PHONY : ground/CMakeFiles/attitude_controller.dir/rule
 
 # Convenience name for target.
@@ -194,12 +194,12 @@ attitude_controller: ground/CMakeFiles/attitude_controller.dir/rule
 
 # fast build rule for target.
 attitude_controller/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/attitude_controller.dir/build.make ground/CMakeFiles/attitude_controller.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/attitude_controller.dir/build.make ground/CMakeFiles/attitude_controller.dir/build
 .PHONY : attitude_controller/fast
 
 # Convenience name for target.
 ground/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 .PHONY : ground/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -209,12 +209,12 @@ roscpp_generate_messages_cpp: ground/CMakeFiles/roscpp_generate_messages_cpp.dir
 
 # fast build rule for target.
 roscpp_generate_messages_cpp/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make ground/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make ground/CMakeFiles/roscpp_generate_messages_cpp.dir/build
 .PHONY : roscpp_generate_messages_cpp/fast
 
 # Convenience name for target.
 ground/CMakeFiles/uuid_msgs_generate_messages_py.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/uuid_msgs_generate_messages_py.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/uuid_msgs_generate_messages_py.dir/rule
 .PHONY : ground/CMakeFiles/uuid_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -224,12 +224,12 @@ uuid_msgs_generate_messages_py: ground/CMakeFiles/uuid_msgs_generate_messages_py
 
 # fast build rule for target.
 uuid_msgs_generate_messages_py/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/uuid_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/uuid_msgs_generate_messages_py.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/uuid_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/uuid_msgs_generate_messages_py.dir/build
 .PHONY : uuid_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 ground/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 .PHONY : ground/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -239,12 +239,12 @@ std_msgs_generate_messages_lisp: ground/CMakeFiles/std_msgs_generate_messages_li
 
 # fast build rule for target.
 std_msgs_generate_messages_lisp/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 ground/CMakeFiles/geographic_msgs_generate_messages_py.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/geographic_msgs_generate_messages_py.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/geographic_msgs_generate_messages_py.dir/rule
 .PHONY : ground/CMakeFiles/geographic_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -254,12 +254,12 @@ geographic_msgs_generate_messages_py: ground/CMakeFiles/geographic_msgs_generate
 
 # fast build rule for target.
 geographic_msgs_generate_messages_py/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/geographic_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/geographic_msgs_generate_messages_py.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/geographic_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/geographic_msgs_generate_messages_py.dir/build
 .PHONY : geographic_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 ground/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
 .PHONY : ground/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -269,12 +269,12 @@ sensor_msgs_generate_messages_eus: ground/CMakeFiles/sensor_msgs_generate_messag
 
 # fast build rule for target.
 sensor_msgs_generate_messages_eus/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
 .PHONY : sensor_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 ground/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
 .PHONY : ground/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -284,12 +284,12 @@ sensor_msgs_generate_messages_lisp: ground/CMakeFiles/sensor_msgs_generate_messa
 
 # fast build rule for target.
 sensor_msgs_generate_messages_lisp/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
 .PHONY : sensor_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 ground/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/rule
 .PHONY : ground/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -299,12 +299,12 @@ geographic_msgs_generate_messages_nodejs: ground/CMakeFiles/geographic_msgs_gene
 
 # fast build rule for target.
 geographic_msgs_generate_messages_nodejs/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/build
 .PHONY : geographic_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 ground/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 .PHONY : ground/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -314,12 +314,12 @@ sensor_msgs_generate_messages_cpp: ground/CMakeFiles/sensor_msgs_generate_messag
 
 # fast build rule for target.
 sensor_msgs_generate_messages_cpp/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
 .PHONY : sensor_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 ground/CMakeFiles/geographic_msgs_generate_messages_eus.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/geographic_msgs_generate_messages_eus.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/geographic_msgs_generate_messages_eus.dir/rule
 .PHONY : ground/CMakeFiles/geographic_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -329,12 +329,12 @@ geographic_msgs_generate_messages_eus: ground/CMakeFiles/geographic_msgs_generat
 
 # fast build rule for target.
 geographic_msgs_generate_messages_eus/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/geographic_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/geographic_msgs_generate_messages_eus.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/geographic_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/geographic_msgs_generate_messages_eus.dir/build
 .PHONY : geographic_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 ground/CMakeFiles/mavros_msgs_generate_messages_py.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/mavros_msgs_generate_messages_py.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/mavros_msgs_generate_messages_py.dir/rule
 .PHONY : ground/CMakeFiles/mavros_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -344,12 +344,12 @@ mavros_msgs_generate_messages_py: ground/CMakeFiles/mavros_msgs_generate_message
 
 # fast build rule for target.
 mavros_msgs_generate_messages_py/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/mavros_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/mavros_msgs_generate_messages_py.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/mavros_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/mavros_msgs_generate_messages_py.dir/build
 .PHONY : mavros_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 ground/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
 .PHONY : ground/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -359,12 +359,12 @@ geometry_msgs_generate_messages_eus: ground/CMakeFiles/geometry_msgs_generate_me
 
 # fast build rule for target.
 geometry_msgs_generate_messages_eus/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
 .PHONY : geometry_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 ground/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
 .PHONY : ground/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -374,12 +374,12 @@ std_msgs_generate_messages_nodejs: ground/CMakeFiles/std_msgs_generate_messages_
 
 # fast build rule for target.
 std_msgs_generate_messages_nodejs/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
 .PHONY : std_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 ground/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
 .PHONY : ground/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -389,12 +389,12 @@ sensor_msgs_generate_messages_nodejs: ground/CMakeFiles/sensor_msgs_generate_mes
 
 # fast build rule for target.
 sensor_msgs_generate_messages_nodejs/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
 .PHONY : sensor_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 ground/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
 .PHONY : ground/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -404,12 +404,12 @@ geometry_msgs_generate_messages_py: ground/CMakeFiles/geometry_msgs_generate_mes
 
 # fast build rule for target.
 geometry_msgs_generate_messages_py/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
 .PHONY : geometry_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 ground/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/rule
 .PHONY : ground/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -419,12 +419,12 @@ uuid_msgs_generate_messages_lisp: ground/CMakeFiles/uuid_msgs_generate_messages_
 
 # fast build rule for target.
 uuid_msgs_generate_messages_lisp/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/build
 .PHONY : uuid_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 ground/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
 .PHONY : ground/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -434,12 +434,12 @@ geometry_msgs_generate_messages_nodejs: ground/CMakeFiles/geometry_msgs_generate
 
 # fast build rule for target.
 geometry_msgs_generate_messages_nodejs/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
 .PHONY : geometry_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 ground/CMakeFiles/gripper_controller.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/gripper_controller.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/gripper_controller.dir/rule
 .PHONY : ground/CMakeFiles/gripper_controller.dir/rule
 
 # Convenience name for target.
@@ -449,12 +449,12 @@ gripper_controller: ground/CMakeFiles/gripper_controller.dir/rule
 
 # fast build rule for target.
 gripper_controller/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/gripper_controller.dir/build.make ground/CMakeFiles/gripper_controller.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/gripper_controller.dir/build.make ground/CMakeFiles/gripper_controller.dir/build
 .PHONY : gripper_controller/fast
 
 # Convenience name for target.
 ground/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 .PHONY : ground/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -464,12 +464,12 @@ std_msgs_generate_messages_cpp: ground/CMakeFiles/std_msgs_generate_messages_cpp
 
 # fast build rule for target.
 std_msgs_generate_messages_cpp/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
 .PHONY : std_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 ground/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
 .PHONY : ground/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -479,12 +479,12 @@ tf2_msgs_generate_messages_cpp: ground/CMakeFiles/tf2_msgs_generate_messages_cpp
 
 # fast build rule for target.
 tf2_msgs_generate_messages_cpp/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
 .PHONY : tf2_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 ground/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
 .PHONY : ground/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -494,12 +494,12 @@ geometry_msgs_generate_messages_lisp: ground/CMakeFiles/geometry_msgs_generate_m
 
 # fast build rule for target.
 geometry_msgs_generate_messages_lisp/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
 .PHONY : geometry_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 ground/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/rule
 .PHONY : ground/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -509,12 +509,12 @@ mavros_msgs_generate_messages_nodejs: ground/CMakeFiles/mavros_msgs_generate_mes
 
 # fast build rule for target.
 mavros_msgs_generate_messages_nodejs/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/build
 .PHONY : mavros_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 ground/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 .PHONY : ground/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -524,12 +524,12 @@ std_msgs_generate_messages_py: ground/CMakeFiles/std_msgs_generate_messages_py.d
 
 # fast build rule for target.
 std_msgs_generate_messages_py/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/std_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/std_msgs_generate_messages_py.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/std_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 ground/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/rule
 .PHONY : ground/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -539,12 +539,12 @@ uuid_msgs_generate_messages_nodejs: ground/CMakeFiles/uuid_msgs_generate_message
 
 # fast build rule for target.
 uuid_msgs_generate_messages_nodejs/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/build
 .PHONY : uuid_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 ground/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
 .PHONY : ground/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -554,12 +554,12 @@ tf2_msgs_generate_messages_py: ground/CMakeFiles/tf2_msgs_generate_messages_py.d
 
 # fast build rule for target.
 tf2_msgs_generate_messages_py/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
 .PHONY : tf2_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 ground/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/rule
 .PHONY : ground/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -569,12 +569,12 @@ mavros_msgs_generate_messages_cpp: ground/CMakeFiles/mavros_msgs_generate_messag
 
 # fast build rule for target.
 mavros_msgs_generate_messages_cpp/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/build
 .PHONY : mavros_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 ground/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
 .PHONY : ground/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -584,12 +584,12 @@ actionlib_generate_messages_nodejs: ground/CMakeFiles/actionlib_generate_message
 
 # fast build rule for target.
 actionlib_generate_messages_nodejs/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make ground/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make ground/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
 .PHONY : actionlib_generate_messages_nodejs/fast
 
 # Convenience name for target.
 ground/CMakeFiles/mavros_msgs_generate_messages_eus.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/mavros_msgs_generate_messages_eus.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/mavros_msgs_generate_messages_eus.dir/rule
 .PHONY : ground/CMakeFiles/mavros_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -599,12 +599,12 @@ mavros_msgs_generate_messages_eus: ground/CMakeFiles/mavros_msgs_generate_messag
 
 # fast build rule for target.
 mavros_msgs_generate_messages_eus/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/mavros_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/mavros_msgs_generate_messages_eus.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/mavros_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/mavros_msgs_generate_messages_eus.dir/build
 .PHONY : mavros_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 ground/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/rule
 .PHONY : ground/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -614,12 +614,12 @@ uuid_msgs_generate_messages_cpp: ground/CMakeFiles/uuid_msgs_generate_messages_c
 
 # fast build rule for target.
 uuid_msgs_generate_messages_cpp/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/build
 .PHONY : uuid_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 ground/CMakeFiles/uuid_msgs_generate_messages_eus.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/uuid_msgs_generate_messages_eus.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/uuid_msgs_generate_messages_eus.dir/rule
 .PHONY : ground/CMakeFiles/uuid_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -629,12 +629,12 @@ uuid_msgs_generate_messages_eus: ground/CMakeFiles/uuid_msgs_generate_messages_e
 
 # fast build rule for target.
 uuid_msgs_generate_messages_eus/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/uuid_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/uuid_msgs_generate_messages_eus.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/uuid_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/uuid_msgs_generate_messages_eus.dir/build
 .PHONY : uuid_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 ground/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 .PHONY : ground/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -644,12 +644,12 @@ roscpp_generate_messages_eus: ground/CMakeFiles/roscpp_generate_messages_eus.dir
 
 # fast build rule for target.
 roscpp_generate_messages_eus/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/roscpp_generate_messages_eus.dir/build.make ground/CMakeFiles/roscpp_generate_messages_eus.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/roscpp_generate_messages_eus.dir/build.make ground/CMakeFiles/roscpp_generate_messages_eus.dir/build
 .PHONY : roscpp_generate_messages_eus/fast
 
 # Convenience name for target.
 ground/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
 .PHONY : ground/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -659,12 +659,12 @@ sensor_msgs_generate_messages_py: ground/CMakeFiles/sensor_msgs_generate_message
 
 # fast build rule for target.
 sensor_msgs_generate_messages_py/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
 .PHONY : sensor_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 ground/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
 .PHONY : ground/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -674,12 +674,12 @@ tf2_msgs_generate_messages_eus: ground/CMakeFiles/tf2_msgs_generate_messages_eus
 
 # fast build rule for target.
 tf2_msgs_generate_messages_eus/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
 .PHONY : tf2_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 ground/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 .PHONY : ground/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -689,12 +689,12 @@ roscpp_generate_messages_lisp: ground/CMakeFiles/roscpp_generate_messages_lisp.d
 
 # fast build rule for target.
 roscpp_generate_messages_lisp/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make ground/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make ground/CMakeFiles/roscpp_generate_messages_lisp.dir/build
 .PHONY : roscpp_generate_messages_lisp/fast
 
 # Convenience name for target.
 ground/CMakeFiles/actionlib_generate_messages_lisp.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
 .PHONY : ground/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -704,12 +704,12 @@ actionlib_generate_messages_lisp: ground/CMakeFiles/actionlib_generate_messages_
 
 # fast build rule for target.
 actionlib_generate_messages_lisp/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make ground/CMakeFiles/actionlib_generate_messages_lisp.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make ground/CMakeFiles/actionlib_generate_messages_lisp.dir/build
 .PHONY : actionlib_generate_messages_lisp/fast
 
 # Convenience name for target.
 ground/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 .PHONY : ground/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -719,12 +719,12 @@ roscpp_generate_messages_nodejs: ground/CMakeFiles/roscpp_generate_messages_node
 
 # fast build rule for target.
 roscpp_generate_messages_nodejs/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make ground/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make ground/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
 .PHONY : roscpp_generate_messages_nodejs/fast
 
 # Convenience name for target.
 ground/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
 .PHONY : ground/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -734,12 +734,12 @@ geometry_msgs_generate_messages_cpp: ground/CMakeFiles/geometry_msgs_generate_me
 
 # fast build rule for target.
 geometry_msgs_generate_messages_cpp/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
 .PHONY : geometry_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 ground/CMakeFiles/keyboard.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/keyboard.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/keyboard.dir/rule
 .PHONY : ground/CMakeFiles/keyboard.dir/rule
 
 # Convenience name for target.
@@ -749,12 +749,12 @@ keyboard: ground/CMakeFiles/keyboard.dir/rule
 
 # fast build rule for target.
 keyboard/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/keyboard.dir/build.make ground/CMakeFiles/keyboard.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/keyboard.dir/build.make ground/CMakeFiles/keyboard.dir/build
 .PHONY : keyboard/fast
 
 # Convenience name for target.
 ground/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/roscpp_generate_messages_py.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/roscpp_generate_messages_py.dir/rule
 .PHONY : ground/CMakeFiles/roscpp_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -764,12 +764,12 @@ roscpp_generate_messages_py: ground/CMakeFiles/roscpp_generate_messages_py.dir/r
 
 # fast build rule for target.
 roscpp_generate_messages_py/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/roscpp_generate_messages_py.dir/build.make ground/CMakeFiles/roscpp_generate_messages_py.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/roscpp_generate_messages_py.dir/build.make ground/CMakeFiles/roscpp_generate_messages_py.dir/build
 .PHONY : roscpp_generate_messages_py/fast
 
 # Convenience name for target.
 ground/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/rule
 .PHONY : ground/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -779,12 +779,12 @@ geographic_msgs_generate_messages_lisp: ground/CMakeFiles/geographic_msgs_genera
 
 # fast build rule for target.
 geographic_msgs_generate_messages_lisp/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/build
 .PHONY : geographic_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 ground/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
 .PHONY : ground/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -794,12 +794,12 @@ rosgraph_msgs_generate_messages_eus: ground/CMakeFiles/rosgraph_msgs_generate_me
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_eus/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
 .PHONY : rosgraph_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 ground/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 .PHONY : ground/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -809,12 +809,12 @@ rosgraph_msgs_generate_messages_lisp: ground/CMakeFiles/rosgraph_msgs_generate_m
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_lisp/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 ground/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
 .PHONY : ground/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -824,12 +824,12 @@ actionlib_msgs_generate_messages_eus: ground/CMakeFiles/actionlib_msgs_generate_
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_eus/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
 .PHONY : actionlib_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 ground/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/rule
 .PHONY : ground/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -839,12 +839,12 @@ geographic_msgs_generate_messages_cpp: ground/CMakeFiles/geographic_msgs_generat
 
 # fast build rule for target.
 geographic_msgs_generate_messages_cpp/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/build
 .PHONY : geographic_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 ground/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 .PHONY : ground/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -854,12 +854,12 @@ rosgraph_msgs_generate_messages_nodejs: ground/CMakeFiles/rosgraph_msgs_generate
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_nodejs/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
 .PHONY : rosgraph_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 ground/CMakeFiles/qc_servo.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/qc_servo.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/qc_servo.dir/rule
 .PHONY : ground/CMakeFiles/qc_servo.dir/rule
 
 # Convenience name for target.
@@ -869,12 +869,12 @@ qc_servo: ground/CMakeFiles/qc_servo.dir/rule
 
 # fast build rule for target.
 qc_servo/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/qc_servo.dir/build.make ground/CMakeFiles/qc_servo.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/qc_servo.dir/build.make ground/CMakeFiles/qc_servo.dir/build
 .PHONY : qc_servo/fast
 
 # Convenience name for target.
 ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/rule
 .PHONY : ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -884,12 +884,12 @@ mavros_msgs_generate_messages_lisp: ground/CMakeFiles/mavros_msgs_generate_messa
 
 # fast build rule for target.
 mavros_msgs_generate_messages_lisp/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/build
 .PHONY : mavros_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 ground/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
 .PHONY : ground/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -899,12 +899,12 @@ actionlib_msgs_generate_messages_py: ground/CMakeFiles/actionlib_msgs_generate_m
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_py/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
 .PHONY : actionlib_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 ground/CMakeFiles/actionlib_generate_messages_cpp.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
 .PHONY : ground/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -914,12 +914,12 @@ actionlib_generate_messages_cpp: ground/CMakeFiles/actionlib_generate_messages_c
 
 # fast build rule for target.
 actionlib_generate_messages_cpp/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make ground/CMakeFiles/actionlib_generate_messages_cpp.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make ground/CMakeFiles/actionlib_generate_messages_cpp.dir/build
 .PHONY : actionlib_generate_messages_cpp/fast
 
 # Convenience name for target.
 ground/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 .PHONY : ground/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -929,12 +929,12 @@ rosgraph_msgs_generate_messages_py: ground/CMakeFiles/rosgraph_msgs_generate_mes
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_py/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 ground/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
 .PHONY : ground/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -944,12 +944,12 @@ tf2_msgs_generate_messages_lisp: ground/CMakeFiles/tf2_msgs_generate_messages_li
 
 # fast build rule for target.
 tf2_msgs_generate_messages_lisp/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
 .PHONY : tf2_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 ground/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
 .PHONY : ground/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -959,12 +959,12 @@ tf2_msgs_generate_messages_nodejs: ground/CMakeFiles/tf2_msgs_generate_messages_
 
 # fast build rule for target.
 tf2_msgs_generate_messages_nodejs/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
 .PHONY : tf2_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 ground/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
 .PHONY : ground/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -974,12 +974,12 @@ actionlib_msgs_generate_messages_cpp: ground/CMakeFiles/actionlib_msgs_generate_
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_cpp/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
 .PHONY : actionlib_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 ground/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 .PHONY : ground/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -989,12 +989,12 @@ rosgraph_msgs_generate_messages_cpp: ground/CMakeFiles/rosgraph_msgs_generate_me
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 ground/CMakeFiles/actionlib_generate_messages_eus.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/actionlib_generate_messages_eus.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/actionlib_generate_messages_eus.dir/rule
 .PHONY : ground/CMakeFiles/actionlib_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1004,12 +1004,12 @@ actionlib_generate_messages_eus: ground/CMakeFiles/actionlib_generate_messages_e
 
 # fast build rule for target.
 actionlib_generate_messages_eus/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/actionlib_generate_messages_eus.dir/build.make ground/CMakeFiles/actionlib_generate_messages_eus.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/actionlib_generate_messages_eus.dir/build.make ground/CMakeFiles/actionlib_generate_messages_eus.dir/build
 .PHONY : actionlib_generate_messages_eus/fast
 
 # Convenience name for target.
 ground/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
 .PHONY : ground/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1019,12 +1019,12 @@ std_msgs_generate_messages_eus: ground/CMakeFiles/std_msgs_generate_messages_eus
 
 # fast build rule for target.
 std_msgs_generate_messages_eus/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/std_msgs_generate_messages_eus.dir/build
 .PHONY : std_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 ground/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
 .PHONY : ground/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1034,12 +1034,12 @@ actionlib_msgs_generate_messages_lisp: ground/CMakeFiles/actionlib_msgs_generate
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_lisp/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
 .PHONY : actionlib_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 ground/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
 .PHONY : ground/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1049,12 +1049,12 @@ actionlib_msgs_generate_messages_nodejs: ground/CMakeFiles/actionlib_msgs_genera
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_nodejs/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build
 .PHONY : actionlib_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 ground/CMakeFiles/actionlib_generate_messages_py.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/actionlib_generate_messages_py.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/actionlib_generate_messages_py.dir/rule
 .PHONY : ground/CMakeFiles/actionlib_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -1064,12 +1064,12 @@ actionlib_generate_messages_py: ground/CMakeFiles/actionlib_generate_messages_py
 
 # fast build rule for target.
 actionlib_generate_messages_py/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/actionlib_generate_messages_py.dir/build.make ground/CMakeFiles/actionlib_generate_messages_py.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/actionlib_generate_messages_py.dir/build.make ground/CMakeFiles/actionlib_generate_messages_py.dir/build
 .PHONY : actionlib_generate_messages_py/fast
 
 # Convenience name for target.
 ground/CMakeFiles/trajectory_generator.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/trajectory_generator.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/trajectory_generator.dir/rule
 .PHONY : ground/CMakeFiles/trajectory_generator.dir/rule
 
 # Convenience name for target.
@@ -1079,12 +1079,12 @@ trajectory_generator: ground/CMakeFiles/trajectory_generator.dir/rule
 
 # fast build rule for target.
 trajectory_generator/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/trajectory_generator.dir/build.make ground/CMakeFiles/trajectory_generator.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/trajectory_generator.dir/build.make ground/CMakeFiles/trajectory_generator.dir/build
 .PHONY : trajectory_generator/fast
 
 # Convenience name for target.
 ground/CMakeFiles/wrench_mapper.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/wrench_mapper.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/wrench_mapper.dir/rule
 .PHONY : ground/CMakeFiles/wrench_mapper.dir/rule
 
 # Convenience name for target.
@@ -1094,12 +1094,12 @@ wrench_mapper: ground/CMakeFiles/wrench_mapper.dir/rule
 
 # fast build rule for target.
 wrench_mapper/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/wrench_mapper.dir/build.make ground/CMakeFiles/wrench_mapper.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/wrench_mapper.dir/build.make ground/CMakeFiles/wrench_mapper.dir/build
 .PHONY : wrench_mapper/fast
 
 # Convenience name for target.
 ground/CMakeFiles/position_controller.dir/rule:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/position_controller.dir/rule
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/position_controller.dir/rule
 .PHONY : ground/CMakeFiles/position_controller.dir/rule
 
 # Convenience name for target.
@@ -1109,7 +1109,7 @@ position_controller: ground/CMakeFiles/position_controller.dir/rule
 
 # fast build rule for target.
 position_controller/fast:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/position_controller.dir/build.make ground/CMakeFiles/position_controller.dir/build
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/position_controller.dir/build.make ground/CMakeFiles/position_controller.dir/build
 .PHONY : position_controller/fast
 
 node/attitude_controller.o: node/attitude_controller.cpp.o
@@ -1118,7 +1118,7 @@ node/attitude_controller.o: node/attitude_controller.cpp.o
 
 # target to build an object file
 node/attitude_controller.cpp.o:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/attitude_controller.dir/build.make ground/CMakeFiles/attitude_controller.dir/node/attitude_controller.cpp.o
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/attitude_controller.dir/build.make ground/CMakeFiles/attitude_controller.dir/node/attitude_controller.cpp.o
 .PHONY : node/attitude_controller.cpp.o
 
 node/attitude_controller.i: node/attitude_controller.cpp.i
@@ -1127,7 +1127,7 @@ node/attitude_controller.i: node/attitude_controller.cpp.i
 
 # target to preprocess a source file
 node/attitude_controller.cpp.i:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/attitude_controller.dir/build.make ground/CMakeFiles/attitude_controller.dir/node/attitude_controller.cpp.i
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/attitude_controller.dir/build.make ground/CMakeFiles/attitude_controller.dir/node/attitude_controller.cpp.i
 .PHONY : node/attitude_controller.cpp.i
 
 node/attitude_controller.s: node/attitude_controller.cpp.s
@@ -1136,7 +1136,7 @@ node/attitude_controller.s: node/attitude_controller.cpp.s
 
 # target to generate assembly for a file
 node/attitude_controller.cpp.s:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/attitude_controller.dir/build.make ground/CMakeFiles/attitude_controller.dir/node/attitude_controller.cpp.s
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/attitude_controller.dir/build.make ground/CMakeFiles/attitude_controller.dir/node/attitude_controller.cpp.s
 .PHONY : node/attitude_controller.cpp.s
 
 node/gripper_controller.o: node/gripper_controller.cpp.o
@@ -1145,7 +1145,7 @@ node/gripper_controller.o: node/gripper_controller.cpp.o
 
 # target to build an object file
 node/gripper_controller.cpp.o:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/gripper_controller.dir/build.make ground/CMakeFiles/gripper_controller.dir/node/gripper_controller.cpp.o
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/gripper_controller.dir/build.make ground/CMakeFiles/gripper_controller.dir/node/gripper_controller.cpp.o
 .PHONY : node/gripper_controller.cpp.o
 
 node/gripper_controller.i: node/gripper_controller.cpp.i
@@ -1154,7 +1154,7 @@ node/gripper_controller.i: node/gripper_controller.cpp.i
 
 # target to preprocess a source file
 node/gripper_controller.cpp.i:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/gripper_controller.dir/build.make ground/CMakeFiles/gripper_controller.dir/node/gripper_controller.cpp.i
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/gripper_controller.dir/build.make ground/CMakeFiles/gripper_controller.dir/node/gripper_controller.cpp.i
 .PHONY : node/gripper_controller.cpp.i
 
 node/gripper_controller.s: node/gripper_controller.cpp.s
@@ -1163,7 +1163,7 @@ node/gripper_controller.s: node/gripper_controller.cpp.s
 
 # target to generate assembly for a file
 node/gripper_controller.cpp.s:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/gripper_controller.dir/build.make ground/CMakeFiles/gripper_controller.dir/node/gripper_controller.cpp.s
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/gripper_controller.dir/build.make ground/CMakeFiles/gripper_controller.dir/node/gripper_controller.cpp.s
 .PHONY : node/gripper_controller.cpp.s
 
 node/keyboard.o: node/keyboard.cpp.o
@@ -1172,7 +1172,7 @@ node/keyboard.o: node/keyboard.cpp.o
 
 # target to build an object file
 node/keyboard.cpp.o:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/keyboard.dir/build.make ground/CMakeFiles/keyboard.dir/node/keyboard.cpp.o
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/keyboard.dir/build.make ground/CMakeFiles/keyboard.dir/node/keyboard.cpp.o
 .PHONY : node/keyboard.cpp.o
 
 node/keyboard.i: node/keyboard.cpp.i
@@ -1181,7 +1181,7 @@ node/keyboard.i: node/keyboard.cpp.i
 
 # target to preprocess a source file
 node/keyboard.cpp.i:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/keyboard.dir/build.make ground/CMakeFiles/keyboard.dir/node/keyboard.cpp.i
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/keyboard.dir/build.make ground/CMakeFiles/keyboard.dir/node/keyboard.cpp.i
 .PHONY : node/keyboard.cpp.i
 
 node/keyboard.s: node/keyboard.cpp.s
@@ -1190,7 +1190,7 @@ node/keyboard.s: node/keyboard.cpp.s
 
 # target to generate assembly for a file
 node/keyboard.cpp.s:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/keyboard.dir/build.make ground/CMakeFiles/keyboard.dir/node/keyboard.cpp.s
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/keyboard.dir/build.make ground/CMakeFiles/keyboard.dir/node/keyboard.cpp.s
 .PHONY : node/keyboard.cpp.s
 
 node/position_controller.o: node/position_controller.cpp.o
@@ -1199,7 +1199,7 @@ node/position_controller.o: node/position_controller.cpp.o
 
 # target to build an object file
 node/position_controller.cpp.o:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/position_controller.dir/build.make ground/CMakeFiles/position_controller.dir/node/position_controller.cpp.o
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/position_controller.dir/build.make ground/CMakeFiles/position_controller.dir/node/position_controller.cpp.o
 .PHONY : node/position_controller.cpp.o
 
 node/position_controller.i: node/position_controller.cpp.i
@@ -1208,7 +1208,7 @@ node/position_controller.i: node/position_controller.cpp.i
 
 # target to preprocess a source file
 node/position_controller.cpp.i:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/position_controller.dir/build.make ground/CMakeFiles/position_controller.dir/node/position_controller.cpp.i
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/position_controller.dir/build.make ground/CMakeFiles/position_controller.dir/node/position_controller.cpp.i
 .PHONY : node/position_controller.cpp.i
 
 node/position_controller.s: node/position_controller.cpp.s
@@ -1217,7 +1217,7 @@ node/position_controller.s: node/position_controller.cpp.s
 
 # target to generate assembly for a file
 node/position_controller.cpp.s:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/position_controller.dir/build.make ground/CMakeFiles/position_controller.dir/node/position_controller.cpp.s
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/position_controller.dir/build.make ground/CMakeFiles/position_controller.dir/node/position_controller.cpp.s
 .PHONY : node/position_controller.cpp.s
 
 node/qc_servo.o: node/qc_servo.cpp.o
@@ -1226,7 +1226,7 @@ node/qc_servo.o: node/qc_servo.cpp.o
 
 # target to build an object file
 node/qc_servo.cpp.o:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/qc_servo.dir/build.make ground/CMakeFiles/qc_servo.dir/node/qc_servo.cpp.o
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/qc_servo.dir/build.make ground/CMakeFiles/qc_servo.dir/node/qc_servo.cpp.o
 .PHONY : node/qc_servo.cpp.o
 
 node/qc_servo.i: node/qc_servo.cpp.i
@@ -1235,7 +1235,7 @@ node/qc_servo.i: node/qc_servo.cpp.i
 
 # target to preprocess a source file
 node/qc_servo.cpp.i:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/qc_servo.dir/build.make ground/CMakeFiles/qc_servo.dir/node/qc_servo.cpp.i
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/qc_servo.dir/build.make ground/CMakeFiles/qc_servo.dir/node/qc_servo.cpp.i
 .PHONY : node/qc_servo.cpp.i
 
 node/qc_servo.s: node/qc_servo.cpp.s
@@ -1244,7 +1244,7 @@ node/qc_servo.s: node/qc_servo.cpp.s
 
 # target to generate assembly for a file
 node/qc_servo.cpp.s:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/qc_servo.dir/build.make ground/CMakeFiles/qc_servo.dir/node/qc_servo.cpp.s
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/qc_servo.dir/build.make ground/CMakeFiles/qc_servo.dir/node/qc_servo.cpp.s
 .PHONY : node/qc_servo.cpp.s
 
 node/trajectory_generator.o: node/trajectory_generator.cpp.o
@@ -1253,7 +1253,7 @@ node/trajectory_generator.o: node/trajectory_generator.cpp.o
 
 # target to build an object file
 node/trajectory_generator.cpp.o:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/trajectory_generator.dir/build.make ground/CMakeFiles/trajectory_generator.dir/node/trajectory_generator.cpp.o
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/trajectory_generator.dir/build.make ground/CMakeFiles/trajectory_generator.dir/node/trajectory_generator.cpp.o
 .PHONY : node/trajectory_generator.cpp.o
 
 node/trajectory_generator.i: node/trajectory_generator.cpp.i
@@ -1262,7 +1262,7 @@ node/trajectory_generator.i: node/trajectory_generator.cpp.i
 
 # target to preprocess a source file
 node/trajectory_generator.cpp.i:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/trajectory_generator.dir/build.make ground/CMakeFiles/trajectory_generator.dir/node/trajectory_generator.cpp.i
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/trajectory_generator.dir/build.make ground/CMakeFiles/trajectory_generator.dir/node/trajectory_generator.cpp.i
 .PHONY : node/trajectory_generator.cpp.i
 
 node/trajectory_generator.s: node/trajectory_generator.cpp.s
@@ -1271,7 +1271,7 @@ node/trajectory_generator.s: node/trajectory_generator.cpp.s
 
 # target to generate assembly for a file
 node/trajectory_generator.cpp.s:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/trajectory_generator.dir/build.make ground/CMakeFiles/trajectory_generator.dir/node/trajectory_generator.cpp.s
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/trajectory_generator.dir/build.make ground/CMakeFiles/trajectory_generator.dir/node/trajectory_generator.cpp.s
 .PHONY : node/trajectory_generator.cpp.s
 
 node/wrench_mapper.o: node/wrench_mapper.cpp.o
@@ -1280,7 +1280,7 @@ node/wrench_mapper.o: node/wrench_mapper.cpp.o
 
 # target to build an object file
 node/wrench_mapper.cpp.o:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/wrench_mapper.dir/build.make ground/CMakeFiles/wrench_mapper.dir/node/wrench_mapper.cpp.o
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/wrench_mapper.dir/build.make ground/CMakeFiles/wrench_mapper.dir/node/wrench_mapper.cpp.o
 .PHONY : node/wrench_mapper.cpp.o
 
 node/wrench_mapper.i: node/wrench_mapper.cpp.i
@@ -1289,7 +1289,7 @@ node/wrench_mapper.i: node/wrench_mapper.cpp.i
 
 # target to preprocess a source file
 node/wrench_mapper.cpp.i:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/wrench_mapper.dir/build.make ground/CMakeFiles/wrench_mapper.dir/node/wrench_mapper.cpp.i
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/wrench_mapper.dir/build.make ground/CMakeFiles/wrench_mapper.dir/node/wrench_mapper.cpp.i
 .PHONY : node/wrench_mapper.cpp.i
 
 node/wrench_mapper.s: node/wrench_mapper.cpp.s
@@ -1298,7 +1298,7 @@ node/wrench_mapper.s: node/wrench_mapper.cpp.s
 
 # target to generate assembly for a file
 node/wrench_mapper.cpp.s:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/wrench_mapper.dir/build.make ground/CMakeFiles/wrench_mapper.dir/node/wrench_mapper.cpp.s
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/wrench_mapper.dir/build.make ground/CMakeFiles/wrench_mapper.dir/node/wrench_mapper.cpp.s
 .PHONY : node/wrench_mapper.cpp.s
 
 src/filter.o: src/filter.cpp.o
@@ -1307,7 +1307,7 @@ src/filter.o: src/filter.cpp.o
 
 # target to build an object file
 src/filter.cpp.o:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/topic_tool_platform.dir/build.make ground/CMakeFiles/topic_tool_platform.dir/src/filter.cpp.o
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/topic_tool_platform.dir/build.make ground/CMakeFiles/topic_tool_platform.dir/src/filter.cpp.o
 .PHONY : src/filter.cpp.o
 
 src/filter.i: src/filter.cpp.i
@@ -1316,7 +1316,7 @@ src/filter.i: src/filter.cpp.i
 
 # target to preprocess a source file
 src/filter.cpp.i:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/topic_tool_platform.dir/build.make ground/CMakeFiles/topic_tool_platform.dir/src/filter.cpp.i
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/topic_tool_platform.dir/build.make ground/CMakeFiles/topic_tool_platform.dir/src/filter.cpp.i
 .PHONY : src/filter.cpp.i
 
 src/filter.s: src/filter.cpp.s
@@ -1325,7 +1325,7 @@ src/filter.s: src/filter.cpp.s
 
 # target to generate assembly for a file
 src/filter.cpp.s:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/topic_tool_platform.dir/build.make ground/CMakeFiles/topic_tool_platform.dir/src/filter.cpp.s
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/topic_tool_platform.dir/build.make ground/CMakeFiles/topic_tool_platform.dir/src/filter.cpp.s
 .PHONY : src/filter.cpp.s
 
 src/getch.o: src/getch.cpp.o
@@ -1334,7 +1334,7 @@ src/getch.o: src/getch.cpp.o
 
 # target to build an object file
 src/getch.cpp.o:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/keyboard.dir/build.make ground/CMakeFiles/keyboard.dir/src/getch.cpp.o
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/keyboard.dir/build.make ground/CMakeFiles/keyboard.dir/src/getch.cpp.o
 .PHONY : src/getch.cpp.o
 
 src/getch.i: src/getch.cpp.i
@@ -1343,7 +1343,7 @@ src/getch.i: src/getch.cpp.i
 
 # target to preprocess a source file
 src/getch.cpp.i:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/keyboard.dir/build.make ground/CMakeFiles/keyboard.dir/src/getch.cpp.i
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/keyboard.dir/build.make ground/CMakeFiles/keyboard.dir/src/getch.cpp.i
 .PHONY : src/getch.cpp.i
 
 src/getch.s: src/getch.cpp.s
@@ -1352,7 +1352,7 @@ src/getch.s: src/getch.cpp.s
 
 # target to generate assembly for a file
 src/getch.cpp.s:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/keyboard.dir/build.make ground/CMakeFiles/keyboard.dir/src/getch.cpp.s
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/keyboard.dir/build.make ground/CMakeFiles/keyboard.dir/src/getch.cpp.s
 .PHONY : src/getch.cpp.s
 
 src/topic_tool_platform.o: src/topic_tool_platform.cpp.o
@@ -1361,7 +1361,7 @@ src/topic_tool_platform.o: src/topic_tool_platform.cpp.o
 
 # target to build an object file
 src/topic_tool_platform.cpp.o:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/topic_tool_platform.dir/build.make ground/CMakeFiles/topic_tool_platform.dir/src/topic_tool_platform.cpp.o
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/topic_tool_platform.dir/build.make ground/CMakeFiles/topic_tool_platform.dir/src/topic_tool_platform.cpp.o
 .PHONY : src/topic_tool_platform.cpp.o
 
 src/topic_tool_platform.i: src/topic_tool_platform.cpp.i
@@ -1370,7 +1370,7 @@ src/topic_tool_platform.i: src/topic_tool_platform.cpp.i
 
 # target to preprocess a source file
 src/topic_tool_platform.cpp.i:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/topic_tool_platform.dir/build.make ground/CMakeFiles/topic_tool_platform.dir/src/topic_tool_platform.cpp.i
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/topic_tool_platform.dir/build.make ground/CMakeFiles/topic_tool_platform.dir/src/topic_tool_platform.cpp.i
 .PHONY : src/topic_tool_platform.cpp.i
 
 src/topic_tool_platform.s: src/topic_tool_platform.cpp.s
@@ -1379,7 +1379,7 @@ src/topic_tool_platform.s: src/topic_tool_platform.cpp.s
 
 # target to generate assembly for a file
 src/topic_tool_platform.cpp.s:
-	cd /home/lee/workspace/ex_ws/build && $(MAKE) -f ground/CMakeFiles/topic_tool_platform.dir/build.make ground/CMakeFiles/topic_tool_platform.dir/src/topic_tool_platform.cpp.s
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(MAKE) -f ground/CMakeFiles/topic_tool_platform.dir/build.make ground/CMakeFiles/topic_tool_platform.dir/src/topic_tool_platform.cpp.s
 .PHONY : src/topic_tool_platform.cpp.s
 
 # Help Target
@@ -1499,6 +1499,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/lee/workspace/ex_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

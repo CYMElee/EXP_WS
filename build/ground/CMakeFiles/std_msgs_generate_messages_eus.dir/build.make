@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lee/workspace/ex_ws/src
+CMAKE_SOURCE_DIR = /home/lee/workspace/ros_ws/ex_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lee/workspace/ex_ws/build
+CMAKE_BINARY_DIR = /home/lee/workspace/ros_ws/ex_ws/build
 
 # Utility rule file for std_msgs_generate_messages_eus.
 
@@ -63,10 +63,10 @@ ground/CMakeFiles/std_msgs_generate_messages_eus.dir/build: std_msgs_generate_me
 .PHONY : ground/CMakeFiles/std_msgs_generate_messages_eus.dir/build
 
 ground/CMakeFiles/std_msgs_generate_messages_eus.dir/clean:
-	cd /home/lee/workspace/ex_ws/build/ground && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_eus.dir/cmake_clean.cmake
+	cd /home/lee/workspace/ros_ws/ex_ws/build/ground && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_eus.dir/cmake_clean.cmake
 .PHONY : ground/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
 
 ground/CMakeFiles/std_msgs_generate_messages_eus.dir/depend:
-	cd /home/lee/workspace/ex_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lee/workspace/ex_ws/src /home/lee/workspace/ex_ws/src/ground /home/lee/workspace/ex_ws/build /home/lee/workspace/ex_ws/build/ground /home/lee/workspace/ex_ws/build/ground/CMakeFiles/std_msgs_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lee/workspace/ros_ws/ex_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lee/workspace/ros_ws/ex_ws/src /home/lee/workspace/ros_ws/ex_ws/src/ground /home/lee/workspace/ros_ws/ex_ws/build /home/lee/workspace/ros_ws/ex_ws/build/ground /home/lee/workspace/ros_ws/ex_ws/build/ground/CMakeFiles/std_msgs_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ground/CMakeFiles/std_msgs_generate_messages_eus.dir/depend
 

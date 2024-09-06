@@ -10,6 +10,8 @@ filter::filter(Eigen::Vector3d a,Eigen::Vector4d b){
     b1 =b(1);
     b2 =b(2);
     b3 =b(3);
+
+
 }
 
 Eigen::Vector3d filter::Butterworth_filter_position(geometry_msgs::PoseStamped pose,int t){
@@ -82,4 +84,36 @@ Eigen::Vector4d filter::Butterworth_filter_attitude(geometry_msgs::PoseStamped p
     
     
     return filt_attitude;
+}
+
+
+Eigen::Vector3d filter::Butterworth_filter_angular_rate(geometry_msgs::Vector3Stamped imu_data,int t){
+       if(t == 0){
+       imu_angular_rate_raw_t_1 << 0,0,0;
+       imu_angular_rate_raw_t_2 << 0,0,0;
+  
+       imu_angular_rate_t_1 << 0,0,0;
+       imu_angular_rate_t_2 << 0,0,0;
+       }
+
+    imu_angular_rate_raw << imu_data.vector.x,imu_data.vector.y,imu_data.vector.z;
+
+
+    filt_angular_rate = b0*imu_angular_rate_raw+b1*imu_angular_rate_raw_t_1+b2*imu_angular_rate_raw_t_2\
+          -a1*imu_angular_rate_t_1-a2*imu_angular_rate_t_2;
+
+    /*renew the prev data*/
+  
+    imu_angular_rate_t_2 = imu_angular_rate_t_1;
+    imu_angular_rate_t_1 = filt_angular_rate;
+
+    /*renew the be failt data*/
+ 
+    imu_angular_rate_raw_t_2 = imu_angular_rate_raw_t_1;
+    imu_angular_rate_raw_t_1 =  imu_angular_rate_raw;
+    
+    
+    return filt_angular_rate;
+
+
 }

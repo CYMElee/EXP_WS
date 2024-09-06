@@ -44,10 +44,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lee/workspace/ex_ws/src
+CMAKE_SOURCE_DIR = /home/lee/workspace/ros_ws/ex_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lee/workspace/ex_ws/build
+CMAKE_BINARY_DIR = /home/lee/workspace/ros_ws/ex_ws/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -360,14 +360,14 @@ xsens_ros_mti_driver/clean: xsens_ros_mti_driver/CMakeFiles/xsens_mti_node.dir/c
 CMakeFiles/doxygen.dir/all:
 	$(MAKE) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/depend
 	$(MAKE) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target doxygen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target doxygen"
 .PHONY : CMakeFiles/doxygen.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/doxygen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/doxygen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : CMakeFiles/doxygen.dir/rule
 
 # Convenience name for target.
@@ -387,14 +387,14 @@ CMakeFiles/doxygen.dir/clean:
 CMakeFiles/run_tests.dir/all:
 	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/depend
 	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target run_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target run_tests"
 .PHONY : CMakeFiles/run_tests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/run_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/run_tests.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : CMakeFiles/run_tests.dir/rule
 
 # Convenience name for target.
@@ -414,14 +414,14 @@ CMakeFiles/run_tests.dir/clean:
 CMakeFiles/clean_test_results.dir/all:
 	$(MAKE) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/depend
 	$(MAKE) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target clean_test_results"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target clean_test_results"
 .PHONY : CMakeFiles/clean_test_results.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/clean_test_results.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/clean_test_results.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : CMakeFiles/clean_test_results.dir/rule
 
 # Convenience name for target.
@@ -441,14 +441,14 @@ CMakeFiles/clean_test_results.dir/clean:
 CMakeFiles/tests.dir/all:
 	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/depend
 	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target tests"
 .PHONY : CMakeFiles/tests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/tests.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : CMakeFiles/tests.dir/rule
 
 # Convenience name for target.
@@ -468,14 +468,14 @@ CMakeFiles/tests.dir/clean:
 CMakeFiles/download_extra_data.dir/all:
 	$(MAKE) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/depend
 	$(MAKE) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target download_extra_data"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target download_extra_data"
 .PHONY : CMakeFiles/download_extra_data.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/download_extra_data.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/download_extra_data.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : CMakeFiles/download_extra_data.dir/rule
 
 # Convenience name for target.
@@ -496,14 +496,14 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googlemock/CMakeFiles/gmoc
 gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num=5,6 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num=5,6 "Built target gmock_main"
 .PHONY : gtest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/googlemock/CMakeFiles/gmock_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/CMakeFiles/gmock_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : gtest/googlemock/CMakeFiles/gmock_main.dir/rule
 
 # Convenience name for target.
@@ -523,14 +523,14 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/clean:
 gtest/googlemock/CMakeFiles/gmock.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num=3,4 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num=3,4 "Built target gmock"
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/CMakeFiles/gmock.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/rule
 
 # Convenience name for target.
@@ -550,14 +550,14 @@ gtest/googlemock/CMakeFiles/gmock.dir/clean:
 gtest/googletest/CMakeFiles/gtest_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num=11,12 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num=11,12 "Built target gtest_main"
 .PHONY : gtest/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/googletest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/googletest/CMakeFiles/gtest_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : gtest/googletest/CMakeFiles/gtest_main.dir/rule
 
 # Convenience name for target.
@@ -577,14 +577,14 @@ gtest/googletest/CMakeFiles/gtest_main.dir/clean:
 gtest/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num=9,10 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num=9,10 "Built target gtest"
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/googletest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/googletest/CMakeFiles/gtest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/rule
 
 # Convenience name for target.
@@ -604,14 +604,14 @@ gtest/googletest/CMakeFiles/gtest.dir/clean:
 ground/CMakeFiles/topic_tool_platform.dir/all:
 	$(MAKE) -f ground/CMakeFiles/topic_tool_platform.dir/build.make ground/CMakeFiles/topic_tool_platform.dir/depend
 	$(MAKE) -f ground/CMakeFiles/topic_tool_platform.dir/build.make ground/CMakeFiles/topic_tool_platform.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num=36,37,38 "Built target topic_tool_platform"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num=36,37,38 "Built target topic_tool_platform"
 .PHONY : ground/CMakeFiles/topic_tool_platform.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/topic_tool_platform.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/topic_tool_platform.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/topic_tool_platform.dir/rule
 
 # Convenience name for target.
@@ -631,14 +631,14 @@ ground/CMakeFiles/topic_tool_platform.dir/clean:
 ground/CMakeFiles/attitude_controller.dir/all:
 	$(MAKE) -f ground/CMakeFiles/attitude_controller.dir/build.make ground/CMakeFiles/attitude_controller.dir/depend
 	$(MAKE) -f ground/CMakeFiles/attitude_controller.dir/build.make ground/CMakeFiles/attitude_controller.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num=1,2 "Built target attitude_controller"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num=1,2 "Built target attitude_controller"
 .PHONY : ground/CMakeFiles/attitude_controller.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/attitude_controller.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/attitude_controller.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/attitude_controller.dir/rule
 
 # Convenience name for target.
@@ -658,14 +658,14 @@ ground/CMakeFiles/attitude_controller.dir/clean:
 ground/CMakeFiles/roscpp_generate_messages_cpp.dir/all:
 	$(MAKE) -f ground/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make ground/CMakeFiles/roscpp_generate_messages_cpp.dir/depend
 	$(MAKE) -f ground/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make ground/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_cpp"
 .PHONY : ground/CMakeFiles/roscpp_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/roscpp_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -685,14 +685,14 @@ ground/CMakeFiles/roscpp_generate_messages_cpp.dir/clean:
 ground/CMakeFiles/uuid_msgs_generate_messages_py.dir/all:
 	$(MAKE) -f ground/CMakeFiles/uuid_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/uuid_msgs_generate_messages_py.dir/depend
 	$(MAKE) -f ground/CMakeFiles/uuid_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/uuid_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target uuid_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target uuid_msgs_generate_messages_py"
 .PHONY : ground/CMakeFiles/uuid_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/uuid_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/uuid_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/uuid_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -712,14 +712,14 @@ ground/CMakeFiles/uuid_msgs_generate_messages_py.dir/clean:
 ground/CMakeFiles/std_msgs_generate_messages_lisp.dir/all:
 	$(MAKE) -f ground/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) -f ground/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_lisp"
 .PHONY : ground/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -739,14 +739,14 @@ ground/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean:
 ground/CMakeFiles/geographic_msgs_generate_messages_py.dir/all:
 	$(MAKE) -f ground/CMakeFiles/geographic_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/geographic_msgs_generate_messages_py.dir/depend
 	$(MAKE) -f ground/CMakeFiles/geographic_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/geographic_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target geographic_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target geographic_msgs_generate_messages_py"
 .PHONY : ground/CMakeFiles/geographic_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/geographic_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/geographic_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/geographic_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -766,14 +766,14 @@ ground/CMakeFiles/geographic_msgs_generate_messages_py.dir/clean:
 ground/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all:
 	$(MAKE) -f ground/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/sensor_msgs_generate_messages_eus.dir/depend
 	$(MAKE) -f ground/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_eus"
 .PHONY : ground/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -793,14 +793,14 @@ ground/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean:
 ground/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all:
 	$(MAKE) -f ground/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) -f ground/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_lisp"
 .PHONY : ground/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -820,14 +820,14 @@ ground/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean:
 ground/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/all:
 	$(MAKE) -f ground/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) -f ground/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target geographic_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target geographic_msgs_generate_messages_nodejs"
 .PHONY : ground/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -847,14 +847,14 @@ ground/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/clean:
 ground/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all:
 	$(MAKE) -f ground/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) -f ground/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_cpp"
 .PHONY : ground/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -874,14 +874,14 @@ ground/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean:
 ground/CMakeFiles/geographic_msgs_generate_messages_eus.dir/all:
 	$(MAKE) -f ground/CMakeFiles/geographic_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/geographic_msgs_generate_messages_eus.dir/depend
 	$(MAKE) -f ground/CMakeFiles/geographic_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/geographic_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target geographic_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target geographic_msgs_generate_messages_eus"
 .PHONY : ground/CMakeFiles/geographic_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/geographic_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/geographic_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/geographic_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -901,14 +901,14 @@ ground/CMakeFiles/geographic_msgs_generate_messages_eus.dir/clean:
 ground/CMakeFiles/mavros_msgs_generate_messages_py.dir/all:
 	$(MAKE) -f ground/CMakeFiles/mavros_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/mavros_msgs_generate_messages_py.dir/depend
 	$(MAKE) -f ground/CMakeFiles/mavros_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/mavros_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target mavros_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target mavros_msgs_generate_messages_py"
 .PHONY : ground/CMakeFiles/mavros_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/mavros_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/mavros_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/mavros_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -928,14 +928,14 @@ ground/CMakeFiles/mavros_msgs_generate_messages_py.dir/clean:
 ground/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all:
 	$(MAKE) -f ground/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/geometry_msgs_generate_messages_eus.dir/depend
 	$(MAKE) -f ground/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_eus"
 .PHONY : ground/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -955,14 +955,14 @@ ground/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean:
 ground/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all:
 	$(MAKE) -f ground/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) -f ground/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_nodejs"
 .PHONY : ground/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -982,14 +982,14 @@ ground/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean:
 ground/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all:
 	$(MAKE) -f ground/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) -f ground/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_nodejs"
 .PHONY : ground/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1009,14 +1009,14 @@ ground/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean:
 ground/CMakeFiles/geometry_msgs_generate_messages_py.dir/all:
 	$(MAKE) -f ground/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/geometry_msgs_generate_messages_py.dir/depend
 	$(MAKE) -f ground/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_py"
 .PHONY : ground/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -1036,14 +1036,14 @@ ground/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean:
 ground/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/all:
 	$(MAKE) -f ground/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) -f ground/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target uuid_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target uuid_msgs_generate_messages_lisp"
 .PHONY : ground/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1063,14 +1063,14 @@ ground/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/clean:
 ground/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all:
 	$(MAKE) -f ground/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) -f ground/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_nodejs"
 .PHONY : ground/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1090,14 +1090,14 @@ ground/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean:
 ground/CMakeFiles/gripper_controller.dir/all:
 	$(MAKE) -f ground/CMakeFiles/gripper_controller.dir/build.make ground/CMakeFiles/gripper_controller.dir/depend
 	$(MAKE) -f ground/CMakeFiles/gripper_controller.dir/build.make ground/CMakeFiles/gripper_controller.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num=7,8 "Built target gripper_controller"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num=7,8 "Built target gripper_controller"
 .PHONY : ground/CMakeFiles/gripper_controller.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/gripper_controller.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/gripper_controller.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/gripper_controller.dir/rule
 
 # Convenience name for target.
@@ -1117,14 +1117,14 @@ ground/CMakeFiles/gripper_controller.dir/clean:
 ground/CMakeFiles/std_msgs_generate_messages_cpp.dir/all:
 	$(MAKE) -f ground/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) -f ground/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_cpp"
 .PHONY : ground/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -1144,14 +1144,14 @@ ground/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean:
 ground/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/all:
 	$(MAKE) -f ground/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) -f ground/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target tf2_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target tf2_msgs_generate_messages_cpp"
 .PHONY : ground/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -1171,14 +1171,14 @@ ground/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/clean:
 ground/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all:
 	$(MAKE) -f ground/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) -f ground/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_lisp"
 .PHONY : ground/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1198,14 +1198,14 @@ ground/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean:
 ground/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/all:
 	$(MAKE) -f ground/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) -f ground/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target mavros_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target mavros_msgs_generate_messages_nodejs"
 .PHONY : ground/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1225,14 +1225,14 @@ ground/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/clean:
 ground/CMakeFiles/std_msgs_generate_messages_py.dir/all:
 	$(MAKE) -f ground/CMakeFiles/std_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/std_msgs_generate_messages_py.dir/depend
 	$(MAKE) -f ground/CMakeFiles/std_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/std_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_py"
 .PHONY : ground/CMakeFiles/std_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/std_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/std_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -1252,14 +1252,14 @@ ground/CMakeFiles/std_msgs_generate_messages_py.dir/clean:
 ground/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/all:
 	$(MAKE) -f ground/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) -f ground/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target uuid_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target uuid_msgs_generate_messages_nodejs"
 .PHONY : ground/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1279,14 +1279,14 @@ ground/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/clean:
 ground/CMakeFiles/tf2_msgs_generate_messages_py.dir/all:
 	$(MAKE) -f ground/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/tf2_msgs_generate_messages_py.dir/depend
 	$(MAKE) -f ground/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target tf2_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target tf2_msgs_generate_messages_py"
 .PHONY : ground/CMakeFiles/tf2_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/tf2_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -1306,14 +1306,14 @@ ground/CMakeFiles/tf2_msgs_generate_messages_py.dir/clean:
 ground/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/all:
 	$(MAKE) -f ground/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) -f ground/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target mavros_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target mavros_msgs_generate_messages_cpp"
 .PHONY : ground/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -1333,14 +1333,14 @@ ground/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/clean:
 ground/CMakeFiles/actionlib_generate_messages_nodejs.dir/all:
 	$(MAKE) -f ground/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make ground/CMakeFiles/actionlib_generate_messages_nodejs.dir/depend
 	$(MAKE) -f ground/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make ground/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target actionlib_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target actionlib_generate_messages_nodejs"
 .PHONY : ground/CMakeFiles/actionlib_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/actionlib_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1360,14 +1360,14 @@ ground/CMakeFiles/actionlib_generate_messages_nodejs.dir/clean:
 ground/CMakeFiles/mavros_msgs_generate_messages_eus.dir/all:
 	$(MAKE) -f ground/CMakeFiles/mavros_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/mavros_msgs_generate_messages_eus.dir/depend
 	$(MAKE) -f ground/CMakeFiles/mavros_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/mavros_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target mavros_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target mavros_msgs_generate_messages_eus"
 .PHONY : ground/CMakeFiles/mavros_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/mavros_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/mavros_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/mavros_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1387,14 +1387,14 @@ ground/CMakeFiles/mavros_msgs_generate_messages_eus.dir/clean:
 ground/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/all:
 	$(MAKE) -f ground/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) -f ground/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target uuid_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target uuid_msgs_generate_messages_cpp"
 .PHONY : ground/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -1414,14 +1414,14 @@ ground/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/clean:
 ground/CMakeFiles/uuid_msgs_generate_messages_eus.dir/all:
 	$(MAKE) -f ground/CMakeFiles/uuid_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/uuid_msgs_generate_messages_eus.dir/depend
 	$(MAKE) -f ground/CMakeFiles/uuid_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/uuid_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target uuid_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target uuid_msgs_generate_messages_eus"
 .PHONY : ground/CMakeFiles/uuid_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/uuid_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/uuid_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/uuid_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1441,14 +1441,14 @@ ground/CMakeFiles/uuid_msgs_generate_messages_eus.dir/clean:
 ground/CMakeFiles/roscpp_generate_messages_eus.dir/all:
 	$(MAKE) -f ground/CMakeFiles/roscpp_generate_messages_eus.dir/build.make ground/CMakeFiles/roscpp_generate_messages_eus.dir/depend
 	$(MAKE) -f ground/CMakeFiles/roscpp_generate_messages_eus.dir/build.make ground/CMakeFiles/roscpp_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_eus"
 .PHONY : ground/CMakeFiles/roscpp_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/roscpp_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/roscpp_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1468,14 +1468,14 @@ ground/CMakeFiles/roscpp_generate_messages_eus.dir/clean:
 ground/CMakeFiles/sensor_msgs_generate_messages_py.dir/all:
 	$(MAKE) -f ground/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/sensor_msgs_generate_messages_py.dir/depend
 	$(MAKE) -f ground/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_py"
 .PHONY : ground/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -1495,14 +1495,14 @@ ground/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean:
 ground/CMakeFiles/tf2_msgs_generate_messages_eus.dir/all:
 	$(MAKE) -f ground/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/tf2_msgs_generate_messages_eus.dir/depend
 	$(MAKE) -f ground/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target tf2_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target tf2_msgs_generate_messages_eus"
 .PHONY : ground/CMakeFiles/tf2_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/tf2_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1522,14 +1522,14 @@ ground/CMakeFiles/tf2_msgs_generate_messages_eus.dir/clean:
 ground/CMakeFiles/roscpp_generate_messages_lisp.dir/all:
 	$(MAKE) -f ground/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make ground/CMakeFiles/roscpp_generate_messages_lisp.dir/depend
 	$(MAKE) -f ground/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make ground/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_lisp"
 .PHONY : ground/CMakeFiles/roscpp_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/roscpp_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1549,14 +1549,14 @@ ground/CMakeFiles/roscpp_generate_messages_lisp.dir/clean:
 ground/CMakeFiles/actionlib_generate_messages_lisp.dir/all:
 	$(MAKE) -f ground/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make ground/CMakeFiles/actionlib_generate_messages_lisp.dir/depend
 	$(MAKE) -f ground/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make ground/CMakeFiles/actionlib_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target actionlib_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target actionlib_generate_messages_lisp"
 .PHONY : ground/CMakeFiles/actionlib_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/actionlib_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/actionlib_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1576,14 +1576,14 @@ ground/CMakeFiles/actionlib_generate_messages_lisp.dir/clean:
 ground/CMakeFiles/roscpp_generate_messages_nodejs.dir/all:
 	$(MAKE) -f ground/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make ground/CMakeFiles/roscpp_generate_messages_nodejs.dir/depend
 	$(MAKE) -f ground/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make ground/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_nodejs"
 .PHONY : ground/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1603,14 +1603,14 @@ ground/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean:
 ground/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all:
 	$(MAKE) -f ground/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) -f ground/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_cpp"
 .PHONY : ground/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -1630,14 +1630,14 @@ ground/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean:
 ground/CMakeFiles/keyboard.dir/all:
 	$(MAKE) -f ground/CMakeFiles/keyboard.dir/build.make ground/CMakeFiles/keyboard.dir/depend
 	$(MAKE) -f ground/CMakeFiles/keyboard.dir/build.make ground/CMakeFiles/keyboard.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num=13,14,15 "Built target keyboard"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num=13,14,15 "Built target keyboard"
 .PHONY : ground/CMakeFiles/keyboard.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/keyboard.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/keyboard.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/keyboard.dir/rule
 
 # Convenience name for target.
@@ -1657,14 +1657,14 @@ ground/CMakeFiles/keyboard.dir/clean:
 ground/CMakeFiles/roscpp_generate_messages_py.dir/all:
 	$(MAKE) -f ground/CMakeFiles/roscpp_generate_messages_py.dir/build.make ground/CMakeFiles/roscpp_generate_messages_py.dir/depend
 	$(MAKE) -f ground/CMakeFiles/roscpp_generate_messages_py.dir/build.make ground/CMakeFiles/roscpp_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_py"
 .PHONY : ground/CMakeFiles/roscpp_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/roscpp_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/roscpp_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/roscpp_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -1684,14 +1684,14 @@ ground/CMakeFiles/roscpp_generate_messages_py.dir/clean:
 ground/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/all:
 	$(MAKE) -f ground/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) -f ground/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target geographic_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target geographic_msgs_generate_messages_lisp"
 .PHONY : ground/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1711,14 +1711,14 @@ ground/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/clean:
 ground/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all:
 	$(MAKE) -f ground/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/depend
 	$(MAKE) -f ground/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_eus"
 .PHONY : ground/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1738,14 +1738,14 @@ ground/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean:
 ground/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all:
 	$(MAKE) -f ground/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) -f ground/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_lisp"
 .PHONY : ground/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1765,14 +1765,14 @@ ground/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean:
 ground/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/all:
 	$(MAKE) -f ground/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/depend
 	$(MAKE) -f ground/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target actionlib_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target actionlib_msgs_generate_messages_eus"
 .PHONY : ground/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1792,14 +1792,14 @@ ground/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/clean:
 ground/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/all:
 	$(MAKE) -f ground/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) -f ground/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target geographic_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target geographic_msgs_generate_messages_cpp"
 .PHONY : ground/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -1819,14 +1819,14 @@ ground/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/clean:
 ground/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all:
 	$(MAKE) -f ground/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) -f ground/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_nodejs"
 .PHONY : ground/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1846,14 +1846,14 @@ ground/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean:
 ground/CMakeFiles/qc_servo.dir/all:
 	$(MAKE) -f ground/CMakeFiles/qc_servo.dir/build.make ground/CMakeFiles/qc_servo.dir/depend
 	$(MAKE) -f ground/CMakeFiles/qc_servo.dir/build.make ground/CMakeFiles/qc_servo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num=26,27 "Built target qc_servo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num=26,27 "Built target qc_servo"
 .PHONY : ground/CMakeFiles/qc_servo.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/qc_servo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/qc_servo.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/qc_servo.dir/rule
 
 # Convenience name for target.
@@ -1873,14 +1873,14 @@ ground/CMakeFiles/qc_servo.dir/clean:
 ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/all:
 	$(MAKE) -f ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) -f ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target mavros_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target mavros_msgs_generate_messages_lisp"
 .PHONY : ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1900,14 +1900,14 @@ ground/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/clean:
 ground/CMakeFiles/actionlib_msgs_generate_messages_py.dir/all:
 	$(MAKE) -f ground/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/actionlib_msgs_generate_messages_py.dir/depend
 	$(MAKE) -f ground/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target actionlib_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target actionlib_msgs_generate_messages_py"
 .PHONY : ground/CMakeFiles/actionlib_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/actionlib_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -1927,14 +1927,14 @@ ground/CMakeFiles/actionlib_msgs_generate_messages_py.dir/clean:
 ground/CMakeFiles/actionlib_generate_messages_cpp.dir/all:
 	$(MAKE) -f ground/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make ground/CMakeFiles/actionlib_generate_messages_cpp.dir/depend
 	$(MAKE) -f ground/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make ground/CMakeFiles/actionlib_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target actionlib_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target actionlib_generate_messages_cpp"
 .PHONY : ground/CMakeFiles/actionlib_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/actionlib_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/actionlib_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -1954,14 +1954,14 @@ ground/CMakeFiles/actionlib_generate_messages_cpp.dir/clean:
 ground/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all:
 	$(MAKE) -f ground/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend
 	$(MAKE) -f ground/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make ground/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_py"
 .PHONY : ground/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -1981,14 +1981,14 @@ ground/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
 ground/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/all:
 	$(MAKE) -f ground/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) -f ground/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target tf2_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target tf2_msgs_generate_messages_lisp"
 .PHONY : ground/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -2008,14 +2008,14 @@ ground/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/clean:
 ground/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/all:
 	$(MAKE) -f ground/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) -f ground/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target tf2_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target tf2_msgs_generate_messages_nodejs"
 .PHONY : ground/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -2035,14 +2035,14 @@ ground/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/clean:
 ground/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all:
 	$(MAKE) -f ground/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) -f ground/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target actionlib_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target actionlib_msgs_generate_messages_cpp"
 .PHONY : ground/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -2062,14 +2062,14 @@ ground/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/clean:
 ground/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all:
 	$(MAKE) -f ground/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) -f ground/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make ground/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_cpp"
 .PHONY : ground/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -2089,14 +2089,14 @@ ground/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean:
 ground/CMakeFiles/actionlib_generate_messages_eus.dir/all:
 	$(MAKE) -f ground/CMakeFiles/actionlib_generate_messages_eus.dir/build.make ground/CMakeFiles/actionlib_generate_messages_eus.dir/depend
 	$(MAKE) -f ground/CMakeFiles/actionlib_generate_messages_eus.dir/build.make ground/CMakeFiles/actionlib_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target actionlib_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target actionlib_generate_messages_eus"
 .PHONY : ground/CMakeFiles/actionlib_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/actionlib_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/actionlib_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/actionlib_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -2116,14 +2116,14 @@ ground/CMakeFiles/actionlib_generate_messages_eus.dir/clean:
 ground/CMakeFiles/std_msgs_generate_messages_eus.dir/all:
 	$(MAKE) -f ground/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/std_msgs_generate_messages_eus.dir/depend
 	$(MAKE) -f ground/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make ground/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_eus"
 .PHONY : ground/CMakeFiles/std_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/std_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/std_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -2143,14 +2143,14 @@ ground/CMakeFiles/std_msgs_generate_messages_eus.dir/clean:
 ground/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all:
 	$(MAKE) -f ground/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) -f ground/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make ground/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target actionlib_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target actionlib_msgs_generate_messages_lisp"
 .PHONY : ground/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -2170,14 +2170,14 @@ ground/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/clean:
 ground/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/all:
 	$(MAKE) -f ground/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) -f ground/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build.make ground/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target actionlib_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target actionlib_msgs_generate_messages_nodejs"
 .PHONY : ground/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -2197,14 +2197,14 @@ ground/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/clean:
 ground/CMakeFiles/actionlib_generate_messages_py.dir/all:
 	$(MAKE) -f ground/CMakeFiles/actionlib_generate_messages_py.dir/build.make ground/CMakeFiles/actionlib_generate_messages_py.dir/depend
 	$(MAKE) -f ground/CMakeFiles/actionlib_generate_messages_py.dir/build.make ground/CMakeFiles/actionlib_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num= "Built target actionlib_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num= "Built target actionlib_generate_messages_py"
 .PHONY : ground/CMakeFiles/actionlib_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/actionlib_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/actionlib_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/actionlib_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -2224,14 +2224,14 @@ ground/CMakeFiles/actionlib_generate_messages_py.dir/clean:
 ground/CMakeFiles/trajectory_generator.dir/all:
 	$(MAKE) -f ground/CMakeFiles/trajectory_generator.dir/build.make ground/CMakeFiles/trajectory_generator.dir/depend
 	$(MAKE) -f ground/CMakeFiles/trajectory_generator.dir/build.make ground/CMakeFiles/trajectory_generator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num=39,40 "Built target trajectory_generator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num=39,40 "Built target trajectory_generator"
 .PHONY : ground/CMakeFiles/trajectory_generator.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/trajectory_generator.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/trajectory_generator.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/trajectory_generator.dir/rule
 
 # Convenience name for target.
@@ -2251,14 +2251,14 @@ ground/CMakeFiles/trajectory_generator.dir/clean:
 ground/CMakeFiles/wrench_mapper.dir/all:
 	$(MAKE) -f ground/CMakeFiles/wrench_mapper.dir/build.make ground/CMakeFiles/wrench_mapper.dir/depend
 	$(MAKE) -f ground/CMakeFiles/wrench_mapper.dir/build.make ground/CMakeFiles/wrench_mapper.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num=41,42 "Built target wrench_mapper"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num=41,42 "Built target wrench_mapper"
 .PHONY : ground/CMakeFiles/wrench_mapper.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/wrench_mapper.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/wrench_mapper.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/wrench_mapper.dir/rule
 
 # Convenience name for target.
@@ -2278,14 +2278,14 @@ ground/CMakeFiles/wrench_mapper.dir/clean:
 ground/CMakeFiles/position_controller.dir/all:
 	$(MAKE) -f ground/CMakeFiles/position_controller.dir/build.make ground/CMakeFiles/position_controller.dir/depend
 	$(MAKE) -f ground/CMakeFiles/position_controller.dir/build.make ground/CMakeFiles/position_controller.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num=24,25 "Built target position_controller"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num=24,25 "Built target position_controller"
 .PHONY : ground/CMakeFiles/position_controller.dir/all
 
 # Build rule for subdir invocation for target.
 ground/CMakeFiles/position_controller.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 ground/CMakeFiles/position_controller.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : ground/CMakeFiles/position_controller.dir/rule
 
 # Convenience name for target.
@@ -2305,14 +2305,14 @@ ground/CMakeFiles/position_controller.dir/clean:
 MAV/MAV1/CMakeFiles/topic_tool_mav1.dir/all:
 	$(MAKE) -f MAV/MAV1/CMakeFiles/topic_tool_mav1.dir/build.make MAV/MAV1/CMakeFiles/topic_tool_mav1.dir/depend
 	$(MAKE) -f MAV/MAV1/CMakeFiles/topic_tool_mav1.dir/build.make MAV/MAV1/CMakeFiles/topic_tool_mav1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num=28,29 "Built target topic_tool_mav1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num=28,29 "Built target topic_tool_mav1"
 .PHONY : MAV/MAV1/CMakeFiles/topic_tool_mav1.dir/all
 
 # Build rule for subdir invocation for target.
 MAV/MAV1/CMakeFiles/topic_tool_mav1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 MAV/MAV1/CMakeFiles/topic_tool_mav1.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : MAV/MAV1/CMakeFiles/topic_tool_mav1.dir/rule
 
 # Convenience name for target.
@@ -2332,14 +2332,14 @@ MAV/MAV1/CMakeFiles/topic_tool_mav1.dir/clean:
 MAV/MAV1/CMakeFiles/mav1.dir/all:
 	$(MAKE) -f MAV/MAV1/CMakeFiles/mav1.dir/build.make MAV/MAV1/CMakeFiles/mav1.dir/depend
 	$(MAKE) -f MAV/MAV1/CMakeFiles/mav1.dir/build.make MAV/MAV1/CMakeFiles/mav1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num=16,17 "Built target mav1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num=16,17 "Built target mav1"
 .PHONY : MAV/MAV1/CMakeFiles/mav1.dir/all
 
 # Build rule for subdir invocation for target.
 MAV/MAV1/CMakeFiles/mav1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 MAV/MAV1/CMakeFiles/mav1.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : MAV/MAV1/CMakeFiles/mav1.dir/rule
 
 # Convenience name for target.
@@ -2359,14 +2359,14 @@ MAV/MAV1/CMakeFiles/mav1.dir/clean:
 MAV/MAV2/CMakeFiles/topic_tool_mav2.dir/all:
 	$(MAKE) -f MAV/MAV2/CMakeFiles/topic_tool_mav2.dir/build.make MAV/MAV2/CMakeFiles/topic_tool_mav2.dir/depend
 	$(MAKE) -f MAV/MAV2/CMakeFiles/topic_tool_mav2.dir/build.make MAV/MAV2/CMakeFiles/topic_tool_mav2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num=30,31 "Built target topic_tool_mav2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num=30,31 "Built target topic_tool_mav2"
 .PHONY : MAV/MAV2/CMakeFiles/topic_tool_mav2.dir/all
 
 # Build rule for subdir invocation for target.
 MAV/MAV2/CMakeFiles/topic_tool_mav2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 MAV/MAV2/CMakeFiles/topic_tool_mav2.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : MAV/MAV2/CMakeFiles/topic_tool_mav2.dir/rule
 
 # Convenience name for target.
@@ -2386,14 +2386,14 @@ MAV/MAV2/CMakeFiles/topic_tool_mav2.dir/clean:
 MAV/MAV2/CMakeFiles/mav2.dir/all:
 	$(MAKE) -f MAV/MAV2/CMakeFiles/mav2.dir/build.make MAV/MAV2/CMakeFiles/mav2.dir/depend
 	$(MAKE) -f MAV/MAV2/CMakeFiles/mav2.dir/build.make MAV/MAV2/CMakeFiles/mav2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num=18,19 "Built target mav2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num=18,19 "Built target mav2"
 .PHONY : MAV/MAV2/CMakeFiles/mav2.dir/all
 
 # Build rule for subdir invocation for target.
 MAV/MAV2/CMakeFiles/mav2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 MAV/MAV2/CMakeFiles/mav2.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : MAV/MAV2/CMakeFiles/mav2.dir/rule
 
 # Convenience name for target.
@@ -2413,14 +2413,14 @@ MAV/MAV2/CMakeFiles/mav2.dir/clean:
 MAV/MAV3/CMakeFiles/topic_tool_mav3.dir/all:
 	$(MAKE) -f MAV/MAV3/CMakeFiles/topic_tool_mav3.dir/build.make MAV/MAV3/CMakeFiles/topic_tool_mav3.dir/depend
 	$(MAKE) -f MAV/MAV3/CMakeFiles/topic_tool_mav3.dir/build.make MAV/MAV3/CMakeFiles/topic_tool_mav3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num=32,33 "Built target topic_tool_mav3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num=32,33 "Built target topic_tool_mav3"
 .PHONY : MAV/MAV3/CMakeFiles/topic_tool_mav3.dir/all
 
 # Build rule for subdir invocation for target.
 MAV/MAV3/CMakeFiles/topic_tool_mav3.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 MAV/MAV3/CMakeFiles/topic_tool_mav3.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : MAV/MAV3/CMakeFiles/topic_tool_mav3.dir/rule
 
 # Convenience name for target.
@@ -2440,14 +2440,14 @@ MAV/MAV3/CMakeFiles/topic_tool_mav3.dir/clean:
 MAV/MAV3/CMakeFiles/mav3.dir/all:
 	$(MAKE) -f MAV/MAV3/CMakeFiles/mav3.dir/build.make MAV/MAV3/CMakeFiles/mav3.dir/depend
 	$(MAKE) -f MAV/MAV3/CMakeFiles/mav3.dir/build.make MAV/MAV3/CMakeFiles/mav3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num=20,21 "Built target mav3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num=20,21 "Built target mav3"
 .PHONY : MAV/MAV3/CMakeFiles/mav3.dir/all
 
 # Build rule for subdir invocation for target.
 MAV/MAV3/CMakeFiles/mav3.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 MAV/MAV3/CMakeFiles/mav3.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : MAV/MAV3/CMakeFiles/mav3.dir/rule
 
 # Convenience name for target.
@@ -2467,14 +2467,14 @@ MAV/MAV3/CMakeFiles/mav3.dir/clean:
 MAV/MAV4/CMakeFiles/topic_tool_mav4.dir/all:
 	$(MAKE) -f MAV/MAV4/CMakeFiles/topic_tool_mav4.dir/build.make MAV/MAV4/CMakeFiles/topic_tool_mav4.dir/depend
 	$(MAKE) -f MAV/MAV4/CMakeFiles/topic_tool_mav4.dir/build.make MAV/MAV4/CMakeFiles/topic_tool_mav4.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num=34,35 "Built target topic_tool_mav4"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num=34,35 "Built target topic_tool_mav4"
 .PHONY : MAV/MAV4/CMakeFiles/topic_tool_mav4.dir/all
 
 # Build rule for subdir invocation for target.
 MAV/MAV4/CMakeFiles/topic_tool_mav4.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 MAV/MAV4/CMakeFiles/topic_tool_mav4.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : MAV/MAV4/CMakeFiles/topic_tool_mav4.dir/rule
 
 # Convenience name for target.
@@ -2494,14 +2494,14 @@ MAV/MAV4/CMakeFiles/topic_tool_mav4.dir/clean:
 MAV/MAV4/CMakeFiles/mav4.dir/all:
 	$(MAKE) -f MAV/MAV4/CMakeFiles/mav4.dir/build.make MAV/MAV4/CMakeFiles/mav4.dir/depend
 	$(MAKE) -f MAV/MAV4/CMakeFiles/mav4.dir/build.make MAV/MAV4/CMakeFiles/mav4.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num=22,23 "Built target mav4"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num=22,23 "Built target mav4"
 .PHONY : MAV/MAV4/CMakeFiles/mav4.dir/all
 
 # Build rule for subdir invocation for target.
 MAV/MAV4/CMakeFiles/mav4.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 MAV/MAV4/CMakeFiles/mav4.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : MAV/MAV4/CMakeFiles/mav4.dir/rule
 
 # Convenience name for target.
@@ -2521,14 +2521,14 @@ MAV/MAV4/CMakeFiles/mav4.dir/clean:
 xsens_ros_mti_driver/CMakeFiles/xsens_mti_node.dir/all:
 	$(MAKE) -f xsens_ros_mti_driver/CMakeFiles/xsens_mti_node.dir/build.make xsens_ros_mti_driver/CMakeFiles/xsens_mti_node.dir/depend
 	$(MAKE) -f xsens_ros_mti_driver/CMakeFiles/xsens_mti_node.dir/build.make xsens_ros_mti_driver/CMakeFiles/xsens_mti_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ex_ws/build/CMakeFiles --progress-num=43,44,45,46 "Built target xsens_mti_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num=43,44,45,46 "Built target xsens_mti_node"
 .PHONY : xsens_ros_mti_driver/CMakeFiles/xsens_mti_node.dir/all
 
 # Build rule for subdir invocation for target.
 xsens_ros_mti_driver/CMakeFiles/xsens_mti_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 xsens_ros_mti_driver/CMakeFiles/xsens_mti_node.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ex_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
 .PHONY : xsens_ros_mti_driver/CMakeFiles/xsens_mti_node.dir/rule
 
 # Convenience name for target.

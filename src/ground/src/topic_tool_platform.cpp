@@ -26,6 +26,7 @@
 #define dt 0.01
 
 using namespace Eigen;
+using namespace std;
 
 float Psi = 0; // x
 float Theta = 0; // y
@@ -42,6 +43,9 @@ Vector4d b;
 Vector3d c;
 Vector4d d;
 
+Vector3d e;
+Vector4d f;
+
 
 Vector3d p;
 Vector3d p_prev;
@@ -49,6 +53,8 @@ Vector3d p_prev;
 
 Vector4d q;
 Vector3d eu;
+
+Vector3d o;
 
 Matrix<double, 3, 3> R;
 Matrix<double, 3, 3> Rate_Change_Matrix;
@@ -77,23 +83,22 @@ void Attitude_and_Angular_rate(void);
 /*now we just get cm */
 void host_pos(const geometry_msgs::PoseStamped::ConstPtr& msg)
 {   pose = *msg;
-    pose.pose.position.x = std::floor(pose.pose.position.x*100)/100;
-    pose.pose.position.y = std::floor(pose.pose.position.y*100)/100;
-    pose.pose.position.z = std::floor(pose.pose.position.z*100)/100;
-    pose.pose.orientation.w = std::floor(pose.pose.orientation.w*100)/100;
-    pose.pose.orientation.x = std::floor(pose.pose.orientation.x*100)/100;
-    pose.pose.orientation.y = std::floor(pose.pose.orientation.y*100)/100;
-    pose.pose.orientation.z = std::floor(pose.pose.orientation.z*100)/100;
+    pose.pose.position.x = std::floor(pose.pose.position.x*1000)/1000;
+    pose.pose.position.y = std::floor(pose.pose.position.y*1000)/1000;
+    pose.pose.position.z = std::floor(pose.pose.position.z*1000)/1000;
+    pose.pose.orientation.w = std::floor(pose.pose.orientation.w*1000)/1000;
+    pose.pose.orientation.x = std::floor(pose.pose.orientation.x*1000)/1000;
+    pose.pose.orientation.y = std::floor(pose.pose.orientation.y*1000)/1000;
+    pose.pose.orientation.z = std::floor(pose.pose.orientation.z*1000)/1000;
 }
 
 void imu_cb(const geometry_msgs::Vector3Stamped::ConstPtr& msg)
 {
     imu_rate = *msg;
-    imu_rate.vector.x = std::floor(imu_rate.vector.x*100)/100;
-    imu_rate.vector.y = std::floor(imu_rate.vector.y*100)/100;
-    imu_rate.vector.z = std::floor(imu_rate.vector.z*100)/100;
+    imu_rate.vector.x = std::floor(imu_rate.vector.x*1000)/1000;
+    imu_rate.vector.y = std::floor(imu_rate.vector.y*1000)/1000;
+    imu_rate.vector.z = std::floor(imu_rate.vector.z*1000)/1000;
     
-
 }
 
 
@@ -107,9 +112,13 @@ int main(int argc, char **argv)
 
     c << -1.911197067426073,0.914975834801434,0;
     d <<9.446918438401550e-04,0.001889383687680,9.446918438401550e-04,0;
+
+    e<< -1.911197067426073,0.914975834801434,0;
+    f<< 9.446918438401550e-04,0.001889383687680,9.446918438401550e-04,0;
     
     filter position_filter(a,b);
     filter attitude_filter(c,d);
+    filter angular_rate_filter(e,f);
 
     std::string sub_topic = std::string("/vrpn_client_node/platform") + std::string("/pose");
 
@@ -156,6 +165,8 @@ int main(int argc, char **argv)
 
         p = position_filter.Butterworth_filter_position(pose,t);
         q = attitude_filter.Butterworth_filter_attitude(pose,t);
+        o = angular_rate_filter.Butterworth_filter_angular_rate(imu_rate,t);
+        
         Position_and_Velocity();
         Attitude_and_Angular_rate();
 
@@ -218,8 +229,8 @@ void Attitude_and_Angular_rate(void)
     PLA_r.data[3] = q(3);
 
     //transfer the attitude from Orientation to Euler
-    PLA_agvr.data[0] =  imu_rate.vector.x;
-    PLA_agvr.data[1] =  imu_rate.vector.y;
-    PLA_agvr.data[2] =  imu_rate.vector.z;
+    PLA_agvr.data[0] =  o(0);
+    PLA_agvr.data[1] =  o(1);
+    PLA_agvr.data[2] =  o(2);
 
 }

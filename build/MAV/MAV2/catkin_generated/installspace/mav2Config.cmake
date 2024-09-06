@@ -67,14 +67,14 @@ set(mav2_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(mav2_SOURCE_PREFIX /home/lee/workspace/ex_ws/src/MAV/MAV2)
-  set(mav2_DEVEL_PREFIX /home/lee/workspace/ex_ws/devel)
+  set(mav2_SOURCE_PREFIX /home/lee/workspace/ros_ws/ex_ws/src/MAV/MAV2)
+  set(mav2_DEVEL_PREFIX /home/lee/workspace/ros_ws/ex_ws/devel)
   set(mav2_INSTALL_PREFIX "")
   set(mav2_PREFIX ${mav2_DEVEL_PREFIX})
 else()
   set(mav2_SOURCE_PREFIX "")
   set(mav2_DEVEL_PREFIX "")
-  set(mav2_INSTALL_PREFIX /home/lee/workspace/ex_ws/install)
+  set(mav2_INSTALL_PREFIX /home/lee/workspace/ros_ws/ex_ws/install)
   set(mav2_PREFIX ${mav2_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/lee/workspace/ex_ws/install/lib;/opt/ros/noetic/lib)
+    foreach(path /home/lee/workspace/ros_ws/ex_ws/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
