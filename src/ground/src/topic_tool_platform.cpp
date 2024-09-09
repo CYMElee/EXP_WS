@@ -82,22 +82,15 @@ void Attitude_and_Angular_rate(void);
 
 /*now we just get cm */
 void host_pos(const geometry_msgs::PoseStamped::ConstPtr& msg)
-{   pose = *msg;
-    pose.pose.position.x = std::floor(pose.pose.position.x*1000)/1000;
-    pose.pose.position.y = std::floor(pose.pose.position.y*1000)/1000;
-    pose.pose.position.z = std::floor(pose.pose.position.z*1000)/1000;
-    pose.pose.orientation.w = std::floor(pose.pose.orientation.w*1000)/1000;
-    pose.pose.orientation.x = std::floor(pose.pose.orientation.x*1000)/1000;
-    pose.pose.orientation.y = std::floor(pose.pose.orientation.y*1000)/1000;
-    pose.pose.orientation.z = std::floor(pose.pose.orientation.z*1000)/1000;
-}
+{   
+    pose = *msg;
 
+}
 void imu_cb(const geometry_msgs::Vector3Stamped::ConstPtr& msg)
 {
+    
     imu_rate = *msg;
-    imu_rate.vector.x = std::floor(imu_rate.vector.x*1000)/1000;
-    imu_rate.vector.y = std::floor(imu_rate.vector.y*1000)/1000;
-    imu_rate.vector.z = std::floor(imu_rate.vector.z*1000)/1000;
+
     
 }
 

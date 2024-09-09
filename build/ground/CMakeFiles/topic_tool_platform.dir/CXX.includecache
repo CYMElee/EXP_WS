@@ -16,10 +16,6 @@ geometry_msgs/PoseStamped.h
 geometry_msgs/Vector3Stamped.h
 /home/lee/workspace/ros_ws/ex_ws/src/ground/include/geometry_msgs/Vector3Stamped.h
 
-/home/lee/workspace/ros_ws/ex_ws/src/ground/src/filter.cpp
-filter.h
-/home/lee/workspace/ros_ws/ex_ws/src/ground/src/filter.h
-
 /home/lee/workspace/ros_ws/ex_ws/src/ground/src/topic_tool_platform.cpp
 iostream
 -
