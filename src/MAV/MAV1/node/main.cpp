@@ -82,7 +82,7 @@ int main(int argv,char** argc)
     /*subscribe the Platform attitude*/
     ros::Subscriber platform_pose_sub = nh.subscribe<geometry_msgs::PoseStamped>("/vrpn_client_node/platform/pose",12,platform_pose_cb);
     /*subscribe the MAV attitude, get from optitrack*/
-    std::string sub_topic = std::string("/vrpn_client_node/MAV") + std::to_string(UAV_ID) + std::string("/pose");
+    std::string sub_topic = std::string("/MAV") + std::to_string(UAV_ID) + std::string("/local_position/pose");
     ros::Subscriber MAV_pose = nh.subscribe<geometry_msgs::PoseStamped>(sub_topic, 10, mav_pose_cb);
     /*****Subscribe the Gimbal_angle and Thrust command!!!******/
     ros::Subscriber T_sub = nh.subscribe<std_msgs::Float64MultiArray>("cmd",12,T_sub_cb);
@@ -211,7 +211,7 @@ void T_cmd_calculate(void){
     double alpha = T_cmd.data[1];
     double  beta = T_cmd.data[2];
     double  thrust = T_cmd.data[0]; 
-    double  z = 0;
+    double  z = eulerAngles_mav(0);
 
      /*get the MAV desire Attitude(from mav fram to platform fram)*/
     Eigen::Quaterniond MAV_pose_cmd;
@@ -231,7 +231,8 @@ void T_cmd_calculate(void){
     Eigen::Matrix3d rotationMatrix_mav_des_b2i = rotationMatrix_platform*rotationMatrix_mav_des;
     
     Eigen::Vector3d eulerAngles_mav_des = rotationMatrix_mav_des_b2i.eulerAngles(2, 1, 0);
-   // eulerAngles_mav_des(0) = eulerAngles_mav(0);
+  
+  
     Eigen::Quaterniond mav_pose_desire;
     mav_pose_desire = Eigen::AngleAxisd(eulerAngles_mav_des(0),Eigen::Vector3d::UnitZ()) * \
     Eigen::AngleAxisd(eulerAngles_mav_des(1),Eigen::Vector3d::UnitY()) * \
