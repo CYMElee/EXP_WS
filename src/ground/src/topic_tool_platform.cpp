@@ -95,9 +95,9 @@ int main(int argc, char **argv)
     initialize();
 
 
-    ros::Subscriber pos_sub = nh.subscribe<geometry_msgs::PoseStamped>("/MAV5/mavros/local_position/pose", 10, pose_cb);
+    ros::Subscriber pos_sub = nh.subscribe<geometry_msgs::PoseStamped>("/platform/mavros/local_position/pose", 10, pose_cb);
     
-    ros::Subscriber vel_sub = nh.subscribe<geometry_msgs::TwistStamped>("/MAV5/mavros/local_position/velocity_local", 10,  vel_cb);
+    ros::Subscriber vel_sub = nh.subscribe<geometry_msgs::TwistStamped>("/platform/mavros/local_position/velocity_local", 10,  vel_cb);
   
 
     /*the platform position*/

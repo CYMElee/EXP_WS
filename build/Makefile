@@ -1207,6 +1207,19 @@ mav4/fast:
 	$(MAKE) -f MAV/MAV4/CMakeFiles/mav4.dir/build.make MAV/MAV4/CMakeFiles/mav4.dir/build
 .PHONY : mav4/fast
 
+#=============================================================================
+# Target rules for targets named topic_tool_fcu
+
+# Build rule for target.
+topic_tool_fcu: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 topic_tool_fcu
+.PHONY : topic_tool_fcu
+
+# fast build rule for target.
+topic_tool_fcu/fast:
+	$(MAKE) -f sensor/CMakeFiles/topic_tool_fcu.dir/build.make sensor/CMakeFiles/topic_tool_fcu.dir/build
+.PHONY : topic_tool_fcu/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1300,6 +1313,7 @@ help:
 	@echo "... mav3"
 	@echo "... topic_tool_mav4"
 	@echo "... mav4"
+	@echo "... topic_tool_fcu"
 .PHONY : help
 
 

@@ -2,7 +2,6 @@
     <arg name="fcu_url" default="/dev/ttyACM0:921600"/>
     <arg name="gcs_url" default="udp://@192.168.50.81"/>
     <arg name="SYS_ID" default="1"/>
-
     <group ns="MAV$(arg SYS_ID)">
         <param name="UAV_ID" value="$(arg SYS_ID)"/>
         <include file="$(find mavros)/launch/px4.launch">

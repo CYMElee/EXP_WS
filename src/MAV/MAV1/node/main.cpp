@@ -80,7 +80,7 @@ int main(int argv,char** argc)
     //******************************//
 
     /*subscribe the Platform attitude*/
-    ros::Subscriber platform_pose_sub = nh.subscribe<geometry_msgs::PoseStamped>("/vrpn_client_node/platform/pose",12,platform_pose_cb);
+    ros::Subscriber platform_pose_sub = nh.subscribe<geometry_msgs::PoseStamped>("/platform/mavros/local_position/pose",12,platform_pose_cb);
     /*subscribe the MAV attitude, get from optitrack*/
     std::string sub_topic = std::string("/MAV") + std::to_string(UAV_ID) + std::string("/local_position/pose");
     ros::Subscriber MAV_pose = nh.subscribe<geometry_msgs::PoseStamped>(sub_topic, 10, mav_pose_cb);
