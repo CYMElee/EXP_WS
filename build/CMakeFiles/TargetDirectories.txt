@@ -148,11 +148,3 @@
 /home/lee/workspace/ros_ws/ex_ws/build/sensor/CMakeFiles/rebuild_cache.dir
 /home/lee/workspace/ros_ws/ex_ws/build/sensor/CMakeFiles/edit_cache.dir
 /home/lee/workspace/ros_ws/ex_ws/build/sensor/CMakeFiles/test.dir
-/home/lee/workspace/ros_ws/ex_ws/build/xsens_ros_mti_driver/CMakeFiles/install/strip.dir
-/home/lee/workspace/ros_ws/ex_ws/build/xsens_ros_mti_driver/CMakeFiles/install/local.dir
-/home/lee/workspace/ros_ws/ex_ws/build/xsens_ros_mti_driver/CMakeFiles/edit_cache.dir
-/home/lee/workspace/ros_ws/ex_ws/build/xsens_ros_mti_driver/CMakeFiles/test.dir
-/home/lee/workspace/ros_ws/ex_ws/build/xsens_ros_mti_driver/CMakeFiles/install.dir
-/home/lee/workspace/ros_ws/ex_ws/build/xsens_ros_mti_driver/CMakeFiles/list_install_components.dir
-/home/lee/workspace/ros_ws/ex_ws/build/xsens_ros_mti_driver/CMakeFiles/rebuild_cache.dir
-/home/lee/workspace/ros_ws/ex_ws/build/xsens_ros_mti_driver/CMakeFiles/xsens_mti_node.dir

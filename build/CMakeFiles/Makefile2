@@ -60,7 +60,6 @@ all: MAV/MAV2/all
 all: MAV/MAV3/all
 all: MAV/MAV4/all
 all: sensor/all
-all: xsens_ros_mti_driver/all
 
 .PHONY : all
 
@@ -72,7 +71,6 @@ preinstall: MAV/MAV2/preinstall
 preinstall: MAV/MAV3/preinstall
 preinstall: MAV/MAV4/preinstall
 preinstall: sensor/preinstall
-preinstall: xsens_ros_mti_driver/preinstall
 
 .PHONY : preinstall
 
@@ -89,7 +87,6 @@ clean: MAV/MAV2/clean
 clean: MAV/MAV3/clean
 clean: MAV/MAV4/clean
 clean: sensor/clean
-clean: xsens_ros_mti_driver/clean
 
 .PHONY : clean
 
@@ -334,24 +331,6 @@ sensor/preinstall:
 sensor/clean:
 
 .PHONY : sensor/clean
-
-#=============================================================================
-# Directory level rules for directory xsens_ros_mti_driver
-
-# Recursive "all" directory target.
-xsens_ros_mti_driver/all: xsens_ros_mti_driver/CMakeFiles/xsens_mti_node.dir/all
-
-.PHONY : xsens_ros_mti_driver/all
-
-# Recursive "preinstall" directory target.
-xsens_ros_mti_driver/preinstall:
-
-.PHONY : xsens_ros_mti_driver/preinstall
-
-# Recursive "clean" directory target.
-xsens_ros_mti_driver/clean: xsens_ros_mti_driver/CMakeFiles/xsens_mti_node.dir/clean
-
-.PHONY : xsens_ros_mti_driver/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/doxygen.dir
@@ -2513,33 +2492,6 @@ mav4: MAV/MAV4/CMakeFiles/mav4.dir/rule
 MAV/MAV4/CMakeFiles/mav4.dir/clean:
 	$(MAKE) -f MAV/MAV4/CMakeFiles/mav4.dir/build.make MAV/MAV4/CMakeFiles/mav4.dir/clean
 .PHONY : MAV/MAV4/CMakeFiles/mav4.dir/clean
-
-#=============================================================================
-# Target rules for target xsens_ros_mti_driver/CMakeFiles/xsens_mti_node.dir
-
-# All Build rule for target.
-xsens_ros_mti_driver/CMakeFiles/xsens_mti_node.dir/all:
-	$(MAKE) -f xsens_ros_mti_driver/CMakeFiles/xsens_mti_node.dir/build.make xsens_ros_mti_driver/CMakeFiles/xsens_mti_node.dir/depend
-	$(MAKE) -f xsens_ros_mti_driver/CMakeFiles/xsens_mti_node.dir/build.make xsens_ros_mti_driver/CMakeFiles/xsens_mti_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles --progress-num=43,44,45,46 "Built target xsens_mti_node"
-.PHONY : xsens_ros_mti_driver/CMakeFiles/xsens_mti_node.dir/all
-
-# Build rule for subdir invocation for target.
-xsens_ros_mti_driver/CMakeFiles/xsens_mti_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 xsens_ros_mti_driver/CMakeFiles/xsens_mti_node.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lee/workspace/ros_ws/ex_ws/build/CMakeFiles 0
-.PHONY : xsens_ros_mti_driver/CMakeFiles/xsens_mti_node.dir/rule
-
-# Convenience name for target.
-xsens_mti_node: xsens_ros_mti_driver/CMakeFiles/xsens_mti_node.dir/rule
-
-.PHONY : xsens_mti_node
-
-# clean rule for target.
-xsens_ros_mti_driver/CMakeFiles/xsens_mti_node.dir/clean:
-	$(MAKE) -f xsens_ros_mti_driver/CMakeFiles/xsens_mti_node.dir/build.make xsens_ros_mti_driver/CMakeFiles/xsens_mti_node.dir/clean
-.PHONY : xsens_ros_mti_driver/CMakeFiles/xsens_mti_node.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

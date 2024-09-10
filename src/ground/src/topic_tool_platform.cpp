@@ -20,47 +20,26 @@
 #include "std_msgs/Float32MultiArray.h"
 #include "std_msgs/Float64MultiArray.h"
 #include "geometry_msgs/Vector3Stamped.h"
+#include "sensor_msgs/Imu.h"
 #include "Eigen/Dense"
 #include "filter.h"
 
-#define dt 0.01
 
 using namespace Eigen;
 using namespace std;
 
-float Psi = 0; // x
-float Theta = 0; // y
-float Phi = 0; // z
-
-int t = 0;
-
-geometry_msgs::PoseStamped host_mocap;
-geometry_msgs::Vector3Stamped imu_rate;
-
-Vector3d a; //a & b using for filter
-Vector4d b;
-
-Vector3d c;
-Vector4d d;
-
-Vector3d e;
-Vector4d f;
 
 
-Vector3d p;
-Vector3d p_prev;
 
 
-Vector4d q;
-Vector3d eu;
 
-Vector3d o;
 
+/*
 Matrix<double, 3, 3> R;
 Matrix<double, 3, 3> Rate_Change_Matrix;
 Matrix<double, 3, 1> Euler_Rate_Change;
 Matrix<double, 3, 1> Angular_Rate_Change;
-
+*/
 std_msgs::Float64MultiArray PLA_p;   //platform position
 std_msgs::Float64MultiArray PLA_p_d; //platform velocity
 std_msgs::Float64MultiArray PLA_r;   //platform attitude
@@ -70,8 +49,8 @@ std_msgs::Float64MultiArray PLA_agvr;//platform omga
 std_msgs::Float64MultiArray Euler;   //platform attitude using for debug
 
 geometry_msgs::PoseStamped pose;
-
-
+geometry_msgs::TwistStamped vel;
+sensor_msgs::Imu imu;
 
 
 
@@ -81,18 +60,32 @@ void Position_and_Velocity(void);
 void Attitude_and_Angular_rate(void);
 
 /*now we just get cm */
-void host_pos(const geometry_msgs::PoseStamped::ConstPtr& msg)
+void pose_cb(const geometry_msgs::PoseStamped::ConstPtr& msg)
 {   
     pose = *msg;
+    double roll, pitch, yaw;
+    tf::Quaternion Q(
+            msg->pose.orientation.x,
+            msg->pose.orientation.y,
+            msg->pose.orientation.z,
+            msg->pose.orientation.w);
+    tf::Matrix3x3(Q).getRPY(roll,pitch,yaw);
+    Euler.data[0] = yaw;
+    Euler.data[1] = pitch;
+    Euler.data[2] = roll;
 
 }
-void imu_cb(const geometry_msgs::Vector3Stamped::ConstPtr& msg)
+
+void vel_cb(const geometry_msgs::TwistStamped::ConstPtr& msg)
 {
-    
-    imu_rate = *msg;
+    vel = *msg;
 
-    
 }
+
+
+
+
+
 
 
 int main(int argc, char **argv)
@@ -100,25 +93,12 @@ int main(int argc, char **argv)
     ros::init(argc, argv, "topic_tool_platform");
     ros::NodeHandle nh;
     initialize();
-    a << -0.726542528005361,0,0;
-    b <<0.136728735997320,0.136728735997320,0,0;
 
-    c << -1.911197067426073,0.914975834801434,0;
-    d <<9.446918438401550e-04,0.001889383687680,9.446918438401550e-04,0;
 
-    e<< -1.911197067426073,0.914975834801434,0;
-    f<< 9.446918438401550e-04,0.001889383687680,9.446918438401550e-04,0;
+    ros::Subscriber pos_sub = nh.subscribe<geometry_msgs::PoseStamped>("/MAV5/mavros/local_position/pose", 10, pose_cb);
     
-    filter position_filter(a,b);
-    filter attitude_filter(c,d);
-    filter angular_rate_filter(e,f);
-
-    std::string sub_topic = std::string("/vrpn_client_node/platform") + std::string("/pose");
-
-    ros::Subscriber host_sub = nh.subscribe<geometry_msgs::PoseStamped>(sub_topic, 10, host_pos);
-
-    /*get the angular velocity from MTI-300 IMU*/
-    ros::Subscriber imu_sub = nh.subscribe<geometry_msgs::Vector3Stamped>("/imu/angular_velocity",10,imu_cb);
+    ros::Subscriber vel_sub = nh.subscribe<geometry_msgs::TwistStamped>("/MAV5/mavros/local_position/velocity_local", 10,  vel_cb);
+  
 
     /*the platform position*/
     ros::Publisher pos_pub =  nh.advertise<std_msgs::Float64MultiArray>
@@ -142,24 +122,10 @@ int main(int argc, char **argv)
     
     ros::Rate rate(100);
 
-    for(int i = 0;i<50; i++){
-        /*set the position_prev*/
-        p_prev(0) = pose.pose.position.x;
-        p_prev(1) = pose.pose.position.y;
-        p_prev(2) = pose.pose.position.z;
-        /*set the */
-  
-        ros::spinOnce();
-        rate.sleep();
-    }
 
 
     while (ros::ok()) {
-
-        p = position_filter.Butterworth_filter_position(pose,t);
-        q = attitude_filter.Butterworth_filter_attitude(pose,t);
-        o = angular_rate_filter.Butterworth_filter_angular_rate(imu_rate,t);
-        
+      
         Position_and_Velocity();
         Attitude_and_Angular_rate();
 
@@ -169,11 +135,9 @@ int main(int argc, char **argv)
         omega_pub.publish(PLA_agvr);
         attitude_euler_pub.publish(Euler);
 
-        p_prev = p;
         
         ros::spinOnce();
         rate.sleep();
-        t++;
     }
 
     return 0;
@@ -189,24 +153,19 @@ void initialize(void)
     Euler.data.resize(3);
     
 
-
-
-    /*set the init position using to get init velocity*/
-
-
 }
 
 
 void Position_and_Velocity(void)
 {
     
-    PLA_p.data[0] = p(0);
-    PLA_p.data[1] = p(1);
-    PLA_p.data[2] = p(2);
+    PLA_p.data[0] = pose.pose.position.x;
+    PLA_p.data[1] = pose.pose.position.y;
+    PLA_p.data[2] = pose.pose.position.z;
 
-    PLA_p_d.data[0] = ((p(0)-p_prev(0))/dt);
-    PLA_p_d.data[1] = ((p(1)-p_prev(1))/dt);
-    PLA_p_d.data[2] = ((p(2)-p_prev(2))/dt);
+    PLA_p_d.data[0] = vel.twist.linear.x;
+    PLA_p_d.data[1] = vel.twist.linear.y;
+    PLA_p_d.data[2] = vel.twist.linear.z;
 
 }
 
@@ -214,16 +173,18 @@ void Position_and_Velocity(void)
 
 void Attitude_and_Angular_rate(void)
 {
-    Quaterniond quaternion(q(0),q(1),q(2),q(3));
+   
    // quaternion.normalize();
-    PLA_r.data[0] = q(0);
-    PLA_r.data[1] = q(1);
-    PLA_r.data[2] = q(2);
-    PLA_r.data[3] = q(3);
+    PLA_r.data[0] = pose.pose.orientation.w;
+    PLA_r.data[1] = pose.pose.orientation.x;
+    PLA_r.data[2] = pose.pose.orientation.y;
+    PLA_r.data[3] = pose.pose.orientation.z;
 
     //transfer the attitude from Orientation to Euler
-    PLA_agvr.data[0] =  o(0);
-    PLA_agvr.data[1] =  o(1);
-    PLA_agvr.data[2] =  o(2);
+    PLA_agvr.data[0] = vel.twist.angular.x;
+    PLA_agvr.data[1] = vel.twist.angular.y;
+    PLA_agvr.data[2] = vel.twist.angular.z;
+
+
 
 }

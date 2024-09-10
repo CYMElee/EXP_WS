@@ -1,4 +1,5 @@
 <launch> 
+
 <!--controller -->
     <node name="gripper_controller" pkg="ground" type="gripper_controller" output="screen"></node>
     <node name="position_controller" pkg="ground" type="position_controller" output="screen"></node>
@@ -10,7 +11,7 @@
 <!--trajectory generate-->
     <node name="trajectory_generator" pkg="ground" type="trajectory_generator" output="screen"></node>
 <!-- optitrack using for platform-->
-    <node name="topic_tool_platform" pkg="ground" type="topic_tool_platform" output="screen"></node>
+   <!-- <node name="topic_tool_platform" pkg="ground" type="topic_tool_platform" output="screen"></node> -->
     <node pkg="rosbag" type="record" name="bag_record" args="-a -o $(find ground)/rosbag_record/ex_all.bag"></node>
 </launch>
 
