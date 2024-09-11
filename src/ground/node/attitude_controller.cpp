@@ -106,9 +106,9 @@ int main(int argc,char **argv)
     ros::NodeHandle nh;
     u2.data.resize(3);
     er.data.resize(3);
-    KR << 5, 0 , 0 ,
-          0 , 5, 0 ,
-          0 , 0 , 5;
+    KR << 4, 0 , 0 ,
+          0 , 4, 0 ,
+          0 , 0 , 4;
 
     Kw << 1  , 0 , 0 ,
           0  , 1, 0 ,
