@@ -9,7 +9,7 @@
             <arg name="gcs_url" value="$(arg gcs_url)"/>
             <arg name="tgt_system" value="$(arg SYS_ID)"/>
         </include>
-       <node name="topic_tool" pkg="mav$(arg SYS_ID)" type="topic_tool_platform"></node>
+       <node name="topic_tool" pkg="sensor" type="topic_tool_fcu"></node>
        <!--<node name="origin_py" pkg="mav$(arg SYS_ID)" type="origin.py"></node> -->
     </group>
 </launch>

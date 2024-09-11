@@ -103,13 +103,13 @@ int main(int argc,char **argv)
     ROS_INFO("SUCCESS LAUNCH POSITION CONTROLLER"); 
 
     //control gain
-Kp << 8, 0 , 0 ,
-      0  , 8 ,0 ,
-      0  , 0,  8;
+Kp << 5, 0 , 0 ,
+      0  , 5 ,0 ,
+      0  , 0,  5;
 
-Kv << 3 , 0  ,0 ,
-      0  , 3  ,0,
-      0  , 0  ,3;
+Kv << 2 , 0  ,0 ,
+      0  , 2  ,0,
+      0  , 0  ,2;
 
 Ki << 1, 0 , 0 ,
       0  , 1,0,
