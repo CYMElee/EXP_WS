@@ -228,7 +228,7 @@ void T_cmd_calculate(void){
     Eigen::Matrix3d rotationMatrix_platform = quaternion_platform.toRotationMatrix();
 
     /**get the desire mav attitude (body frame to inertial frame)**/
-    Eigen::Matrix3d rotationMatrix_mav_des_b2i = rotationMatrix_platform*rotationMatrix_mav_des;
+    Eigen::Matrix3d rotationMatrix_mav_des_b2i = (rotationMatrix_platform.transpose())*rotationMatrix_mav_des;
     
     Eigen::Vector3d eulerAngles_mav_des = rotationMatrix_mav_des_b2i.eulerAngles(2, 1, 0);
   
