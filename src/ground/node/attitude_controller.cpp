@@ -4,9 +4,9 @@
 #include "Eigen/Dense"
 
 
-#define Lw_sq 1
-double IBXY = 2*2.3*Lw_sq+0.18;
-double IBZ  = 4*2.3*Lw_sq+0.09;
+#define Lw_sq 0.64
+double IBXY = 2*1.5*0.64;
+double IBZ  = 4*1.5*0.64;
 
 using namespace Eigen ;
 
