@@ -64,6 +64,7 @@ ground/CMakeFiles/trajectory_generator.dir/node/trajectory_generator.cpp.o: /opt
 ground/CMakeFiles/trajectory_generator.dir/node/trajectory_generator.cpp.o: /opt/ros/noetic/include/rosconsole/macros_generated.h
 ground/CMakeFiles/trajectory_generator.dir/node/trajectory_generator.cpp.o: /opt/ros/noetic/include/std_msgs/Bool.h
 ground/CMakeFiles/trajectory_generator.dir/node/trajectory_generator.cpp.o: /opt/ros/noetic/include/std_msgs/Float32MultiArray.h
+ground/CMakeFiles/trajectory_generator.dir/node/trajectory_generator.cpp.o: /opt/ros/noetic/include/std_msgs/Float64MultiArray.h
 ground/CMakeFiles/trajectory_generator.dir/node/trajectory_generator.cpp.o: /opt/ros/noetic/include/std_msgs/Header.h
 ground/CMakeFiles/trajectory_generator.dir/node/trajectory_generator.cpp.o: /opt/ros/noetic/include/std_msgs/Int16.h
 ground/CMakeFiles/trajectory_generator.dir/node/trajectory_generator.cpp.o: /opt/ros/noetic/include/std_msgs/MultiArrayDimension.h

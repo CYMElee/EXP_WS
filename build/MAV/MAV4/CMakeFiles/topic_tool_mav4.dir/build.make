@@ -85,7 +85,7 @@ topic_tool_mav4_EXTERNAL_OBJECTS =
 /home/lee/workspace/ros_ws/ex_ws/devel/lib/mav4/topic_tool_mav4: /opt/ros/noetic/lib/libactionlib.so
 /home/lee/workspace/ros_ws/ex_ws/devel/lib/mav4/topic_tool_mav4: /opt/ros/noetic/lib/libmessage_filters.so
 /home/lee/workspace/ros_ws/ex_ws/devel/lib/mav4/topic_tool_mav4: /opt/ros/noetic/lib/libroscpp.so
-/home/lee/workspace/ros_ws/ex_ws/devel/lib/mav4/topic_tool_mav4: /usr/lib/x86_64-linux-gnu/libpthread.a
+/home/lee/workspace/ros_ws/ex_ws/devel/lib/mav4/topic_tool_mav4: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/lee/workspace/ros_ws/ex_ws/devel/lib/mav4/topic_tool_mav4: /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0
 /home/lee/workspace/ros_ws/ex_ws/devel/lib/mav4/topic_tool_mav4: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
 /home/lee/workspace/ros_ws/ex_ws/devel/lib/mav4/topic_tool_mav4: /opt/ros/noetic/lib/librosconsole.so
