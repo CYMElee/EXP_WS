@@ -52,7 +52,7 @@ if __name__ == "__main__":
     UAVID = rospy.get_param('UAV_ID', default=1)
     stream_rate = rospy.get_param('stream_rate', default=100)  # Default to 100Hz
 
-    topic = "/MAV" + str(UAVID) + "/mavlink/to"
+    topic = "/platform"  + "/mavlink/to"
     mavlink_pub = rospy.Publisher(topic, Mavlink, queue_size=10)
 
     # Setup mavlink instance

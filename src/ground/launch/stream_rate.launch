@@ -27,6 +27,6 @@
     <group ns="platform">
         <param name="stream_rate" value="100"/>
         <param name="UAV_ID" value="$(arg MAV5_ID)"/>
-       <node name="stream_rate_py" pkg="ground" type="stream_rate.py"></node>
+       <node name="stream_rate_platform_py" pkg="ground" type="stream_rate_platform.py"></node>
     </group>
 </launch>
