@@ -2,19 +2,19 @@
 
 ##
 #
-# Send SET_GPS_GLOBAL_ORIGIN and SET_HOME_POSITION messages
+# Send SET_GPS_GLOBAL_ORIGIN and SET_HOME_POSITION messages for PX4
 #
 ##
 
 import rospy
-from pymavlink.dialects.v10 import ardupilotmega as MAV_APM
+from pymavlink.dialects.v20 import common as MAV_PX4  # 使用 PX4 MAVLink 方言
 from mavros.mavlink import convert_to_rosmsg
 from mavros_msgs.msg import Mavlink
 
 # Global position of the origin
-lat = 0   # Terni
-lon = 0   # Terni
-alt = 0
+lat = 0   # Replace with actual latitude
+lon = 0   # Replace with actual longitude
+alt = 0   # Replace with actual altitude
 
 class fifo(object):
     """ A simple buffer """
@@ -30,13 +30,6 @@ def send_message(mavlink_msg, mav, pub):
     """
     Send a mavlink message
     """
-    # msg.pack(msg, mav, True)
-    
-    # rosmsg = convert_to_rosmsg(msg)
-    # pub.publish(rosmsg)
-
-    # print("sent message %s" % msg)
-
     packed_data = mavlink_msg.pack(mav, True)
 
     rosmsg = convert_to_rosmsg(mavlink_msg)
@@ -47,16 +40,14 @@ def send_message(mavlink_msg, mav, pub):
 
 def set_global_origin(mav, pub):
     """
-    Send a mavlink SET_GPS_GLOBAL_ORIGIN message, which allows us
-    to use local position information without a GPS.
+    Send a mavlink SET_GPS_GLOBAL_ORIGIN message for PX4
     """
     target_system = mav.srcSystem
-    #target_system = 0   # 0 --> broadcast to everyone
     lattitude = lat
     longitude = lon
     altitude = alt
 
-    msg = MAV_APM.MAVLink_set_gps_global_origin_message(
+    msg = MAV_PX4.MAVLink_set_gps_global_origin_message(
             target_system,
             lattitude, 
             longitude,
@@ -66,11 +57,9 @@ def set_global_origin(mav, pub):
 
 def set_home_position(mav, pub):
     """
-    Send a mavlink SET_HOME_POSITION message, which should allow
-    us to use local position information without a GPS
+    Send a mavlink SET_HOME_POSITION message for PX4
     """
     target_system = mav.srcSystem
-    #target_system = 0  # broadcast to everyone
 
     lattitude = lat
     longitude = lon
@@ -85,7 +74,7 @@ def set_home_position(mav, pub):
     approach_y = 0
     approach_z = 1
 
-    msg = MAV_APM.MAVLink_set_home_position_message(
+    msg = MAV_PX4.MAVLink_set_home_position_message(
             target_system,
             lattitude,
             longitude,
@@ -112,7 +101,7 @@ if __name__=="__main__":
 
         # Set up mavlink instance
         f = fifo()
-        mav = MAV_APM.MAVLink(f, srcSystem=UAVID, srcComponent=1)
+        mav = MAV_PX4.MAVLink(f, srcSystem=UAVID, srcComponent=1)
         print(mav)
 
         # wait to initialize
