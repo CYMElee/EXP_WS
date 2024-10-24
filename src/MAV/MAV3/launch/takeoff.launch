@@ -2,7 +2,6 @@
     <arg name="fcu_url" default="/dev/ttyACM0:921600"/>
     <arg name="gcs_url" default="udp://@192.168.50.81"/>
     <arg name="SYS_ID" default="3"/>
-
     <group ns="MAV$(arg SYS_ID)">
         <param name="UAV_ID" value="$(arg SYS_ID)"/>
         <include file="$(find mavros)/launch/px4.launch">
@@ -11,7 +10,7 @@
             <arg name="tgt_system" value="$(arg SYS_ID)"/>
         </include>
        <node name="topic_tool" pkg="mav$(arg SYS_ID)" type="topic_tool_mav3"></node>
-       <node name="origin_py" pkg="mav$(arg SYS_ID)" type="origin.py"></node>
+       <node name="origin_px4_py" pkg="mav$(arg SYS_ID)" type="origin_px4.py"></node>
        <node name="main" pkg="mav$(arg SYS_ID)" type="mav3" output="screen"></node>
     </group>
 </launch>

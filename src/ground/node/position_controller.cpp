@@ -6,8 +6,8 @@
 #include "eigen_conversions/eigen_msg.h"
 
 #define G 9.81 //greavity
-#define  M_main 1.0 //kg
-#define  M_qc  1.5 //kg
+#define  M_main 0.8 //kg
+#define  M_qc  0.8 //kg
 
 
 using namespace Eigen;

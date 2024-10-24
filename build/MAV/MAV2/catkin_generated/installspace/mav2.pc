@@ -1,8 +1,0 @@
-prefix=/home/lee/workspace/ros_ws/ex_ws/install
-
-Name: mav2
-Description: Description of mav2
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

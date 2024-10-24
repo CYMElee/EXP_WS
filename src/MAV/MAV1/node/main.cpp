@@ -139,18 +139,18 @@ int main(int argv,char** argc)
     while(ros::ok() && Change_Mode_Trigger.data !=MAV_mod::TAKEOFF){
 
         ROS_INFO("READY_TAKEOFF!!");
-        //if( current_state.mode != "OFFBOARD" ){
-          //  set_mode_client.call(offb_set_mode);
-       // }
-       // if(!current_state.armed){
-       //     arming_client.call(arm_cmd);
-       // }
-    T_pub.publish(T_PREARM);
+        if( current_state.mode != "OFFBOARD" ){
+           set_mode_client.call(offb_set_mode);
+        }
+        if(!current_state.armed){
+           arming_client.call(arm_cmd);
+        }
+    //T_pub.publish(T_PREARM);
 	ros::spinOnce();
 	rate.sleep();
     }
     rate = ros::Rate(100);
-    ros::topic::waitForMessage<std_msgs::Float64MultiArray>("cmd");
+    //ros::topic::waitForMessage<std_msgs::Float64MultiArray>("cmd");
     while(ros::ok()){
 
         T_cmd_calculate();
