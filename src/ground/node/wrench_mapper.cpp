@@ -131,6 +131,7 @@ int main(int argc,char **argv)
     W1 << 0 , 0 , 1;
     W2 << 0 , 0 ,-1;
     W3 << 0 , 0 , 1;
+    W4 << 0 , 0 , -1;
 
     W1 *= (BP1x*B1R);
     W2 *= (BP2x*B2R);
