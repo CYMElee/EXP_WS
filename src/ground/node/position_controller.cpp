@@ -6,7 +6,7 @@
 #include "eigen_conversions/eigen_msg.h"
 
 #define G 9.81 //greavity
-#define  M_main 1.5 //kg
+#define  M_main 1.0 //kg
 #define  M_qc  1.5 //kg
 
 
@@ -103,13 +103,13 @@ int main(int argc,char **argv)
     ROS_INFO("SUCCESS LAUNCH POSITION CONTROLLER"); 
 
     //control gain
-Kp << 3, 0 , 0 ,
-      0  , 3 ,0 ,
-      0  , 0,  0.5;
+Kp << 4, 0 , 0 ,
+      0  , 4,0 ,
+      0  , 0,  8;
 
-Kv << 2 , 0  ,0 ,
-      0  , 2  ,0,
-      0  , 0  ,2;
+Kv << 3 , 0  ,0 ,
+      0  , 3  ,0,
+      0  , 0  ,7;
 
 Ki << 1, 0 , 0 ,
       0  , 1,0,
