@@ -76,7 +76,7 @@ void fd_gen()
     for(int r = 0;r<12;r++)
     {
         Fd.data[r] = fd(r,0);
-
+        
     }
 
 }
@@ -131,7 +131,7 @@ int main(int argc,char **argv)
     W1 << 0 , 0 , 1;
     W2 << 0 , 0 ,-1;
     W3 << 0 , 0 , 1;
-
+    W4 << 0 , 0 , -1;
     W1 *= (BP1x*B1R);
     W2 *= (BP2x*B2R);
     W3 *= (BP3x*B3R);
