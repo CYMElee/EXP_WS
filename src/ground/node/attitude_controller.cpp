@@ -4,9 +4,9 @@
 #include "Eigen/Dense"
 
 
-#define Lw_sq 1
-double IBXY = 2*2.3*Lw_sq+0.18;
-double IBZ  = 4*2.3*Lw_sq+0.09;
+#define Lw_sq 0.80
+double IBXY = 2*1.5*0.80;
+double IBZ  = 4*1.5*0.80;
 
 using namespace Eigen ;
 
@@ -106,13 +106,13 @@ int main(int argc,char **argv)
     ros::NodeHandle nh;
     u2.data.resize(3);
     er.data.resize(3);
-    KR << 4, 0 , 0 ,
-          0 , 4, 0 ,
-          0 , 0 , 4;
+    KR << 15, 0 , 0 ,
+          0 , 15, 0 ,
+          0 , 0 , 10;
 
-    Kw << 1  , 0 , 0 ,
-          0  , 1, 0 ,
-          0  , 0,  1;
+    Kw << 10  , 0 , 0 ,
+          0  , 10, 0 ,
+          0  , 0,  5;
 
 
     IB << IBxy,  0  , 0,

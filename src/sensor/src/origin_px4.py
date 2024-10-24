@@ -7,7 +7,7 @@
 ##
 
 import rospy
-from pymavlink.dialects.v10 import ardupilotmega as MAV_APM
+from pymavlink.dialects.v20 import common as MAV_PX4
 from mavros.mavlink import convert_to_rosmsg
 from mavros_msgs.msg import Mavlink
 
@@ -56,7 +56,7 @@ def set_global_origin(mav, pub):
     longitude = lon
     altitude = alt
 
-    msg = MAV_APM.MAVLink_set_gps_global_origin_message(
+    msg = MAV_PX4.MAVLink_set_gps_global_origin_message(
             target_system,
             lattitude, 
             longitude,
@@ -85,7 +85,7 @@ def set_home_position(mav, pub):
     approach_y = 0
     approach_z = 1
 
-    msg = MAV_APM.MAVLink_set_home_position_message(
+    msg = MAV_PX4.MAVLink_set_home_position_message(
             target_system,
             lattitude,
             longitude,
@@ -112,7 +112,7 @@ if __name__=="__main__":
 
         # Set up mavlink instance
         f = fifo()
-        mav = MAV_APM.MAVLink(f, srcSystem=UAVID, srcComponent=1)
+        mav = MAV_PX4.MAVLink(f, srcSystem=UAVID, srcComponent=1)
         print(mav)
 
         # wait to initialize

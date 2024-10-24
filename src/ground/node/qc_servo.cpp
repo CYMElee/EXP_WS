@@ -56,8 +56,14 @@ void MAV::Thrust(std_msgs::Float64MultiArray fd,int i)
     double f = (fd_e.norm()/4); //because we have 4 motor for each sd420
 
     T.data[0] = p1*pow(f,6)+p2*pow(f,5)+p3*pow(f,4)+p4*pow(f,3)+p5*pow(f,2)+p6*pow(f,1)+p7;   // net thrust(PWM 0~1) you should imply thrust curve here
+    if (T.data[0]>=1.0)
+            T.data[0] = 1.0;
+
 
     /*using the desire thrust(vector) on platform body frame to get the alpha and beta*/
+
+    
+
 
     double alpha = atan2(-fd_e(1),fd_e(2));
     double beta = asin(fd_e(0)/fd_e.norm());

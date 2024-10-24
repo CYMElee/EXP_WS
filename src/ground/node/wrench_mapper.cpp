@@ -5,7 +5,7 @@
 #include "std_msgs/Float64.h"
 
 #include <Eigen/Dense>
-#define lw  1; //units: meter
+#define lw  0.8; //units: meter
 
 using namespace Eigen;
 

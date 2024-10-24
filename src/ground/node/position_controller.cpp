@@ -6,8 +6,8 @@
 #include "eigen_conversions/eigen_msg.h"
 
 #define G 9.81 //greavity
-#define  M_main 0.3 //kg
-#define  M_qc  0.3 //kg
+#define  M_main 1.0 //kg
+#define  M_qc  1.5 //kg
 
 
 using namespace Eigen;
@@ -86,7 +86,7 @@ void total_thrust()
     ev(1) = p_dot(1) - pd_dot(1);
     ev(2) = p_dot(2) - pd_dot(2);
 
-    fr = ((M_qc+M_main/2)*4+M_main)*(G*z-Kp*ep-Kv*ev);
+    fr = (M_qc*4+M_main)*(G*z-Kp*ep-Kv*ev);
     u1 = R.transpose()*fr; // transform the desire thrust from inertial frame to body fixed frame
     
     t.data[0] = u1(0);
@@ -104,12 +104,12 @@ int main(int argc,char **argv)
 
     //control gain
 Kp << 4, 0 , 0 ,
-      0  , 4 ,0 ,
-      0  , 0,  4;
+      0  , 4,0 ,
+      0  , 0,  8;
 
-Kv << 2 , 0  ,0 ,
-      0  , 2  ,0,
-      0  , 0  ,2;
+Kv << 3 , 0  ,0 ,
+      0  , 3  ,0,
+      0  , 0  ,7;
 
 Ki << 1, 0 , 0 ,
       0  , 1,0,

@@ -1,0 +1,32 @@
+<launch>
+    <arg name="MAV1_ID" default="1"/>
+    <arg name="MAV2_ID" default="2"/>
+    <arg name="MAV3_ID" default="3"/>
+    <arg name="MAV4_ID" default="4"/>
+    <arg name="MAV5_ID" default="5"/>
+    <group ns="MAV$(arg MAV1_ID)">
+        <param name="stream_rate" value="100"/>
+        <param name="UAV_ID" value="$(arg MAV1_ID)"/>
+       <node name="stream_rate_py" pkg="ground" type="stream_rate.py"></node>
+    </group>
+    <group ns="MAV$(arg MAV2_ID)">
+        <param name="stream_rate" value="100"/>
+        <param name="UAV_ID" value="$(arg MAV2_ID)"/>
+       <node name="stream_rate_py" pkg="ground" type="stream_rate.py"></node>
+    </group>
+    <group ns="MAV$(arg MAV3_ID)">
+        <param name="stream_rate" value="100"/>
+        <param name="UAV_ID" value="$(arg MAV3_ID)"/>
+       <node name="stream_rate_py" pkg="ground" type="stream_rate.py"></node>
+    </group>
+    <group ns="MAV$(arg MAV4_ID)">
+        <param name="stream_rate" value="100"/>
+        <param name="UAV_ID" value="$(arg MAV4_ID)"/>
+       <node name="stream_rate_py" pkg="ground" type="stream_rate.py"></node>
+    </group>
+    <group ns="platform">
+        <param name="stream_rate" value="100"/>
+        <param name="UAV_ID" value="$(arg MAV5_ID)"/>
+       <node name="stream_rate_platform_py" pkg="ground" type="stream_rate_platform.py"></node>
+    </group>
+</launch>
