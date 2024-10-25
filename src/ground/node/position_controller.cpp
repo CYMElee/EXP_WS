@@ -103,13 +103,13 @@ int main(int argc,char **argv)
     ROS_INFO("SUCCESS LAUNCH POSITION CONTROLLER"); 
 
     //control gain
-Kp << 4, 0 , 0 ,
-      0  , 4,0 ,
-      0  , 0,  8;
+Kp << 15, 0 , 0 ,
+      0  , 15,0 ,
+      0  , 0,  4;
 
-Kv << 3 , 0  ,0 ,
-      0  , 3  ,0,
-      0  , 0  ,7;
+Kv << 10 , 0  ,0 ,
+      0  , 10  ,0,
+      0  , 0  ,3;
 
 Ki << 1, 0 , 0 ,
       0  , 1,0,
@@ -134,7 +134,7 @@ z<< 0,0,1;
     ros::Publisher desire_thrust_total = nh.advertise<std_msgs::Float64MultiArray>
         ("/platform/desire_thrust_total",10);
 
-    ros::topic::waitForMessage<std_msgs::Float64MultiArray>("/platform/desire_position");
+   // ros::topic::waitForMessage<std_msgs::Float64MultiArray>("/platform/desire_position");
     
     ROS_INFO("RECEIVE POSITION");
     ros::Rate rate(100);

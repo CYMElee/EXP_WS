@@ -106,13 +106,13 @@ int main(int argc,char **argv)
     ros::NodeHandle nh;
     u2.data.resize(3);
     er.data.resize(3);
-    KR << 15, 0 , 0 ,
-          0 , 15, 0 ,
-          0 , 0 , 10;
+    KR << 25, 0 , 0 ,
+          0 , 25, 0 ,
+          0 , 0 , 25;
 
-    Kw << 10  , 0 , 0 ,
-          0  , 10, 0 ,
-          0  , 0,  5;
+    Kw << 15  , 0 , 0 ,
+          0  , 15, 0 ,
+          0  , 0,  15;
 
 
     IB << IBxy,  0  , 0,
@@ -135,7 +135,7 @@ int main(int argc,char **argv)
     ROS_INFO("SUCCESS LAUNCH ATTITUDE CONTROLLER"); 
  
     ros::Rate rate(100);
-    ros::topic::waitForMessage<std_msgs::Float64MultiArray>("/platform/desire_attitude");
+   // ros::topic::waitForMessage<std_msgs::Float64MultiArray>("/platform/desire_attitude");
     while(ros::ok)
     {
         

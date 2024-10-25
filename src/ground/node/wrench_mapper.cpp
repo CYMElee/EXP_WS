@@ -43,6 +43,12 @@ RowVector3d W2;
 RowVector3d W3;
 RowVector3d W4;
 
+
+RowVector3d W1_temp;
+RowVector3d W2_temp;
+RowVector3d W3_temp;
+RowVector3d W4_temp;
+
 float Lw = lw;
 
 void desire_thrust_total_cb(const std_msgs::Float64MultiArray::ConstPtr& msg)
@@ -128,15 +134,15 @@ int main(int argc,char **argv)
 
     Ar_temp2 = A*Ar_temp1;
 
-    W1 << 0 , 0 , 1;
-    W2 << 0 , 0 ,-1;
-    W3 << 0 , 0 , 1;
-    W4 << 0 , 0 , -1;
+    W1_temp << 0 , 0 , 1;
+    W2_temp << 0 , 0 ,-1;
+    W3_temp << 0 , 0 , 1;
+    W4_temp << 0 , 0 , -1;
 
-    W1 *= (BP1x*B1R);
-    W2 *= (BP2x*B2R);
-    W3 *= (BP3x*B3R);
-    W4 *= (BP4x*B4R);
+    W1 = W1_temp*(BP1x*B1R);
+    W2 = W2_temp*(BP2x*B2R);
+    W3 = W3_temp*(BP3x*B3R);
+    W4 = W4_temp*(BP4x*B4R);
 
     Ar << Ar_temp2,W1,W2,W3,W4;
 
@@ -160,7 +166,7 @@ int main(int argc,char **argv)
 
     ROS_INFO("SUCCESS LAUNCH WRENCH_MAPPER!!!"); 
 
-    ros::topic::waitForMessage<std_msgs::Float64MultiArray>("/platform/desire_thrust_total");
+    //ros::topic::waitForMessage<std_msgs::Float64MultiArray>("/platform/desire_thrust_total");
 
     ros::Rate rate(100);
     while(ros::ok())

@@ -131,7 +131,7 @@ void hovering(void)
     /*platform position*/
     pd.data[0] = p_home.data[0];
     pd.data[1] = p_home.data[1];
-    pd.data[2] = 1.0;
+    pd.data[2] = 0.6;
 
     /*platform velocity*/
     pd_d.data[0] = 0;
@@ -162,7 +162,7 @@ void hovering(void)
 void land(void){
     pd.data[0] = p_home.data[0];
     pd.data[1] = p_home.data[1];
-    pd.data[2] = 0.2;
+    pd.data[2] = 0.1;
 
     /*platform velocity*/
     pd_d.data[0] = 0;

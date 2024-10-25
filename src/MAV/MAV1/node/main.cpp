@@ -136,7 +136,7 @@ int main(int argv,char** argc)
     }
 
     rate = ros::Rate(100);
-    while(ros::ok() && Change_Mode_Trigger.data !=MAV_mod::TAKEOFF){
+    while(ros::ok() && Change_Mode_Trigger.data !=MAV_mod::TAKEOFF && Change_Mode_Trigger.data !=MAV_mod::LAND ){
 
         ROS_INFO("READY_TAKEOFF!!");
         if( current_state.mode != "OFFBOARD" ){

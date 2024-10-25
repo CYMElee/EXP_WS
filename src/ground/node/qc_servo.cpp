@@ -58,6 +58,8 @@ void MAV::Thrust(std_msgs::Float64MultiArray fd,int i)
     T.data[0] = p1*pow(f,6)+p2*pow(f,5)+p3*pow(f,4)+p4*pow(f,3)+p5*pow(f,2)+p6*pow(f,1)+p7;   // net thrust(PWM 0~1) you should imply thrust curve here
     if (T.data[0]>=1.0)
             T.data[0] = 1.0;
+    if (T.data[0]<=0.1)
+            T.data[0] = 0.1;
 
 
     /*using the desire thrust(vector) on platform body frame to get the alpha and beta*/
@@ -67,6 +69,8 @@ void MAV::Thrust(std_msgs::Float64MultiArray fd,int i)
 
     double alpha = atan2(-fd_e(1),fd_e(2));
     double beta = asin(fd_e(0)/fd_e.norm());
+
+
     
   
 
@@ -99,7 +103,7 @@ int main(int argc,char **argv)
                   MAV(nh, "/MAV4/cmd")};
                   
     ros::Rate rate(100);
-    ros::topic::waitForMessage<std_msgs::Float64MultiArray>("/plarform/desire_thrust_each");
+   // ros::topic::waitForMessage<std_msgs::Float64MultiArray>("/plarform/desire_thrust_each");
 
     while(ros::ok())
     {
